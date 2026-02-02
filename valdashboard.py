@@ -55,6 +55,15 @@ if not os.path.exists(DATA_PATH):
 if not os.path.exists(DATA_PATH):
     DATA_PATH = "../web/data.json"
 
+# DEBUG: Show what files exist
+if not os.path.exists(DATA_PATH):
+    st.error(f"❌ Cannot find data.json! Checked paths: ./web/data.json, web/data.json, ../web/data.json")
+    st.info(f"Current directory: {os.getcwd()}")
+    st.info(f"Files in current dir: {os.listdir('.')}")
+    if os.path.exists('web'):
+        st.info(f"Files in web/: {os.listdir('web')}")
+    st.stop()
+
 # Updated Region Definitions with Full Canonical Names
 REGION_TEAMS = {
   "Americas": [
