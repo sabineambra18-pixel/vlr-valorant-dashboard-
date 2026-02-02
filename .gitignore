@@ -1,12 +1,10 @@
-@"
-# Data files
+﻿# Data files (but allow web/data.json)
 /data/
-/web/
 
 # Python
 __pycache__/
 *.py[cod]
-*$py.class
+*.class
 *.so
 .Python
 venv/
@@ -15,4 +13,14 @@ env/
 # OS
 .DS_Store
 Thumbs.db
-"@ | Out-File -Encoding UTF8 .gitignore
+
+# Debug and temp files
+debug/
+*debug*.py
+*.lnk
+*.bat
+*.txt
+*.zip
+*backup*
+*.json
+!web/data.json

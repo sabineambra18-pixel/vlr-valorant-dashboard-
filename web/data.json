@@ -1,0 +1,7034 @@
+{
+  "teams": [
+    "100 Thieves",
+    "All Gamers",
+    "BBL Esports",
+    "Bilibili Gaming",
+    "Cloud9",
+    "DRX",
+    "DetonatioN FocusMe",
+    "Dragon Ranger Gaming",
+    "EDward Gaming",
+    "ENVY",
+    "Evil Geniuses",
+    "FNATIC",
+    "FULL SENSE",
+    "FURIA",
+    "FUT Esports",
+    "FunPlus Phoenix",
+    "G2 Esports",
+    "GIANTX",
+    "Gen.G",
+    "Gentle Mates",
+    "Global Esports",
+    "JDG Esports",
+    "KRÜ Esports",
+    "Karmine Corp",
+    "LEVIATÁN",
+    "LOUD",
+    "MIBR",
+    "NRG",
+    "Natus Vincere",
+    "Nongshim RedForce",
+    "Nova Esports",
+    "PCIFIC Esports",
+    "Paper Rex",
+    "Rex Regum Qeon",
+    "Sentinels",
+    "T1",
+    "TYLOO",
+    "Team Heretics",
+    "Team Liquid",
+    "Team Secret",
+    "Team Vitality",
+    "Titan Esports Club",
+    "Trace Esports",
+    "ULF Esports",
+    "VARREL",
+    "Wolves Esports",
+    "Xi Lai Gaming",
+    "ZETA DIVISION"
+  ],
+  "matches": [
+    {
+      "id": 594740,
+      "date": "2026-01-20",
+      "left": "Natus Vincere",
+      "right": "Karmine Corp",
+      "winner": "Natus Vincere",
+      "played": [
+        {
+          "map": "Split",
+          "ls": 13,
+          "rs": 11,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 2,
+            "right": 0
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Haven",
+          "ls": 13,
+          "rs": 7,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "Karmine Corp",
+            "map": "Corrode"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "Karmine Corp",
+            "map": "Pearl"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "Karmine Corp",
+            "map": "Split"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "Karmine Corp",
+            "map": "Haven"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "Karmine Corp",
+            "map": "Abyss"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "Karmine Corp",
+            "map": "Breeze"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Bind"
+          }
+        ],
+        "decider": "Bind"
+      }
+    },
+    {
+      "id": 594741,
+      "date": "2026-01-20",
+      "left": "FUT Esports",
+      "right": "Gentle Mates",
+      "winner": "Gentle Mates",
+      "played": [
+        {
+          "map": "Abyss",
+          "ls": 8,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Split",
+          "ls": 6,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 0,
+            "right": 2
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "FUT Esports",
+            "map": "Haven"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "Gentle Mates",
+            "map": "Breeze"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "FUT Esports",
+            "map": "Abyss"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "Gentle Mates",
+            "map": "Split"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "FUT Esports",
+            "map": "Pearl"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "Gentle Mates",
+            "map": "Bind"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Corrode"
+          }
+        ],
+        "decider": "Corrode"
+      }
+    },
+    {
+      "id": 594742,
+      "date": "2026-01-21",
+      "left": "PCIFIC Esports",
+      "right": "BBL Esports",
+      "winner": "BBL Esports",
+      "played": [
+        {
+          "map": "Breeze",
+          "ls": 10,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Abyss",
+          "ls": 13,
+          "rs": 7,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Pearl",
+          "ls": 4,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 2,
+            "right": 0
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "BBL Esports",
+            "map": "Corrode"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "BBL Esports",
+            "map": "Haven"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "BBL Esports",
+            "map": "Breeze"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "BBL Esports",
+            "map": "Abyss"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "BBL Esports",
+            "map": "Bind"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "BBL Esports",
+            "map": "Split"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Pearl"
+          }
+        ],
+        "decider": "Pearl"
+      }
+    },
+    {
+      "id": 594743,
+      "date": "2026-01-21",
+      "left": "ULF Esports",
+      "right": "Team Vitality",
+      "winner": "Team Vitality",
+      "played": [
+        {
+          "map": "Breeze",
+          "ls": 3,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 0,
+            "right": 2
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Corrode",
+          "ls": 1,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 0,
+            "right": 2
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "Team Vitality",
+            "map": "Split"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "ULF Esports",
+            "map": "Bind"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "Team Vitality",
+            "map": "Breeze"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "ULF Esports",
+            "map": "Corrode"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "Team Vitality",
+            "map": "Haven"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "ULF Esports",
+            "map": "Pearl"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Abyss"
+          }
+        ],
+        "decider": "Abyss"
+      }
+    },
+    {
+      "id": 594744,
+      "date": "2026-01-22",
+      "left": "Team Heretics",
+      "right": "Natus Vincere",
+      "winner": "Natus Vincere",
+      "played": [
+        {
+          "map": "Bind",
+          "ls": 10,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 0,
+            "right": 2
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Haven",
+          "ls": 13,
+          "rs": 11,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Split",
+          "ls": 6,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 0,
+            "right": 2
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "Natus Vincere",
+            "map": "Corrode"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "Natus Vincere",
+            "map": "Abyss"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "Natus Vincere",
+            "map": "Bind"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "Natus Vincere",
+            "map": "Haven"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "Natus Vincere",
+            "map": "Breeze"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "Natus Vincere",
+            "map": "Pearl"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Split"
+          }
+        ],
+        "decider": "Split"
+      }
+    },
+    {
+      "id": 594745,
+      "date": "2026-01-22",
+      "left": "GIANTX",
+      "right": "Gentle Mates",
+      "winner": "Gentle Mates",
+      "played": [
+        {
+          "map": "Pearl",
+          "ls": 10,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Bind",
+          "ls": 10,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "Gentle Mates",
+            "map": "Breeze"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "Gentle Mates",
+            "map": "Corrode"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "Gentle Mates",
+            "map": "Pearl"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "Gentle Mates",
+            "map": "Bind"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "Gentle Mates",
+            "map": "Haven"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "Gentle Mates",
+            "map": "Abyss"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Split"
+          }
+        ],
+        "decider": "Split"
+      }
+    },
+    {
+      "id": 594746,
+      "date": "2026-01-23",
+      "left": "FNATIC",
+      "right": "BBL Esports",
+      "winner": "BBL Esports",
+      "played": [
+        {
+          "map": "Breeze",
+          "ls": 11,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Haven",
+          "ls": 4,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 0,
+            "right": 2
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "BBL Esports",
+            "map": "Bind"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "BBL Esports",
+            "map": "Pearl"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "BBL Esports",
+            "map": "Breeze"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "BBL Esports",
+            "map": "Haven"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "BBL Esports",
+            "map": "Corrode"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "BBL Esports",
+            "map": "Split"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Abyss"
+          }
+        ],
+        "decider": "Abyss"
+      }
+    },
+    {
+      "id": 594747,
+      "date": "2026-01-23",
+      "left": "Team Liquid",
+      "right": "Team Vitality",
+      "winner": "Team Vitality",
+      "played": [
+        {
+          "map": "Breeze",
+          "ls": 11,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 2,
+            "right": 0
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Pearl",
+          "ls": 14,
+          "rs": 12,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Corrode",
+          "ls": 9,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "Team Vitality",
+            "map": "Split"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "Team Vitality",
+            "map": "Haven"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "Team Vitality",
+            "map": "Breeze"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "Team Vitality",
+            "map": "Pearl"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "Team Vitality",
+            "map": "Bind"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "Team Vitality",
+            "map": "Abyss"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Corrode"
+          }
+        ],
+        "decider": "Corrode"
+      }
+    },
+    {
+      "id": 594748,
+      "date": "2026-01-29",
+      "left": "Natus Vincere",
+      "right": "Gentle Mates",
+      "winner": "Gentle Mates",
+      "played": [
+        {
+          "map": "Abyss",
+          "ls": 7,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 0,
+            "right": 2
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Bind",
+          "ls": 9,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "Gentle Mates",
+            "map": "Breeze"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "Gentle Mates",
+            "map": "Corrode"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "Gentle Mates",
+            "map": "Abyss"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "Gentle Mates",
+            "map": "Bind"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "Gentle Mates",
+            "map": "Haven"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "Gentle Mates",
+            "map": "Pearl"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Split"
+          }
+        ],
+        "decider": "Split"
+      }
+    },
+    {
+      "id": 594749,
+      "date": "2026-01-29",
+      "left": "BBL Esports",
+      "right": "Team Vitality",
+      "winner": "BBL Esports",
+      "played": [
+        {
+          "map": "Haven",
+          "ls": 13,
+          "rs": 9,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Abyss",
+          "ls": 13,
+          "rs": 8,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 2,
+            "right": 0
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "BBL Esports",
+            "map": "Bind"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "Team Vitality",
+            "map": "Pearl"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "BBL Esports",
+            "map": "Haven"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "Team Vitality",
+            "map": "Abyss"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "BBL Esports",
+            "map": "Corrode"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "Team Vitality",
+            "map": "Split"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Breeze"
+          }
+        ],
+        "decider": "Breeze"
+      }
+    },
+    {
+      "id": 594751,
+      "date": "2026-01-27",
+      "left": "Karmine Corp",
+      "right": "Team Liquid",
+      "winner": "Team Liquid",
+      "played": [
+        {
+          "map": "Abyss",
+          "ls": 13,
+          "rs": 2,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Split",
+          "ls": 8,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Breeze",
+          "ls": 10,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "Team Liquid",
+            "map": "Pearl"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "Team Liquid",
+            "map": "Haven"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "Team Liquid",
+            "map": "Abyss"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "Team Liquid",
+            "map": "Split"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "Team Liquid",
+            "map": "Corrode"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "Team Liquid",
+            "map": "Bind"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Breeze"
+          }
+        ],
+        "decider": "Breeze"
+      }
+    },
+    {
+      "id": 594752,
+      "date": "2026-01-27",
+      "left": "FUT Esports",
+      "right": "FNATIC",
+      "winner": "FNATIC",
+      "played": [
+        {
+          "map": "Abyss",
+          "ls": 3,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 0,
+            "right": 2
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Corrode",
+          "ls": 18,
+          "rs": 16,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Split",
+          "ls": 14,
+          "rs": 16,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "FUT Esports",
+            "map": "Bind"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "FNATIC",
+            "map": "Pearl"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "FUT Esports",
+            "map": "Abyss"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "FNATIC",
+            "map": "Corrode"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "FUT Esports",
+            "map": "Haven"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "FNATIC",
+            "map": "Breeze"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Split"
+          }
+        ],
+        "decider": "Split"
+      }
+    },
+    {
+      "id": 594753,
+      "date": "2026-01-28",
+      "left": "PCIFIC Esports",
+      "right": "GIANTX",
+      "winner": "GIANTX",
+      "played": [
+        {
+          "map": "Abyss",
+          "ls": 8,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Bind",
+          "ls": 14,
+          "rs": 12,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 0,
+            "right": 2
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Split",
+          "ls": 10,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "GIANTX",
+            "map": "Haven"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "GIANTX",
+            "map": "Corrode"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "GIANTX",
+            "map": "Abyss"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "GIANTX",
+            "map": "Bind"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "GIANTX",
+            "map": "Pearl"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "GIANTX",
+            "map": "Breeze"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Split"
+          }
+        ],
+        "decider": "Split"
+      }
+    },
+    {
+      "id": 594754,
+      "date": "2026-01-28",
+      "left": "ULF Esports",
+      "right": "Team Heretics",
+      "winner": "Team Heretics",
+      "played": [
+        {
+          "map": "Haven",
+          "ls": 7,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Bind",
+          "ls": 8,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 2,
+            "right": 0
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "ULF Esports",
+            "map": "Corrode"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "Team Heretics",
+            "map": "Pearl"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "ULF Esports",
+            "map": "Haven"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "Team Heretics",
+            "map": "Bind"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "ULF Esports",
+            "map": "Abyss"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "Team Heretics",
+            "map": "Split"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Breeze"
+          }
+        ],
+        "decider": "Breeze"
+      }
+    },
+    {
+      "id": 594755,
+      "date": "2026-01-30",
+      "left": "Team Liquid",
+      "right": "FNATIC",
+      "winner": "FNATIC",
+      "played": [
+        {
+          "map": "Corrode",
+          "ls": 5,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 0,
+            "right": 2
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Split",
+          "ls": 9,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "FNATIC",
+            "map": "Pearl"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "FNATIC",
+            "map": "Haven"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "FNATIC",
+            "map": "Corrode"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "FNATIC",
+            "map": "Split"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "FNATIC",
+            "map": "Bind"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "FNATIC",
+            "map": "Abyss"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Breeze"
+          }
+        ],
+        "decider": "Breeze"
+      }
+    },
+    {
+      "id": 594756,
+      "date": "2026-01-30",
+      "left": "GIANTX",
+      "right": "Team Heretics",
+      "winner": "GIANTX",
+      "played": [
+        {
+          "map": "Abyss",
+          "ls": 13,
+          "rs": 10,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Haven",
+          "ls": 13,
+          "rs": 7,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "Team Heretics",
+            "map": "Corrode"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "Team Heretics",
+            "map": "Pearl"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "Team Heretics",
+            "map": "Abyss"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "Team Heretics",
+            "map": "Haven"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "Team Heretics",
+            "map": "Split"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "Team Heretics",
+            "map": "Bind"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Breeze"
+          }
+        ],
+        "decider": "Breeze"
+      }
+    },
+    {
+      "id": 595630,
+      "date": "2026-01-22",
+      "left": "Nongshim RedForce",
+      "right": "Team Secret",
+      "winner": "Nongshim RedForce",
+      "played": [
+        {
+          "map": "Haven",
+          "ls": 13,
+          "rs": 5,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 2,
+            "right": 0
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Split",
+          "ls": 13,
+          "rs": 8,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "Team Secret",
+            "map": "Corrode"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "Team Secret",
+            "map": "Pearl"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "Team Secret",
+            "map": "Haven"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "Team Secret",
+            "map": "Split"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "Team Secret",
+            "map": "Abyss"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "Team Secret",
+            "map": "Bind"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Breeze"
+          }
+        ],
+        "decider": "Breeze"
+      }
+    },
+    {
+      "id": 595631,
+      "date": "2026-01-22",
+      "left": "ZETA DIVISION",
+      "right": "FULL SENSE",
+      "winner": "FULL SENSE",
+      "played": [
+        {
+          "map": "Corrode",
+          "ls": 4,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Split",
+          "ls": 2,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 0,
+            "right": 2
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "FULL SENSE",
+            "map": "Haven"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "ZETA DIVISION",
+            "map": "Pearl"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "FULL SENSE",
+            "map": "Corrode"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "ZETA DIVISION",
+            "map": "Split"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "FULL SENSE",
+            "map": "Abyss"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "ZETA DIVISION",
+            "map": "Bind"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Breeze"
+          }
+        ],
+        "decider": "Breeze"
+      }
+    },
+    {
+      "id": 595632,
+      "date": "2026-01-23",
+      "left": "VARREL",
+      "right": "Global Esports",
+      "winner": "Global Esports",
+      "played": [
+        {
+          "map": "Abyss",
+          "ls": 7,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 0,
+            "right": 2
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Split",
+          "ls": 7,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "Global Esports",
+            "map": "Corrode"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "Global Esports",
+            "map": "Bind"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "Global Esports",
+            "map": "Split"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "Global Esports",
+            "map": "Abyss"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "Global Esports",
+            "map": "Breeze"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "Global Esports",
+            "map": "Pearl"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Haven"
+          }
+        ],
+        "decider": "Haven"
+      }
+    },
+    {
+      "id": 595633,
+      "date": "2026-01-23",
+      "left": "DetonatioN FocusMe",
+      "right": "Gen.G",
+      "winner": "DetonatioN FocusMe",
+      "played": [
+        {
+          "map": "Abyss",
+          "ls": 13,
+          "rs": 8,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Pearl",
+          "ls": 13,
+          "rs": 10,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 2,
+            "right": 0
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "Gen.G",
+            "map": "Bind"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "Gen.G",
+            "map": "Breeze"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "Gen.G",
+            "map": "Abyss"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "Gen.G",
+            "map": "Pearl"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "Gen.G",
+            "map": "Corrode"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "Gen.G",
+            "map": "Split"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Haven"
+          }
+        ],
+        "decider": "Haven"
+      }
+    },
+    {
+      "id": 595634,
+      "date": "2026-01-24",
+      "left": "T1",
+      "right": "Nongshim RedForce",
+      "winner": "Nongshim RedForce",
+      "played": [
+        {
+          "map": "Haven",
+          "ls": 4,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 0,
+            "right": 2
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Corrode",
+          "ls": 9,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 0,
+            "right": 2
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Split",
+          "ls": 13,
+          "rs": 9,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "Nongshim RedForce",
+            "map": "Pearl"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "T1",
+            "map": "Bind"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "Nongshim RedForce",
+            "map": "Split"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "T1",
+            "map": "Haven"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "Nongshim RedForce",
+            "map": "Breeze"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "T1",
+            "map": "Abyss"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Corrode"
+          }
+        ],
+        "decider": "Corrode"
+      }
+    },
+    {
+      "id": 595635,
+      "date": "2026-01-24",
+      "left": "DRX",
+      "right": "FULL SENSE",
+      "winner": "FULL SENSE",
+      "played": [
+        {
+          "map": "Breeze",
+          "ls": 13,
+          "rs": 10,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 2,
+            "right": 0
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Pearl",
+          "ls": 8,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Split",
+          "ls": 8,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "FULL SENSE",
+            "map": "Abyss"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "DRX",
+            "map": "Corrode"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "FULL SENSE",
+            "map": "Breeze"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "DRX",
+            "map": "Pearl"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "FULL SENSE",
+            "map": "Haven"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "DRX",
+            "map": "Bind"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Split"
+          }
+        ],
+        "decider": "Split"
+      }
+    },
+    {
+      "id": 595636,
+      "date": "2026-01-25",
+      "left": "Paper Rex",
+      "right": "Global Esports",
+      "winner": "Paper Rex",
+      "played": [
+        {
+          "map": "Breeze",
+          "ls": 13,
+          "rs": 10,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Split",
+          "ls": 5,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Bind",
+          "ls": 13,
+          "rs": 10,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "Global Esports",
+            "map": "Pearl"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "Global Esports",
+            "map": "Abyss"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "Global Esports",
+            "map": "Breeze"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "Global Esports",
+            "map": "Split"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "Global Esports",
+            "map": "Haven"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "Global Esports",
+            "map": "Corrode"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Bind"
+          }
+        ],
+        "decider": "Bind"
+      }
+    },
+    {
+      "id": 595637,
+      "date": "2026-01-25",
+      "left": "Rex Regum Qeon",
+      "right": "DetonatioN FocusMe",
+      "winner": "Rex Regum Qeon",
+      "played": [
+        {
+          "map": "Haven",
+          "ls": 13,
+          "rs": 10,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Corrode",
+          "ls": 13,
+          "rs": 5,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "DetonatioN FocusMe",
+            "map": "Pearl"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "DetonatioN FocusMe",
+            "map": "Abyss"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "DetonatioN FocusMe",
+            "map": "Haven"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "DetonatioN FocusMe",
+            "map": "Corrode"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "DetonatioN FocusMe",
+            "map": "Breeze"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "DetonatioN FocusMe",
+            "map": "Split"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Bind"
+          }
+        ],
+        "decider": "Bind"
+      }
+    },
+    {
+      "id": 595638,
+      "date": "2026-01-31",
+      "left": "Nongshim RedForce",
+      "right": "FULL SENSE",
+      "winner": "Nongshim RedForce",
+      "played": [
+        {
+          "map": "Split",
+          "ls": 14,
+          "rs": 12,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Bind",
+          "ls": 13,
+          "rs": 2,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 2,
+            "right": 0
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "FULL SENSE",
+            "map": "Haven"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "FULL SENSE",
+            "map": "Pearl"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "FULL SENSE",
+            "map": "Split"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "FULL SENSE",
+            "map": "Bind"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "FULL SENSE",
+            "map": "Abyss"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "FULL SENSE",
+            "map": "Breeze"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Corrode"
+          }
+        ],
+        "decider": "Corrode"
+      }
+    },
+    {
+      "id": 595639,
+      "date": "2026-01-31",
+      "left": "Paper Rex",
+      "right": "Rex Regum Qeon",
+      "winner": "Rex Regum Qeon",
+      "played": [
+        {
+          "map": "Bind",
+          "ls": 6,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 0,
+            "right": 2
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Pearl",
+          "ls": 5,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "Rex Regum Qeon",
+            "map": "Abyss"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "Rex Regum Qeon",
+            "map": "Split"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "Rex Regum Qeon",
+            "map": "Bind"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "Rex Regum Qeon",
+            "map": "Pearl"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "Rex Regum Qeon",
+            "map": "Corrode"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "Rex Regum Qeon",
+            "map": "Haven"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Breeze"
+          }
+        ],
+        "decider": "Breeze"
+      }
+    },
+    {
+      "id": 595641,
+      "date": "2026-01-29",
+      "left": "Team Secret",
+      "right": "DetonatioN FocusMe",
+      "winner": "DetonatioN FocusMe",
+      "played": [
+        {
+          "map": "Split",
+          "ls": 2,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 0,
+            "right": 2
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Bind",
+          "ls": 8,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 2,
+            "right": 0
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "DetonatioN FocusMe",
+            "map": "Corrode"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "DetonatioN FocusMe",
+            "map": "Haven"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "DetonatioN FocusMe",
+            "map": "Split"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "DetonatioN FocusMe",
+            "map": "Bind"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "DetonatioN FocusMe",
+            "map": "Abyss"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "DetonatioN FocusMe",
+            "map": "Pearl"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Breeze"
+          }
+        ],
+        "decider": "Breeze"
+      }
+    },
+    {
+      "id": 595642,
+      "date": "2026-01-29",
+      "left": "ZETA DIVISION",
+      "right": "Global Esports",
+      "winner": "Global Esports",
+      "played": [
+        {
+          "map": "Haven",
+          "ls": 11,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 2,
+            "right": 0
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Abyss",
+          "ls": 9,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "ZETA DIVISION",
+            "map": "Pearl"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "Global Esports",
+            "map": "Corrode"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "ZETA DIVISION",
+            "map": "Haven"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "Global Esports",
+            "map": "Abyss"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "ZETA DIVISION",
+            "map": "Bind"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "Global Esports",
+            "map": "Breeze"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Split"
+          }
+        ],
+        "decider": "Split"
+      }
+    },
+    {
+      "id": 595643,
+      "date": "2026-01-30",
+      "left": "VARREL",
+      "right": "DRX",
+      "winner": "DRX",
+      "played": [
+        {
+          "map": "Corrode",
+          "ls": 13,
+          "rs": 10,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 0,
+            "right": 2
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Split",
+          "ls": 10,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 0,
+            "right": 2
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Bind",
+          "ls": 5,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 2,
+            "right": 0
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "DRX",
+            "map": "Abyss"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "DRX",
+            "map": "Pearl"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "DRX",
+            "map": "Corrode"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "DRX",
+            "map": "Split"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "DRX",
+            "map": "Breeze"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "DRX",
+            "map": "Haven"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Bind"
+          }
+        ],
+        "decider": "Bind"
+      }
+    },
+    {
+      "id": 595644,
+      "date": "2026-01-30",
+      "left": "Gen.G",
+      "right": "T1",
+      "winner": "T1",
+      "played": [
+        {
+          "map": "Breeze",
+          "ls": 13,
+          "rs": 7,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Bind",
+          "ls": 8,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 0,
+            "right": 2
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Haven",
+          "ls": 9,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "Gen.G",
+            "map": "Pearl"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "T1",
+            "map": "Abyss"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "Gen.G",
+            "map": "Breeze"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "T1",
+            "map": "Bind"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "Gen.G",
+            "map": "Split"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "T1",
+            "map": "Corrode"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Haven"
+          }
+        ],
+        "decider": "Haven"
+      }
+    },
+    {
+      "id": 595645,
+      "date": "2026-02-01",
+      "left": "DetonatioN FocusMe",
+      "right": "Global Esports",
+      "winner": "DetonatioN FocusMe",
+      "played": [
+        {
+          "map": "Breeze",
+          "ls": 3,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 0,
+            "right": 2
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Pearl",
+          "ls": 13,
+          "rs": 9,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Split",
+          "ls": 13,
+          "rs": 8,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 2,
+            "right": 0
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "Global Esports",
+            "map": "Abyss"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "Global Esports",
+            "map": "Corrode"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "Global Esports",
+            "map": "Breeze"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "Global Esports",
+            "map": "Pearl"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "Global Esports",
+            "map": "Bind"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "Global Esports",
+            "map": "Haven"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Split"
+          }
+        ],
+        "decider": "Split"
+      }
+    },
+    {
+      "id": 595646,
+      "date": "2026-02-01",
+      "left": "DRX",
+      "right": "T1",
+      "winner": "T1",
+      "played": [
+        {
+          "map": "Split",
+          "ls": 8,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Bind",
+          "ls": 8,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 2,
+            "right": 0
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "DRX",
+            "map": "Pearl"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "T1",
+            "map": "Abyss"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "DRX",
+            "map": "Split"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "T1",
+            "map": "Bind"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "DRX",
+            "map": "Haven"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "T1",
+            "map": "Corrode"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Breeze"
+          }
+        ],
+        "decider": "Breeze"
+      }
+    },
+    {
+      "id": 596398,
+      "date": "2026-01-15",
+      "left": "LOUD",
+      "right": "Cloud9",
+      "winner": "Cloud9",
+      "played": [
+        {
+          "map": "Haven",
+          "ls": 7,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 0,
+            "right": 2
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Abyss",
+          "ls": 11,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 2,
+            "right": 0
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "Cloud9",
+            "map": "Breeze"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "LOUD",
+            "map": "Split"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "Cloud9",
+            "map": "Haven"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "LOUD",
+            "map": "Abyss"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "Cloud9",
+            "map": "Corrode"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "LOUD",
+            "map": "Pearl"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Bind"
+          }
+        ],
+        "decider": "Bind"
+      }
+    },
+    {
+      "id": 596399,
+      "date": "2026-01-15",
+      "left": "ENVY",
+      "right": "Evil Geniuses",
+      "winner": "ENVY",
+      "played": [
+        {
+          "map": "Abyss",
+          "ls": 9,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Corrode",
+          "ls": 13,
+          "rs": 10,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Bind",
+          "ls": 13,
+          "rs": 9,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "ENVY",
+            "map": "Haven"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "Evil Geniuses",
+            "map": "Breeze"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "ENVY",
+            "map": "Abyss"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "Evil Geniuses",
+            "map": "Corrode"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "ENVY",
+            "map": "Pearl"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "Evil Geniuses",
+            "map": "Split"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Bind"
+          }
+        ],
+        "decider": "Bind"
+      }
+    },
+    {
+      "id": 596400,
+      "date": "2026-01-16",
+      "left": "KRÜ Esports",
+      "right": "FURIA",
+      "winner": "FURIA",
+      "played": [
+        {
+          "map": "Pearl",
+          "ls": 13,
+          "rs": 10,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 0,
+            "right": 2
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Breeze",
+          "ls": 8,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 0,
+            "right": 2
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Abyss",
+          "ls": 5,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 0,
+            "right": 2
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "KRÜ Esports",
+            "map": "Haven"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "FURIA",
+            "map": "Split"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "KRÜ Esports",
+            "map": "Pearl"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "FURIA",
+            "map": "Breeze"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "KRÜ Esports",
+            "map": "Bind"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "FURIA",
+            "map": "Corrode"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Abyss"
+          }
+        ],
+        "decider": "Abyss"
+      }
+    },
+    {
+      "id": 596401,
+      "date": "2026-01-16",
+      "left": "100 Thieves",
+      "right": "LEVIATÁN",
+      "winner": "100 Thieves",
+      "played": [
+        {
+          "map": "Bind",
+          "ls": 13,
+          "rs": 9,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 0,
+            "right": 2
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Pearl",
+          "ls": 10,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 0,
+            "right": 2
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Split",
+          "ls": 13,
+          "rs": 9,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "LEVIATÁN",
+            "map": "Abyss"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "LEVIATÁN",
+            "map": "Corrode"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "LEVIATÁN",
+            "map": "Bind"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "LEVIATÁN",
+            "map": "Pearl"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "LEVIATÁN",
+            "map": "Breeze"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "LEVIATÁN",
+            "map": "Haven"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Split"
+          }
+        ],
+        "decider": "Split"
+      }
+    },
+    {
+      "id": 596402,
+      "date": "2026-01-17",
+      "left": "NRG",
+      "right": "Cloud9",
+      "winner": "NRG",
+      "played": [
+        {
+          "map": "Pearl",
+          "ls": 13,
+          "rs": 2,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 2,
+            "right": 0
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Breeze",
+          "ls": 13,
+          "rs": 9,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "Cloud9",
+            "map": "Corrode"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "NRG",
+            "map": "Haven"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "Cloud9",
+            "map": "Pearl"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "NRG",
+            "map": "Breeze"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "Cloud9",
+            "map": "Abyss"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "NRG",
+            "map": "Split"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Bind"
+          }
+        ],
+        "decider": "Bind"
+      }
+    },
+    {
+      "id": 596403,
+      "date": "2026-01-17",
+      "left": "MIBR",
+      "right": "ENVY",
+      "winner": "MIBR",
+      "played": [
+        {
+          "map": "Abyss",
+          "ls": 13,
+          "rs": 7,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Corrode",
+          "ls": 13,
+          "rs": 11,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 0,
+            "right": 2
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "ENVY",
+            "map": "Haven"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "MIBR",
+            "map": "Split"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "ENVY",
+            "map": "Abyss"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "MIBR",
+            "map": "Corrode"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "ENVY",
+            "map": "Breeze"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "MIBR",
+            "map": "Pearl"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Bind"
+          }
+        ],
+        "decider": "Bind"
+      }
+    },
+    {
+      "id": 596404,
+      "date": "2026-01-18",
+      "left": "Sentinels",
+      "right": "FURIA",
+      "winner": "FURIA",
+      "played": [
+        {
+          "map": "Split",
+          "ls": 5,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Breeze",
+          "ls": 11,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 2,
+            "right": 0
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "Sentinels",
+            "map": "Haven"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "FURIA",
+            "map": "Pearl"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "Sentinels",
+            "map": "Split"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "FURIA",
+            "map": "Breeze"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "Sentinels",
+            "map": "Bind"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "FURIA",
+            "map": "Corrode"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Abyss"
+          }
+        ],
+        "decider": "Abyss"
+      }
+    },
+    {
+      "id": 596405,
+      "date": "2026-01-18",
+      "left": "G2 Esports",
+      "right": "100 Thieves",
+      "winner": "G2 Esports",
+      "played": [
+        {
+          "map": "Bind",
+          "ls": 13,
+          "rs": 11,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Corrode",
+          "ls": 3,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 0,
+            "right": 2
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Split",
+          "ls": 13,
+          "rs": 8,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 2,
+            "right": 0
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "100 Thieves",
+            "map": "Abyss"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "G2 Esports",
+            "map": "Breeze"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "100 Thieves",
+            "map": "Bind"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "G2 Esports",
+            "map": "Corrode"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "100 Thieves",
+            "map": "Haven"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "G2 Esports",
+            "map": "Pearl"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Split"
+          }
+        ],
+        "decider": "Split"
+      }
+    },
+    {
+      "id": 596406,
+      "date": "2026-01-30",
+      "left": "NRG",
+      "right": "MIBR",
+      "winner": "MIBR",
+      "played": [
+        {
+          "map": "Abyss",
+          "ls": 13,
+          "rs": 6,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Split",
+          "ls": 11,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Breeze",
+          "ls": 8,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "MIBR",
+            "map": "Pearl"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "NRG",
+            "map": "Haven"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "MIBR",
+            "map": "Abyss"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "NRG",
+            "map": "Split"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "MIBR",
+            "map": "Corrode"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "NRG",
+            "map": "Bind"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Breeze"
+          }
+        ],
+        "decider": "Breeze"
+      }
+    },
+    {
+      "id": 596407,
+      "date": "2026-01-30",
+      "left": "FURIA",
+      "right": "G2 Esports",
+      "winner": "FURIA",
+      "played": [
+        {
+          "map": "Abyss",
+          "ls": 13,
+          "rs": 7,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 2,
+            "right": 0
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Bind",
+          "ls": 6,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 0,
+            "right": 2
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Split",
+          "ls": 13,
+          "rs": 3,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 2,
+            "right": 0
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "FURIA",
+            "map": "Pearl"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "G2 Esports",
+            "map": "Breeze"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "FURIA",
+            "map": "Abyss"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "G2 Esports",
+            "map": "Bind"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "FURIA",
+            "map": "Haven"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "G2 Esports",
+            "map": "Corrode"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Split"
+          }
+        ],
+        "decider": "Split"
+      }
+    },
+    {
+      "id": 596409,
+      "date": "2026-01-23",
+      "left": "LOUD",
+      "right": "100 Thieves",
+      "winner": "100 Thieves",
+      "played": [
+        {
+          "map": "Breeze",
+          "ls": 13,
+          "rs": 11,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 2,
+            "right": 0
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Bind",
+          "ls": 6,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Pearl",
+          "ls": 2,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "LOUD",
+            "map": "Split"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "100 Thieves",
+            "map": "Abyss"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "LOUD",
+            "map": "Breeze"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "100 Thieves",
+            "map": "Pearl"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "LOUD",
+            "map": "Corrode"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "100 Thieves",
+            "map": "Haven"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Bind"
+          }
+        ],
+        "decider": "Bind"
+      }
+    },
+    {
+      "id": 596410,
+      "date": "2026-01-23",
+      "left": "Evil Geniuses",
+      "right": "Sentinels",
+      "winner": "Sentinels",
+      "played": [
+        {
+          "map": "Abyss",
+          "ls": 8,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Pearl",
+          "ls": 11,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 2,
+            "right": 0
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "Sentinels",
+            "map": "Breeze"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "Sentinels",
+            "map": "Haven"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "Sentinels",
+            "map": "Abyss"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "Sentinels",
+            "map": "Pearl"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "Sentinels",
+            "map": "Split"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "Sentinels",
+            "map": "Bind"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Corrode"
+          }
+        ],
+        "decider": "Corrode"
+      }
+    },
+    {
+      "id": 596411,
+      "date": "2026-01-24",
+      "left": "KRÜ Esports",
+      "right": "ENVY",
+      "winner": "ENVY",
+      "played": [
+        {
+          "map": "Abyss",
+          "ls": 13,
+          "rs": 9,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Pearl",
+          "ls": 5,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Breeze",
+          "ls": 9,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "ENVY",
+            "map": "Haven"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "KRÜ Esports",
+            "map": "Corrode"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "ENVY",
+            "map": "Abyss"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "KRÜ Esports",
+            "map": "Pearl"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "ENVY",
+            "map": "Split"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "KRÜ Esports",
+            "map": "Bind"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Breeze"
+          }
+        ],
+        "decider": "Breeze"
+      }
+    },
+    {
+      "id": 596412,
+      "date": "2026-01-24",
+      "left": "LEVIATÁN",
+      "right": "Cloud9",
+      "winner": "Cloud9",
+      "played": [
+        {
+          "map": "Pearl",
+          "ls": 3,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 2,
+            "right": 0
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Split",
+          "ls": 8,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "LEVIATÁN",
+            "map": "Abyss"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "Cloud9",
+            "map": "Corrode"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "LEVIATÁN",
+            "map": "Pearl"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "Cloud9",
+            "map": "Split"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "LEVIATÁN",
+            "map": "Breeze"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "Cloud9",
+            "map": "Bind"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Haven"
+          }
+        ],
+        "decider": "Haven"
+      }
+    },
+    {
+      "id": 596413,
+      "date": "2026-01-25",
+      "left": "100 Thieves",
+      "right": "Sentinels",
+      "winner": "100 Thieves",
+      "played": [
+        {
+          "map": "Corrode",
+          "ls": 13,
+          "rs": 11,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Split",
+          "ls": 16,
+          "rs": 14,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 0,
+            "right": 2
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "Sentinels",
+            "map": "Abyss"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "Sentinels",
+            "map": "Haven"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "Sentinels",
+            "map": "Corrode"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "Sentinels",
+            "map": "Split"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "Sentinels",
+            "map": "Breeze"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "Sentinels",
+            "map": "Bind"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Pearl"
+          }
+        ],
+        "decider": "Pearl"
+      }
+    },
+    {
+      "id": 596414,
+      "date": "2026-01-25",
+      "left": "ENVY",
+      "right": "Cloud9",
+      "winner": "Cloud9",
+      "played": [
+        {
+          "map": "Pearl",
+          "ls": 18,
+          "rs": 20,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Breeze",
+          "ls": 13,
+          "rs": 8,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 2,
+            "right": 0
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Split",
+          "ls": 11,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "Cloud9",
+            "map": "Corrode"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "ENVY",
+            "map": "Haven"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "Cloud9",
+            "map": "Pearl"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "ENVY",
+            "map": "Breeze"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "Cloud9",
+            "map": "Bind"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "ENVY",
+            "map": "Abyss"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Split"
+          }
+        ],
+        "decider": "Split"
+      }
+    },
+    {
+      "id": 596415,
+      "date": "2026-02-01",
+      "left": "NRG",
+      "right": "100 Thieves",
+      "winner": "NRG",
+      "played": [
+        {
+          "map": "Haven",
+          "ls": 13,
+          "rs": 9,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Corrode",
+          "ls": 13,
+          "rs": 11,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "100 Thieves",
+            "map": "Abyss"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "NRG",
+            "map": "Bind"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "100 Thieves",
+            "map": "Haven"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "NRG",
+            "map": "Corrode"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "100 Thieves",
+            "map": "Pearl"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "NRG",
+            "map": "Breeze"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Split"
+          }
+        ],
+        "decider": "Split"
+      }
+    },
+    {
+      "id": 596416,
+      "date": "2026-02-01",
+      "left": "G2 Esports",
+      "right": "Cloud9",
+      "winner": "G2 Esports",
+      "played": [
+        {
+          "map": "Corrode",
+          "ls": 13,
+          "rs": 11,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Bind",
+          "ls": 13,
+          "rs": 9,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "Cloud9",
+            "map": "Pearl"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "G2 Esports",
+            "map": "Abyss"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "Cloud9",
+            "map": "Corrode"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "G2 Esports",
+            "map": "Bind"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "Cloud9",
+            "map": "Haven"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "G2 Esports",
+            "map": "Breeze"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Split"
+          }
+        ],
+        "decider": "Split"
+      }
+    },
+    {
+      "id": 596419,
+      "date": "2026-01-31",
+      "left": "LOUD",
+      "right": "Evil Geniuses",
+      "winner": "Evil Geniuses",
+      "played": [
+        {
+          "map": "Haven",
+          "ls": 5,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Abyss",
+          "ls": 12,
+          "rs": 14,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "Evil Geniuses",
+            "map": "Breeze"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "LOUD",
+            "map": "Split"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "Evil Geniuses",
+            "map": "Haven"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "LOUD",
+            "map": "Abyss"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "Evil Geniuses",
+            "map": "Bind"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "LOUD",
+            "map": "Pearl"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Corrode"
+          }
+        ],
+        "decider": "Corrode"
+      }
+    },
+    {
+      "id": 596420,
+      "date": "2026-01-31",
+      "left": "KRÜ Esports",
+      "right": "LEVIATÁN",
+      "winner": "LEVIATÁN",
+      "played": [
+        {
+          "map": "Bind",
+          "ls": 4,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 0,
+            "right": 2
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Split",
+          "ls": 10,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 0,
+            "right": 2
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "LEVIATÁN",
+            "map": "Breeze"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "KRÜ Esports",
+            "map": "Corrode"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "LEVIATÁN",
+            "map": "Bind"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "KRÜ Esports",
+            "map": "Split"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "LEVIATÁN",
+            "map": "Pearl"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "KRÜ Esports",
+            "map": "Haven"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Abyss"
+          }
+        ],
+        "decider": "Abyss"
+      }
+    },
+    {
+      "id": 598921,
+      "date": "2026-01-23",
+      "left": "All Gamers",
+      "right": "Nova Esports",
+      "winner": "All Gamers",
+      "played": [
+        {
+          "map": "Split",
+          "ls": 13,
+          "rs": 7,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 2,
+            "right": 0
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Pearl",
+          "ls": 16,
+          "rs": 14,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 0,
+            "right": 2
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "Nova Esports",
+            "map": "Breeze"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "Nova Esports",
+            "map": "Bind"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "Nova Esports",
+            "map": "Split"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "Nova Esports",
+            "map": "Pearl"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "Nova Esports",
+            "map": "Haven"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "Nova Esports",
+            "map": "Abyss"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Corrode"
+          }
+        ],
+        "decider": "Corrode"
+      }
+    },
+    {
+      "id": 598922,
+      "date": "2026-01-23",
+      "left": "JDG Esports",
+      "right": "Titan Esports Club",
+      "winner": "JDG Esports",
+      "played": [
+        {
+          "map": "Corrode",
+          "ls": 13,
+          "rs": 6,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Haven",
+          "ls": 6,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Abyss",
+          "ls": 13,
+          "rs": 10,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "Titan Esports Club",
+            "map": "Pearl"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "JDG Esports",
+            "map": "Split"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "Titan Esports Club",
+            "map": "Corrode"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "JDG Esports",
+            "map": "Haven"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "Titan Esports Club",
+            "map": "Breeze"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "JDG Esports",
+            "map": "Bind"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Abyss"
+          }
+        ],
+        "decider": "Abyss"
+      }
+    },
+    {
+      "id": 598923,
+      "date": "2026-01-22",
+      "left": "Trace Esports",
+      "right": "Wolves Esports",
+      "winner": "Wolves Esports",
+      "played": [
+        {
+          "map": "Abyss",
+          "ls": 13,
+          "rs": 7,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 2,
+            "right": 0
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Haven",
+          "ls": 11,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Bind",
+          "ls": 5,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 2,
+            "right": 0
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "Trace Esports",
+            "map": "Breeze"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "Wolves Esports",
+            "map": "Corrode"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "Trace Esports",
+            "map": "Abyss"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "Wolves Esports",
+            "map": "Haven"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "Trace Esports",
+            "map": "Pearl"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "Wolves Esports",
+            "map": "Split"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Bind"
+          }
+        ],
+        "decider": "Bind"
+      }
+    },
+    {
+      "id": 598924,
+      "date": "2026-01-22",
+      "left": "FunPlus Phoenix",
+      "right": "TYLOO",
+      "winner": "TYLOO",
+      "played": [
+        {
+          "map": "Pearl",
+          "ls": 3,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 0,
+            "right": 2
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Haven",
+          "ls": 4,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 0,
+            "right": 2
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "TYLOO",
+            "map": "Bind"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "TYLOO",
+            "map": "Split"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "TYLOO",
+            "map": "Pearl"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "TYLOO",
+            "map": "Haven"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "TYLOO",
+            "map": "Breeze"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "TYLOO",
+            "map": "Corrode"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Abyss"
+          }
+        ],
+        "decider": "Abyss"
+      }
+    },
+    {
+      "id": 598925,
+      "date": "2026-01-25",
+      "left": "Bilibili Gaming",
+      "right": "All Gamers",
+      "winner": "All Gamers",
+      "played": [
+        {
+          "map": "Split",
+          "ls": 10,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 0,
+            "right": 2
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Abyss",
+          "ls": 3,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "All Gamers",
+            "map": "Breeze"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "Bilibili Gaming",
+            "map": "Corrode"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "All Gamers",
+            "map": "Split"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "Bilibili Gaming",
+            "map": "Abyss"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "All Gamers",
+            "map": "Haven"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "Bilibili Gaming",
+            "map": "Pearl"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Bind"
+          }
+        ],
+        "decider": "Bind"
+      }
+    },
+    {
+      "id": 598926,
+      "date": "2026-01-25",
+      "left": "Dragon Ranger Gaming",
+      "right": "JDG Esports",
+      "winner": "Dragon Ranger Gaming",
+      "played": [
+        {
+          "map": "Abyss",
+          "ls": 11,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Breeze",
+          "ls": 13,
+          "rs": 8,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Corrode",
+          "ls": 13,
+          "rs": 9,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "JDG Esports",
+            "map": "Haven"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "JDG Esports",
+            "map": "Pearl"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "JDG Esports",
+            "map": "Abyss"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "JDG Esports",
+            "map": "Breeze"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "JDG Esports",
+            "map": "Split"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "JDG Esports",
+            "map": "Bind"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Corrode"
+          }
+        ],
+        "decider": "Corrode"
+      }
+    },
+    {
+      "id": 598927,
+      "date": "2026-01-24",
+      "left": "Xi Lai Gaming",
+      "right": "Wolves Esports",
+      "winner": "Xi Lai Gaming",
+      "played": [
+        {
+          "map": "Breeze",
+          "ls": 13,
+          "rs": 4,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 2,
+            "right": 0
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Abyss",
+          "ls": 13,
+          "rs": 6,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 2,
+            "right": 0
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "Wolves Esports",
+            "map": "Corrode"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "Wolves Esports",
+            "map": "Split"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "Wolves Esports",
+            "map": "Breeze"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "Wolves Esports",
+            "map": "Abyss"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "Wolves Esports",
+            "map": "Pearl"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "Wolves Esports",
+            "map": "Haven"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Bind"
+          }
+        ],
+        "decider": "Bind"
+      }
+    },
+    {
+      "id": 598928,
+      "date": "2026-01-24",
+      "left": "EDward Gaming",
+      "right": "TYLOO",
+      "winner": "EDward Gaming",
+      "played": [
+        {
+          "map": "Abyss",
+          "ls": 13,
+          "rs": 5,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Bind",
+          "ls": 14,
+          "rs": 12,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 2,
+            "right": 0
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "TYLOO",
+            "map": "Breeze"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "TYLOO",
+            "map": "Split"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "TYLOO",
+            "map": "Abyss"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "TYLOO",
+            "map": "Bind"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "TYLOO",
+            "map": "Corrode"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "TYLOO",
+            "map": "Haven"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Pearl"
+          }
+        ],
+        "decider": "Pearl"
+      }
+    },
+    {
+      "id": 598929,
+      "date": "2026-01-31",
+      "left": "All Gamers",
+      "right": "Dragon Ranger Gaming",
+      "winner": "All Gamers",
+      "played": [
+        {
+          "map": "Corrode",
+          "ls": 7,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 0,
+            "right": 2
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Bind",
+          "ls": 15,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 0,
+            "right": 2
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Abyss",
+          "ls": 13,
+          "rs": 10,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 2,
+            "right": 0
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "Dragon Ranger Gaming",
+            "map": "Haven"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "Dragon Ranger Gaming",
+            "map": "Breeze"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "Dragon Ranger Gaming",
+            "map": "Corrode"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "Dragon Ranger Gaming",
+            "map": "Bind"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "Dragon Ranger Gaming",
+            "map": "Split"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "Dragon Ranger Gaming",
+            "map": "Pearl"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Abyss"
+          }
+        ],
+        "decider": "Abyss"
+      }
+    },
+    {
+      "id": 598930,
+      "date": "2026-02-01",
+      "left": "Xi Lai Gaming",
+      "right": "EDward Gaming",
+      "winner": "Xi Lai Gaming",
+      "played": [
+        {
+          "map": "Split",
+          "ls": 13,
+          "rs": 5,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 2,
+            "right": 0
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Pearl",
+          "ls": 13,
+          "rs": 6,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 2,
+            "right": 0
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "EDward Gaming",
+            "map": "Breeze"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "EDward Gaming",
+            "map": "Corrode"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "EDward Gaming",
+            "map": "Split"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "EDward Gaming",
+            "map": "Pearl"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "EDward Gaming",
+            "map": "Abyss"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "EDward Gaming",
+            "map": "Haven"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Bind"
+          }
+        ],
+        "decider": "Bind"
+      }
+    },
+    {
+      "id": 598932,
+      "date": "2026-01-28",
+      "left": "Nova Esports",
+      "right": "TYLOO",
+      "winner": "TYLOO",
+      "played": [
+        {
+          "map": "Split",
+          "ls": 10,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 2,
+            "right": 0
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Corrode",
+          "ls": 4,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 0,
+            "right": 2
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "TYLOO",
+            "map": "Pearl"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "Nova Esports",
+            "map": "Bind"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "TYLOO",
+            "map": "Split"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "Nova Esports",
+            "map": "Corrode"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "TYLOO",
+            "map": "Abyss"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "Nova Esports",
+            "map": "Haven"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Breeze"
+          }
+        ],
+        "decider": "Breeze"
+      }
+    },
+    {
+      "id": 598933,
+      "date": "2026-01-28",
+      "left": "Titan Esports Club",
+      "right": "Wolves Esports",
+      "winner": "Titan Esports Club",
+      "played": [
+        {
+          "map": "Breeze",
+          "ls": 13,
+          "rs": 11,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 2,
+            "right": 0
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Bind",
+          "ls": 7,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Haven",
+          "ls": 13,
+          "rs": 8,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 2,
+            "right": 0
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "Wolves Esports",
+            "map": "Pearl"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "Wolves Esports",
+            "map": "Corrode"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "Wolves Esports",
+            "map": "Breeze"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "Wolves Esports",
+            "map": "Bind"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "Wolves Esports",
+            "map": "Abyss"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "Wolves Esports",
+            "map": "Split"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Haven"
+          }
+        ],
+        "decider": "Haven"
+      }
+    },
+    {
+      "id": 598934,
+      "date": "2026-01-29",
+      "left": "Trace Esports",
+      "right": "JDG Esports",
+      "winner": "Trace Esports",
+      "played": [
+        {
+          "map": "Split",
+          "ls": 13,
+          "rs": 11,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Pearl",
+          "ls": 3,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Corrode",
+          "ls": 13,
+          "rs": 4,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 2,
+            "right": 0
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "JDG Esports",
+            "map": "Breeze"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "JDG Esports",
+            "map": "Abyss"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "JDG Esports",
+            "map": "Split"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "JDG Esports",
+            "map": "Pearl"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "JDG Esports",
+            "map": "Bind"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "JDG Esports",
+            "map": "Haven"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Corrode"
+          }
+        ],
+        "decider": "Corrode"
+      }
+    },
+    {
+      "id": 598935,
+      "date": "2026-01-29",
+      "left": "FunPlus Phoenix",
+      "right": "Bilibili Gaming",
+      "winner": "Bilibili Gaming",
+      "played": [
+        {
+          "map": "Pearl",
+          "ls": 9,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Bind",
+          "ls": 15,
+          "rs": 17,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "Bilibili Gaming",
+            "map": "Corrode"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "Bilibili Gaming",
+            "map": "Split"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "Bilibili Gaming",
+            "map": "Pearl"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "Bilibili Gaming",
+            "map": "Bind"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "Bilibili Gaming",
+            "map": "Haven"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "Bilibili Gaming",
+            "map": "Abyss"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Breeze"
+          }
+        ],
+        "decider": "Breeze"
+      }
+    },
+    {
+      "id": 598936,
+      "date": "2026-01-30",
+      "left": "TYLOO",
+      "right": "Titan Esports Club",
+      "winner": "TYLOO",
+      "played": [
+        {
+          "map": "Corrode",
+          "ls": 10,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 2,
+            "right": 0
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Breeze",
+          "ls": 13,
+          "rs": 9,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Split",
+          "ls": 13,
+          "rs": 9,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "TYLOO",
+            "map": "Haven"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "Titan Esports Club",
+            "map": "Pearl"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "TYLOO",
+            "map": "Corrode"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "Titan Esports Club",
+            "map": "Breeze"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "TYLOO",
+            "map": "Bind"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "Titan Esports Club",
+            "map": "Abyss"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Split"
+          }
+        ],
+        "decider": "Split"
+      }
+    },
+    {
+      "id": 598937,
+      "date": "2026-01-30",
+      "left": "Trace Esports",
+      "right": "Bilibili Gaming",
+      "winner": "Bilibili Gaming",
+      "played": [
+        {
+          "map": "Abyss",
+          "ls": 10,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 0,
+            "right": 2
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Breeze",
+          "ls": 11,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "Bilibili Gaming",
+            "map": "Pearl"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "Bilibili Gaming",
+            "map": "Corrode"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "Bilibili Gaming",
+            "map": "Abyss"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "Bilibili Gaming",
+            "map": "Breeze"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "Bilibili Gaming",
+            "map": "Bind"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "Bilibili Gaming",
+            "map": "Split"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Haven"
+          }
+        ],
+        "decider": "Haven"
+      }
+    },
+    {
+      "id": 598942,
+      "date": "2026-01-31",
+      "left": "Nova Esports",
+      "right": "Wolves Esports",
+      "winner": "Wolves Esports",
+      "played": [
+        {
+          "map": "Abyss",
+          "ls": 13,
+          "rs": 5,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Haven",
+          "ls": 3,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 0,
+            "right": 2
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Pearl",
+          "ls": 11,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "Nova Esports",
+            "map": "Bind"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "Wolves Esports",
+            "map": "Corrode"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "Nova Esports",
+            "map": "Abyss"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "Wolves Esports",
+            "map": "Haven"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "Nova Esports",
+            "map": "Split"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "Wolves Esports",
+            "map": "Breeze"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Pearl"
+          }
+        ],
+        "decider": "Pearl"
+      }
+    },
+    {
+      "id": 598943,
+      "date": "2026-02-01",
+      "left": "JDG Esports",
+      "right": "FunPlus Phoenix",
+      "winner": "JDG Esports",
+      "played": [
+        {
+          "map": "Pearl",
+          "ls": 5,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 0,
+            "right": 2
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Bind",
+          "ls": 13,
+          "rs": 3,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 2,
+            "right": 0
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        },
+        {
+          "map": "Haven",
+          "ls": 13,
+          "rs": 7,
+          "picked_by": null,
+          "left_agents": [],
+          "right_agents": [],
+          "pistols": {
+            "left": 2,
+            "right": 0
+          },
+          "sides": {
+            "left_atk": 0,
+            "left_def": 0,
+            "right_atk": 0,
+            "right_def": 0
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "JDG Esports",
+            "map": "Breeze"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "FunPlus Phoenix",
+            "map": "Split"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "JDG Esports",
+            "map": "Pearl"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "FunPlus Phoenix",
+            "map": "Bind"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "JDG Esports",
+            "map": "Corrode"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "FunPlus Phoenix",
+            "map": "Abyss"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Haven"
+          }
+        ],
+        "decider": "Haven"
+      }
+    }
+  ]
+}
