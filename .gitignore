@@ -1,0 +1,18 @@
+@"
+# Data files
+/data/
+/web/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+
+# OS
+.DS_Store
+Thumbs.db
+"@ | Out-File -Encoding UTF8 .gitignore
