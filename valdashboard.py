@@ -49,6 +49,12 @@ st.markdown("""
 
 DATA_PATH = "./web/data.json"
 
+# Try multiple possible paths for Streamlit Cloud
+if not os.path.exists(DATA_PATH):
+    DATA_PATH = "web/data.json"
+if not os.path.exists(DATA_PATH):
+    DATA_PATH = "../web/data.json"
+
 # Updated Region Definitions with Full Canonical Names
 REGION_TEAMS = {
   "Americas": [
