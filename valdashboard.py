@@ -106,6 +106,13 @@ def is_team_in_region(team_name, region):
 @st.cache_data
 def load_data():
     if not os.path.exists(DATA_PATH):
+        st.error(f"❌ Cannot find data.json at: {DATA_PATH}")
+        st.info(f"📁 Current directory: {os.getcwd()}")
+        st.info(f"📄 Files in current dir: {os.listdir('.')}")
+        if os.path.exists('web'):
+            st.info(f"📄 Files in web/: {os.listdir('web')}")
+        else:
+            st.warning("⚠️ web/ folder does not exist!")
         return None, None
     with open(DATA_PATH, "r", encoding="utf-8") as f:
         data = json.load(f)
