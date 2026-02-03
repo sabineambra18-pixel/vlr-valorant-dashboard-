@@ -1642,17 +1642,29 @@
           "ls": 13,
           "rs": 5,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Neon",
+            "Sova",
+            "Yoru",
+            "Omen",
+            "Killjoy"
+          ],
+          "right_agents": [
+            "Viper",
+            "Omen",
+            "Sova",
+            "Killjoy",
+            "Neon"
+          ],
           "pistols": {
             "left": 2,
             "right": 0
           },
           "sides": {
-            "left_atk": 0,
-            "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "left_atk": 9,
+            "left_def": 4,
+            "right_atk": 2,
+            "right_def": 3
           }
         },
         {
@@ -1660,17 +1672,28 @@
           "ls": 13,
           "rs": 8,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Neon",
+            "Omen",
+            "Yoru",
+            "Viper",
+            "Fade"
+          ],
+          "right_agents": [
+            "Viper",
+            "Omen",
+            "Fade",
+            "Yoru"
+          ],
           "pistols": {
             "left": 1,
             "right": 1
           },
           "sides": {
-            "left_atk": 0,
-            "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "left_atk": 5,
+            "left_def": 8,
+            "right_atk": 1,
+            "right_def": 7
           }
         }
       ],
@@ -1734,17 +1757,28 @@
           "ls": 4,
           "rs": 13,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Neon",
+            "Yoru",
+            "Omen",
+            "Viper",
+            "Fade"
+          ],
+          "right_agents": [
+            "Yoru",
+            "Fade",
+            "Cypher",
+            "Omen"
+          ],
           "pistols": {
             "left": 1,
             "right": 1
           },
           "sides": {
-            "left_atk": 0,
+            "left_atk": 4,
             "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "right_atk": 5,
+            "right_def": 8
           }
         },
         {
@@ -1752,17 +1786,29 @@
           "ls": 2,
           "rs": 13,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Neon",
+            "Yoru",
+            "Omen",
+            "Viper",
+            "Fade"
+          ],
+          "right_agents": [
+            "Omen",
+            "Yoru",
+            "Viper",
+            "Fade",
+            "Raze"
+          ],
           "pistols": {
             "left": 0,
             "right": 2
           },
           "sides": {
-            "left_atk": 0,
+            "left_atk": 2,
             "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "right_atk": 3,
+            "right_def": 10
           }
         }
       ],
@@ -1822,39 +1868,60 @@
       "winner": "Global Esports",
       "played": [
         {
-          "map": "Abyss",
-          "ls": 7,
-          "rs": 13,
-          "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
-          "pistols": {
-            "left": 0,
-            "right": 2
-          },
-          "sides": {
-            "left_atk": 0,
-            "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
-          }
-        },
-        {
           "map": "Split",
           "ls": 7,
           "rs": 13,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Fade",
+            "Yoru",
+            "Viper",
+            "Raze",
+            "Omen"
+          ],
+          "right_agents": [
+            "Astra",
+            "Viper",
+            "Fade",
+            "Yoru"
+          ],
           "pistols": {
             "left": 1,
             "right": 1
           },
           "sides": {
-            "left_atk": 0,
-            "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "left_atk": 4,
+            "left_def": 3,
+            "right_atk": 5,
+            "right_def": 8
+          }
+        },
+        {
+          "map": "Abyss",
+          "ls": 7,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [
+            "Yoru",
+            "Sova",
+            "Harbor",
+            "Astra"
+          ],
+          "right_agents": [
+            "Astra",
+            "Sova",
+            "Yoru",
+            "Omen"
+          ],
+          "pistols": {
+            "left": 0,
+            "right": 2
+          },
+          "sides": {
+            "left_atk": 5,
+            "left_def": 2,
+            "right_atk": 6,
+            "right_def": 7
           }
         }
       ],
@@ -1918,17 +1985,25 @@
           "ls": 13,
           "rs": 8,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Astra",
+            "Yoru",
+            "Sova"
+          ],
+          "right_agents": [
+            "Astra",
+            "Yoru",
+            "Sova"
+          ],
           "pistols": {
             "left": 1,
             "right": 1
           },
           "sides": {
-            "left_atk": 0,
-            "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "left_atk": 7,
+            "left_def": 6,
+            "right_atk": 3,
+            "right_def": 5
           }
         },
         {
@@ -1936,17 +2011,28 @@
           "ls": 13,
           "rs": 10,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Neon",
+            "Sova",
+            "Astra",
+            "Killjoy",
+            "Yoru"
+          ],
+          "right_agents": [
+            "Killjoy",
+            "Astra",
+            "Yoru",
+            "Neon"
+          ],
           "pistols": {
             "left": 2,
             "right": 0
           },
           "sides": {
-            "left_atk": 0,
-            "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "left_atk": 5,
+            "left_def": 8,
+            "right_atk": 3,
+            "right_def": 7
           }
         }
       ],
@@ -2006,21 +2092,63 @@
       "winner": "Nongshim RedForce",
       "played": [
         {
+          "map": "Split",
+          "ls": 13,
+          "rs": 9,
+          "picked_by": null,
+          "left_agents": [
+            "Raze",
+            "Yoru",
+            "Omen",
+            "Fade",
+            "Viper"
+          ],
+          "right_agents": [
+            "Yoru",
+            "Viper",
+            "Omen",
+            "Fade",
+            "Neon"
+          ],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 6,
+            "left_def": 7,
+            "right_atk": 3,
+            "right_def": 6
+          }
+        },
+        {
           "map": "Haven",
           "ls": 4,
           "rs": 13,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Neon",
+            "Viper",
+            "Sova",
+            "Killjoy",
+            "Omen"
+          ],
+          "right_agents": [
+            "Neon",
+            "Sova",
+            "Yoru",
+            "Killjoy",
+            "Omen"
+          ],
           "pistols": {
             "left": 0,
             "right": 2
           },
           "sides": {
-            "left_atk": 0,
+            "left_atk": 4,
             "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "right_atk": 5,
+            "right_def": 8
           }
         },
         {
@@ -2028,35 +2156,28 @@
           "ls": 9,
           "rs": 13,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Fade",
+            "Omen",
+            "Yoru",
+            "Viper"
+          ],
+          "right_agents": [
+            "Viper",
+            "Yoru",
+            "Neon",
+            "Omen",
+            "Fade"
+          ],
           "pistols": {
             "left": 0,
             "right": 2
           },
           "sides": {
-            "left_atk": 0,
-            "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
-          }
-        },
-        {
-          "map": "Split",
-          "ls": 13,
-          "rs": 9,
-          "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
-          "pistols": {
-            "left": 1,
-            "right": 1
-          },
-          "sides": {
-            "left_atk": 0,
-            "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "left_atk": 4,
+            "left_def": 5,
+            "right_atk": 5,
+            "right_def": 8
           }
         }
       ],
@@ -2120,17 +2241,29 @@
           "ls": 13,
           "rs": 10,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Viper",
+            "Astra",
+            "Sova",
+            "Yoru",
+            "Jett"
+          ],
+          "right_agents": [
+            "Yoru",
+            "Fade",
+            "Vyse",
+            "Omen",
+            "Jett"
+          ],
           "pistols": {
             "left": 2,
             "right": 0
           },
           "sides": {
-            "left_atk": 0,
-            "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "left_atk": 8,
+            "left_def": 5,
+            "right_atk": 6,
+            "right_def": 4
           }
         },
         {
@@ -2138,17 +2271,29 @@
           "ls": 8,
           "rs": 13,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Cypher",
+            "Sova",
+            "Astra",
+            "Yoru",
+            "Neon"
+          ],
+          "right_agents": [
+            "Yoru",
+            "Fade",
+            "Astra",
+            "Killjoy",
+            "Raze"
+          ],
           "pistols": {
             "left": 1,
             "right": 1
           },
           "sides": {
-            "left_atk": 0,
-            "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "left_atk": 4,
+            "left_def": 4,
+            "right_atk": 5,
+            "right_def": 8
           }
         },
         {
@@ -2156,17 +2301,29 @@
           "ls": 8,
           "rs": 13,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Omen",
+            "Viper",
+            "Fade",
+            "Neon",
+            "Yoru"
+          ],
+          "right_agents": [
+            "Yoru",
+            "Viper",
+            "Raze",
+            "Fade",
+            "Omen"
+          ],
           "pistols": {
             "left": 1,
             "right": 1
           },
           "sides": {
-            "left_atk": 0,
-            "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "left_atk": 5,
+            "left_def": 3,
+            "right_atk": 6,
+            "right_def": 7
           }
         }
       ],
@@ -2230,17 +2387,28 @@
           "ls": 13,
           "rs": 10,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Jett",
+            "Sova",
+            "Brimstone",
+            "Yoru",
+            "Viper"
+          ],
+          "right_agents": [
+            "Omen",
+            "Astra",
+            "Sova",
+            "Yoru"
+          ],
           "pistols": {
             "left": 1,
             "right": 1
           },
           "sides": {
-            "left_atk": 0,
-            "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "left_atk": 7,
+            "left_def": 6,
+            "right_atk": 5,
+            "right_def": 5
           }
         },
         {
@@ -2248,17 +2416,28 @@
           "ls": 5,
           "rs": 13,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Viper",
+            "Yoru",
+            "Raze",
+            "Omen",
+            "Fade"
+          ],
+          "right_agents": [
+            "Yoru",
+            "Viper",
+            "Astra",
+            "Fade"
+          ],
           "pistols": {
             "left": 1,
             "right": 1
           },
           "sides": {
-            "left_atk": 0,
+            "left_atk": 5,
             "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "right_atk": 6,
+            "right_def": 7
           }
         },
         {
@@ -2266,17 +2445,27 @@
           "ls": 13,
           "rs": 10,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Brimstone",
+            "Yoru",
+            "Fade",
+            "Raze",
+            "Viper"
+          ],
+          "right_agents": [
+            "Astra",
+            "Yoru",
+            "Fade"
+          ],
           "pistols": {
             "left": 1,
             "right": 1
           },
           "sides": {
-            "left_atk": 0,
-            "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "left_atk": 7,
+            "left_def": 6,
+            "right_atk": 5,
+            "right_def": 5
           }
         }
       ],
@@ -2340,17 +2529,29 @@
           "ls": 13,
           "rs": 10,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Killjoy",
+            "Sova",
+            "Neon",
+            "Omen",
+            "Viper"
+          ],
+          "right_agents": [
+            "Chamber",
+            "Astra",
+            "Yoru",
+            "Fade",
+            "Phoenix"
+          ],
           "pistols": {
             "left": 1,
             "right": 1
           },
           "sides": {
-            "left_atk": 0,
-            "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "left_atk": 4,
+            "left_def": 9,
+            "right_atk": 2,
+            "right_def": 8
           }
         },
         {
@@ -2358,17 +2559,29 @@
           "ls": 13,
           "rs": 5,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Fade",
+            "Chamber",
+            "Viper",
+            "Omen",
+            "Neon"
+          ],
+          "right_agents": [
+            "Yoru",
+            "Phoenix",
+            "Omen",
+            "Chamber",
+            "Fade"
+          ],
           "pistols": {
             "left": 1,
             "right": 1
           },
           "sides": {
-            "left_atk": 0,
-            "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "left_atk": 10,
+            "left_def": 3,
+            "right_atk": 3,
+            "right_def": 2
           }
         }
       ],
@@ -2432,17 +2645,29 @@
           "ls": 14,
           "rs": 12,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Neon",
+            "Omen",
+            "Viper",
+            "Fade",
+            "Yoru"
+          ],
+          "right_agents": [
+            "Omen",
+            "Cypher",
+            "Raze",
+            "Yoru",
+            "Fade"
+          ],
           "pistols": {
             "left": 1,
             "right": 1
           },
           "sides": {
-            "left_atk": 0,
-            "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "left_atk": 6,
+            "left_def": 8,
+            "right_atk": 6,
+            "right_def": 6
           }
         },
         {
@@ -2450,17 +2675,29 @@
           "ls": 13,
           "rs": 2,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Yoru",
+            "Brimstone",
+            "Neon",
+            "Viper",
+            "Fade"
+          ],
+          "right_agents": [
+            "Brimstone",
+            "Raze",
+            "Fade",
+            "Yoru",
+            "Viper"
+          ],
           "pistols": {
             "left": 2,
             "right": 0
           },
           "sides": {
-            "left_atk": 0,
-            "left_def": 0,
+            "left_atk": 10,
+            "left_def": 3,
             "right_atk": 0,
-            "right_def": 0
+            "right_def": 2
           }
         }
       ],
@@ -2524,17 +2761,29 @@
           "ls": 6,
           "rs": 13,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Brimstone",
+            "Fade",
+            "Raze",
+            "Viper",
+            "Yoru"
+          ],
+          "right_agents": [
+            "Chamber",
+            "Skye",
+            "Raze",
+            "Viper",
+            "Brimstone"
+          ],
           "pistols": {
             "left": 0,
             "right": 2
           },
           "sides": {
-            "left_atk": 0,
-            "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "left_atk": 5,
+            "left_def": 1,
+            "right_atk": 6,
+            "right_def": 7
           }
         },
         {
@@ -2542,17 +2791,27 @@
           "ls": 5,
           "rs": 13,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Astra",
+            "Killjoy",
+            "Yoru",
+            "Sova"
+          ],
+          "right_agents": [
+            "Chamber",
+            "Astra",
+            "Sova",
+            "Neon"
+          ],
           "pistols": {
             "left": 1,
             "right": 1
           },
           "sides": {
-            "left_atk": 0,
-            "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "left_atk": 2,
+            "left_def": 3,
+            "right_atk": 3,
+            "right_def": 10
           }
         }
       ],
@@ -2616,17 +2875,28 @@
           "ls": 2,
           "rs": 13,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Viper",
+            "Fade",
+            "Yoru",
+            "Omen"
+          ],
+          "right_agents": [
+            "Fade",
+            "Raze",
+            "Viper",
+            "Omen",
+            "Yoru"
+          ],
           "pistols": {
             "left": 0,
             "right": 2
           },
           "sides": {
-            "left_atk": 0,
+            "left_atk": 2,
             "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "right_atk": 3,
+            "right_def": 10
           }
         },
         {
@@ -2634,17 +2904,28 @@
           "ls": 8,
           "rs": 13,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Yoru",
+            "Viper",
+            "Brimstone",
+            "Fade"
+          ],
+          "right_agents": [
+            "Fade",
+            "Brimstone",
+            "Yoru",
+            "Raze",
+            "Viper"
+          ],
           "pistols": {
             "left": 2,
             "right": 0
           },
           "sides": {
-            "left_atk": 0,
-            "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "left_atk": 5,
+            "left_def": 3,
+            "right_atk": 6,
+            "right_def": 7
           }
         }
       ],
@@ -2708,17 +2989,29 @@
           "ls": 11,
           "rs": 13,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Yoru",
+            "Omen",
+            "Cypher",
+            "Neon",
+            "Sova"
+          ],
+          "right_agents": [
+            "Astra",
+            "Jett",
+            "Skye",
+            "Sova",
+            "Chamber"
+          ],
           "pistols": {
             "left": 2,
             "right": 0
           },
           "sides": {
-            "left_atk": 0,
-            "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "left_atk": 3,
+            "left_def": 8,
+            "right_atk": 4,
+            "right_def": 9
           }
         },
         {
@@ -2726,17 +3019,27 @@
           "ls": 9,
           "rs": 13,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Sova",
+            "Omen",
+            "Astra",
+            "Yoru"
+          ],
+          "right_agents": [
+            "Astra",
+            "Sova",
+            "Yoru",
+            "Omen"
+          ],
           "pistols": {
             "left": 1,
             "right": 1
           },
           "sides": {
-            "left_atk": 0,
-            "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "left_atk": 4,
+            "left_def": 5,
+            "right_atk": 5,
+            "right_def": 8
           }
         }
       ],
@@ -2800,17 +3103,27 @@
           "ls": 13,
           "rs": 10,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Sova",
+            "Brimstone",
+            "Raze",
+            "Omen"
+          ],
+          "right_agents": [
+            "Omen",
+            "Fade",
+            "Viper",
+            "Yoru"
+          ],
           "pistols": {
             "left": 0,
             "right": 2
           },
           "sides": {
-            "left_atk": 0,
-            "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "left_atk": 5,
+            "left_def": 8,
+            "right_atk": 3,
+            "right_def": 7
           }
         },
         {
@@ -2818,17 +3131,28 @@
           "ls": 10,
           "rs": 13,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Viper",
+            "Skye",
+            "Chamber",
+            "Omen",
+            "Raze"
+          ],
+          "right_agents": [
+            "Skye",
+            "Viper",
+            "Raze",
+            "Omen"
+          ],
           "pistols": {
             "left": 0,
             "right": 2
           },
           "sides": {
-            "left_atk": 0,
-            "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "left_atk": 4,
+            "left_def": 6,
+            "right_atk": 5,
+            "right_def": 8
           }
         },
         {
@@ -2836,17 +3160,29 @@
           "ls": 5,
           "rs": 13,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Raze",
+            "Brimstone",
+            "Astra",
+            "Yoru",
+            "Skye"
+          ],
+          "right_agents": [
+            "Raze",
+            "Fade",
+            "Brimstone",
+            "Yoru",
+            "Viper"
+          ],
           "pistols": {
             "left": 2,
             "right": 0
           },
           "sides": {
-            "left_atk": 0,
-            "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "left_atk": 3,
+            "left_def": 2,
+            "right_atk": 4,
+            "right_def": 9
           }
         }
       ],
@@ -2910,17 +3246,29 @@
           "ls": 13,
           "rs": 7,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Jett",
+            "Sova",
+            "Astra",
+            "Viper",
+            "Yoru"
+          ],
+          "right_agents": [
+            "Sova",
+            "Astra",
+            "Yoru",
+            "Viper",
+            "Jett"
+          ],
           "pistols": {
             "left": 1,
             "right": 1
           },
           "sides": {
-            "left_atk": 0,
-            "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "left_atk": 7,
+            "left_def": 6,
+            "right_atk": 2,
+            "right_def": 5
           }
         },
         {
@@ -2928,17 +3276,27 @@
           "ls": 8,
           "rs": 13,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Raze",
+            "Viper",
+            "Skye",
+            "Astra"
+          ],
+          "right_agents": [
+            "Viper",
+            "Yoru",
+            "Brimstone",
+            "Fade"
+          ],
           "pistols": {
             "left": 0,
             "right": 2
           },
           "sides": {
-            "left_atk": 0,
-            "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "left_atk": 5,
+            "left_def": 3,
+            "right_atk": 6,
+            "right_def": 7
           }
         },
         {
@@ -2946,17 +3304,29 @@
           "ls": 9,
           "rs": 13,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Cypher",
+            "Yoru",
+            "Sova",
+            "Jett",
+            "Omen"
+          ],
+          "right_agents": [
+            "Omen",
+            "Viper",
+            "Killjoy",
+            "Sova",
+            "Neon"
+          ],
           "pistols": {
             "left": 1,
             "right": 1
           },
           "sides": {
-            "left_atk": 0,
-            "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "left_atk": 6,
+            "left_def": 3,
+            "right_atk": 7,
+            "right_def": 6
           }
         }
       ],
@@ -3020,17 +3390,28 @@
           "ls": 3,
           "rs": 13,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Jett",
+            "Viper",
+            "Sova",
+            "Astra",
+            "Yoru"
+          ],
+          "right_agents": [
+            "Omen",
+            "Yoru",
+            "Sova",
+            "Astra"
+          ],
           "pistols": {
             "left": 0,
             "right": 2
           },
           "sides": {
-            "left_atk": 0,
-            "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "left_atk": 2,
+            "left_def": 1,
+            "right_atk": 3,
+            "right_def": 10
           }
         },
         {
@@ -3038,17 +3419,27 @@
           "ls": 13,
           "rs": 9,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Neon",
+            "Sova",
+            "Killjoy",
+            "Yoru",
+            "Astra"
+          ],
+          "right_agents": [
+            "Yoru",
+            "Astra",
+            "Fade"
+          ],
           "pistols": {
             "left": 1,
             "right": 1
           },
           "sides": {
-            "left_atk": 0,
-            "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "left_atk": 7,
+            "left_def": 6,
+            "right_atk": 4,
+            "right_def": 5
           }
         },
         {
@@ -3056,17 +3447,28 @@
           "ls": 13,
           "rs": 8,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Raze",
+            "Fade",
+            "Omen",
+            "Viper",
+            "Yoru"
+          ],
+          "right_agents": [
+            "Yoru",
+            "Fade",
+            "Viper",
+            "Astra"
+          ],
           "pistols": {
             "left": 2,
             "right": 0
           },
           "sides": {
-            "left_atk": 0,
-            "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "left_atk": 7,
+            "left_def": 6,
+            "right_atk": 3,
+            "right_def": 5
           }
         }
       ],
@@ -3130,17 +3532,28 @@
           "ls": 8,
           "rs": 13,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Raze",
+            "Skye",
+            "Omen",
+            "Viper"
+          ],
+          "right_agents": [
+            "Raze",
+            "Yoru",
+            "Omen",
+            "Viper",
+            "Fade"
+          ],
           "pistols": {
             "left": 1,
             "right": 1
           },
           "sides": {
-            "left_atk": 0,
-            "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "left_atk": 5,
+            "left_def": 3,
+            "right_atk": 6,
+            "right_def": 7
           }
         },
         {
@@ -3148,17 +3561,28 @@
           "ls": 8,
           "rs": 13,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Viper",
+            "Raze",
+            "Yoru",
+            "Brimstone",
+            "Fade"
+          ],
+          "right_agents": [
+            "Brimstone",
+            "Yoru",
+            "Viper",
+            "Fade"
+          ],
           "pistols": {
             "left": 2,
             "right": 0
           },
           "sides": {
-            "left_atk": 0,
-            "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "left_atk": 4,
+            "left_def": 4,
+            "right_atk": 5,
+            "right_def": 8
           }
         }
       ],
@@ -3222,17 +3646,29 @@
           "ls": 7,
           "rs": 13,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Viper",
+            "Sova",
+            "Yoru",
+            "Omen",
+            "Killjoy"
+          ],
+          "right_agents": [
+            "Neon",
+            "Viper",
+            "Omen",
+            "Sova",
+            "Killjoy"
+          ],
           "pistols": {
             "left": 0,
             "right": 2
           },
           "sides": {
-            "left_atk": 0,
-            "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "left_atk": 5,
+            "left_def": 2,
+            "right_atk": 6,
+            "right_def": 7
           }
         },
         {
@@ -3240,17 +3676,27 @@
           "ls": 11,
           "rs": 13,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Chamber",
+            "Astra",
+            "Harbor",
+            "Sova",
+            "Yoru"
+          ],
+          "right_agents": [
+            "Sova",
+            "Astra",
+            "Breach"
+          ],
           "pistols": {
             "left": 2,
             "right": 0
           },
           "sides": {
-            "left_atk": 0,
-            "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "left_atk": 7,
+            "left_def": 4,
+            "right_atk": 8,
+            "right_def": 5
           }
         }
       ],
@@ -3314,17 +3760,28 @@
           "ls": 9,
           "rs": 13,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Omen",
+            "Viper",
+            "Iso",
+            "Yoru",
+            "Sova"
+          ],
+          "right_agents": [
+            "Yoru",
+            "Breach",
+            "Sova",
+            "Astra"
+          ],
           "pistols": {
             "left": 1,
             "right": 1
           },
           "sides": {
-            "left_atk": 0,
-            "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "left_atk": 2,
+            "left_def": 7,
+            "right_atk": 3,
+            "right_def": 10
           }
         },
         {
@@ -3332,17 +3789,27 @@
           "ls": 13,
           "rs": 10,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Omen",
+            "Yoru",
+            "Viper",
+            "Fade"
+          ],
+          "right_agents": [
+            "Yoru",
+            "Sova",
+            "Viper",
+            "Omen"
+          ],
           "pistols": {
             "left": 1,
             "right": 1
           },
           "sides": {
-            "left_atk": 0,
-            "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "left_atk": 7,
+            "left_def": 6,
+            "right_atk": 5,
+            "right_def": 5
           }
         },
         {
@@ -3350,17 +3817,27 @@
           "ls": 13,
           "rs": 9,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Yoru",
+            "Brimstone",
+            "Viper",
+            "Skye"
+          ],
+          "right_agents": [
+            "Viper",
+            "Brimstone",
+            "Fade",
+            "Yoru"
+          ],
           "pistols": {
             "left": 1,
             "right": 1
           },
           "sides": {
-            "left_atk": 0,
-            "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "left_atk": 7,
+            "left_def": 6,
+            "right_atk": 4,
+            "right_def": 5
           }
         }
       ],
@@ -3424,17 +3901,29 @@
           "ls": 13,
           "rs": 10,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Astra",
+            "Yoru",
+            "Killjoy",
+            "Neon",
+            "Fade"
+          ],
+          "right_agents": [
+            "Chamber",
+            "KAY/O",
+            "Astra",
+            "Fade",
+            "Neon"
+          ],
           "pistols": {
             "left": 0,
             "right": 2
           },
           "sides": {
-            "left_atk": 0,
-            "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "left_atk": 7,
+            "left_def": 6,
+            "right_atk": 5,
+            "right_def": 5
           }
         },
         {
@@ -3442,17 +3931,29 @@
           "ls": 8,
           "rs": 13,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Chamber",
+            "KAY/O",
+            "Jett",
+            "Sova",
+            "Viper"
+          ],
+          "right_agents": [
+            "Astra",
+            "Yoru",
+            "Jett",
+            "Sova",
+            "Viper"
+          ],
           "pistols": {
             "left": 0,
             "right": 2
           },
           "sides": {
-            "left_atk": 0,
-            "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "left_atk": 7,
+            "left_def": 1,
+            "right_atk": 8,
+            "right_def": 5
           }
         },
         {
@@ -3460,17 +3961,27 @@
           "ls": 5,
           "rs": 13,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Yoru",
+            "KAY/O",
+            "Sova",
+            "Chamber",
+            "Omen"
+          ],
+          "right_agents": [
+            "Omen",
+            "Astra",
+            "Sova"
+          ],
           "pistols": {
             "left": 0,
             "right": 2
           },
           "sides": {
-            "left_atk": 0,
-            "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "left_atk": 4,
+            "left_def": 1,
+            "right_atk": 5,
+            "right_def": 8
           }
         }
       ],
@@ -3534,17 +4045,27 @@
           "ls": 13,
           "rs": 9,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Chamber",
+            "Viper",
+            "Skye",
+            "Brimstone"
+          ],
+          "right_agents": [
+            "Viper",
+            "Yoru",
+            "Brimstone",
+            "Fade"
+          ],
           "pistols": {
             "left": 0,
             "right": 2
           },
           "sides": {
-            "left_atk": 0,
-            "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "left_atk": 9,
+            "left_def": 4,
+            "right_atk": 6,
+            "right_def": 3
           }
         },
         {
@@ -3552,17 +4073,26 @@
           "ls": 10,
           "rs": 13,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "KAY/O",
+            "Fade",
+            "Astra",
+            "Chamber"
+          ],
+          "right_agents": [
+            "Astra",
+            "KAY/O",
+            "Chamber"
+          ],
           "pistols": {
             "left": 0,
             "right": 2
           },
           "sides": {
-            "left_atk": 0,
-            "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "left_atk": 7,
+            "left_def": 3,
+            "right_atk": 8,
+            "right_def": 5
           }
         },
         {
@@ -3570,17 +4100,27 @@
           "ls": 13,
           "rs": 9,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Skye",
+            "Omen",
+            "Viper",
+            "Sage"
+          ],
+          "right_agents": [
+            "Yoru",
+            "Viper",
+            "Omen",
+            "Fade"
+          ],
           "pistols": {
             "left": 1,
             "right": 1
           },
           "sides": {
-            "left_atk": 0,
-            "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "left_atk": 6,
+            "left_def": 7,
+            "right_atk": 3,
+            "right_def": 6
           }
         }
       ],
@@ -3644,17 +4184,26 @@
           "ls": 13,
           "rs": 2,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Sova",
+            "Killjoy",
+            "Astra"
+          ],
+          "right_agents": [
+            "Astra",
+            "Chamber",
+            "KAY/O",
+            "Neon"
+          ],
           "pistols": {
             "left": 2,
             "right": 0
           },
           "sides": {
-            "left_atk": 0,
-            "left_def": 0,
+            "left_atk": 10,
+            "left_def": 3,
             "right_atk": 0,
-            "right_def": 0
+            "right_def": 2
           }
         },
         {
@@ -3662,17 +4211,29 @@
           "ls": 13,
           "rs": 9,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Neon",
+            "Viper",
+            "Yoru",
+            "Sova",
+            "Astra"
+          ],
+          "right_agents": [
+            "Viper",
+            "Neon",
+            "Yoru",
+            "Sova",
+            "Breach"
+          ],
           "pistols": {
             "left": 1,
             "right": 1
           },
           "sides": {
-            "left_atk": 0,
-            "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "left_atk": 10,
+            "left_def": 3,
+            "right_atk": 7,
+            "right_def": 2
           }
         }
       ],
@@ -3736,17 +4297,29 @@
           "ls": 13,
           "rs": 7,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Jett",
+            "KAY/O",
+            "Sova",
+            "Cypher",
+            "Astra"
+          ],
+          "right_agents": [
+            "Omen",
+            "Sova",
+            "Viper",
+            "Iso",
+            "Yoru"
+          ],
           "pistols": {
             "left": 1,
             "right": 1
           },
           "sides": {
-            "left_atk": 0,
-            "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "left_atk": 9,
+            "left_def": 4,
+            "right_atk": 4,
+            "right_def": 3
           }
         },
         {
@@ -3754,17 +4327,27 @@
           "ls": 13,
           "rs": 11,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Sova",
+            "Viper",
+            "Omen",
+            "KAY/O"
+          ],
+          "right_agents": [
+            "Viper",
+            "Omen",
+            "Yoru",
+            "Fade"
+          ],
           "pistols": {
             "left": 0,
             "right": 2
           },
           "sides": {
-            "left_atk": 0,
-            "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "left_atk": 10,
+            "left_def": 3,
+            "right_atk": 9,
+            "right_def": 2
           }
         }
       ],
@@ -3828,17 +4411,26 @@
           "ls": 5,
           "rs": 13,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Omen",
+            "Viper",
+            "Yoru"
+          ],
+          "right_agents": [
+            "Yoru",
+            "Fade",
+            "Omen",
+            "Viper"
+          ],
           "pistols": {
             "left": 1,
             "right": 1
           },
           "sides": {
-            "left_atk": 0,
-            "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "left_atk": 3,
+            "left_def": 2,
+            "right_atk": 4,
+            "right_def": 9
           }
         },
         {
@@ -3846,17 +4438,29 @@
           "ls": 11,
           "rs": 13,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Astra",
+            "Neon",
+            "Skye",
+            "Viper",
+            "Yoru"
+          ],
+          "right_agents": [
+            "Jett",
+            "Astra",
+            "Yoru",
+            "Viper",
+            "Sova"
+          ],
           "pistols": {
             "left": 2,
             "right": 0
           },
           "sides": {
-            "left_atk": 0,
-            "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "left_atk": 5,
+            "left_def": 6,
+            "right_atk": 6,
+            "right_def": 7
           }
         }
       ],
@@ -3920,17 +4524,27 @@
           "ls": 13,
           "rs": 11,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Chamber",
+            "Skye",
+            "Brimstone",
+            "Viper"
+          ],
+          "right_agents": [
+            "Chamber",
+            "Viper",
+            "Brimstone",
+            "Skye"
+          ],
           "pistols": {
             "left": 1,
             "right": 1
           },
           "sides": {
-            "left_atk": 0,
-            "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "left_atk": 8,
+            "left_def": 5,
+            "right_atk": 7,
+            "right_def": 4
           }
         },
         {
@@ -3938,17 +4552,26 @@
           "ls": 3,
           "rs": 13,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Fade",
+            "Omen",
+            "Viper",
+            "Yoru"
+          ],
+          "right_agents": [
+            "Fade",
+            "Sage",
+            "Omen"
+          ],
           "pistols": {
             "left": 0,
             "right": 2
           },
           "sides": {
-            "left_atk": 0,
-            "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "left_atk": 1,
+            "left_def": 2,
+            "right_atk": 2,
+            "right_def": 11
           }
         },
         {
@@ -3956,17 +4579,27 @@
           "ls": 13,
           "rs": 8,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Breach",
+            "Fade",
+            "Omen",
+            "Viper"
+          ],
+          "right_agents": [
+            "Omen",
+            "Viper",
+            "Skye",
+            "Sage"
+          ],
           "pistols": {
             "left": 2,
             "right": 0
           },
           "sides": {
-            "left_atk": 0,
-            "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "left_atk": 10,
+            "left_def": 3,
+            "right_atk": 6,
+            "right_def": 2
           }
         }
       ],
@@ -4030,17 +4663,27 @@
           "ls": 13,
           "rs": 6,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Sova",
+            "Omen",
+            "Viper"
+          ],
+          "right_agents": [
+            "Sova",
+            "KAY/O",
+            "Astra",
+            "Cypher",
+            "Jett"
+          ],
           "pistols": {
             "left": 1,
             "right": 1
           },
           "sides": {
-            "left_atk": 0,
-            "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "left_atk": 11,
+            "left_def": 2,
+            "right_atk": 5,
+            "right_def": 1
           }
         },
         {
@@ -4048,17 +4691,27 @@
           "ls": 11,
           "rs": 13,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Skye",
+            "Viper",
+            "Astra"
+          ],
+          "right_agents": [
+            "Yoru",
+            "Fade",
+            "Omen",
+            "Viper",
+            "Raze"
+          ],
           "pistols": {
             "left": 1,
             "right": 1
           },
           "sides": {
-            "left_atk": 0,
-            "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "left_atk": 7,
+            "left_def": 4,
+            "right_atk": 8,
+            "right_def": 5
           }
         },
         {
@@ -4066,17 +4719,29 @@
           "ls": 8,
           "rs": 13,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Sova",
+            "Yoru",
+            "Astra",
+            "Viper",
+            "Neon"
+          ],
+          "right_agents": [
+            "Yoru",
+            "Jett",
+            "Sova",
+            "Astra",
+            "Viper"
+          ],
           "pistols": {
             "left": 1,
             "right": 1
           },
           "sides": {
-            "left_atk": 0,
-            "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "left_atk": 3,
+            "left_def": 5,
+            "right_atk": 4,
+            "right_def": 9
           }
         }
       ],
@@ -4140,17 +4805,26 @@
           "ls": 13,
           "rs": 7,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Astra",
+            "Sova",
+            "Omen"
+          ],
+          "right_agents": [
+            "Yoru",
+            "Breach",
+            "Astra",
+            "Jett"
+          ],
           "pistols": {
             "left": 2,
             "right": 0
           },
           "sides": {
-            "left_atk": 0,
-            "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "left_atk": 8,
+            "left_def": 5,
+            "right_atk": 3,
+            "right_def": 4
           }
         },
         {
@@ -4158,17 +4832,27 @@
           "ls": 6,
           "rs": 13,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Fade",
+            "Yoru",
+            "Viper",
+            "Astra"
+          ],
+          "right_agents": [
+            "Brimstone",
+            "Skye",
+            "Viper",
+            "Chamber"
+          ],
           "pistols": {
             "left": 0,
             "right": 2
           },
           "sides": {
-            "left_atk": 0,
-            "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "left_atk": 5,
+            "left_def": 1,
+            "right_atk": 6,
+            "right_def": 7
           }
         },
         {
@@ -4176,17 +4860,27 @@
           "ls": 13,
           "rs": 3,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Fade",
+            "Omen",
+            "Yoru",
+            "Viper"
+          ],
+          "right_agents": [
+            "Omen",
+            "Breach",
+            "Fade",
+            "Viper"
+          ],
           "pistols": {
             "left": 2,
             "right": 0
           },
           "sides": {
-            "left_atk": 0,
-            "left_def": 0,
+            "left_atk": 9,
+            "left_def": 4,
             "right_atk": 0,
-            "right_def": 0
+            "right_def": 3
           }
         }
       ],
@@ -4250,35 +4944,29 @@
           "ls": 13,
           "rs": 11,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Astra",
+            "Jett",
+            "KAY/O",
+            "Viper",
+            "Sova"
+          ],
+          "right_agents": [
+            "Astra",
+            "Jett",
+            "Sova",
+            "Viper",
+            "KAY/O"
+          ],
           "pistols": {
             "left": 2,
             "right": 0
           },
           "sides": {
-            "left_atk": 0,
-            "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
-          }
-        },
-        {
-          "map": "Bind",
-          "ls": 6,
-          "rs": 13,
-          "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
-          "pistols": {
-            "left": 1,
-            "right": 1
-          },
-          "sides": {
-            "left_atk": 0,
-            "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "left_atk": 7,
+            "left_def": 6,
+            "right_atk": 6,
+            "right_def": 5
           }
         },
         {
@@ -4286,17 +4974,55 @@
           "ls": 2,
           "rs": 13,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Killjoy",
+            "Astra",
+            "Yoru",
+            "Fade"
+          ],
+          "right_agents": [
+            "Astra",
+            "KAY/O",
+            "Chamber",
+            "Fade"
+          ],
           "pistols": {
             "left": 1,
             "right": 1
           },
           "sides": {
-            "left_atk": 0,
+            "left_atk": 2,
             "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "right_atk": 3,
+            "right_def": 10
+          }
+        },
+        {
+          "map": "Bind",
+          "ls": 6,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [
+            "Viper",
+            "Yoru",
+            "Fade",
+            "Brimstone"
+          ],
+          "right_agents": [
+            "Viper",
+            "Chamber",
+            "Skye",
+            "Brimstone"
+          ],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 3,
+            "left_def": 3,
+            "right_atk": 4,
+            "right_def": 9
           }
         }
       ],
@@ -4360,17 +5086,26 @@
           "ls": 8,
           "rs": 13,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Breach",
+            "Sova",
+            "Yoru",
+            "Astra"
+          ],
+          "right_agents": [
+            "Yoru",
+            "Breach",
+            "Astra"
+          ],
           "pistols": {
             "left": 1,
             "right": 1
           },
           "sides": {
-            "left_atk": 0,
-            "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "left_atk": 3,
+            "left_def": 5,
+            "right_atk": 4,
+            "right_def": 9
           }
         },
         {
@@ -4378,17 +5113,27 @@
           "ls": 11,
           "rs": 13,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Killjoy",
+            "Astra",
+            "Sova",
+            "Yoru"
+          ],
+          "right_agents": [
+            "Astra",
+            "Yoru",
+            "Sova",
+            "Killjoy"
+          ],
           "pistols": {
             "left": 2,
             "right": 0
           },
           "sides": {
-            "left_atk": 0,
-            "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "left_atk": 7,
+            "left_def": 4,
+            "right_atk": 8,
+            "right_def": 5
           }
         }
       ],
@@ -4452,17 +5197,27 @@
           "ls": 13,
           "rs": 9,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Yoru",
+            "Brimstone",
+            "Astra",
+            "Sova"
+          ],
+          "right_agents": [
+            "Sova",
+            "Astra",
+            "Viper",
+            "Yoru"
+          ],
           "pistols": {
             "left": 1,
             "right": 1
           },
           "sides": {
-            "left_atk": 0,
-            "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "left_atk": 8,
+            "left_def": 5,
+            "right_atk": 5,
+            "right_def": 4
           }
         },
         {
@@ -4470,17 +5225,29 @@
           "ls": 5,
           "rs": 13,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Yoru",
+            "Astra",
+            "Killjoy",
+            "Fade",
+            "Neon"
+          ],
+          "right_agents": [
+            "Astra",
+            "Yoru",
+            "Sova",
+            "Killjoy",
+            "Neon"
+          ],
           "pistols": {
             "left": 1,
             "right": 1
           },
           "sides": {
-            "left_atk": 0,
-            "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "left_atk": 1,
+            "left_def": 4,
+            "right_atk": 2,
+            "right_def": 11
           }
         },
         {
@@ -4488,17 +5255,29 @@
           "ls": 9,
           "rs": 13,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Astra",
+            "Sova",
+            "Neon",
+            "Yoru",
+            "Viper"
+          ],
+          "right_agents": [
+            "Astra",
+            "Jett",
+            "Viper",
+            "Yoru",
+            "Sova"
+          ],
           "pistols": {
             "left": 1,
             "right": 1
           },
           "sides": {
-            "left_atk": 0,
-            "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "left_atk": 7,
+            "left_def": 2,
+            "right_atk": 8,
+            "right_def": 5
           }
         }
       ],
@@ -4562,17 +5341,26 @@
           "ls": 3,
           "rs": 13,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Chamber",
+            "KAY/O",
+            "Astra"
+          ],
+          "right_agents": [
+            "Chamber",
+            "Astra",
+            "KAY/O",
+            "Neon"
+          ],
           "pistols": {
             "left": 2,
             "right": 0
           },
           "sides": {
-            "left_atk": 0,
-            "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "left_atk": 2,
+            "left_def": 1,
+            "right_atk": 3,
+            "right_def": 10
           }
         },
         {
@@ -4580,17 +5368,28 @@
           "ls": 8,
           "rs": 13,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Fade",
+            "Omen",
+            "Yoru",
+            "Viper"
+          ],
+          "right_agents": [
+            "Skye",
+            "Viper",
+            "Chamber",
+            "Raze",
+            "Omen"
+          ],
           "pistols": {
             "left": 1,
             "right": 1
           },
           "sides": {
-            "left_atk": 0,
-            "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "left_atk": 5,
+            "left_def": 3,
+            "right_atk": 6,
+            "right_def": 7
           }
         }
       ],
@@ -4654,17 +5453,25 @@
           "ls": 13,
           "rs": 11,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Omen",
+            "Sage",
+            "Fade"
+          ],
+          "right_agents": [
+            "Fade",
+            "Viper",
+            "Omen"
+          ],
           "pistols": {
             "left": 1,
             "right": 1
           },
           "sides": {
-            "left_atk": 0,
-            "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "left_atk": 5,
+            "left_def": 8,
+            "right_atk": 4,
+            "right_def": 7
           }
         },
         {
@@ -4672,17 +5479,27 @@
           "ls": 16,
           "rs": 14,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Viper",
+            "Omen",
+            "Skye",
+            "Sage"
+          ],
+          "right_agents": [
+            "Yoru",
+            "Omen",
+            "Viper",
+            "Fade"
+          ],
           "pistols": {
             "left": 0,
             "right": 2
           },
           "sides": {
-            "left_atk": 0,
-            "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "left_atk": 8,
+            "left_def": 8,
+            "right_atk": 10,
+            "right_def": 4
           }
         }
       ],
@@ -5426,17 +6243,27 @@
           "ls": 13,
           "rs": 7,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Yoru",
+            "Breach",
+            "Astra",
+            "Sova"
+          ],
+          "right_agents": [
+            "KAY/O",
+            "Sova",
+            "Omen",
+            "Astra"
+          ],
           "pistols": {
             "left": 2,
             "right": 0
           },
           "sides": {
-            "left_atk": 0,
-            "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "left_atk": 6,
+            "left_def": 7,
+            "right_atk": 1,
+            "right_def": 6
           }
         },
         {
@@ -5444,17 +6271,29 @@
           "ls": 11,
           "rs": 13,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Killjoy",
+            "Viper",
+            "Neon",
+            "Sova",
+            "Omen"
+          ],
+          "right_agents": [
+            "Omen",
+            "Neon",
+            "Viper",
+            "Killjoy",
+            "Sova"
+          ],
           "pistols": {
             "left": 1,
             "right": 1
           },
           "sides": {
-            "left_atk": 0,
-            "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "left_atk": 5,
+            "left_def": 6,
+            "right_atk": 6,
+            "right_def": 7
           }
         },
         {
@@ -5462,17 +6301,28 @@
           "ls": 5,
           "rs": 13,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Raze",
+            "Fade",
+            "Brimstone",
+            "Viper",
+            "Yoru"
+          ],
+          "right_agents": [
+            "Viper",
+            "Brimstone",
+            "Chamber",
+            "Skye"
+          ],
           "pistols": {
             "left": 2,
             "right": 0
           },
           "sides": {
-            "left_atk": 0,
-            "left_def": 0,
-            "right_atk": 0,
-            "right_def": 0
+            "left_atk": 4,
+            "left_def": 1,
+            "right_atk": 5,
+            "right_def": 8
           }
         }
       ],
