@@ -402,6 +402,10 @@ with tab_leaderboard:
     for team in all_teams:
         team_matches = [m for m in filtered_matches if m.get("left") == team or m.get("right") == team]
         
+        # Skip teams with no matches
+        if len(team_matches) == 0:
+            continue
+        
         # Match stats
         wins = sum(1 for m in team_matches if m.get("winner") == team)
         losses = len(team_matches) - wins
