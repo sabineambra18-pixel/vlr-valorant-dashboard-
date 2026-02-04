@@ -81,9 +81,9 @@ REGION_TEAMS = {
     "Global Esports", "Gen.G"
   ],
   "China": [
-    "Edward Gaming", "FunPlus Phoenix", "Trace Esports", "Bilibili Gaming", 
+    "EDward Gaming", "FunPlus Phoenix", "Trace Esports", "Bilibili Gaming", 
     "Wolves Esports", "TYLOO", "All Gamers", "JDG Esports", 
-    "Titan Esports Club", "Dragon Ranger Gaming", "XLG Esports", "Nova Esports"
+    "Titan Esports Club", "Dragon Ranger Gaming", "Xi Lai Gaming", "Nova Esports"
   ]
 }
 
@@ -394,15 +394,13 @@ with tab_leaderboard:
     st.header("🏆 Team Rankings")
     
     st.markdown("""
-    Click column headers to sort. Teams with fewer than 3 matches are excluded.
+    Click column headers to sort.
     """)
     
     # Build leaderboard data
     leaderboard_data = []
     for team in all_teams:
         team_matches = [m for m in filtered_matches if m.get("left") == team or m.get("right") == team]
-        if len(team_matches) < 3:
-            continue
         
         # Match stats
         wins = sum(1 for m in team_matches if m.get("winner") == team)
