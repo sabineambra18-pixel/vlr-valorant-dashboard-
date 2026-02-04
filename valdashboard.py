@@ -375,10 +375,10 @@ with tab_home:
         winner = match.get("winner", "")
         date = match.get("date", "N/A")
         
-        # Get match result from result field
-        result = match.get("result", {})
-        left_wins = result.get("left_wins", 0)
-        right_wins = result.get("right_wins", 0)
+        # Calculate scores from played maps
+        played_maps = match.get("played", [])
+        left_wins = sum(1 for m in played_maps if m.get("ls", 0) > m.get("rs", 0))
+        right_wins = sum(1 for m in played_maps if m.get("rs", 0) > m.get("ls", 0))
         
         st.markdown(f"""
         <div class='card'>
