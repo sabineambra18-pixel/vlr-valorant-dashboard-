@@ -282,8 +282,10 @@ if not all_teams or not matches_raw:
 st.title("⚔️ Valorant Team Analysis Dashboard")
 
 # Create tabs - Home and Leaderboard first, then existing tabs
-tab_home, tab_leaderboard, tab_overview, tab_history, tab_h2h, tab_deep_dive, tab_comparison = st.tabs([
-    "🏠 Home", "🏆 Leaderboard", "📊 Overview", "📜 History", "⚔️ Head-to-Head", "🗺️ Map Deep Dive", "🔄 Comparison"
+
+# Create tabs with Home and Leaderboard
+tab_home, tab_leaderboard, tab_overview, tab_history, tab_h2h, tab_map, tab_comp = st.tabs([
+    "🏠 Home", "🏆 Leaderboard", "📊 Overview", "📜 History", "⚔️ Head-to-Head", "🗺️ Map Deep Dive", "📈 Comparison"
 ])
 
 # Sidebar filters
@@ -344,12 +346,6 @@ t2_stats, _ = get_team_stats(team2, team2_matches)
 # Tabs
 
 # Create tabs with new Home and Leaderboard
-tab_home, tab_leaderboard, tab_overview, tab_history, tab_h2h, tab_map, tab_comp = st.tabs([
-    "🏠 Home", "🏆 Leaderboard", "📊 Overview", "📜 History", "⚔️ Head-to-Head", "🗺️ Map Deep Dive", "📈 Comparison"
-])
-
-# Insert this after line ~340 (after stats are computed but before existing tabs)
-
 # ========== HOME TAB ==========
 with tab_home:
     st.header("🏠 Tournament Overview")
@@ -370,37 +366,6 @@ with tab_home:
     
     st.markdown("---")
     
-    # Top 5 Teams by Win Rate
-    st.subheader("🏆 Top 5 Teams by Win Rate")
-    
-    team_records = []
-    for team in all_teams:
-        team_matches = [m for m in filtered_matches if m.get("left") == team or m.get("right") == team]
-        if len(team_matches) < 3:  # Skip teams with <3 matches
-            continue
-        
-        wins = sum(1 for m in team_matches if m.get("winner") == team)
-        losses = len(team_matches) - wins
-        win_rate = (wins / len(team_matches) * 100) if team_matches else 0
-        
-        team_records.append({
-            "Team": team,
-            "Matches": len(team_matches),
-            "Wins": wins,
-            "Losses": losses,
-            "Win Rate": win_rate
-        })
-    
-    team_records.sort(key=lambda x: x["Win Rate"], reverse=True)
-    top_5 = team_records[:5]
-    
-    if top_5:
-        df_top = pd.DataFrame(top_5)
-        df_top["Win Rate"] = df_top["Win Rate"].apply(lambda x: f"{x:.1f}%")
-        st.dataframe(df_top, use_container_width=True, hide_index=True)
-    
-    st.markdown("---")
-    
     # Recent Matches
     st.subheader("📅 Recent Matches")
     recent = sorted(filtered_matches, key=lambda m: m.get("date", ""), reverse=True)[:10]
@@ -409,19 +374,18 @@ with tab_home:
         left, right = match.get("left", ""), match.get("right", "")
         winner = match.get("winner", "")
         date = match.get("date", "N/A")
-        maps_played = len(match.get("maps", []))
         
-        left_wins = sum(1 for mp in match.get("maps", []) if mp.get("ls", 0) > mp.get("rs", 0))
-        right_wins = sum(1 for mp in match.get("maps", []) if mp.get("rs", 0) > mp.get("ls", 0))
+        # Get match result from result field
+        result = match.get("result", {})
+        left_wins = result.get("left_wins", 0)
+        right_wins = result.get("right_wins", 0)
         
-        winner_class = "win" if winner else ""
         st.markdown(f"""
         <div class='card'>
             <strong>{date}</strong><br/>
             <span class='{"win" if winner == left else "loss"}'>{left}</span> 
             <strong>{left_wins}</strong> - <strong>{right_wins}</strong> 
             <span class='{"win" if winner == right else "loss"}'>{right}</span>
-            <br/><small>{maps_played} maps</small>
         </div>
         """, unsafe_allow_html=True)
 
