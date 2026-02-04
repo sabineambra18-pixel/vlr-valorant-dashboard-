@@ -281,13 +281,26 @@ if not all_teams or not matches_raw:
 
 st.title("⚔️ Valorant Team Analysis Dashboard")
 
+# Create tabs - Home and Leaderboard first, then existing tabs
+tab_home, tab_leaderboard, tab_overview, tab_history, tab_h2h, tab_deep_dive, tab_comparison = st.tabs([
+    "🏠 Home", "🏆 Leaderboard", "📊 Overview", "📜 History", "⚔️ Head-to-Head", "🗺️ Map Deep Dive", "🔄 Comparison"
+])
+
 # Sidebar filters
 with st.sidebar:
     st.header("🔍 Filters")
+    
+    # Search box for quick team finding
+    search_term = st.text_input("🔎 Search Teams", placeholder="Type team name...")
+    
     region = st.selectbox("Region", ["All Regions"] + list(REGION_TEAMS.keys()))
     
     # Filter teams by region
     region_filtered_teams = [t for t in all_teams if is_team_in_region(t, region)]
+    
+    # Further filter by search term
+    if search_term:
+        region_filtered_teams = [t for t in region_filtered_teams if search_term.lower() in t.lower()]
     
     team1 = st.selectbox("Team 1", region_filtered_teams, key="t1")
     team2 = st.selectbox("Team 2", region_filtered_teams, key="t2", index=min(1, len(region_filtered_teams)-1))
@@ -329,9 +342,176 @@ t1_stats, _ = get_team_stats(team1, team1_matches)
 t2_stats, _ = get_team_stats(team2, team2_matches)
 
 # Tabs
-tab_overview, tab_history, tab_h2h, tab_map, tab_comp = st.tabs(["📊 Overview", "📜 History", "⚔️ Head-to-Head", "🗺️ Map Deep Dive", "📈 Comparison"])
 
-with tab_overview:
+# Create tabs with new Home and Leaderboard
+tab_home, tab_leaderboard, tab_overview, tab_history, tab_h2h, tab_map, tab_comp = st.tabs([
+    "🏠 Home", "🏆 Leaderboard", "📊 Overview", "📜 History", "⚔️ Head-to-Head", "🗺️ Map Deep Dive", "📈 Comparison"
+])
+
+# Insert this after line ~340 (after stats are computed but before existing tabs)
+
+# ========== HOME TAB ==========
+with tab_home:
+    st.header("🏠 Tournament Overview")
+    
+    col1, col2, col3, col4 = st.columns(4)
+    
+    with col1:
+        st.metric("Total Teams", len(all_teams))
+    with col2:
+        st.metric("Total Matches", len(filtered_matches))
+    with col3:
+        total_maps = sum(len(m.get("maps", [])) for m in filtered_matches)
+        st.metric("Maps Played", total_maps)
+    with col4:
+        regions_represented = len(set(r for r in REGION_TEAMS.keys() 
+                                      if any(is_team_in_region(t, r) for t in all_teams)))
+        st.metric("Regions", regions_represented)
+    
+    st.markdown("---")
+    
+    # Top 5 Teams by Win Rate
+    st.subheader("🏆 Top 5 Teams by Win Rate")
+    
+    team_records = []
+    for team in all_teams:
+        team_matches = [m for m in filtered_matches if m.get("left") == team or m.get("right") == team]
+        if len(team_matches) < 3:  # Skip teams with <3 matches
+            continue
+        
+        wins = sum(1 for m in team_matches if m.get("winner") == team)
+        losses = len(team_matches) - wins
+        win_rate = (wins / len(team_matches) * 100) if team_matches else 0
+        
+        team_records.append({
+            "Team": team,
+            "Matches": len(team_matches),
+            "Wins": wins,
+            "Losses": losses,
+            "Win Rate": win_rate
+        })
+    
+    team_records.sort(key=lambda x: x["Win Rate"], reverse=True)
+    top_5 = team_records[:5]
+    
+    if top_5:
+        df_top = pd.DataFrame(top_5)
+        df_top["Win Rate"] = df_top["Win Rate"].apply(lambda x: f"{x:.1f}%")
+        st.dataframe(df_top, use_container_width=True, hide_index=True)
+    
+    st.markdown("---")
+    
+    # Recent Matches
+    st.subheader("📅 Recent Matches")
+    recent = sorted(filtered_matches, key=lambda m: m.get("date", ""), reverse=True)[:10]
+    
+    for match in recent:
+        left, right = match.get("left", ""), match.get("right", "")
+        winner = match.get("winner", "")
+        date = match.get("date", "N/A")
+        maps_played = len(match.get("maps", []))
+        
+        left_wins = sum(1 for mp in match.get("maps", []) if mp.get("ls", 0) > mp.get("rs", 0))
+        right_wins = sum(1 for mp in match.get("maps", []) if mp.get("rs", 0) > mp.get("ls", 0))
+        
+        winner_class = "win" if winner else ""
+        st.markdown(f"""
+        <div class='card'>
+            <strong>{date}</strong><br/>
+            <span class='{"win" if winner == left else "loss"}'>{left}</span> 
+            <strong>{left_wins}</strong> - <strong>{right_wins}</strong> 
+            <span class='{"win" if winner == right else "loss"}'>{right}</span>
+            <br/><small>{maps_played} maps</small>
+        </div>
+        """, unsafe_allow_html=True)
+
+# ========== LEADERBOARD TAB ==========
+with tab_leaderboard:
+    st.header("🏆 Team Rankings")
+    
+    st.markdown("""
+    Click column headers to sort. Teams with fewer than 3 matches are excluded.
+    """)
+    
+    # Build leaderboard data
+    leaderboard_data = []
+    for team in all_teams:
+        team_matches = [m for m in filtered_matches if m.get("left") == team or m.get("right") == team]
+        if len(team_matches) < 3:
+            continue
+        
+        # Match stats
+        wins = sum(1 for m in team_matches if m.get("winner") == team)
+        losses = len(team_matches) - wins
+        win_rate = (wins / len(team_matches) * 100) if team_matches else 0
+        
+        # Map stats
+        map_wins, map_losses = 0, 0
+        pistol_wins, pistol_total = 0, 0
+        
+        for match in team_matches:
+            is_left = match.get("left") == team
+            for mp in match.get("maps", []):
+                left_score = mp.get("ls", 0)
+                right_score = mp.get("rs", 0)
+                
+                if is_left:
+                    if left_score > right_score:
+                        map_wins += 1
+                    else:
+                        map_losses += 1
+                    pistol_wins += mp.get("pistols", {}).get("left", 0)
+                    pistol_total += 2
+                else:
+                    if right_score > left_score:
+                        map_wins += 1
+                    else:
+                        map_losses += 1
+                    pistol_wins += mp.get("pistols", {}).get("right", 0)
+                    pistol_total += 2
+        
+        map_win_rate = (map_wins / (map_wins + map_losses) * 100) if (map_wins + map_losses) > 0 else 0
+        pistol_rate = (pistol_wins / pistol_total * 100) if pistol_total > 0 else 0
+        
+        leaderboard_data.append({
+            "Team": team,
+            "Matches": len(team_matches),
+            "W-L": f"{wins}-{losses}",
+            "Win %": win_rate,
+            "Map W-L": f"{map_wins}-{map_losses}",
+            "Map Win %": map_win_rate,
+            "Pistol %": pistol_rate
+        })
+    
+    # Sort by win rate
+    leaderboard_data.sort(key=lambda x: x["Win %"], reverse=True)
+    
+    # Add rank
+    for i, row in enumerate(leaderboard_data, 1):
+        row["Rank"] = i
+    
+    # Reorder columns
+    df_leaderboard = pd.DataFrame(leaderboard_data)
+    df_leaderboard = df_leaderboard[["Rank", "Team", "Matches", "W-L", "Win %", "Map W-L", "Map Win %", "Pistol %"]]
+    
+    # Format percentages
+    df_leaderboard["Win %"] = df_leaderboard["Win %"].apply(lambda x: f"{x:.1f}%")
+    df_leaderboard["Map Win %"] = df_leaderboard["Map Win %"].apply(lambda x: f"{x:.1f}%")
+    df_leaderboard["Pistol %"] = df_leaderboard["Pistol %"].apply(lambda x: f"{x:.1f}%")
+    
+    st.dataframe(df_leaderboard, use_container_width=True, hide_index=True, height=600)
+    
+    # Download button
+    csv = df_leaderboard.to_csv(index=False)
+    st.download_button(
+        label="📥 Download as CSV",
+        data=csv,
+        file_name="valorant_leaderboard.csv",
+        mime="text/csv"
+    )
+
+
+
     col_left, col_right = st.columns(2)
     
     def render_team_overview(col, team_name, stats, color):
