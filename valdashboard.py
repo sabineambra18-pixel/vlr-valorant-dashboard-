@@ -415,7 +415,7 @@ with tab_leaderboard:
         
         for match in team_matches:
             is_left = match.get("left") == team
-            for mp in match.get("maps", []):
+            for mp in match.get("played", []):
                 left_score = mp.get("ls", 0)
                 right_score = mp.get("rs", 0)
                 
