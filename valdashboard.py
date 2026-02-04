@@ -412,6 +412,7 @@ with tab_leaderboard:
         # Map stats
         map_wins, map_losses = 0, 0
         pistol_wins, pistol_total = 0, 0
+        round_wins, round_losses = 0, 0
         
         for match in team_matches:
             is_left = match.get("left") == team
@@ -420,22 +421,33 @@ with tab_leaderboard:
                 right_score = mp.get("rs", 0)
                 
                 if is_left:
+                    # Map wins/losses
                     if left_score > right_score:
                         map_wins += 1
                     else:
                         map_losses += 1
+                    # Pistol rounds
                     pistol_wins += mp.get("pistols", {}).get("left", 0)
                     pistol_total += 2
+                    # Individual rounds
+                    round_wins += left_score
+                    round_losses += right_score
                 else:
+                    # Map wins/losses
                     if right_score > left_score:
                         map_wins += 1
                     else:
                         map_losses += 1
+                    # Pistol rounds
                     pistol_wins += mp.get("pistols", {}).get("right", 0)
                     pistol_total += 2
+                    # Individual rounds
+                    round_wins += right_score
+                    round_losses += left_score
         
         map_win_rate = (map_wins / (map_wins + map_losses) * 100) if (map_wins + map_losses) > 0 else 0
         pistol_rate = (pistol_wins / pistol_total * 100) if pistol_total > 0 else 0
+        round_rate = (round_wins / (round_wins + round_losses) * 100) if (round_wins + round_losses) > 0 else 0
         
         leaderboard_data.append({
             "Team": team,
@@ -444,6 +456,9 @@ with tab_leaderboard:
             "Win %": win_rate,
             "Map W-L": f"{map_wins}-{map_losses}",
             "Map Win %": map_win_rate,
+            "Round W-L": f"{round_wins}-{round_losses}",
+            "Round %": round_rate,
+            "Pistol W-L": f"{pistol_wins}-{pistol_total - pistol_wins}",
             "Pistol %": pistol_rate
         })
     
@@ -456,11 +471,12 @@ with tab_leaderboard:
     
     # Reorder columns
     df_leaderboard = pd.DataFrame(leaderboard_data)
-    df_leaderboard = df_leaderboard[["Rank", "Team", "Matches", "W-L", "Win %", "Map W-L", "Map Win %", "Pistol %"]]
+    df_leaderboard = df_leaderboard[["Rank", "Team", "Matches", "W-L", "Win %", "Map W-L", "Map Win %", "Round W-L", "Round %", "Pistol W-L", "Pistol %"]]
     
     # Format percentages
     df_leaderboard["Win %"] = df_leaderboard["Win %"].apply(lambda x: f"{x:.1f}%")
     df_leaderboard["Map Win %"] = df_leaderboard["Map Win %"].apply(lambda x: f"{x:.1f}%")
+    df_leaderboard["Round %"] = df_leaderboard["Round %"].apply(lambda x: f"{x:.1f}%")
     df_leaderboard["Pistol %"] = df_leaderboard["Pistol %"].apply(lambda x: f"{x:.1f}%")
     
     st.dataframe(df_leaderboard, use_container_width=True, hide_index=True, height=600)
