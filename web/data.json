@@ -5737,18 +5737,6 @@
       }
     },
     {
-      "id": 596408,
-      "date": "2026-02-13",
-      "left": "MIBR",
-      "right": "FURIA",
-      "winner": null,
-      "played": [],
-      "veto": {
-        "events": [],
-        "decider": null
-      }
-    },
-    {
       "id": 596409,
       "date": "2026-01-23",
       "left": "LOUD",
