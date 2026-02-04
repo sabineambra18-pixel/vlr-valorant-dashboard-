@@ -1631,6 +1631,148 @@
       }
     },
     {
+      "id": 594761,
+      "date": "2026-02-03",
+      "left": "Karmine Corp",
+      "right": "FUT Esports",
+      "winner": "Karmine Corp",
+      "played": [
+        {
+          "map": "Haven",
+          "ls": 14,
+          "rs": 12,
+          "picked_by": null,
+          "left_agents": [
+            "Omen",
+            "Phoenix",
+            "Yoru",
+            "Sova",
+            "Cypher"
+          ],
+          "right_agents": [
+            "Viper",
+            "Fade",
+            "Omen",
+            "Killjoy"
+          ],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 7,
+            "left_def": 7,
+            "right_atk": 7,
+            "right_def": 5
+          }
+        },
+        {
+          "map": "Split",
+          "ls": 8,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [
+            "Astra",
+            "Skye",
+            "Tejo",
+            "Viper"
+          ],
+          "right_agents": [
+            "Astra",
+            "Fade",
+            "Viper",
+            "Neon"
+          ],
+          "pistols": {
+            "left": 0,
+            "right": 2
+          },
+          "sides": {
+            "left_atk": 5,
+            "left_def": 3,
+            "right_atk": 6,
+            "right_def": 7
+          }
+        },
+        {
+          "map": "Pearl",
+          "ls": 13,
+          "rs": 7,
+          "picked_by": null,
+          "left_agents": [
+            "Astra",
+            "Yoru",
+            "Tejo",
+            "Fade",
+            "Killjoy"
+          ],
+          "right_agents": [
+            "Fade",
+            "Chamber",
+            "Astra",
+            "Tejo"
+          ],
+          "pistols": {
+            "left": 2,
+            "right": 0
+          },
+          "sides": {
+            "left_atk": 7,
+            "left_def": 6,
+            "right_atk": 2,
+            "right_def": 5
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "FUT Esports",
+            "map": "Corrode"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "FUT Esports",
+            "map": "Abyss"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "FUT Esports",
+            "map": "Haven"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "FUT Esports",
+            "map": "Split"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "FUT Esports",
+            "map": "Breeze"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "FUT Esports",
+            "map": "Bind"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Pearl"
+          }
+        ],
+        "decider": "Pearl"
+      }
+    },
+    {
       "id": 595630,
       "date": "2026-01-22",
       "left": "Nongshim RedForce",
@@ -7661,6 +7803,151 @@
       }
     },
     {
+      "id": 598938,
+      "date": "2026-02-03",
+      "left": "Dragon Ranger Gaming",
+      "right": "TYLOO",
+      "winner": "Dragon Ranger Gaming",
+      "played": [
+        {
+          "map": "Corrode",
+          "ls": 10,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [
+            "Cypher",
+            "Yoru",
+            "Neon",
+            "Omen",
+            "Gekko"
+          ],
+          "right_agents": [
+            "Viper",
+            "Yoru",
+            "Omen",
+            "Neon",
+            "Fade"
+          ],
+          "pistols": {
+            "left": 2,
+            "right": 0
+          },
+          "sides": {
+            "left_atk": 8,
+            "left_def": 2,
+            "right_atk": 9,
+            "right_def": 4
+          }
+        },
+        {
+          "map": "Split",
+          "ls": 13,
+          "rs": 6,
+          "picked_by": null,
+          "left_agents": [
+            "Fade",
+            "Cypher",
+            "Yoru",
+            "Neon",
+            "Omen"
+          ],
+          "right_agents": [
+            "Viper",
+            "Omen",
+            "Yoru",
+            "Fade"
+          ],
+          "pistols": {
+            "left": 2,
+            "right": 0
+          },
+          "sides": {
+            "left_atk": 9,
+            "left_def": 4,
+            "right_atk": 3,
+            "right_def": 3
+          }
+        },
+        {
+          "map": "Pearl",
+          "ls": 13,
+          "rs": 6,
+          "picked_by": null,
+          "left_agents": [
+            "Astra",
+            "Vyse",
+            "Tejo",
+            "Phoenix",
+            "Neon"
+          ],
+          "right_agents": [
+            "Astra",
+            "Yoru",
+            "Neon",
+            "Sova",
+            "Killjoy"
+          ],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 7,
+            "left_def": 6,
+            "right_atk": 1,
+            "right_def": 5
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "TYLOO",
+            "map": "Haven"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "TYLOO",
+            "map": "Abyss"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "TYLOO",
+            "map": "Corrode"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "TYLOO",
+            "map": "Split"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "TYLOO",
+            "map": "Bind"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "TYLOO",
+            "map": "Breeze"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Pearl"
+          }
+        ],
+        "decider": "Pearl"
+      }
+    },
+    {
       "id": 598942,
       "date": "2026-01-31",
       "left": "Nova Esports",
@@ -7878,6 +8165,148 @@
           }
         ],
         "decider": "Haven"
+      }
+    },
+    {
+      "id": 598944,
+      "date": "2026-02-03",
+      "left": "Trace Esports",
+      "right": "Wolves Esports",
+      "winner": "Trace Esports",
+      "played": [
+        {
+          "map": "Abyss",
+          "ls": 12,
+          "rs": 14,
+          "picked_by": null,
+          "left_agents": [
+            "Sova",
+            "Breach",
+            "Yoru",
+            "Astra"
+          ],
+          "right_agents": [
+            "Sova",
+            "Veto",
+            "Yoru",
+            "Astra"
+          ],
+          "pistols": {
+            "left": 2,
+            "right": 0
+          },
+          "sides": {
+            "left_atk": 5,
+            "left_def": 7,
+            "right_atk": 7,
+            "right_def": 7
+          }
+        },
+        {
+          "map": "Bind",
+          "ls": 13,
+          "rs": 8,
+          "picked_by": null,
+          "left_agents": [
+            "Fade",
+            "Raze",
+            "Yoru",
+            "Brimstone",
+            "Viper"
+          ],
+          "right_agents": [
+            "Brimstone",
+            "Viper",
+            "Chamber",
+            "Skye"
+          ],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 6,
+            "left_def": 7,
+            "right_atk": 2,
+            "right_def": 6
+          }
+        },
+        {
+          "map": "Split",
+          "ls": 13,
+          "rs": 6,
+          "picked_by": null,
+          "left_agents": [
+            "Neon",
+            "Viper",
+            "Skye",
+            "Omen"
+          ],
+          "right_agents": [
+            "Skye",
+            "Chamber",
+            "Raze",
+            "Viper",
+            "Omen"
+          ],
+          "pistols": {
+            "left": 2,
+            "right": 0
+          },
+          "sides": {
+            "left_atk": 10,
+            "left_def": 3,
+            "right_atk": 4,
+            "right_def": 2
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "Wolves Esports",
+            "map": "Pearl"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "Wolves Esports",
+            "map": "Corrode"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "Wolves Esports",
+            "map": "Abyss"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "Wolves Esports",
+            "map": "Bind"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "Wolves Esports",
+            "map": "Haven"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "Wolves Esports",
+            "map": "Breeze"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Split"
+          }
+        ],
+        "decider": "Split"
       }
     }
   ]
