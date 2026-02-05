@@ -74,11 +74,31 @@ st.markdown("""
     /* Sidebar */
     section[data-testid="stSidebar"] { background-color: #0d1117; }
 
-    /* Compact tabs - visible on dark bg */
-    .stTabs [data-baseweb="tab-list"] { gap: 4px; border-bottom: 1px solid #1e2a3a; }
-    .stTabs [data-baseweb="tab"] { padding: 8px 14px; font-size: 13px; color: #9fb3c8 !important; }
-    .stTabs [data-baseweb="tab"][aria-selected="true"] { color: #e8ecf1 !important; border-bottom: 2px solid #4FC3F7; }
-    .stTabs [data-baseweb="tab"]:hover { color: #e8ecf1 !important; }
+    /* Tabs - force visible */
+    .stTabs [data-baseweb="tab-list"] {
+        gap: 4px;
+        border-bottom: 2px solid #1e2a3a;
+        background-color: #0d1117;
+        padding: 4px 0;
+    }
+    .stTabs [data-baseweb="tab"] {
+        padding: 10px 16px !important;
+        font-size: 14px !important;
+        color: #94a3b8 !important;
+        background-color: transparent !important;
+    }
+    .stTabs [data-baseweb="tab"][aria-selected="true"] {
+        color: #ffffff !important;
+        background-color: #1e2a3a !important;
+        border-radius: 6px 6px 0 0;
+        border-bottom: 3px solid #4FC3F7 !important;
+    }
+    .stTabs [data-baseweb="tab"]:hover {
+        color: #e2e8f0 !important;
+        background-color: #151d2b !important;
+    }
+    /* Make sure tab panel text is also visible */
+    .stTabs [data-baseweb="tab-panel"] { color: #e8ecf1; }
 
     /* Mobile */
     @media (max-width: 768px) {
