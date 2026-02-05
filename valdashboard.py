@@ -111,7 +111,7 @@ st.markdown("""
     /* Cleaner */
     #MainMenu { visibility: hidden; }
     footer { visibility: hidden; }
-    .block-container { padding-top: 1rem; padding-bottom: 1rem; }
+    .block-container { padding-top: 2.5rem; padding-bottom: 1rem; }
 </style>
 """, unsafe_allow_html=True)
 
