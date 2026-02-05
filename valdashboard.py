@@ -475,13 +475,21 @@ with tab_leaderboard:
     df_leaderboard = pd.DataFrame(leaderboard_data)
     df_leaderboard = df_leaderboard[["Rank", "Team", "Matches", "W-L", "Win %", "Map W-L", "Map Win %", "Round W-L", "Round %", "Pistol W-L", "Pistol %"]]
     
-    # Format percentages
-    df_leaderboard["Win %"] = df_leaderboard["Win %"].apply(lambda x: f"{x:.1f}%")
-    df_leaderboard["Map Win %"] = df_leaderboard["Map Win %"].apply(lambda x: f"{x:.1f}%")
-    df_leaderboard["Round %"] = df_leaderboard["Round %"].apply(lambda x: f"{x:.1f}%")
-    df_leaderboard["Pistol %"] = df_leaderboard["Pistol %"].apply(lambda x: f"{x:.1f}%")
-    
-    st.dataframe(df_leaderboard, use_container_width=True, hide_index=True, height=600)
+    # Keep numeric values for sorting, format for display
+    st.dataframe(
+        df_leaderboard,
+        use_container_width=True,
+        hide_index=True,
+        height=600,
+        column_config={
+            "Rank": st.column_config.NumberColumn("Rank", format="%d"),
+            "Matches": st.column_config.NumberColumn("Matches", format="%d"),
+            "Win %": st.column_config.NumberColumn("Win %", format="%.1f%%"),
+            "Map Win %": st.column_config.NumberColumn("Map Win %", format="%.1f%%"),
+            "Round %": st.column_config.NumberColumn("Round %", format="%.1f%%"),
+            "Pistol %": st.column_config.NumberColumn("Pistol %", format="%.1f%%"),
+        }
+    )
     
     # Download button
     csv = df_leaderboard.to_csv(index=False)
