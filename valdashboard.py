@@ -74,9 +74,11 @@ st.markdown("""
     /* Sidebar */
     section[data-testid="stSidebar"] { background-color: #0d1117; }
 
-    /* Compact tabs */
-    .stTabs [data-baseweb="tab-list"] { gap: 4px; }
-    .stTabs [data-baseweb="tab"] { padding: 8px 14px; font-size: 13px; }
+    /* Compact tabs - visible on dark bg */
+    .stTabs [data-baseweb="tab-list"] { gap: 4px; border-bottom: 1px solid #1e2a3a; }
+    .stTabs [data-baseweb="tab"] { padding: 8px 14px; font-size: 13px; color: #9fb3c8 !important; }
+    .stTabs [data-baseweb="tab"][aria-selected="true"] { color: #e8ecf1 !important; border-bottom: 2px solid #4FC3F7; }
+    .stTabs [data-baseweb="tab"]:hover { color: #e8ecf1 !important; }
 
     /* Mobile */
     @media (max-width: 768px) {
