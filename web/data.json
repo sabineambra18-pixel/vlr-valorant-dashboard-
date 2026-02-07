@@ -36,7 +36,6 @@
     "Rex Regum Qeon",
     "Sentinels",
     "T1",
-    "TBD",
     "TYLOO",
     "Team Heretics",
     "Team Liquid",
@@ -11079,18 +11078,6 @@
           }
         ],
         "decider": "Breeze"
-      }
-    },
-    {
-      "id": 598941,
-      "date": "2026-02-08",
-      "left": "Bilibili Gaming",
-      "right": "TBD",
-      "winner": null,
-      "played": [],
-      "veto": {
-        "events": [],
-        "decider": null
       }
     },
     {
