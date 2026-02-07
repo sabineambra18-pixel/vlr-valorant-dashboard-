@@ -8376,6 +8376,238 @@
       }
     },
     {
+      "id": 596421,
+      "date": "2026-02-06",
+      "left": "ENVY",
+      "right": "Evil Geniuses",
+      "winner": "Evil Geniuses",
+      "played": [
+        {
+          "map": "Pearl",
+          "ls": 14,
+          "rs": 16,
+          "picked_by": null,
+          "left_agents": [
+            "Yoru",
+            "Astra",
+            "Killjoy",
+            "Sova",
+            "Neon"
+          ],
+          "right_agents": [
+            "Killjoy",
+            "Yoru",
+            "Sova",
+            "Astra",
+            "Waylay"
+          ],
+          "pistols": {
+            "left": 0,
+            "right": 2
+          },
+          "sides": {
+            "left_atk": 4,
+            "left_def": 10,
+            "right_atk": 8,
+            "right_def": 8
+          }
+        },
+        {
+          "map": "Corrode",
+          "ls": 5,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [
+            "Waylay",
+            "Viper",
+            "Yoru",
+            "Omen",
+            "Fade"
+          ],
+          "right_agents": [
+            "Yoru",
+            "Viper",
+            "Sova",
+            "Waylay",
+            "Omen"
+          ],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 4,
+            "left_def": 1,
+            "right_atk": 5,
+            "right_def": 8
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "Evil Geniuses",
+            "map": "Breeze"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "ENVY",
+            "map": "Haven"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "Evil Geniuses",
+            "map": "Pearl"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "ENVY",
+            "map": "Corrode"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "Evil Geniuses",
+            "map": "Abyss"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "ENVY",
+            "map": "Split"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Bind"
+          }
+        ],
+        "decider": "Bind"
+      }
+    },
+    {
+      "id": 596422,
+      "date": "2026-02-06",
+      "left": "Sentinels",
+      "right": "LEVIATÁN",
+      "winner": "LEVIATÁN",
+      "played": [
+        {
+          "map": "Corrode",
+          "ls": 10,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [
+            "Waylay",
+            "Sova",
+            "Neon",
+            "Omen",
+            "Viper"
+          ],
+          "right_agents": [
+            "Waylay",
+            "Fade",
+            "Viper",
+            "Chamber",
+            "Omen"
+          ],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 5,
+            "left_def": 5,
+            "right_atk": 6,
+            "right_def": 7
+          }
+        },
+        {
+          "map": "Bind",
+          "ls": 12,
+          "rs": 14,
+          "picked_by": null,
+          "left_agents": [
+            "Chamber",
+            "Viper",
+            "Waylay",
+            "Skye",
+            "Brimstone"
+          ],
+          "right_agents": [
+            "Brimstone",
+            "Yoru",
+            "Viper",
+            "Fade",
+            "Waylay"
+          ],
+          "pistols": {
+            "left": 2,
+            "right": 0
+          },
+          "sides": {
+            "left_atk": 4,
+            "left_def": 8,
+            "right_atk": 6,
+            "right_def": 8
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "Sentinels",
+            "map": "Haven"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "LEVIATÁN",
+            "map": "Split"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "Sentinels",
+            "map": "Corrode"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "LEVIATÁN",
+            "map": "Bind"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "Sentinels",
+            "map": "Split"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "LEVIATÁN",
+            "map": "Breeze"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Abyss"
+          }
+        ],
+        "decider": "Abyss"
+      }
+    },
+    {
       "id": 598921,
       "date": "2026-01-23",
       "left": "All Gamers",
