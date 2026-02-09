@@ -262,12 +262,21 @@ def get_team_stats(team, matches):
                 if ag: ms["agents"][ag] = ms["agents"].get(ag, 0) + 1
 
             opponent = m.get("right" if is_left else "left")
-            ms["history"].append({
+            # Store sides and pistol info for history display
+            h_entry = {
                 "date": p.get("date") or m.get("date"),
                 "opponent": opponent,
                 "score": f"{my_score}-{opp_score}",
-                "agents": my_agents
-            })
+                "agents": my_agents,
+                "atk": 0, "def": 0, "pistol_w": 0, "pistol_l": 0
+            }
+            if sides and isinstance(sides, dict):
+                h_entry["atk"] = my_atk
+                h_entry["def"] = my_def
+            if pistols and isinstance(pistols, dict):
+                h_entry["pistol_w"] = my_p
+                h_entry["pistol_l"] = opp_p
+            ms["history"].append(h_entry)
 
         # Veto: picks, bans, 1st/2nd ban tracking
         veto = m.get("veto", {})
@@ -690,8 +699,18 @@ with tab_map:
                 history = data.get("history", [])
                 if history:
                     with st.expander("Recent Comps", expanded=False):
-                        for h in history[:5]:
-                            st.markdown(f"<span style='font-size:12px; color:#c4a88a'>{h['date']} vs {h['opponent']} ({h['score']})</span><br>"
+                        sorted_hist = sorted(history, key=lambda x: x.get('date') or '0000', reverse=True)
+                        for h in sorted_hist[:5]:
+                            atk_r = h.get('atk', 0)
+                            def_r = h.get('def', 0)
+                            pw = h.get('pistol_w', 0)
+                            pl = h.get('pistol_l', 0)
+                            detail = f"({h['score']})"
+                            if atk_r > 0 or def_r > 0:
+                                detail += f" ({atk_r}A, {def_r}D)"
+                            if pw > 0 or pl > 0:
+                                detail += f" ({pw}-{pl} Pistols)"
+                            st.markdown(f"<span style='font-size:12px; color:#c4a88a'>{h['date']} vs {h['opponent']} {detail}</span><br>"
                                         f"<span style='font-size:12px'>{', '.join(h['agents'])}</span>", unsafe_allow_html=True)
 
         render_map_card(col1, team1, t1_stats["maps"].get(selected_map, {}), "#ADDFB3", t1_stats)
