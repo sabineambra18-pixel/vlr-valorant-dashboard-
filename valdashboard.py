@@ -14,26 +14,26 @@ st.set_page_config(page_title="VAL Dashboard", layout="wide", page_icon="⚔️"
 st.markdown("""
 <style>
     /* Base - warm cream background */
-    .stApp { background-color: #AE734E; }
+    .stApp { background-color: #2B2A27; }
     .stMarkdown, .stDataFrame { color: #EEE1C6; }
     div[data-testid="stMetricValue"] { font-size: 22px; color: #EEE1C6; }
     div[data-testid="stMetricLabel"] { color: #c4a88a; font-size: 13px; }
 
     /* Cards */
     .card {
-        background: linear-gradient(135deg, #9a6744 0%, #8f5e3e 100%);
-        border: 1px solid #7a5535; border-radius: 10px;
+        background: linear-gradient(135deg, #353432 0%, #302e2c 100%);
+        border: 1px solid #4a4846; border-radius: 10px;
         padding: 16px; margin-bottom: 12px;
     }
     .card h3 {
         margin-top: 0; color: #EEE1C6; font-size: 16px;
-        border-bottom: 1px solid #7a5535; padding-bottom: 8px; margin-bottom: 12px;
+        border-bottom: 1px solid #4a4846; padding-bottom: 8px; margin-bottom: 12px;
     }
 
     /* Match card */
     .match-card {
-        background: linear-gradient(135deg, #9a6744 0%, #9e6b48 100%);
-        border: 1px solid #7a5535; border-radius: 8px;
+        background: linear-gradient(135deg, #353432 0%, #383634 100%);
+        border: 1px solid #4a4846; border-radius: 8px;
         padding: 12px 16px; margin-bottom: 8px;
         display: flex; align-items: center; justify-content: space-between;
         flex-wrap: wrap; gap: 8px;
@@ -44,12 +44,12 @@ st.markdown("""
 
     /* Pills */
     .pill {
-        display: inline-block; background: #8f5e3e;
+        display: inline-block; background: #302e2c;
         padding: 3px 8px; border-radius: 999px;
-        margin: 2px; font-size: 11px; border: 1px solid #7a5535; color: #EEE1C6;
+        margin: 2px; font-size: 11px; border: 1px solid #4a4846; color: #EEE1C6;
     }
     .map-pill {
-        display: inline-block; border: 1px solid #7a5535;
+        display: inline-block; border: 1px solid #4a4846;
         padding: 2px 8px; border-radius: 6px; margin: 1px 2px; font-size: 12px;
     }
 
@@ -63,17 +63,17 @@ st.markdown("""
 
     /* Stat box */
     .stat-box {
-        background: #8f5e3e; padding: 8px 12px; border-radius: 6px;
-        margin: 3px 0; border: 1px solid #7a5535; font-size: 14px; color: #EEE1C6;
+        background: #302e2c; padding: 8px 12px; border-radius: 6px;
+        margin: 3px 0; border: 1px solid #4a4846; font-size: 14px; color: #EEE1C6;
     }
     .legend-text {
-        background-color: #9a6744; padding: 10px; border-radius: 8px;
-        border: 1px solid #7a5535; text-align: center; margin-bottom: 10px;
+        background-color: #353432; padding: 10px; border-radius: 8px;
+        border: 1px solid #4a4846; text-align: center; margin-bottom: 10px;
         font-family: monospace; color: #EEE1C6;
     }
 
     /* Sidebar */
-    section[data-testid="stSidebar"] { background-color: #8f5e3e; }
+    section[data-testid="stSidebar"] { background-color: #302e2c; }
     section[data-testid="stSidebar"] .stSelectbox label,
     section[data-testid="stSidebar"] .stTextInput label,
     section[data-testid="stSidebar"] .stCheckbox label { color: #d4c8b0; }
@@ -81,8 +81,8 @@ st.markdown("""
     /* Tabs */
     .stTabs [data-baseweb="tab-list"] {
         gap: 4px;
-        border-bottom: 2px solid #7a5535;
-        background-color: #8f5e3e;
+        border-bottom: 2px solid #4a4846;
+        background-color: #302e2c;
         padding: 4px 0;
     }
     .stTabs [data-baseweb="tab"] {
@@ -93,13 +93,13 @@ st.markdown("""
     }
     .stTabs [data-baseweb="tab"][aria-selected="true"] {
         color: #E59E6D !important;
-        background-color: #AE734E !important;
+        background-color: #2B2A27 !important;
         border-radius: 6px 6px 0 0;
         border-bottom: 3px solid #E59E6D !important;
     }
     .stTabs [data-baseweb="tab"]:hover {
         color: #EEE1C6 !important;
-        background-color: #9a6744 !important;
+        background-color: #353432 !important;
     }
     .stTabs [data-baseweb="tab-panel"] { color: #EEE1C6; }
 
