@@ -10,95 +10,98 @@ from datetime import datetime
 # --- Configuration ---
 st.set_page_config(page_title="VAL Dashboard", layout="wide", page_icon="⚔️")
 
-# --- Warm Charcoal + Green & Cream color scheme ---
+# --- Cream + Orange/Green color scheme ---
 st.markdown("""
 <style>
-    /* Base - warm charcoal */
-    .stApp { background-color: #433E3F; }
-    .stMarkdown, .stDataFrame { color: #EEE1C6; }
-    div[data-testid="stMetricValue"] { font-size: 22px; color: #EEE1C6; }
-    div[data-testid="stMetricLabel"] { color: #bfb5a0; font-size: 13px; }
+    /* Base - warm cream background */
+    .stApp { background-color: #EEE1C6; }
+    .stMarkdown, .stDataFrame { color: #2d2a26; }
+    div[data-testid="stMetricValue"] { font-size: 22px; color: #2d2a26; }
+    div[data-testid="stMetricLabel"] { color: #6b6560; font-size: 13px; }
 
     /* Cards */
     .card {
-        background: linear-gradient(135deg, #3a3536 0%, #353031 100%);
-        border: 1px solid #5c5758; border-radius: 10px;
+        background: linear-gradient(135deg, #e6d8b8 0%, #dfd0b0 100%);
+        border: 1px solid #c9b998; border-radius: 10px;
         padding: 16px; margin-bottom: 12px;
     }
     .card h3 {
-        margin-top: 0; color: #EEE1C6; font-size: 16px;
-        border-bottom: 1px solid #5c5758; padding-bottom: 8px; margin-bottom: 12px;
+        margin-top: 0; color: #3d3733; font-size: 16px;
+        border-bottom: 1px solid #c9b998; padding-bottom: 8px; margin-bottom: 12px;
     }
 
     /* Match card */
     .match-card {
-        background: linear-gradient(135deg, #3a3536 0%, #3d3839 100%);
-        border: 1px solid #5c5758; border-radius: 8px;
+        background: linear-gradient(135deg, #e6d8b8 0%, #e2d4b4 100%);
+        border: 1px solid #c9b998; border-radius: 8px;
         padding: 12px 16px; margin-bottom: 8px;
         display: flex; align-items: center; justify-content: space-between;
         flex-wrap: wrap; gap: 8px;
     }
-    .match-card .date { color: #8a8384; font-size: 12px; min-width: 80px; }
-    .match-card .teams { flex: 1; text-align: center; font-size: 15px; }
+    .match-card .date { color: #8a8078; font-size: 12px; min-width: 80px; }
+    .match-card .teams { flex: 1; text-align: center; font-size: 15px; color: #2d2a26; }
     .match-card .maps-row { font-size: 12px; width: 100%; text-align: center; margin-top: 4px; }
 
     /* Pills */
     .pill {
-        display: inline-block; background: #4d4748;
+        display: inline-block; background: #ddd0b2;
         padding: 3px 8px; border-radius: 999px;
-        margin: 2px; font-size: 11px; border: 1px solid #5c5758; color: #EEE1C6;
+        margin: 2px; font-size: 11px; border: 1px solid #c9b998; color: #2d2a26;
     }
     .map-pill {
-        display: inline-block; border: 1px solid #5c5758;
+        display: inline-block; border: 1px solid #c9b998;
         padding: 2px 8px; border-radius: 6px; margin: 1px 2px; font-size: 12px;
     }
 
-    /* Win = soft green, Loss = muted */
-    .win { color: #ADDFB3 !important; font-weight: 700; font-size: 1.05em; }
-    .loss { color: #7a7374 !important; font-weight: 400; }
+    /* Win team = warm orange, Map win = soft green, Loss = muted */
+    .win { color: #E59E6D !important; font-weight: 700; font-size: 1.05em; }
+    .loss { color: #9c9590 !important; font-weight: 400; }
 
-    /* Team headers - green & cream */
-    .team-header-left { border-left: 3px solid #ADDFB3; padding-left: 12px; }
-    .team-header-right { border-left: 3px solid #EEE1C6; padding-left: 12px; }
+    /* Team headers */
+    .team-header-left { border-left: 3px solid #E59E6D; padding-left: 12px; }
+    .team-header-right { border-left: 3px solid #ADDFB3; padding-left: 12px; }
 
     /* Stat box */
     .stat-box {
-        background: #4d4748; padding: 8px 12px; border-radius: 6px;
-        margin: 3px 0; border: 1px solid #5c5758; font-size: 14px;
+        background: #ddd0b2; padding: 8px 12px; border-radius: 6px;
+        margin: 3px 0; border: 1px solid #c9b998; font-size: 14px; color: #2d2a26;
     }
     .legend-text {
-        background-color: #3a3536; padding: 10px; border-radius: 8px;
-        border: 1px solid #5c5758; text-align: center; margin-bottom: 10px;
-        font-family: monospace;
+        background-color: #e6d8b8; padding: 10px; border-radius: 8px;
+        border: 1px solid #c9b998; text-align: center; margin-bottom: 10px;
+        font-family: monospace; color: #2d2a26;
     }
 
     /* Sidebar */
-    section[data-testid="stSidebar"] { background-color: #332f30; }
+    section[data-testid="stSidebar"] { background-color: #e2d4b0; }
+    section[data-testid="stSidebar"] .stSelectbox label,
+    section[data-testid="stSidebar"] .stTextInput label,
+    section[data-testid="stSidebar"] .stCheckbox label { color: #4a4540; }
 
     /* Tabs */
     .stTabs [data-baseweb="tab-list"] {
         gap: 4px;
-        border-bottom: 2px solid #5c5758;
-        background-color: #332f30;
+        border-bottom: 2px solid #c9b998;
+        background-color: #e2d4b0;
         padding: 4px 0;
     }
     .stTabs [data-baseweb="tab"] {
         padding: 10px 16px !important;
         font-size: 14px !important;
-        color: #8a8384 !important;
+        color: #8a8078 !important;
         background-color: transparent !important;
     }
     .stTabs [data-baseweb="tab"][aria-selected="true"] {
-        color: #ADDFB3 !important;
-        background-color: #4d4748 !important;
+        color: #E59E6D !important;
+        background-color: #EEE1C6 !important;
         border-radius: 6px 6px 0 0;
-        border-bottom: 3px solid #ADDFB3 !important;
+        border-bottom: 3px solid #E59E6D !important;
     }
     .stTabs [data-baseweb="tab"]:hover {
-        color: #EEE1C6 !important;
-        background-color: #3a3536 !important;
+        color: #2d2a26 !important;
+        background-color: #e6d8b8 !important;
     }
-    .stTabs [data-baseweb="tab-panel"] { color: #EEE1C6; }
+    .stTabs [data-baseweb="tab-panel"] { color: #2d2a26; }
 
     /* Mobile */
     @media (max-width: 768px) {
@@ -390,9 +393,9 @@ with tab_home:
                 w_score = ls_v if winner_is_left else rs_v
                 l_score = rs_v if winner_is_left else ls_v
                 if w_score > l_score:
-                    clr = "#EEE1C6"  # winner won this map
+                    clr = "#ADDFB3"  # winner won this map
                 else:
-                    clr = "#e87c7c"  # winner lost this map
+                    clr = "#c45c5c"  # winner lost this map
                 pills.append(f"<span class='map-pill' style='color:{clr}'>{mn} {w_score}-{l_score}</span>")
             else:
                 pills.append(f"<span class='map-pill' style='color:#94a3b8'>{mn} {ls_v}-{rs_v}</span>")
@@ -500,7 +503,7 @@ with tab_overview:
             if map_wr_data:
                 df = pd.DataFrame(map_wr_data).sort_values("Win Rate", ascending=False)
                 fig = px.bar(df, x="Map", y="Win Rate", text="Record", color="Win Rate",
-                             color_continuous_scale=[[0, '#e87c7c'], [0.5, '#EEE1C6'], [1, '#EEE1C6']])
+                             color_continuous_scale=[[0, '#c45c5c'], [0.5, '#ADDFB3'], [1, '#ADDFB3']])
                 fig.update_layout(paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)',
                                   font_color='#e8ecf1', showlegend=False, yaxis=dict(range=[0, 115]),
                                   margin=dict(t=10, b=10), height=300)
@@ -524,7 +527,7 @@ with tab_overview:
                                                  font_color='#e8ecf1', showlegend=False,
                                                  yaxis=dict(range=[0, max(ban_1st.values()) * 1.4]),
                                                  margin=dict(t=30, b=10), height=260)
-                            fig_b1.update_traces(marker_color='#e87c7c', textposition='outside')
+                            fig_b1.update_traces(marker_color='#c45c5c', textposition='outside')
                             st.plotly_chart(fig_b1, use_container_width=True, key=f"b1_{team_name}")
                     with bc2:
                         if ban_2nd:
@@ -537,11 +540,11 @@ with tab_overview:
                                                  font_color='#e8ecf1', showlegend=False,
                                                  yaxis=dict(range=[0, max(ban_2nd.values()) * 1.4]),
                                                  margin=dict(t=30, b=10), height=260)
-                            fig_b2.update_traces(marker_color='#EEE1C6', textposition='outside')
+                            fig_b2.update_traces(marker_color='#ADDFB3', textposition='outside')
                             st.plotly_chart(fig_b2, use_container_width=True, key=f"b2_{team_name}")
 
-    render_team_overview(col_left, team1, t1_stats, '#ADDFB3')
-    render_team_overview(col_right, team2, t2_stats, '#EEE1C6')
+    render_team_overview(col_left, team1, t1_stats, "#E59E6D")
+    render_team_overview(col_right, team2, t2_stats, "#ADDFB3")
 
 # ========== HISTORY ==========
 with tab_history:
@@ -557,7 +560,7 @@ with tab_history:
             elif rs_v > ls_v: rw += 1
             my_s = ls_v if is_left else rs_v
             op_s = rs_v if is_left else ls_v
-            clr = "#EEE1C6" if my_s > op_s else "#e87c7c"
+            clr = "#ADDFB3" if my_s > op_s else "#c45c5c"
             mn = clean_map_name(p.get('map', '?'))
             pist = p.get("pistols", {})
             if pist and isinstance(pist, dict):
@@ -618,7 +621,7 @@ with tab_h2h:
                 elif rs_v > ls_v: rw += 1
                 my_s = ls_v if is_left else rs_v
                 op_s = rs_v if is_left else ls_v
-                clr = "#EEE1C6" if my_s > op_s else "#e87c7c"
+                clr = "#ADDFB3" if my_s > op_s else "#c45c5c"
                 mn = clean_map_name(p.get('map', '?'))
                 pist = p.get("pistols", {})
                 if pist and isinstance(pist, dict):
@@ -681,7 +684,7 @@ with tab_map:
 with tab_comp:
     cl, cm, cr = st.columns([1, 0.2, 1])
     with cl:
-        st.markdown(f"<h2 style='color:#ADDFB3; text-align:center;'>{team1}</h2>", unsafe_allow_html=True)
+        st.markdown(f"<h2 style='color:#E59E6D; text-align:center;'>{team1}</h2>", unsafe_allow_html=True)
         st.metric("Series Win Rate", f"{calc_wr(t1_stats['series_wins'], t1_stats['series_losses']):.1f}%",
                   f"{t1_stats['series_wins']}-{t1_stats['series_losses']}")
         st.metric("Map Win Rate", f"{calc_wr(t1_stats['total_map_wins'], t1_stats['total_map_losses']):.1f}%",
@@ -709,7 +712,7 @@ with tab_comp:
             comp_data.append({"Map": mn, "Team": t, "Win Rate": calc_wr(d.get("wins", 0), d.get("losses", 0)), "Label": label})
     if comp_data:
         fig = px.bar(pd.DataFrame(comp_data), x="Map", y="Win Rate", color="Team", barmode="group", text="Label",
-                     color_discrete_map={team1: '#ADDFB3', team2: '#EEE1C6'})
+                     color_discrete_map={team1: '#E59E6D', team2: '#ADDFB3'})
         fig.update_layout(paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)',
                           font_color='#e8ecf1', yaxis=dict(range=[0, 130]),
                           margin=dict(t=10, b=10), height=400)
