@@ -14,48 +14,48 @@ st.set_page_config(page_title="VAL Dashboard", layout="wide", page_icon="⚔️"
 st.markdown("""
 <style>
     /* Base - warm cream background */
-    .stApp { background-color: #EEE1C6; }
-    .stMarkdown, .stDataFrame { color: #2d2a26; }
-    div[data-testid="stMetricValue"] { font-size: 22px; color: #2d2a26; }
-    div[data-testid="stMetricLabel"] { color: #6b6560; font-size: 13px; }
+    .stApp { background-color: #AE734E; }
+    .stMarkdown, .stDataFrame { color: #EEE1C6; }
+    div[data-testid="stMetricValue"] { font-size: 22px; color: #EEE1C6; }
+    div[data-testid="stMetricLabel"] { color: #c4a88a; font-size: 13px; }
 
     /* Cards */
     .card {
-        background: linear-gradient(135deg, #e6d8b8 0%, #dfd0b0 100%);
-        border: 1px solid #c9b998; border-radius: 10px;
+        background: linear-gradient(135deg, #9a6744 0%, #8f5e3e 100%);
+        border: 1px solid #7a5535; border-radius: 10px;
         padding: 16px; margin-bottom: 12px;
     }
     .card h3 {
-        margin-top: 0; color: #3d3733; font-size: 16px;
-        border-bottom: 1px solid #c9b998; padding-bottom: 8px; margin-bottom: 12px;
+        margin-top: 0; color: #EEE1C6; font-size: 16px;
+        border-bottom: 1px solid #7a5535; padding-bottom: 8px; margin-bottom: 12px;
     }
 
     /* Match card */
     .match-card {
-        background: linear-gradient(135deg, #e6d8b8 0%, #e2d4b4 100%);
-        border: 1px solid #c9b998; border-radius: 8px;
+        background: linear-gradient(135deg, #9a6744 0%, #9e6b48 100%);
+        border: 1px solid #7a5535; border-radius: 8px;
         padding: 12px 16px; margin-bottom: 8px;
         display: flex; align-items: center; justify-content: space-between;
         flex-wrap: wrap; gap: 8px;
     }
-    .match-card .date { color: #8a8078; font-size: 12px; min-width: 80px; }
-    .match-card .teams { flex: 1; text-align: center; font-size: 15px; color: #2d2a26; }
+    .match-card .date { color: #c4a88a; font-size: 12px; min-width: 80px; }
+    .match-card .teams { flex: 1; text-align: center; font-size: 15px; color: #EEE1C6; }
     .match-card .maps-row { font-size: 12px; width: 100%; text-align: center; margin-top: 4px; }
 
     /* Pills */
     .pill {
-        display: inline-block; background: #ddd0b2;
+        display: inline-block; background: #8f5e3e;
         padding: 3px 8px; border-radius: 999px;
-        margin: 2px; font-size: 11px; border: 1px solid #c9b998; color: #2d2a26;
+        margin: 2px; font-size: 11px; border: 1px solid #7a5535; color: #EEE1C6;
     }
     .map-pill {
-        display: inline-block; border: 1px solid #c9b998;
+        display: inline-block; border: 1px solid #7a5535;
         padding: 2px 8px; border-radius: 6px; margin: 1px 2px; font-size: 12px;
     }
 
     /* Win team = warm orange, Map win = soft green, Loss = muted */
     .win { color: #E59E6D !important; font-weight: 700; font-size: 1.05em; }
-    .loss { color: #9c9590 !important; font-weight: 400; }
+    .loss { color: #b8a898 !important; font-weight: 400; }
 
     /* Team headers */
     .team-header-left { border-left: 3px solid #E59E6D; padding-left: 12px; }
@@ -63,45 +63,45 @@ st.markdown("""
 
     /* Stat box */
     .stat-box {
-        background: #ddd0b2; padding: 8px 12px; border-radius: 6px;
-        margin: 3px 0; border: 1px solid #c9b998; font-size: 14px; color: #2d2a26;
+        background: #8f5e3e; padding: 8px 12px; border-radius: 6px;
+        margin: 3px 0; border: 1px solid #7a5535; font-size: 14px; color: #EEE1C6;
     }
     .legend-text {
-        background-color: #e6d8b8; padding: 10px; border-radius: 8px;
-        border: 1px solid #c9b998; text-align: center; margin-bottom: 10px;
-        font-family: monospace; color: #2d2a26;
+        background-color: #9a6744; padding: 10px; border-radius: 8px;
+        border: 1px solid #7a5535; text-align: center; margin-bottom: 10px;
+        font-family: monospace; color: #EEE1C6;
     }
 
     /* Sidebar */
-    section[data-testid="stSidebar"] { background-color: #e2d4b0; }
+    section[data-testid="stSidebar"] { background-color: #8f5e3e; }
     section[data-testid="stSidebar"] .stSelectbox label,
     section[data-testid="stSidebar"] .stTextInput label,
-    section[data-testid="stSidebar"] .stCheckbox label { color: #4a4540; }
+    section[data-testid="stSidebar"] .stCheckbox label { color: #d4c8b0; }
 
     /* Tabs */
     .stTabs [data-baseweb="tab-list"] {
         gap: 4px;
-        border-bottom: 2px solid #c9b998;
-        background-color: #e2d4b0;
+        border-bottom: 2px solid #7a5535;
+        background-color: #8f5e3e;
         padding: 4px 0;
     }
     .stTabs [data-baseweb="tab"] {
         padding: 10px 16px !important;
         font-size: 14px !important;
-        color: #8a8078 !important;
+        color: #c4a88a !important;
         background-color: transparent !important;
     }
     .stTabs [data-baseweb="tab"][aria-selected="true"] {
         color: #E59E6D !important;
-        background-color: #EEE1C6 !important;
+        background-color: #AE734E !important;
         border-radius: 6px 6px 0 0;
         border-bottom: 3px solid #E59E6D !important;
     }
     .stTabs [data-baseweb="tab"]:hover {
-        color: #2d2a26 !important;
-        background-color: #e6d8b8 !important;
+        color: #EEE1C6 !important;
+        background-color: #9a6744 !important;
     }
-    .stTabs [data-baseweb="tab-panel"] { color: #2d2a26; }
+    .stTabs [data-baseweb="tab-panel"] { color: #EEE1C6; }
 
     /* Mobile */
     @media (max-width: 768px) {
