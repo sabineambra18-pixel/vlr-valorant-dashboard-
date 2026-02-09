@@ -274,7 +274,18 @@ def get_team_stats(team, matches):
         team_ban_count = 0
         for event in veto.get("events", []):
             map_v = event.get("map"); evt_type = event.get("type"); evt_team = event.get("team")
-            if map_v and map_v in stats["maps"] and evt_team == team:
+            if map_v and evt_team == team and evt_type in ("pick", "ban"):
+                # Create map entry if it doesn't exist yet
+                if map_v not in stats["maps"]:
+                    stats["maps"][map_v] = {
+                        "played": 0, "wins": 0, "losses": 0,
+                        "round_wins": 0, "round_losses": 0,
+                        "picks": 0, "bans": 0,
+                        "pistol_wins": 0, "pistol_losses": 0, "pistol_rounds": 0,
+                        "atk_rounds_won": 0, "def_rounds_won": 0,
+                        "atk_rounds_lost": 0, "def_rounds_lost": 0,
+                        "agents": {}, "history": []
+                    }
                 if evt_type == "pick": stats["maps"][map_v]["picks"] += 1
                 elif evt_type == "ban": stats["maps"][map_v]["bans"] += 1
             if evt_type == "ban" and evt_team == team and map_v:
@@ -641,7 +652,7 @@ with tab_map:
     if selected_map:
         col1, col2 = st.columns(2)
 
-        def render_map_card(col, team_name, data, color_border):
+        def render_map_card(col, team_name, data, color_border, team_stats):
             with col:
                 st.markdown(f"<div class='card' style='border-top: 3px solid {color_border}'><h3>{team_name} on {selected_map}</h3></div>", unsafe_allow_html=True)
                 if not data:
@@ -656,7 +667,13 @@ with tab_map:
                     st.metric("Picks", data.get("picks", 0))
                 with cb:
                     st.metric("Pistol WR", f"{pwr:.1f}%", f"{pw_v}/{pr}" if pr else "N/A")
-                    st.metric("Bans", data.get("bans", 0))
+                    total_bans = data.get("bans", 0)
+                    b1 = team_stats.get("ban_1st", {}).get(selected_map, 0)
+                    b2 = team_stats.get("ban_2nd", {}).get(selected_map, 0)
+                    if b1 > 0 or b2 > 0:
+                        st.metric("Bans", total_bans, f"1st: {b1} · 2nd: {b2}")
+                    else:
+                        st.metric("Bans", total_bans)
 
                 atk_w, atk_l = data.get("atk_rounds_won", 0), data.get("atk_rounds_lost", 0)
                 def_w, def_l = data.get("def_rounds_won", 0), data.get("def_rounds_lost", 0)
@@ -674,11 +691,11 @@ with tab_map:
                 if history:
                     with st.expander("Recent Comps", expanded=False):
                         for h in history[:5]:
-                            st.markdown(f"<span style='font-size:12px; color:#64748b'>{h['date']} vs {h['opponent']} ({h['score']})</span><br>"
+                            st.markdown(f"<span style='font-size:12px; color:#c4a88a'>{h['date']} vs {h['opponent']} ({h['score']})</span><br>"
                                         f"<span style='font-size:12px'>{', '.join(h['agents'])}</span>", unsafe_allow_html=True)
 
-        render_map_card(col1, team1, t1_stats["maps"].get(selected_map, {}), "#ADDFB3")
-        render_map_card(col2, team2, t2_stats["maps"].get(selected_map, {}), "#EEE1C6")
+        render_map_card(col1, team1, t1_stats["maps"].get(selected_map, {}), "#ADDFB3", t1_stats)
+        render_map_card(col2, team2, t2_stats["maps"].get(selected_map, {}), "#EEE1C6", t2_stats)
 
 # ========== COMPARISON ==========
 with tab_comp:
