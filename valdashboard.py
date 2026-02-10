@@ -253,9 +253,9 @@ def get_team_stats(team, matches):
                     my_atk, my_def = safe_int(sides.get("right_atk", 0)), safe_int(sides.get("right_def", 0))
                     opp_atk, opp_def = safe_int(sides.get("left_atk", 0)), safe_int(sides.get("left_def", 0))
                 ms["atk_rounds_won"] += my_atk; ms["def_rounds_won"] += my_def
-                ms["atk_rounds_lost"] += opp_atk; ms["def_rounds_lost"] += opp_def
+                ms["atk_rounds_lost"] += opp_def; ms["def_rounds_lost"] += opp_atk
                 stats["atk_rounds"] += my_atk; stats["def_rounds"] += my_def
-                stats["atk_rounds_lost"] += opp_atk; stats["def_rounds_lost"] += opp_def
+                stats["atk_rounds_lost"] += opp_def; stats["def_rounds_lost"] += opp_atk
 
             my_agents = p.get("left_agents" if is_left else "right_agents", [])
             for ag in my_agents:
