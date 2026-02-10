@@ -11939,10 +11939,10 @@
           "rs": 13,
           "picked_by": null,
           "left_agents": [
+            "Jett",
             "Yoru",
             "Omen",
             "Astra",
-            "Jett",
             "Sova"
           ],
           "right_agents": [
@@ -13530,6 +13530,182 @@
           }
         ],
         "decider": "Corrode"
+      }
+    },
+    {
+      "id": 598950,
+      "date": "2026-02-09",
+      "left": "Bilibili Gaming",
+      "right": "EDward Gaming",
+      "winner": "EDward Gaming",
+      "played": [
+        {
+          "map": "Pearl",
+          "ls": 13,
+          "rs": 9,
+          "picked_by": null,
+          "left_agents": [
+            "Tejo",
+            "Fade",
+            "Astra",
+            "Killjoy",
+            "Yoru"
+          ],
+          "right_agents": [
+            "Neon",
+            "Killjoy",
+            "Yoru",
+            "Astra",
+            "Sova"
+          ],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 6,
+            "left_def": 7,
+            "right_atk": 3,
+            "right_def": 6
+          }
+        },
+        {
+          "map": "Haven",
+          "ls": 10,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [
+            "Cypher",
+            "Neon",
+            "Breach",
+            "Sova",
+            "Omen"
+          ],
+          "right_agents": [
+            "Viper",
+            "Neon",
+            "Omen",
+            "Chamber",
+            "Sova"
+          ],
+          "pistols": {
+            "left": 2,
+            "right": 0
+          },
+          "sides": {
+            "left_atk": 4,
+            "left_def": 6,
+            "right_atk": 6,
+            "right_def": 7
+          }
+        },
+        {
+          "map": "Abyss",
+          "ls": 10,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [
+            "Breach",
+            "Omen",
+            "Astra",
+            "Waylay",
+            "Tejo"
+          ],
+          "right_agents": [
+            "Jett",
+            "Omen",
+            "Yoru",
+            "Astra",
+            "Sova"
+          ],
+          "pistols": {
+            "left": 2,
+            "right": 0
+          },
+          "sides": {
+            "left_atk": 6,
+            "left_def": 4,
+            "right_atk": 7,
+            "right_def": 6
+          }
+        },
+        {
+          "map": "Split",
+          "ls": 6,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [
+            "Waylay",
+            "Breach",
+            "Viper",
+            "Fade",
+            "Omen"
+          ],
+          "right_agents": [
+            "Fade",
+            "Viper",
+            "Yoru",
+            "Omen",
+            "Neon"
+          ],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 1,
+            "left_def": 5,
+            "right_atk": 7,
+            "right_def": 6
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "EDward Gaming",
+            "map": "Corrode"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "EDward Gaming",
+            "map": "Breeze"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "EDward Gaming",
+            "map": "Pearl"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "EDward Gaming",
+            "map": "Haven"
+          },
+          {
+            "order": 5,
+            "type": "pick",
+            "team": "EDward Gaming",
+            "map": "Abyss"
+          },
+          {
+            "order": 6,
+            "type": "pick",
+            "team": "EDward Gaming",
+            "map": "Split"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Bind"
+          }
+        ],
+        "decider": "Bind"
       }
     }
   ]
