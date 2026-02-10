@@ -123,7 +123,7 @@
           {
             "order": 1,
             "type": "ban",
-            "team": "Karmine Corp",
+            "team": "Natus Vincere",
             "map": "Corrode"
           },
           {
@@ -135,7 +135,7 @@
           {
             "order": 3,
             "type": "pick",
-            "team": "Karmine Corp",
+            "team": "Natus Vincere",
             "map": "Split"
           },
           {
@@ -147,7 +147,7 @@
           {
             "order": 5,
             "type": "ban",
-            "team": "Karmine Corp",
+            "team": "Natus Vincere",
             "map": "Abyss"
           },
           {
@@ -391,7 +391,7 @@
           {
             "order": 2,
             "type": "ban",
-            "team": "BBL Esports",
+            "team": "PCIFIC Esports",
             "map": "Haven"
           },
           {
@@ -403,7 +403,7 @@
           {
             "order": 4,
             "type": "pick",
-            "team": "BBL Esports",
+            "team": "PCIFIC Esports",
             "map": "Abyss"
           },
           {
@@ -415,7 +415,7 @@
           {
             "order": 6,
             "type": "ban",
-            "team": "BBL Esports",
+            "team": "PCIFIC Esports",
             "map": "Split"
           },
           {
@@ -653,7 +653,7 @@
           {
             "order": 2,
             "type": "ban",
-            "team": "Natus Vincere",
+            "team": "Team Heretics",
             "map": "Abyss"
           },
           {
@@ -665,7 +665,7 @@
           {
             "order": 4,
             "type": "pick",
-            "team": "Natus Vincere",
+            "team": "Team Heretics",
             "map": "Haven"
           },
           {
@@ -677,7 +677,7 @@
           {
             "order": 6,
             "type": "ban",
-            "team": "Natus Vincere",
+            "team": "Team Heretics",
             "map": "Pearl"
           },
           {
@@ -769,7 +769,7 @@
           {
             "order": 2,
             "type": "ban",
-            "team": "Gentle Mates",
+            "team": "GIANTX",
             "map": "Corrode"
           },
           {
@@ -781,7 +781,7 @@
           {
             "order": 4,
             "type": "pick",
-            "team": "Gentle Mates",
+            "team": "GIANTX",
             "map": "Bind"
           },
           {
@@ -793,7 +793,7 @@
           {
             "order": 6,
             "type": "ban",
-            "team": "Gentle Mates",
+            "team": "GIANTX",
             "map": "Abyss"
           },
           {
@@ -885,7 +885,7 @@
           {
             "order": 2,
             "type": "ban",
-            "team": "BBL Esports",
+            "team": "FNATIC",
             "map": "Pearl"
           },
           {
@@ -897,7 +897,7 @@
           {
             "order": 4,
             "type": "pick",
-            "team": "BBL Esports",
+            "team": "FNATIC",
             "map": "Haven"
           },
           {
@@ -909,7 +909,7 @@
           {
             "order": 6,
             "type": "ban",
-            "team": "BBL Esports",
+            "team": "FNATIC",
             "map": "Split"
           },
           {
@@ -1031,7 +1031,7 @@
           {
             "order": 2,
             "type": "ban",
-            "team": "Team Vitality",
+            "team": "Team Liquid",
             "map": "Haven"
           },
           {
@@ -1043,7 +1043,7 @@
           {
             "order": 4,
             "type": "pick",
-            "team": "Team Vitality",
+            "team": "Team Liquid",
             "map": "Pearl"
           },
           {
@@ -1055,7 +1055,7 @@
           {
             "order": 6,
             "type": "ban",
-            "team": "Team Vitality",
+            "team": "Team Liquid",
             "map": "Abyss"
           },
           {
@@ -1147,7 +1147,7 @@
           {
             "order": 2,
             "type": "ban",
-            "team": "Gentle Mates",
+            "team": "Natus Vincere",
             "map": "Corrode"
           },
           {
@@ -1159,7 +1159,7 @@
           {
             "order": 4,
             "type": "pick",
-            "team": "Gentle Mates",
+            "team": "Natus Vincere",
             "map": "Bind"
           },
           {
@@ -1171,7 +1171,7 @@
           {
             "order": 6,
             "type": "ban",
-            "team": "Gentle Mates",
+            "team": "Natus Vincere",
             "map": "Pearl"
           },
           {
@@ -1403,7 +1403,7 @@
           {
             "order": 1,
             "type": "ban",
-            "team": "Team Liquid",
+            "team": "Karmine Corp",
             "map": "Pearl"
           },
           {
@@ -1415,7 +1415,7 @@
           {
             "order": 3,
             "type": "pick",
-            "team": "Team Liquid",
+            "team": "Karmine Corp",
             "map": "Abyss"
           },
           {
@@ -1427,7 +1427,7 @@
           {
             "order": 5,
             "type": "ban",
-            "team": "Team Liquid",
+            "team": "Karmine Corp",
             "map": "Corrode"
           },
           {
@@ -1695,7 +1695,7 @@
           {
             "order": 1,
             "type": "ban",
-            "team": "GIANTX",
+            "team": "PCIFIC Esports",
             "map": "Haven"
           },
           {
@@ -1707,7 +1707,7 @@
           {
             "order": 3,
             "type": "pick",
-            "team": "GIANTX",
+            "team": "PCIFIC Esports",
             "map": "Abyss"
           },
           {
@@ -1719,7 +1719,7 @@
           {
             "order": 5,
             "type": "ban",
-            "team": "GIANTX",
+            "team": "PCIFIC Esports",
             "map": "Pearl"
           },
           {
@@ -1933,7 +1933,7 @@
           {
             "order": 2,
             "type": "ban",
-            "team": "FNATIC",
+            "team": "Team Liquid",
             "map": "Haven"
           },
           {
@@ -1945,7 +1945,7 @@
           {
             "order": 4,
             "type": "pick",
-            "team": "FNATIC",
+            "team": "Team Liquid",
             "map": "Split"
           },
           {
@@ -1957,7 +1957,7 @@
           {
             "order": 6,
             "type": "ban",
-            "team": "FNATIC",
+            "team": "Team Liquid",
             "map": "Abyss"
           },
           {
@@ -2043,7 +2043,7 @@
           {
             "order": 1,
             "type": "ban",
-            "team": "Team Heretics",
+            "team": "GIANTX",
             "map": "Corrode"
           },
           {
@@ -2055,7 +2055,7 @@
           {
             "order": 3,
             "type": "pick",
-            "team": "Team Heretics",
+            "team": "GIANTX",
             "map": "Abyss"
           },
           {
@@ -2067,7 +2067,7 @@
           {
             "order": 5,
             "type": "ban",
-            "team": "Team Heretics",
+            "team": "GIANTX",
             "map": "Split"
           },
           {
@@ -2189,7 +2189,7 @@
           {
             "order": 1,
             "type": "ban",
-            "team": "FNATIC",
+            "team": "Natus Vincere",
             "map": "Corrode"
           },
           {
@@ -2201,7 +2201,7 @@
           {
             "order": 3,
             "type": "pick",
-            "team": "FNATIC",
+            "team": "Natus Vincere",
             "map": "Split"
           },
           {
@@ -2213,7 +2213,7 @@
           {
             "order": 5,
             "type": "ban",
-            "team": "FNATIC",
+            "team": "Natus Vincere",
             "map": "Abyss"
           },
           {
@@ -2311,7 +2311,7 @@
           {
             "order": 2,
             "type": "ban",
-            "team": "GIANTX",
+            "team": "Team Vitality",
             "map": "Pearl"
           },
           {
@@ -2323,7 +2323,7 @@
           {
             "order": 4,
             "type": "pick",
-            "team": "GIANTX",
+            "team": "Team Vitality",
             "map": "Breeze"
           },
           {
@@ -2335,7 +2335,7 @@
           {
             "order": 6,
             "type": "ban",
-            "team": "GIANTX",
+            "team": "Team Vitality",
             "map": "Bind"
           },
           {
@@ -2451,7 +2451,7 @@
           {
             "order": 1,
             "type": "ban",
-            "team": "FUT Esports",
+            "team": "Karmine Corp",
             "map": "Corrode"
           },
           {
@@ -2463,7 +2463,7 @@
           {
             "order": 3,
             "type": "pick",
-            "team": "FUT Esports",
+            "team": "Karmine Corp",
             "map": "Haven"
           },
           {
@@ -2475,7 +2475,7 @@
           {
             "order": 5,
             "type": "ban",
-            "team": "FUT Esports",
+            "team": "Karmine Corp",
             "map": "Breeze"
           },
           {
@@ -2573,7 +2573,7 @@
           {
             "order": 2,
             "type": "ban",
-            "team": "ULF Esports",
+            "team": "PCIFIC Esports",
             "map": "Haven"
           },
           {
@@ -2585,7 +2585,7 @@
           {
             "order": 4,
             "type": "pick",
-            "team": "ULF Esports",
+            "team": "PCIFIC Esports",
             "map": "Abyss"
           },
           {
@@ -2597,7 +2597,7 @@
           {
             "order": 6,
             "type": "ban",
-            "team": "ULF Esports",
+            "team": "PCIFIC Esports",
             "map": "Bind"
           },
           {
@@ -2719,7 +2719,7 @@
           {
             "order": 2,
             "type": "ban",
-            "team": "Karmine Corp",
+            "team": "Team Heretics",
             "map": "Pearl"
           },
           {
@@ -2731,7 +2731,7 @@
           {
             "order": 4,
             "type": "pick",
-            "team": "Karmine Corp",
+            "team": "Team Heretics",
             "map": "Haven"
           },
           {
@@ -2743,7 +2743,7 @@
           {
             "order": 6,
             "type": "ban",
-            "team": "Karmine Corp",
+            "team": "Team Heretics",
             "map": "Bind"
           },
           {
@@ -2865,7 +2865,7 @@
           {
             "order": 2,
             "type": "ban",
-            "team": "ULF Esports",
+            "team": "Team Liquid",
             "map": "Haven"
           },
           {
@@ -2877,7 +2877,7 @@
           {
             "order": 4,
             "type": "pick",
-            "team": "ULF Esports",
+            "team": "Team Liquid",
             "map": "Breeze"
           },
           {
@@ -2889,7 +2889,7 @@
           {
             "order": 6,
             "type": "ban",
-            "team": "ULF Esports",
+            "team": "Team Liquid",
             "map": "Abyss"
           },
           {
@@ -2981,7 +2981,7 @@
           {
             "order": 2,
             "type": "ban",
-            "team": "Team Heretics",
+            "team": "Natus Vincere",
             "map": "Corrode"
           },
           {
@@ -2993,7 +2993,7 @@
           {
             "order": 4,
             "type": "pick",
-            "team": "Team Heretics",
+            "team": "Natus Vincere",
             "map": "Breeze"
           },
           {
@@ -3005,7 +3005,7 @@
           {
             "order": 6,
             "type": "ban",
-            "team": "Team Heretics",
+            "team": "Natus Vincere",
             "map": "Abyss"
           },
           {
@@ -3127,7 +3127,7 @@
           {
             "order": 2,
             "type": "ban",
-            "team": "Team Liquid",
+            "team": "GIANTX",
             "map": "Corrode"
           },
           {
@@ -3139,7 +3139,7 @@
           {
             "order": 4,
             "type": "pick",
-            "team": "Team Liquid",
+            "team": "GIANTX",
             "map": "Pearl"
           },
           {
@@ -3151,7 +3151,7 @@
           {
             "order": 6,
             "type": "ban",
-            "team": "Team Liquid",
+            "team": "GIANTX",
             "map": "Abyss"
           },
           {
@@ -3243,7 +3243,7 @@
           {
             "order": 2,
             "type": "ban",
-            "team": "Team Secret",
+            "team": "Nongshim RedForce",
             "map": "Pearl"
           },
           {
@@ -3255,7 +3255,7 @@
           {
             "order": 4,
             "type": "pick",
-            "team": "Team Secret",
+            "team": "Nongshim RedForce",
             "map": "Split"
           },
           {
@@ -3267,7 +3267,7 @@
           {
             "order": 6,
             "type": "ban",
-            "team": "Team Secret",
+            "team": "Nongshim RedForce",
             "map": "Bind"
           },
           {
@@ -3469,7 +3469,7 @@
           {
             "order": 1,
             "type": "ban",
-            "team": "Global Esports",
+            "team": "VARREL",
             "map": "Corrode"
           },
           {
@@ -3481,7 +3481,7 @@
           {
             "order": 3,
             "type": "pick",
-            "team": "Global Esports",
+            "team": "VARREL",
             "map": "Split"
           },
           {
@@ -3493,7 +3493,7 @@
           {
             "order": 5,
             "type": "ban",
-            "team": "Global Esports",
+            "team": "VARREL",
             "map": "Breeze"
           },
           {
@@ -3591,7 +3591,7 @@
           {
             "order": 2,
             "type": "ban",
-            "team": "Gen.G",
+            "team": "DetonatioN FocusMe",
             "map": "Breeze"
           },
           {
@@ -3603,7 +3603,7 @@
           {
             "order": 4,
             "type": "pick",
-            "team": "Gen.G",
+            "team": "DetonatioN FocusMe",
             "map": "Pearl"
           },
           {
@@ -3615,7 +3615,7 @@
           {
             "order": 6,
             "type": "ban",
-            "team": "Gen.G",
+            "team": "DetonatioN FocusMe",
             "map": "Split"
           },
           {
@@ -4029,7 +4029,7 @@
           {
             "order": 2,
             "type": "ban",
-            "team": "Global Esports",
+            "team": "Paper Rex",
             "map": "Abyss"
           },
           {
@@ -4041,7 +4041,7 @@
           {
             "order": 4,
             "type": "pick",
-            "team": "Global Esports",
+            "team": "Paper Rex",
             "map": "Split"
           },
           {
@@ -4053,7 +4053,7 @@
           {
             "order": 6,
             "type": "ban",
-            "team": "Global Esports",
+            "team": "Paper Rex",
             "map": "Corrode"
           },
           {
@@ -4145,7 +4145,7 @@
           {
             "order": 2,
             "type": "ban",
-            "team": "DetonatioN FocusMe",
+            "team": "Rex Regum Qeon",
             "map": "Abyss"
           },
           {
@@ -4157,7 +4157,7 @@
           {
             "order": 4,
             "type": "pick",
-            "team": "DetonatioN FocusMe",
+            "team": "Rex Regum Qeon",
             "map": "Corrode"
           },
           {
@@ -4169,7 +4169,7 @@
           {
             "order": 6,
             "type": "ban",
-            "team": "DetonatioN FocusMe",
+            "team": "Rex Regum Qeon",
             "map": "Split"
           },
           {
@@ -4261,7 +4261,7 @@
           {
             "order": 2,
             "type": "ban",
-            "team": "FULL SENSE",
+            "team": "Nongshim RedForce",
             "map": "Pearl"
           },
           {
@@ -4273,7 +4273,7 @@
           {
             "order": 4,
             "type": "pick",
-            "team": "FULL SENSE",
+            "team": "Nongshim RedForce",
             "map": "Bind"
           },
           {
@@ -4285,7 +4285,7 @@
           {
             "order": 6,
             "type": "ban",
-            "team": "FULL SENSE",
+            "team": "Nongshim RedForce",
             "map": "Breeze"
           },
           {
@@ -4371,7 +4371,7 @@
           {
             "order": 1,
             "type": "ban",
-            "team": "Rex Regum Qeon",
+            "team": "Paper Rex",
             "map": "Abyss"
           },
           {
@@ -4383,7 +4383,7 @@
           {
             "order": 3,
             "type": "pick",
-            "team": "Rex Regum Qeon",
+            "team": "Paper Rex",
             "map": "Bind"
           },
           {
@@ -4395,7 +4395,7 @@
           {
             "order": 5,
             "type": "ban",
-            "team": "Rex Regum Qeon",
+            "team": "Paper Rex",
             "map": "Corrode"
           },
           {
@@ -4487,7 +4487,7 @@
           {
             "order": 1,
             "type": "ban",
-            "team": "DetonatioN FocusMe",
+            "team": "Team Secret",
             "map": "Corrode"
           },
           {
@@ -4499,7 +4499,7 @@
           {
             "order": 3,
             "type": "pick",
-            "team": "DetonatioN FocusMe",
+            "team": "Team Secret",
             "map": "Split"
           },
           {
@@ -4511,7 +4511,7 @@
           {
             "order": 5,
             "type": "ban",
-            "team": "DetonatioN FocusMe",
+            "team": "Team Secret",
             "map": "Abyss"
           },
           {
@@ -4749,7 +4749,7 @@
           {
             "order": 1,
             "type": "ban",
-            "team": "DRX",
+            "team": "VARREL",
             "map": "Abyss"
           },
           {
@@ -4761,7 +4761,7 @@
           {
             "order": 3,
             "type": "pick",
-            "team": "DRX",
+            "team": "VARREL",
             "map": "Corrode"
           },
           {
@@ -4773,7 +4773,7 @@
           {
             "order": 5,
             "type": "ban",
-            "team": "DRX",
+            "team": "VARREL",
             "map": "Breeze"
           },
           {
@@ -5047,7 +5047,7 @@
           {
             "order": 2,
             "type": "ban",
-            "team": "Global Esports",
+            "team": "DetonatioN FocusMe",
             "map": "Corrode"
           },
           {
@@ -5059,7 +5059,7 @@
           {
             "order": 4,
             "type": "pick",
-            "team": "Global Esports",
+            "team": "DetonatioN FocusMe",
             "map": "Pearl"
           },
           {
@@ -5071,7 +5071,7 @@
           {
             "order": 6,
             "type": "ban",
-            "team": "Global Esports",
+            "team": "DetonatioN FocusMe",
             "map": "Haven"
           },
           {
@@ -5309,7 +5309,7 @@
           {
             "order": 2,
             "type": "ban",
-            "team": "DetonatioN FocusMe",
+            "team": "FULL SENSE",
             "map": "Bind"
           },
           {
@@ -5321,7 +5321,7 @@
           {
             "order": 4,
             "type": "pick",
-            "team": "DetonatioN FocusMe",
+            "team": "FULL SENSE",
             "map": "Split"
           },
           {
@@ -5333,7 +5333,7 @@
           {
             "order": 6,
             "type": "ban",
-            "team": "DetonatioN FocusMe",
+            "team": "FULL SENSE",
             "map": "Abyss"
           },
           {
@@ -5455,7 +5455,7 @@
           {
             "order": 2,
             "type": "ban",
-            "team": "T1",
+            "team": "Paper Rex",
             "map": "Abyss"
           },
           {
@@ -5467,7 +5467,7 @@
           {
             "order": 4,
             "type": "pick",
-            "team": "T1",
+            "team": "Paper Rex",
             "map": "Breeze"
           },
           {
@@ -5479,7 +5479,7 @@
           {
             "order": 6,
             "type": "ban",
-            "team": "T1",
+            "team": "Paper Rex",
             "map": "Split"
           },
           {
@@ -5601,7 +5601,7 @@
           {
             "order": 2,
             "type": "ban",
-            "team": "ZETA DIVISION",
+            "team": "Team Secret",
             "map": "Corrode"
           },
           {
@@ -5613,7 +5613,7 @@
           {
             "order": 4,
             "type": "pick",
-            "team": "ZETA DIVISION",
+            "team": "Team Secret",
             "map": "Split"
           },
           {
@@ -5625,7 +5625,7 @@
           {
             "order": 6,
             "type": "ban",
-            "team": "ZETA DIVISION",
+            "team": "Team Secret",
             "map": "Haven"
           },
           {
@@ -5747,7 +5747,7 @@
           {
             "order": 2,
             "type": "ban",
-            "team": "Gen.G",
+            "team": "VARREL",
             "map": "Abyss"
           },
           {
@@ -5759,7 +5759,7 @@
           {
             "order": 4,
             "type": "pick",
-            "team": "Gen.G",
+            "team": "VARREL",
             "map": "Pearl"
           },
           {
@@ -5771,7 +5771,7 @@
           {
             "order": 6,
             "type": "ban",
-            "team": "Gen.G",
+            "team": "VARREL",
             "map": "Bind"
           },
           {
@@ -6039,7 +6039,7 @@
           {
             "order": 2,
             "type": "ban",
-            "team": "Gen.G",
+            "team": "Global Esports",
             "map": "Pearl"
           },
           {
@@ -6051,7 +6051,7 @@
           {
             "order": 4,
             "type": "pick",
-            "team": "Gen.G",
+            "team": "Global Esports",
             "map": "Abyss"
           },
           {
@@ -6063,7 +6063,7 @@
           {
             "order": 6,
             "type": "ban",
-            "team": "Gen.G",
+            "team": "Global Esports",
             "map": "Bind"
           },
           {
@@ -6149,7 +6149,7 @@
           {
             "order": 1,
             "type": "ban",
-            "team": "DRX",
+            "team": "FULL SENSE",
             "map": "Haven"
           },
           {
@@ -6161,7 +6161,7 @@
           {
             "order": 3,
             "type": "pick",
-            "team": "DRX",
+            "team": "FULL SENSE",
             "map": "Corrode"
           },
           {
@@ -6173,7 +6173,7 @@
           {
             "order": 5,
             "type": "ban",
-            "team": "DRX",
+            "team": "FULL SENSE",
             "map": "Bind"
           },
           {
@@ -6301,7 +6301,7 @@
           {
             "order": 2,
             "type": "ban",
-            "team": "Global Esports",
+            "team": "Paper Rex",
             "map": "Abyss"
           },
           {
@@ -6313,7 +6313,7 @@
           {
             "order": 4,
             "type": "pick",
-            "team": "Global Esports",
+            "team": "Paper Rex",
             "map": "Breeze"
           },
           {
@@ -6325,7 +6325,7 @@
           {
             "order": 6,
             "type": "ban",
-            "team": "Global Esports",
+            "team": "Paper Rex",
             "map": "Pearl"
           },
           {
@@ -6411,7 +6411,7 @@
           {
             "order": 1,
             "type": "ban",
-            "team": "Cloud9",
+            "team": "LOUD",
             "map": "Breeze"
           },
           {
@@ -6423,7 +6423,7 @@
           {
             "order": 3,
             "type": "pick",
-            "team": "Cloud9",
+            "team": "LOUD",
             "map": "Haven"
           },
           {
@@ -6435,7 +6435,7 @@
           {
             "order": 5,
             "type": "ban",
-            "team": "Cloud9",
+            "team": "LOUD",
             "map": "Corrode"
           },
           {
@@ -6855,7 +6855,7 @@
           {
             "order": 2,
             "type": "ban",
-            "team": "LEVIATÁN",
+            "team": "100 Thieves",
             "map": "Corrode"
           },
           {
@@ -6867,7 +6867,7 @@
           {
             "order": 4,
             "type": "pick",
-            "team": "LEVIATÁN",
+            "team": "100 Thieves",
             "map": "Pearl"
           },
           {
@@ -6879,7 +6879,7 @@
           {
             "order": 6,
             "type": "ban",
-            "team": "LEVIATÁN",
+            "team": "100 Thieves",
             "map": "Haven"
           },
           {
@@ -7897,7 +7897,7 @@
           {
             "order": 1,
             "type": "ban",
-            "team": "Sentinels",
+            "team": "Evil Geniuses",
             "map": "Breeze"
           },
           {
@@ -7909,7 +7909,7 @@
           {
             "order": 3,
             "type": "pick",
-            "team": "Sentinels",
+            "team": "Evil Geniuses",
             "map": "Abyss"
           },
           {
@@ -7921,7 +7921,7 @@
           {
             "order": 5,
             "type": "ban",
-            "team": "Sentinels",
+            "team": "Evil Geniuses",
             "map": "Split"
           },
           {
@@ -8275,7 +8275,7 @@
           {
             "order": 1,
             "type": "ban",
-            "team": "Sentinels",
+            "team": "100 Thieves",
             "map": "Abyss"
           },
           {
@@ -8287,7 +8287,7 @@
           {
             "order": 3,
             "type": "pick",
-            "team": "Sentinels",
+            "team": "100 Thieves",
             "map": "Corrode"
           },
           {
@@ -8299,7 +8299,7 @@
           {
             "order": 5,
             "type": "ban",
-            "team": "Sentinels",
+            "team": "100 Thieves",
             "map": "Breeze"
           },
           {
@@ -9355,7 +9355,7 @@
           {
             "order": 2,
             "type": "ban",
-            "team": "Evil Geniuses",
+            "team": "100 Thieves",
             "map": "Abyss"
           },
           {
@@ -9367,7 +9367,7 @@
           {
             "order": 4,
             "type": "pick",
-            "team": "Evil Geniuses",
+            "team": "100 Thieves",
             "map": "Bind"
           },
           {
@@ -9379,7 +9379,7 @@
           {
             "order": 6,
             "type": "ban",
-            "team": "Evil Geniuses",
+            "team": "100 Thieves",
             "map": "Corrode"
           },
           {
@@ -9471,7 +9471,7 @@
           {
             "order": 2,
             "type": "ban",
-            "team": "LEVIATÁN",
+            "team": "Cloud9",
             "map": "Corrode"
           },
           {
@@ -9483,7 +9483,7 @@
           {
             "order": 4,
             "type": "pick",
-            "team": "LEVIATÁN",
+            "team": "Cloud9",
             "map": "Breeze"
           },
           {
@@ -9495,7 +9495,7 @@
           {
             "order": 6,
             "type": "ban",
-            "team": "LEVIATÁN",
+            "team": "Cloud9",
             "map": "Haven"
           },
           {
@@ -9581,7 +9581,7 @@
           {
             "order": 1,
             "type": "ban",
-            "team": "Nova Esports",
+            "team": "All Gamers",
             "map": "Breeze"
           },
           {
@@ -9593,7 +9593,7 @@
           {
             "order": 3,
             "type": "pick",
-            "team": "Nova Esports",
+            "team": "All Gamers",
             "map": "Split"
           },
           {
@@ -9605,7 +9605,7 @@
           {
             "order": 5,
             "type": "ban",
-            "team": "Nova Esports",
+            "team": "All Gamers",
             "map": "Haven"
           },
           {
@@ -9995,7 +9995,7 @@
           {
             "order": 2,
             "type": "ban",
-            "team": "TYLOO",
+            "team": "FunPlus Phoenix",
             "map": "Split"
           },
           {
@@ -10007,7 +10007,7 @@
           {
             "order": 4,
             "type": "pick",
-            "team": "TYLOO",
+            "team": "FunPlus Phoenix",
             "map": "Haven"
           },
           {
@@ -10019,7 +10019,7 @@
           {
             "order": 6,
             "type": "ban",
-            "team": "TYLOO",
+            "team": "FunPlus Phoenix",
             "map": "Corrode"
           },
           {
@@ -10373,7 +10373,7 @@
           {
             "order": 2,
             "type": "ban",
-            "team": "Wolves Esports",
+            "team": "Xi Lai Gaming",
             "map": "Split"
           },
           {
@@ -10385,7 +10385,7 @@
           {
             "order": 4,
             "type": "pick",
-            "team": "Wolves Esports",
+            "team": "Xi Lai Gaming",
             "map": "Abyss"
           },
           {
@@ -10397,7 +10397,7 @@
           {
             "order": 6,
             "type": "ban",
-            "team": "Wolves Esports",
+            "team": "Xi Lai Gaming",
             "map": "Haven"
           },
           {
@@ -10489,7 +10489,7 @@
           {
             "order": 2,
             "type": "ban",
-            "team": "TYLOO",
+            "team": "EDward Gaming",
             "map": "Split"
           },
           {
@@ -10501,7 +10501,7 @@
           {
             "order": 4,
             "type": "pick",
-            "team": "TYLOO",
+            "team": "EDward Gaming",
             "map": "Bind"
           },
           {
@@ -10513,7 +10513,7 @@
           {
             "order": 6,
             "type": "ban",
-            "team": "TYLOO",
+            "team": "EDward Gaming",
             "map": "Haven"
           },
           {
@@ -10635,7 +10635,7 @@
           {
             "order": 2,
             "type": "ban",
-            "team": "Dragon Ranger Gaming",
+            "team": "All Gamers",
             "map": "Breeze"
           },
           {
@@ -10647,7 +10647,7 @@
           {
             "order": 4,
             "type": "pick",
-            "team": "Dragon Ranger Gaming",
+            "team": "All Gamers",
             "map": "Bind"
           },
           {
@@ -10659,7 +10659,7 @@
           {
             "order": 6,
             "type": "ban",
-            "team": "Dragon Ranger Gaming",
+            "team": "All Gamers",
             "map": "Pearl"
           },
           {
@@ -10745,37 +10745,37 @@
           {
             "order": 1,
             "type": "ban",
-            "team": "EDward Gaming",
+            "team": "Xi Lai Gaming",
             "map": "Breeze"
           },
           {
             "order": 2,
             "type": "ban",
-            "team": "EDward Gaming",
+            "team": "Xi Lai Gaming",
             "map": "Corrode"
           },
           {
             "order": 3,
             "type": "pick",
-            "team": "EDward Gaming",
+            "team": "Xi Lai Gaming",
             "map": "Split"
           },
           {
             "order": 4,
             "type": "pick",
-            "team": "EDward Gaming",
+            "team": "Xi Lai Gaming",
             "map": "Pearl"
           },
           {
             "order": 5,
             "type": "ban",
-            "team": "EDward Gaming",
+            "team": "Xi Lai Gaming",
             "map": "Abyss"
           },
           {
             "order": 6,
             "type": "ban",
-            "team": "EDward Gaming",
+            "team": "Xi Lai Gaming",
             "map": "Haven"
           },
           {
@@ -10957,7 +10957,7 @@
           {
             "order": 2,
             "type": "ban",
-            "team": "Xi Lai Gaming",
+            "team": "All Gamers",
             "map": "Breeze"
           },
           {
@@ -10969,7 +10969,7 @@
           {
             "order": 4,
             "type": "pick",
-            "team": "Xi Lai Gaming",
+            "team": "All Gamers",
             "map": "Split"
           },
           {
@@ -10981,7 +10981,7 @@
           {
             "order": 6,
             "type": "pick",
-            "team": "Xi Lai Gaming",
+            "team": "All Gamers",
             "map": "Abyss"
           },
           {
@@ -11213,7 +11213,7 @@
           {
             "order": 1,
             "type": "ban",
-            "team": "Wolves Esports",
+            "team": "Titan Esports Club",
             "map": "Pearl"
           },
           {
@@ -11225,7 +11225,7 @@
           {
             "order": 3,
             "type": "pick",
-            "team": "Wolves Esports",
+            "team": "Titan Esports Club",
             "map": "Breeze"
           },
           {
@@ -11237,7 +11237,7 @@
           {
             "order": 5,
             "type": "ban",
-            "team": "Wolves Esports",
+            "team": "Titan Esports Club",
             "map": "Abyss"
           },
           {
@@ -11359,7 +11359,7 @@
           {
             "order": 1,
             "type": "ban",
-            "team": "JDG Esports",
+            "team": "Trace Esports",
             "map": "Breeze"
           },
           {
@@ -11371,7 +11371,7 @@
           {
             "order": 3,
             "type": "pick",
-            "team": "JDG Esports",
+            "team": "Trace Esports",
             "map": "Split"
           },
           {
@@ -11383,7 +11383,7 @@
           {
             "order": 5,
             "type": "ban",
-            "team": "JDG Esports",
+            "team": "Trace Esports",
             "map": "Bind"
           },
           {
@@ -11481,7 +11481,7 @@
           {
             "order": 2,
             "type": "ban",
-            "team": "Bilibili Gaming",
+            "team": "FunPlus Phoenix",
             "map": "Split"
           },
           {
@@ -11493,7 +11493,7 @@
           {
             "order": 4,
             "type": "pick",
-            "team": "Bilibili Gaming",
+            "team": "FunPlus Phoenix",
             "map": "Bind"
           },
           {
@@ -11505,7 +11505,7 @@
           {
             "order": 6,
             "type": "ban",
-            "team": "Bilibili Gaming",
+            "team": "FunPlus Phoenix",
             "map": "Abyss"
           },
           {
@@ -11737,7 +11737,7 @@
           {
             "order": 1,
             "type": "ban",
-            "team": "Bilibili Gaming",
+            "team": "Trace Esports",
             "map": "Pearl"
           },
           {
@@ -11749,7 +11749,7 @@
           {
             "order": 3,
             "type": "pick",
-            "team": "Bilibili Gaming",
+            "team": "Trace Esports",
             "map": "Abyss"
           },
           {
@@ -11761,7 +11761,7 @@
           {
             "order": 5,
             "type": "ban",
-            "team": "Bilibili Gaming",
+            "team": "Trace Esports",
             "map": "Bind"
           },
           {
@@ -11883,7 +11883,7 @@
           {
             "order": 1,
             "type": "ban",
-            "team": "TYLOO",
+            "team": "Dragon Ranger Gaming",
             "map": "Haven"
           },
           {
@@ -11895,7 +11895,7 @@
           {
             "order": 3,
             "type": "pick",
-            "team": "TYLOO",
+            "team": "Dragon Ranger Gaming",
             "map": "Corrode"
           },
           {
@@ -11907,7 +11907,7 @@
           {
             "order": 5,
             "type": "ban",
-            "team": "TYLOO",
+            "team": "Dragon Ranger Gaming",
             "map": "Bind"
           },
           {
@@ -12035,7 +12035,7 @@
           {
             "order": 2,
             "type": "ban",
-            "team": "Bilibili Gaming",
+            "team": "EDward Gaming",
             "map": "Pearl"
           },
           {
@@ -12047,7 +12047,7 @@
           {
             "order": 4,
             "type": "pick",
-            "team": "Bilibili Gaming",
+            "team": "EDward Gaming",
             "map": "Haven"
           },
           {
@@ -12059,7 +12059,7 @@
           {
             "order": 6,
             "type": "ban",
-            "team": "Bilibili Gaming",
+            "team": "EDward Gaming",
             "map": "Split"
           },
           {
@@ -12145,37 +12145,37 @@
           {
             "order": 1,
             "type": "ban",
-            "team": "Bilibili Gaming",
+            "team": "Dragon Ranger Gaming",
             "map": "Haven"
           },
           {
             "order": 2,
             "type": "ban",
-            "team": "Bilibili Gaming",
+            "team": "Dragon Ranger Gaming",
             "map": "Corrode"
           },
           {
             "order": 3,
             "type": "pick",
-            "team": "Bilibili Gaming",
+            "team": "Dragon Ranger Gaming",
             "map": "Split"
           },
           {
             "order": 4,
             "type": "pick",
-            "team": "Bilibili Gaming",
+            "team": "Dragon Ranger Gaming",
             "map": "Abyss"
           },
           {
             "order": 5,
             "type": "ban",
-            "team": "Bilibili Gaming",
+            "team": "Dragon Ranger Gaming",
             "map": "Bind"
           },
           {
             "order": 6,
             "type": "ban",
-            "team": "Bilibili Gaming",
+            "team": "Dragon Ranger Gaming",
             "map": "Pearl"
           },
           {
@@ -12351,37 +12351,37 @@
           {
             "order": 1,
             "type": "ban",
-            "team": "Bilibili Gaming",
+            "team": "Xi Lai Gaming",
             "map": "Haven"
           },
           {
             "order": 2,
             "type": "ban",
-            "team": "Bilibili Gaming",
+            "team": "Xi Lai Gaming",
             "map": "Corrode"
           },
           {
             "order": 3,
             "type": "pick",
-            "team": "Bilibili Gaming",
+            "team": "Xi Lai Gaming",
             "map": "Abyss"
           },
           {
             "order": 4,
             "type": "pick",
-            "team": "Bilibili Gaming",
+            "team": "Xi Lai Gaming",
             "map": "Bind"
           },
           {
             "order": 5,
             "type": "pick",
-            "team": "Bilibili Gaming",
+            "team": "Xi Lai Gaming",
             "map": "Breeze"
           },
           {
             "order": 6,
             "type": "pick",
-            "team": "Bilibili Gaming",
+            "team": "Xi Lai Gaming",
             "map": "Pearl"
           },
           {
@@ -12789,7 +12789,7 @@
           {
             "order": 1,
             "type": "ban",
-            "team": "Wolves Esports",
+            "team": "Trace Esports",
             "map": "Pearl"
           },
           {
@@ -12801,7 +12801,7 @@
           {
             "order": 3,
             "type": "pick",
-            "team": "Wolves Esports",
+            "team": "Trace Esports",
             "map": "Abyss"
           },
           {
@@ -12813,7 +12813,7 @@
           {
             "order": 5,
             "type": "ban",
-            "team": "Wolves Esports",
+            "team": "Trace Esports",
             "map": "Haven"
           },
           {
@@ -12941,7 +12941,7 @@
           {
             "order": 2,
             "type": "ban",
-            "team": "JDG Esports",
+            "team": "Titan Esports Club",
             "map": "Pearl"
           },
           {
@@ -12953,7 +12953,7 @@
           {
             "order": 4,
             "type": "pick",
-            "team": "JDG Esports",
+            "team": "Titan Esports Club",
             "map": "Haven"
           },
           {
@@ -12965,7 +12965,7 @@
           {
             "order": 6,
             "type": "ban",
-            "team": "JDG Esports",
+            "team": "Titan Esports Club",
             "map": "Abyss"
           },
           {
@@ -13203,7 +13203,7 @@
           {
             "order": 2,
             "type": "ban",
-            "team": "JDG Esports",
+            "team": "EDward Gaming",
             "map": "Pearl"
           },
           {
@@ -13215,7 +13215,7 @@
           {
             "order": 4,
             "type": "pick",
-            "team": "JDG Esports",
+            "team": "EDward Gaming",
             "map": "Haven"
           },
           {
@@ -13227,7 +13227,7 @@
           {
             "order": 6,
             "type": "ban",
-            "team": "JDG Esports",
+            "team": "EDward Gaming",
             "map": "Split"
           },
           {
@@ -13489,37 +13489,37 @@
           {
             "order": 1,
             "type": "ban",
-            "team": "EDward Gaming",
+            "team": "Dragon Ranger Gaming",
             "map": "Breeze"
           },
           {
             "order": 2,
             "type": "ban",
-            "team": "EDward Gaming",
+            "team": "Dragon Ranger Gaming",
             "map": "Abyss"
           },
           {
             "order": 3,
             "type": "pick",
-            "team": "EDward Gaming",
+            "team": "Dragon Ranger Gaming",
             "map": "Split"
           },
           {
             "order": 4,
             "type": "pick",
-            "team": "EDward Gaming",
+            "team": "Dragon Ranger Gaming",
             "map": "Pearl"
           },
           {
             "order": 5,
             "type": "ban",
-            "team": "EDward Gaming",
+            "team": "Dragon Ranger Gaming",
             "map": "Bind"
           },
           {
             "order": 6,
             "type": "ban",
-            "team": "EDward Gaming",
+            "team": "Dragon Ranger Gaming",
             "map": "Haven"
           },
           {
@@ -13665,7 +13665,7 @@
           {
             "order": 1,
             "type": "ban",
-            "team": "EDward Gaming",
+            "team": "Bilibili Gaming",
             "map": "Corrode"
           },
           {
@@ -13677,7 +13677,7 @@
           {
             "order": 3,
             "type": "pick",
-            "team": "EDward Gaming",
+            "team": "Bilibili Gaming",
             "map": "Pearl"
           },
           {
@@ -13689,7 +13689,7 @@
           {
             "order": 5,
             "type": "pick",
-            "team": "EDward Gaming",
+            "team": "Bilibili Gaming",
             "map": "Abyss"
           },
           {

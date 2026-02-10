@@ -60,8 +60,76 @@ def resolve_team_strict(token: str, left_full: str, right_full: str) -> str:
     l_clean = clean_internal_name(left_full).upper()
     r_clean = clean_internal_name(right_full).upper()
     
+    # Common VLR abbreviations — verified from actual veto text
+    ALIASES = {
+        # EMEA
+        "NAVI": "NATUS VINCERE", "NV": "NATUS VINCERE",
+        "TL": "TEAM LIQUID", "VIT": "TEAM VITALITY", "TH": "TEAM HERETICS",
+        "FNC": "FNATIC", "GX": "GIANTX", "M8": "GENTLE MATES",
+        "KC": "KARMINE CORP", "BBL": "BBL ESPORTS",
+        "FUT": "FUT ESPORTS", "ULF": "ULF ESPORTS",
+        "PCF": "PCIFIC ESPORTS",
+        # Americas
+        "C9": "CLOUD9", "SEN": "SENTINELS",
+        "100T": "100 THIEVES", "EG": "EVIL GENIUSES",
+        "LEV": "LEVIATAN", "KRU": "KRU ESPORTS",
+        "G2": "G2 ESPORTS", "NRG": "NRG",
+        "MIBR": "MIBR", "LOUD": "LOUD",
+        "FUR": "FURIA", "ENV": "ENVY",
+        # Pacific
+        "PRX": "PAPER REX", "DFM": "DETONATION FOCUSME",
+        "TS": "TEAM SECRET", "GE": "GLOBAL ESPORTS",
+        "RRQ": "REX REGUM QEON", "ZETA": "ZETA DIVISION",
+        "T1": "T1", "DRX": "DRX", "GEN": "GEN.G",
+        "NS": "NONGSHIM REDFORCE", "NSRF": "NONGSHIM REDFORCE",
+        "FS": "FULL SENSE", "TLN": "TALON ESPORTS",
+        "VL": "VARREL",
+        # China
+        "EDG": "EDWARD GAMING", "FPX": "FUNPLUS PHOENIX",
+        "BLG": "BILIBILI GAMING", "WOL": "WOLVES ESPORTS",
+        "TEC": "TITAN ESPORTS CLUB", "DRG": "DRAGON RANGER GAMING",
+        "XLG": "XI LAI GAMING", "AG": "ALL GAMERS",
+        "TE": "TRACE ESPORTS", "TYL": "TYLOO",
+        "JDG": "JDG ESPORTS", "NOVA": "NOVA ESPORTS",
+    }
+    
+    alias_full = ALIASES.get(tag, "")
+    if alias_full:
+        if alias_full in l_clean or l_clean in alias_full: return left_full
+        if alias_full in r_clean or r_clean in alias_full: return right_full
+    
+    # Exact word match
     if re.search(rf'\b{re.escape(tag)}\b', l_clean): return left_full
     if re.search(rf'\b{re.escape(tag)}\b', r_clean): return right_full
+    
+    # Starts with match (e.g. "SEN" matches "SENTINELS")
+    if l_clean.startswith(tag): return left_full
+    if r_clean.startswith(tag): return right_full
+    
+    # Tag is contained in the name (e.g. "LEV" in "LEVIATAN")
+    if tag in l_clean: return left_full
+    if tag in r_clean: return right_full
+    
+    # Handle number-based abbreviations like "100T" for "100 Thieves"
+    # Strip trailing letters from tag and check if number part matches
+    num_match = re.match(r'^(\d+)', tag)
+    if num_match:
+        num = num_match.group(1)
+        if num in l_clean: return left_full
+        if num in r_clean: return right_full
+    
+    # Build abbreviation from full name initials and check
+    # e.g. "Evil Geniuses" -> "EG", "Karmine Corp" -> "KC"
+    l_words = l_clean.split()
+    r_words = r_clean.split()
+    l_abbr = ''.join(w[0] for w in l_words if w)
+    r_abbr = ''.join(w[0] for w in r_words if w)
+    if tag == l_abbr: return left_full
+    if tag == r_abbr: return right_full
+    
+    # Fallback: first word match
+    if l_words and tag.startswith(l_words[0][:3]): return left_full
+    if r_words and tag.startswith(r_words[0][:3]): return right_full
     
     return left_full if l_clean.startswith(tag) else right_full
 
