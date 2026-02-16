@@ -21,8 +21,6 @@
     "Gen.G",
     "Gentle Mates",
     "Global Esports",
-    "Guangzhou Huadu Bilibili Gaming\t\t\t\t\t\t\n\t\t\t\t\t\t\t(Bilibili Gaming)",
-    "JD Mall JDG Esports\t\t\t\t\t\t\n\t\t\t\t\t\t\t(JDG Esports)",
     "JDG Esports",
     "KRÜ Esports",
     "Karmine Corp",
@@ -43,11 +41,11 @@
     "Team Liquid",
     "Team Secret",
     "Team Vitality",
+    "Titan Esports Club",
     "Trace Esports",
     "ULF Esports",
     "VARREL",
     "Wolves Esports",
-    "Wuxi Titan Esports Club\t\t\t\t\t\t\n\t\t\t\t\t\t\t(Titan Esports Club)",
     "Xi Lai Gaming",
     "ZETA DIVISION"
   ],
@@ -5012,30 +5010,64 @@
       "winner": "Rex Regum Qeon",
       "played": [
         {
-          "map": "Haven\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tPICK\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t58:54",
+          "map": "Haven",
           "ls": 13,
           "rs": 10,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Killjoy",
+            "Sova",
+            "Neon",
+            "Omen",
+            "Viper"
+          ],
+          "right_agents": [
+            "Chamber",
+            "Astra",
+            "Yoru",
+            "Fade",
+            "Phoenix"
+          ],
           "pistols": {
-            "left": 0,
-            "right": 0
+            "left": 1,
+            "right": 1
           },
-          "sides": {}
+          "sides": {
+            "left_atk": 4,
+            "left_def": 9,
+            "right_atk": 2,
+            "right_def": 8
+          }
         },
         {
-          "map": "Corrode\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tPICK\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t42:41",
+          "map": "Corrode",
           "ls": 13,
           "rs": 5,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Fade",
+            "Chamber",
+            "Viper",
+            "Omen",
+            "Neon"
+          ],
+          "right_agents": [
+            "Yoru",
+            "Phoenix",
+            "Omen",
+            "Chamber",
+            "Fade"
+          ],
           "pistols": {
-            "left": 0,
-            "right": 0
+            "left": 1,
+            "right": 1
           },
-          "sides": {}
+          "sides": {
+            "left_atk": 10,
+            "left_def": 3,
+            "right_atk": 3,
+            "right_def": 2
+          }
         }
       ],
       "veto": {
@@ -5049,7 +5081,7 @@
           {
             "order": 2,
             "type": "ban",
-            "team": "DetonatioN FocusMe",
+            "team": "Rex Regum Qeon",
             "map": "Abyss"
           },
           {
@@ -5061,7 +5093,7 @@
           {
             "order": 4,
             "type": "pick",
-            "team": "DetonatioN FocusMe",
+            "team": "Rex Regum Qeon",
             "map": "Corrode"
           },
           {
@@ -5073,7 +5105,7 @@
           {
             "order": 6,
             "type": "ban",
-            "team": "DetonatioN FocusMe",
+            "team": "Rex Regum Qeon",
             "map": "Split"
           },
           {
@@ -5210,30 +5242,64 @@
       "winner": "Rex Regum Qeon",
       "played": [
         {
-          "map": "Bind\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tPICK\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t48:03",
+          "map": "Bind",
           "ls": 6,
           "rs": 13,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Brimstone",
+            "Fade",
+            "Raze",
+            "Viper",
+            "Yoru"
+          ],
+          "right_agents": [
+            "Chamber",
+            "Skye",
+            "Raze",
+            "Viper",
+            "Brimstone"
+          ],
           "pistols": {
             "left": 0,
-            "right": 0
+            "right": 2
           },
-          "sides": {}
+          "sides": {
+            "left_atk": 5,
+            "left_def": 1,
+            "right_atk": 6,
+            "right_def": 7
+          }
         },
         {
-          "map": "Pearl\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tPICK\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t41:58",
+          "map": "Pearl",
           "ls": 5,
           "rs": 13,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Astra",
+            "Waylay",
+            "Killjoy",
+            "Yoru",
+            "Sova"
+          ],
+          "right_agents": [
+            "Chamber",
+            "Astra",
+            "Sova",
+            "Neon",
+            "Tejo"
+          ],
           "pistols": {
-            "left": 0,
-            "right": 0
+            "left": 1,
+            "right": 1
           },
-          "sides": {}
+          "sides": {
+            "left_atk": 3,
+            "left_def": 2,
+            "right_atk": 10,
+            "right_def": 3
+          }
         }
       ],
       "veto": {
@@ -5241,7 +5307,7 @@
           {
             "order": 1,
             "type": "ban",
-            "team": "Rex Regum Qeon",
+            "team": "Paper Rex",
             "map": "Abyss"
           },
           {
@@ -5253,7 +5319,7 @@
           {
             "order": 3,
             "type": "pick",
-            "team": "Rex Regum Qeon",
+            "team": "Paper Rex",
             "map": "Bind"
           },
           {
@@ -5265,7 +5331,7 @@
           {
             "order": 5,
             "type": "ban",
-            "team": "Rex Regum Qeon",
+            "team": "Paper Rex",
             "map": "Corrode"
           },
           {
@@ -5292,69 +5358,154 @@
       "winner": "Nongshim RedForce",
       "played": [
         {
-          "map": "Corrode\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tPICK\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t1:11:24",
+          "map": "Corrode",
           "ls": 12,
           "rs": 14,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Omen",
+            "Fade",
+            "Viper",
+            "Neon",
+            "Yoru"
+          ],
+          "right_agents": [
+            "Viper",
+            "Omen",
+            "Chamber",
+            "Neon",
+            "Fade"
+          ],
           "pistols": {
-            "left": 0,
-            "right": 0
+            "left": 1,
+            "right": 1
           },
-          "sides": {}
+          "sides": {
+            "left_atk": 6,
+            "left_def": 6,
+            "right_atk": 7,
+            "right_def": 7
+          }
         },
         {
-          "map": "Bind\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tPICK\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t51:45",
+          "map": "Bind",
           "ls": 13,
           "rs": 8,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Viper",
+            "Brimstone",
+            "Neon",
+            "Fade",
+            "Yoru"
+          ],
+          "right_agents": [
+            "Viper",
+            "Chamber",
+            "Raze",
+            "Brimstone",
+            "Skye"
+          ],
           "pistols": {
-            "left": 0,
-            "right": 0
+            "left": 1,
+            "right": 1
           },
-          "sides": {}
+          "sides": {
+            "left_atk": 9,
+            "left_def": 4,
+            "right_atk": 5,
+            "right_def": 3
+          }
         },
         {
-          "map": "Haven\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tPICK\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t39:55",
+          "map": "Haven",
           "ls": 13,
           "rs": 5,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Neon",
+            "Sova",
+            "Omen",
+            "Yoru",
+            "Killjoy"
+          ],
+          "right_agents": [
+            "Sova",
+            "Killjoy",
+            "Neon",
+            "Viper",
+            "Omen"
+          ],
           "pistols": {
-            "left": 0,
-            "right": 0
+            "left": 1,
+            "right": 1
           },
-          "sides": {}
+          "sides": {
+            "left_atk": 9,
+            "left_def": 4,
+            "right_atk": 2,
+            "right_def": 3
+          }
         },
         {
-          "map": "Abyss\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tPICK\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t48:01",
+          "map": "Abyss",
           "ls": 11,
           "rs": 13,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Astra",
+            "Sova",
+            "Omen",
+            "Yoru",
+            "Waylay"
+          ],
+          "right_agents": [
+            "Yoru",
+            "Waylay",
+            "Brimstone",
+            "Astra",
+            "Sova"
+          ],
           "pistols": {
-            "left": 0,
+            "left": 2,
             "right": 0
           },
-          "sides": {}
+          "sides": {
+            "left_atk": 5,
+            "left_def": 6,
+            "right_atk": 6,
+            "right_def": 7
+          }
         },
         {
-          "map": "Breeze\t\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t41:56",
+          "map": "Breeze",
           "ls": 13,
           "rs": 7,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Sova",
+            "Viper",
+            "Astra",
+            "Yoru",
+            "Neon"
+          ],
+          "right_agents": [
+            "Yoru",
+            "Viper",
+            "Sova",
+            "Jett",
+            "Astra"
+          ],
           "pistols": {
-            "left": 0,
-            "right": 0
+            "left": 1,
+            "right": 1
           },
-          "sides": {}
+          "sides": {
+            "left_atk": 11,
+            "left_def": 2,
+            "right_atk": 6,
+            "right_def": 1
+          }
         }
       ],
       "veto": {
@@ -5368,7 +5519,7 @@
           {
             "order": 2,
             "type": "ban",
-            "team": "Rex Regum Qeon",
+            "team": "Nongshim RedForce",
             "map": "Pearl"
           },
           {
@@ -5380,7 +5531,7 @@
           {
             "order": 4,
             "type": "pick",
-            "team": "Rex Regum Qeon",
+            "team": "Nongshim RedForce",
             "map": "Bind"
           },
           {
@@ -5392,7 +5543,7 @@
           {
             "order": 6,
             "type": "pick",
-            "team": "Rex Regum Qeon",
+            "team": "Nongshim RedForce",
             "map": "Abyss"
           },
           {
@@ -6607,43 +6758,94 @@
       "winner": "T1",
       "played": [
         {
-          "map": "Pearl\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tPICK\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t1:00:37",
+          "map": "Pearl",
           "ls": 7,
           "rs": 13,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Neon",
+            "Chamber",
+            "Astra",
+            "Sova",
+            "Tejo"
+          ],
+          "right_agents": [
+            "Sova",
+            "Yoru",
+            "Astra",
+            "Neon",
+            "Killjoy"
+          ],
           "pistols": {
             "left": 0,
-            "right": 0
+            "right": 2
           },
-          "sides": {}
+          "sides": {
+            "left_atk": 4,
+            "left_def": 3,
+            "right_atk": 9,
+            "right_def": 4
+          }
         },
         {
-          "map": "Breeze\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tPICK\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t29:08",
+          "map": "Breeze",
           "ls": 2,
           "rs": 13,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Viper",
+            "Yoru",
+            "Jett",
+            "Astra",
+            "Sova"
+          ],
+          "right_agents": [
+            "Astra",
+            "Yoru",
+            "Viper",
+            "Sova",
+            "Jett"
+          ],
           "pistols": {
             "left": 0,
-            "right": 0
+            "right": 2
           },
-          "sides": {}
+          "sides": {
+            "left_atk": 2,
+            "left_def": 0,
+            "right_atk": 3,
+            "right_def": 10
+          }
         },
         {
-          "map": "Abyss\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tPICK\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t1:19:38",
+          "map": "Abyss",
           "ls": 17,
           "rs": 19,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Yoru",
+            "Waylay",
+            "Brimstone",
+            "Sova",
+            "Astra"
+          ],
+          "right_agents": [
+            "Waylay",
+            "Sova",
+            "Astra",
+            "Tejo",
+            "Yoru"
+          ],
           "pistols": {
             "left": 0,
-            "right": 0
+            "right": 2
           },
-          "sides": {}
+          "sides": {
+            "left_atk": 12,
+            "left_def": 5,
+            "right_atk": 13,
+            "right_def": 6
+          }
         }
       ],
       "veto": {
@@ -6651,7 +6853,7 @@
           {
             "order": 1,
             "type": "ban",
-            "team": "T1",
+            "team": "Rex Regum Qeon",
             "map": "Split"
           },
           {
@@ -6663,7 +6865,7 @@
           {
             "order": 3,
             "type": "pick",
-            "team": "T1",
+            "team": "Rex Regum Qeon",
             "map": "Pearl"
           },
           {
@@ -6675,7 +6877,7 @@
           {
             "order": 5,
             "type": "pick",
-            "team": "T1",
+            "team": "Rex Regum Qeon",
             "map": "Abyss"
           },
           {
@@ -7810,56 +8012,124 @@
       "winner": "Paper Rex",
       "played": [
         {
-          "map": "Haven\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tPICK\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t1:04:45",
+          "map": "Haven",
           "ls": 8,
           "rs": 13,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Omen",
+            "Yoru",
+            "Cypher",
+            "Sova",
+            "Neon"
+          ],
+          "right_agents": [
+            "Omen",
+            "Phoenix",
+            "Fade",
+            "Chamber",
+            "Yoru"
+          ],
           "pistols": {
-            "left": 0,
-            "right": 0
+            "left": 1,
+            "right": 1
           },
-          "sides": {}
+          "sides": {
+            "left_atk": 8,
+            "left_def": 0,
+            "right_atk": 9,
+            "right_def": 4
+          }
         },
         {
-          "map": "Corrode\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tPICK\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t55:44",
+          "map": "Corrode",
           "ls": 13,
           "rs": 10,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Chamber",
+            "Viper",
+            "Fade",
+            "Omen",
+            "Neon"
+          ],
+          "right_agents": [
+            "Omen",
+            "Fade",
+            "Waylay",
+            "Phoenix",
+            "Viper"
+          ],
           "pistols": {
-            "left": 0,
+            "left": 2,
             "right": 0
           },
-          "sides": {}
+          "sides": {
+            "left_atk": 9,
+            "left_def": 4,
+            "right_atk": 7,
+            "right_def": 3
+          }
         },
         {
-          "map": "Breeze\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tPICK\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t49:02",
+          "map": "Breeze",
           "ls": 10,
           "rs": 13,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Astra",
+            "Viper",
+            "Neon",
+            "Sova",
+            "Yoru"
+          ],
+          "right_agents": [
+            "Yoru",
+            "Sova",
+            "Jett",
+            "Viper",
+            "Omen"
+          ],
           "pistols": {
             "left": 0,
-            "right": 0
+            "right": 2
           },
-          "sides": {}
+          "sides": {
+            "left_atk": 4,
+            "left_def": 6,
+            "right_atk": 5,
+            "right_def": 8
+          }
         },
         {
-          "map": "Pearl\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tPICK\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t53:10",
+          "map": "Pearl",
           "ls": 10,
           "rs": 13,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Chamber",
+            "Sova",
+            "Neon",
+            "Tejo",
+            "Astra"
+          ],
+          "right_agents": [
+            "Veto",
+            "Raze",
+            "Fade",
+            "Yoru",
+            "Astra"
+          ],
           "pistols": {
             "left": 0,
-            "right": 0
+            "right": 2
           },
-          "sides": {}
+          "sides": {
+            "left_atk": 7,
+            "left_def": 3,
+            "right_atk": 8,
+            "right_def": 5
+          }
         }
       ],
       "veto": {
@@ -7873,7 +8143,7 @@
           {
             "order": 2,
             "type": "ban",
-            "team": "Paper Rex",
+            "team": "Rex Regum Qeon",
             "map": "Split"
           },
           {
@@ -7885,7 +8155,7 @@
           {
             "order": 4,
             "type": "pick",
-            "team": "Paper Rex",
+            "team": "Rex Regum Qeon",
             "map": "Corrode"
           },
           {
@@ -7897,7 +8167,7 @@
           {
             "order": 6,
             "type": "pick",
-            "team": "Paper Rex",
+            "team": "Rex Regum Qeon",
             "map": "Pearl"
           },
           {
@@ -12019,48 +12289,99 @@
     {
       "id": 598922,
       "date": "2026-01-23",
-      "left": "JD Mall JDG Esports\t\t\t\t\t\t\n\t\t\t\t\t\t\t(JDG Esports)",
-      "right": "Wuxi Titan Esports Club\t\t\t\t\t\t\n\t\t\t\t\t\t\t(Titan Esports Club)",
-      "winner": "JD Mall JDG Esports\t\t\t\t\t\t\n\t\t\t\t\t\t\t(JDG Esports)",
+      "left": "JDG Esports",
+      "right": "Titan Esports Club",
+      "winner": "JDG Esports",
       "played": [
         {
-          "map": "Corrode\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tPICK\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t-",
+          "map": "Corrode",
           "ls": 13,
           "rs": 6,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Yoru",
+            "Waylay",
+            "Omen",
+            "Viper",
+            "Fade"
+          ],
+          "right_agents": [
+            "Sova",
+            "KAY/O",
+            "Omen",
+            "Viper",
+            "Waylay"
+          ],
           "pistols": {
-            "left": 0,
-            "right": 0
+            "left": 1,
+            "right": 1
           },
-          "sides": {}
+          "sides": {
+            "left_atk": 6,
+            "left_def": 7,
+            "right_atk": 5,
+            "right_def": 1
+          }
         },
         {
-          "map": "Haven\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tPICK\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t-",
+          "map": "Haven",
           "ls": 6,
           "rs": 13,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Cypher",
+            "Omen",
+            "Sova",
+            "Yoru",
+            "Neon"
+          ],
+          "right_agents": [
+            "Killjoy",
+            "Neon",
+            "Viper",
+            "Sova",
+            "Omen"
+          ],
           "pistols": {
-            "left": 0,
-            "right": 0
+            "left": 1,
+            "right": 1
           },
-          "sides": {}
+          "sides": {
+            "left_atk": 1,
+            "left_def": 5,
+            "right_atk": 7,
+            "right_def": 6
+          }
         },
         {
-          "map": "Abyss\t\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t-",
+          "map": "Abyss",
           "ls": 13,
           "rs": 10,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Waylay",
+            "Cypher",
+            "Yoru",
+            "Astra",
+            "Sova"
+          ],
+          "right_agents": [
+            "Sova",
+            "Tejo",
+            "Waylay",
+            "Neon",
+            "Astra"
+          ],
           "pistols": {
-            "left": 0,
-            "right": 0
+            "left": 1,
+            "right": 1
           },
-          "sides": {}
+          "sides": {
+            "left_atk": 5,
+            "left_def": 8,
+            "right_atk": 4,
+            "right_def": 6
+          }
         }
       ],
       "veto": {
@@ -12068,37 +12389,37 @@
           {
             "order": 1,
             "type": "ban",
-            "team": "Wuxi Titan Esports Club\t\t\t\t\t\t\n\t\t\t\t\t\t\t(Titan Esports Club)",
+            "team": "Titan Esports Club",
             "map": "Pearl"
           },
           {
             "order": 2,
             "type": "ban",
-            "team": "JD Mall JDG Esports\t\t\t\t\t\t\n\t\t\t\t\t\t\t(JDG Esports)",
+            "team": "JDG Esports",
             "map": "Split"
           },
           {
             "order": 3,
             "type": "pick",
-            "team": "Wuxi Titan Esports Club\t\t\t\t\t\t\n\t\t\t\t\t\t\t(Titan Esports Club)",
+            "team": "Titan Esports Club",
             "map": "Corrode"
           },
           {
             "order": 4,
             "type": "pick",
-            "team": "JD Mall JDG Esports\t\t\t\t\t\t\n\t\t\t\t\t\t\t(JDG Esports)",
+            "team": "JDG Esports",
             "map": "Haven"
           },
           {
             "order": 5,
             "type": "ban",
-            "team": "Wuxi Titan Esports Club\t\t\t\t\t\t\n\t\t\t\t\t\t\t(Titan Esports Club)",
+            "team": "Titan Esports Club",
             "map": "Breeze"
           },
           {
             "order": 6,
             "type": "ban",
-            "team": "JD Mall JDG Esports\t\t\t\t\t\t\n\t\t\t\t\t\t\t(JDG Esports)",
+            "team": "JDG Esports",
             "map": "Bind"
           },
           {
@@ -12493,47 +12814,98 @@
       "id": 598926,
       "date": "2026-01-25",
       "left": "Dragon Ranger Gaming",
-      "right": "JD Mall JDG Esports\t\t\t\t\t\t\n\t\t\t\t\t\t\t(JDG Esports)",
+      "right": "JDG Esports",
       "winner": "Dragon Ranger Gaming",
       "played": [
         {
-          "map": "Abyss\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tPICK\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t1:12:45",
+          "map": "Abyss",
           "ls": 11,
           "rs": 13,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Cypher",
+            "Jett",
+            "Reyna",
+            "Tejo",
+            "Astra"
+          ],
+          "right_agents": [
+            "Astra",
+            "Cypher",
+            "Sova",
+            "Yoru",
+            "Waylay"
+          ],
           "pistols": {
-            "left": 0,
-            "right": 0
+            "left": 1,
+            "right": 1
           },
-          "sides": {}
+          "sides": {
+            "left_atk": 5,
+            "left_def": 6,
+            "right_atk": 6,
+            "right_def": 7
+          }
         },
         {
-          "map": "Breeze\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tPICK\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t44:06",
+          "map": "Breeze",
           "ls": 13,
           "rs": 8,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Yoru",
+            "Sova",
+            "Jett",
+            "Astra",
+            "Cypher"
+          ],
+          "right_agents": [
+            "Jett",
+            "Sova",
+            "Viper",
+            "Astra",
+            "Yoru"
+          ],
           "pistols": {
-            "left": 0,
-            "right": 0
+            "left": 1,
+            "right": 1
           },
-          "sides": {}
+          "sides": {
+            "left_atk": 5,
+            "left_def": 8,
+            "right_atk": 4,
+            "right_def": 4
+          }
         },
         {
-          "map": "Corrode\t\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t52:23",
+          "map": "Corrode",
           "ls": 13,
           "rs": 9,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Cypher",
+            "Omen",
+            "Yoru",
+            "Neon",
+            "Gekko"
+          ],
+          "right_agents": [
+            "Viper",
+            "Waylay",
+            "Fade",
+            "Yoru",
+            "Omen"
+          ],
           "pistols": {
-            "left": 0,
-            "right": 0
+            "left": 1,
+            "right": 1
           },
-          "sides": {}
+          "sides": {
+            "left_atk": 6,
+            "left_def": 7,
+            "right_atk": 3,
+            "right_def": 6
+          }
         }
       ],
       "veto": {
@@ -12541,37 +12913,37 @@
           {
             "order": 1,
             "type": "ban",
-            "team": "JD Mall JDG Esports\t\t\t\t\t\t\n\t\t\t\t\t\t\t(JDG Esports)",
+            "team": "JDG Esports",
             "map": "Haven"
           },
           {
             "order": 2,
             "type": "ban",
-            "team": "JD Mall JDG Esports\t\t\t\t\t\t\n\t\t\t\t\t\t\t(JDG Esports)",
+            "team": "JDG Esports",
             "map": "Pearl"
           },
           {
             "order": 3,
             "type": "pick",
-            "team": "JD Mall JDG Esports\t\t\t\t\t\t\n\t\t\t\t\t\t\t(JDG Esports)",
+            "team": "JDG Esports",
             "map": "Abyss"
           },
           {
             "order": 4,
             "type": "pick",
-            "team": "JD Mall JDG Esports\t\t\t\t\t\t\n\t\t\t\t\t\t\t(JDG Esports)",
+            "team": "JDG Esports",
             "map": "Breeze"
           },
           {
             "order": 5,
             "type": "ban",
-            "team": "JD Mall JDG Esports\t\t\t\t\t\t\n\t\t\t\t\t\t\t(JDG Esports)",
+            "team": "JDG Esports",
             "map": "Split"
           },
           {
             "order": 6,
             "type": "ban",
-            "team": "JD Mall JDG Esports\t\t\t\t\t\t\n\t\t\t\t\t\t\t(JDG Esports)",
+            "team": "JDG Esports",
             "map": "Bind"
           },
           {
@@ -12592,30 +12964,64 @@
       "winner": "Xi Lai Gaming",
       "played": [
         {
-          "map": "Breeze\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tPICK\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t1:13:39",
+          "map": "Breeze",
           "ls": 13,
           "rs": 4,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Yoru",
+            "Viper",
+            "Omen",
+            "Sova",
+            "Jett"
+          ],
+          "right_agents": [
+            "Viper",
+            "Sova",
+            "Astra",
+            "Yoru",
+            "Veto"
+          ],
           "pistols": {
-            "left": 0,
+            "left": 2,
             "right": 0
           },
-          "sides": {}
+          "sides": {
+            "left_atk": 8,
+            "left_def": 5,
+            "right_atk": 0,
+            "right_def": 4
+          }
         },
         {
-          "map": "Abyss\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tPICK\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t42:49",
+          "map": "Abyss",
           "ls": 13,
           "rs": 6,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Astra",
+            "Yoru",
+            "Sova",
+            "Omen",
+            "Waylay"
+          ],
+          "right_agents": [
+            "Veto",
+            "Yoru",
+            "Astra",
+            "Sova",
+            "Omen"
+          ],
           "pistols": {
-            "left": 0,
+            "left": 2,
             "right": 0
           },
-          "sides": {}
+          "sides": {
+            "left_atk": 7,
+            "left_def": 6,
+            "right_atk": 1,
+            "right_def": 5
+          }
         }
       ],
       "veto": {
@@ -12629,7 +13035,7 @@
           {
             "order": 2,
             "type": "ban",
-            "team": "Wolves Esports",
+            "team": "Xi Lai Gaming",
             "map": "Split"
           },
           {
@@ -12641,7 +13047,7 @@
           {
             "order": 4,
             "type": "pick",
-            "team": "Wolves Esports",
+            "team": "Xi Lai Gaming",
             "map": "Abyss"
           },
           {
@@ -12653,7 +13059,7 @@
           {
             "order": 6,
             "type": "ban",
-            "team": "Wolves Esports",
+            "team": "Xi Lai Gaming",
             "map": "Haven"
           },
           {
@@ -12790,43 +13196,94 @@
       "winner": "All Gamers",
       "played": [
         {
-          "map": "Corrode\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tPICK\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t1:02:01",
+          "map": "Corrode",
           "ls": 7,
           "rs": 13,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Waylay",
+            "Sova",
+            "KAY/O",
+            "Omen",
+            "Viper"
+          ],
+          "right_agents": [
+            "Cypher",
+            "Gekko",
+            "Omen",
+            "Yoru",
+            "Neon"
+          ],
           "pistols": {
             "left": 0,
-            "right": 0
+            "right": 2
           },
-          "sides": {}
+          "sides": {
+            "left_atk": 3,
+            "left_def": 4,
+            "right_atk": 8,
+            "right_def": 5
+          }
         },
         {
-          "map": "Bind\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tPICK\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t1:09:45",
+          "map": "Bind",
           "ls": 15,
           "rs": 13,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Brimstone",
+            "Viper",
+            "Raze",
+            "Yoru",
+            "Fade"
+          ],
+          "right_agents": [
+            "Cypher",
+            "Reyna",
+            "Waylay",
+            "Brimstone",
+            "Skye"
+          ],
           "pistols": {
             "left": 0,
-            "right": 0
+            "right": 2
           },
-          "sides": {}
+          "sides": {
+            "left_atk": 8,
+            "left_def": 7,
+            "right_atk": 7,
+            "right_def": 6
+          }
         },
         {
-          "map": "Abyss\t\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t54:49",
+          "map": "Abyss",
           "ls": 13,
           "rs": 10,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Waylay",
+            "Sova",
+            "Astra",
+            "Yoru",
+            "Veto"
+          ],
+          "right_agents": [
+            "Sova",
+            "Astra",
+            "Reyna",
+            "Cypher",
+            "Waylay"
+          ],
           "pistols": {
-            "left": 0,
+            "left": 2,
             "right": 0
           },
-          "sides": {}
+          "sides": {
+            "left_atk": 7,
+            "left_def": 6,
+            "right_atk": 6,
+            "right_def": 4
+          }
         }
       ],
       "veto": {
@@ -12840,7 +13297,7 @@
           {
             "order": 2,
             "type": "ban",
-            "team": "Dragon Ranger Gaming",
+            "team": "All Gamers",
             "map": "Breeze"
           },
           {
@@ -12852,7 +13309,7 @@
           {
             "order": 4,
             "type": "pick",
-            "team": "Dragon Ranger Gaming",
+            "team": "All Gamers",
             "map": "Bind"
           },
           {
@@ -12864,7 +13321,7 @@
           {
             "order": 6,
             "type": "ban",
-            "team": "Dragon Ranger Gaming",
+            "team": "All Gamers",
             "map": "Pearl"
           },
           {
@@ -12885,30 +13342,64 @@
       "winner": "Xi Lai Gaming",
       "played": [
         {
-          "map": "Split\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tPICK\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t57:25",
+          "map": "Split",
           "ls": 13,
           "rs": 5,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Viper",
+            "Omen",
+            "Fade",
+            "Waylay",
+            "Yoru"
+          ],
+          "right_agents": [
+            "Viper",
+            "Fade",
+            "Yoru",
+            "Neon",
+            "Omen"
+          ],
           "pistols": {
-            "left": 0,
+            "left": 2,
             "right": 0
           },
-          "sides": {}
+          "sides": {
+            "left_atk": 6,
+            "left_def": 7,
+            "right_atk": 5,
+            "right_def": 0
+          }
         },
         {
-          "map": "Pearl\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tPICK\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t45:12",
+          "map": "Pearl",
           "ls": 13,
           "rs": 6,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Astra",
+            "Killjoy",
+            "Waylay",
+            "Fade",
+            "Yoru"
+          ],
+          "right_agents": [
+            "Killjoy",
+            "Sova",
+            "Astra",
+            "Yoru",
+            "Neon"
+          ],
           "pistols": {
-            "left": 0,
+            "left": 2,
             "right": 0
           },
-          "sides": {}
+          "sides": {
+            "left_atk": 4,
+            "left_def": 9,
+            "right_atk": 3,
+            "right_def": 3
+          }
         }
       ],
       "veto": {
@@ -12922,7 +13413,7 @@
           {
             "order": 2,
             "type": "ban",
-            "team": "EDward Gaming",
+            "team": "Xi Lai Gaming",
             "map": "Corrode"
           },
           {
@@ -12934,7 +13425,7 @@
           {
             "order": 4,
             "type": "pick",
-            "team": "EDward Gaming",
+            "team": "Xi Lai Gaming",
             "map": "Pearl"
           },
           {
@@ -12946,7 +13437,7 @@
           {
             "order": 6,
             "type": "ban",
-            "team": "EDward Gaming",
+            "team": "Xi Lai Gaming",
             "map": "Haven"
           },
           {
@@ -12967,69 +13458,154 @@
       "winner": "All Gamers",
       "played": [
         {
-          "map": "Pearl\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tPICK\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t1:15:59",
+          "map": "Pearl",
           "ls": 13,
           "rs": 5,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Fade",
+            "Yoru",
+            "Killjoy",
+            "Astra",
+            "Waylay"
+          ],
+          "right_agents": [
+            "Yoru",
+            "Astra",
+            "Waylay",
+            "Fade",
+            "Killjoy"
+          ],
           "pistols": {
-            "left": 0,
-            "right": 0
+            "left": 1,
+            "right": 1
           },
-          "sides": {}
+          "sides": {
+            "left_atk": 2,
+            "left_def": 11,
+            "right_atk": 1,
+            "right_def": 4
+          }
         },
         {
-          "map": "Split\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tPICK\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t54:06",
+          "map": "Split",
           "ls": 13,
           "rs": 11,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Raze",
+            "Waylay",
+            "Omen",
+            "Viper",
+            "Skye"
+          ],
+          "right_agents": [
+            "Waylay",
+            "Omen",
+            "Viper",
+            "Fade",
+            "Yoru"
+          ],
           "pistols": {
-            "left": 0,
+            "left": 2,
             "right": 0
           },
-          "sides": {}
+          "sides": {
+            "left_atk": 4,
+            "left_def": 9,
+            "right_atk": 3,
+            "right_def": 8
+          }
         },
         {
-          "map": "Bind\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tPICK\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t49:25",
+          "map": "Bind",
           "ls": 7,
           "rs": 13,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Viper",
+            "Brimstone",
+            "Yoru",
+            "Raze",
+            "Fade"
+          ],
+          "right_agents": [
+            "Viper",
+            "Yoru",
+            "Waylay",
+            "Brimstone",
+            "Fade"
+          ],
           "pistols": {
             "left": 0,
-            "right": 0
+            "right": 2
           },
-          "sides": {}
+          "sides": {
+            "left_atk": 3,
+            "left_def": 4,
+            "right_atk": 8,
+            "right_def": 5
+          }
         },
         {
-          "map": "Abyss\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tPICK\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t44:30",
+          "map": "Abyss",
           "ls": 6,
           "rs": 13,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Yoru",
+            "Sova",
+            "Veto",
+            "Astra",
+            "Waylay"
+          ],
+          "right_agents": [
+            "Astra",
+            "Yoru",
+            "Omen",
+            "Sova",
+            "Waylay"
+          ],
           "pistols": {
-            "left": 0,
-            "right": 0
+            "left": 1,
+            "right": 1
           },
-          "sides": {}
+          "sides": {
+            "left_atk": 1,
+            "left_def": 5,
+            "right_atk": 7,
+            "right_def": 6
+          }
         },
         {
-          "map": "Haven\t\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t52:41",
+          "map": "Haven",
           "ls": 13,
           "rs": 10,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Sova",
+            "Omen",
+            "Yoru",
+            "Cypher",
+            "Waylay"
+          ],
+          "right_agents": [
+            "Sova",
+            "Viper",
+            "Neon",
+            "Omen",
+            "Killjoy"
+          ],
           "pistols": {
             "left": 0,
-            "right": 0
+            "right": 2
           },
-          "sides": {}
+          "sides": {
+            "left_atk": 8,
+            "left_def": 5,
+            "right_atk": 7,
+            "right_def": 3
+          }
         }
       ],
       "veto": {
@@ -13043,7 +13619,7 @@
           {
             "order": 2,
             "type": "ban",
-            "team": "Xi Lai Gaming",
+            "team": "All Gamers",
             "map": "Breeze"
           },
           {
@@ -13055,7 +13631,7 @@
           {
             "order": 4,
             "type": "pick",
-            "team": "Xi Lai Gaming",
+            "team": "All Gamers",
             "map": "Split"
           },
           {
@@ -13067,7 +13643,7 @@
           {
             "order": 6,
             "type": "pick",
-            "team": "Xi Lai Gaming",
+            "team": "All Gamers",
             "map": "Abyss"
           },
           {
@@ -13199,48 +13775,99 @@
     {
       "id": 598933,
       "date": "2026-01-28",
-      "left": "Wuxi Titan Esports Club\t\t\t\t\t\t\n\t\t\t\t\t\t\t(Titan Esports Club)",
+      "left": "Titan Esports Club",
       "right": "Wolves Esports",
-      "winner": "Wuxi Titan Esports Club\t\t\t\t\t\t\n\t\t\t\t\t\t\t(Titan Esports Club)",
+      "winner": "Titan Esports Club",
       "played": [
         {
-          "map": "Breeze\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tPICK\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t1:02:33",
+          "map": "Breeze",
           "ls": 13,
           "rs": 11,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Astra",
+            "Viper",
+            "Sova",
+            "Neon",
+            "Yoru"
+          ],
+          "right_agents": [
+            "Yoru",
+            "Sova",
+            "Jett",
+            "Astra",
+            "Viper"
+          ],
           "pistols": {
-            "left": 0,
+            "left": 2,
             "right": 0
           },
-          "sides": {}
+          "sides": {
+            "left_atk": 5,
+            "left_def": 8,
+            "right_atk": 4,
+            "right_def": 7
+          }
         },
         {
-          "map": "Bind\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tPICK\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t44:09",
+          "map": "Bind",
           "ls": 7,
           "rs": 13,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Brimstone",
+            "Tejo",
+            "Waylay",
+            "Fade",
+            "Viper"
+          ],
+          "right_agents": [
+            "Brimstone",
+            "Chamber",
+            "Viper",
+            "Skye",
+            "Waylay"
+          ],
           "pistols": {
-            "left": 0,
-            "right": 0
+            "left": 1,
+            "right": 1
           },
-          "sides": {}
+          "sides": {
+            "left_atk": 5,
+            "left_def": 2,
+            "right_atk": 6,
+            "right_def": 7
+          }
         },
         {
-          "map": "Haven\t\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t50:29",
+          "map": "Haven",
           "ls": 13,
           "rs": 8,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Neon",
+            "Viper",
+            "Sova",
+            "Killjoy",
+            "Omen"
+          ],
+          "right_agents": [
+            "Killjoy",
+            "Omen",
+            "Viper",
+            "Neon",
+            "Sova"
+          ],
           "pistols": {
-            "left": 0,
+            "left": 2,
             "right": 0
           },
-          "sides": {}
+          "sides": {
+            "left_atk": 7,
+            "left_def": 6,
+            "right_atk": 3,
+            "right_def": 5
+          }
         }
       ],
       "veto": {
@@ -13248,7 +13875,7 @@
           {
             "order": 1,
             "type": "ban",
-            "team": "Wolves Esports",
+            "team": "Titan Esports Club",
             "map": "Pearl"
           },
           {
@@ -13260,7 +13887,7 @@
           {
             "order": 3,
             "type": "pick",
-            "team": "Wolves Esports",
+            "team": "Titan Esports Club",
             "map": "Breeze"
           },
           {
@@ -13272,7 +13899,7 @@
           {
             "order": 5,
             "type": "ban",
-            "team": "Wolves Esports",
+            "team": "Titan Esports Club",
             "map": "Abyss"
           },
           {
@@ -13557,47 +14184,98 @@
       "id": 598936,
       "date": "2026-01-30",
       "left": "TYLOO",
-      "right": "Wuxi Titan Esports Club\t\t\t\t\t\t\n\t\t\t\t\t\t\t(Titan Esports Club)",
+      "right": "Titan Esports Club",
       "winner": "TYLOO",
       "played": [
         {
-          "map": "Corrode\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tPICK\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t1:12:57",
+          "map": "Corrode",
           "ls": 10,
           "rs": 13,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Neon",
+            "Yoru",
+            "Omen",
+            "Fade",
+            "Viper"
+          ],
+          "right_agents": [
+            "KAY/O",
+            "Viper",
+            "Waylay",
+            "Omen",
+            "Sova"
+          ],
           "pistols": {
-            "left": 0,
+            "left": 2,
             "right": 0
           },
-          "sides": {}
+          "sides": {
+            "left_atk": 6,
+            "left_def": 4,
+            "right_atk": 8,
+            "right_def": 5
+          }
         },
         {
-          "map": "Breeze\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tPICK\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t50:44",
+          "map": "Breeze",
           "ls": 13,
           "rs": 9,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Jett",
+            "Astra",
+            "Viper",
+            "Sova",
+            "Yoru"
+          ],
+          "right_agents": [
+            "Sova",
+            "Neon",
+            "Viper",
+            "Yoru",
+            "Astra"
+          ],
           "pistols": {
-            "left": 0,
-            "right": 0
+            "left": 1,
+            "right": 1
           },
-          "sides": {}
+          "sides": {
+            "left_atk": 8,
+            "left_def": 5,
+            "right_atk": 7,
+            "right_def": 2
+          }
         },
         {
-          "map": "Split\t\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t50:21",
+          "map": "Split",
           "ls": 13,
           "rs": 9,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Yoru",
+            "Omen",
+            "Waylay",
+            "Viper",
+            "Fade"
+          ],
+          "right_agents": [
+            "Fade",
+            "Yoru",
+            "Viper",
+            "Omen",
+            "Neon"
+          ],
           "pistols": {
-            "left": 0,
-            "right": 0
+            "left": 1,
+            "right": 1
           },
-          "sides": {}
+          "sides": {
+            "left_atk": 6,
+            "left_def": 7,
+            "right_atk": 5,
+            "right_def": 4
+          }
         }
       ],
       "veto": {
@@ -13611,7 +14289,7 @@
           {
             "order": 2,
             "type": "ban",
-            "team": "Wuxi Titan Esports Club\t\t\t\t\t\t\n\t\t\t\t\t\t\t(Titan Esports Club)",
+            "team": "Titan Esports Club",
             "map": "Pearl"
           },
           {
@@ -13623,7 +14301,7 @@
           {
             "order": 4,
             "type": "pick",
-            "team": "Wuxi Titan Esports Club\t\t\t\t\t\t\n\t\t\t\t\t\t\t(Titan Esports Club)",
+            "team": "Titan Esports Club",
             "map": "Breeze"
           },
           {
@@ -13635,7 +14313,7 @@
           {
             "order": 6,
             "type": "ban",
-            "team": "Wuxi Titan Esports Club\t\t\t\t\t\t\n\t\t\t\t\t\t\t(Titan Esports Club)",
+            "team": "Titan Esports Club",
             "map": "Abyss"
           },
           {
@@ -13772,43 +14450,94 @@
       "winner": "Dragon Ranger Gaming",
       "played": [
         {
-          "map": "Corrode\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tPICK\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t1:01:36",
+          "map": "Corrode",
           "ls": 10,
           "rs": 13,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Cypher",
+            "Yoru",
+            "Neon",
+            "Omen",
+            "Gekko"
+          ],
+          "right_agents": [
+            "Viper",
+            "Yoru",
+            "Omen",
+            "Neon",
+            "Fade"
+          ],
           "pistols": {
-            "left": 0,
+            "left": 2,
             "right": 0
           },
-          "sides": {}
+          "sides": {
+            "left_atk": 2,
+            "left_def": 8,
+            "right_atk": 4,
+            "right_def": 9
+          }
         },
         {
-          "map": "Split\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tPICK\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t42:02",
+          "map": "Split",
           "ls": 13,
           "rs": 6,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Fade",
+            "Cypher",
+            "Yoru",
+            "Neon",
+            "Omen"
+          ],
+          "right_agents": [
+            "Viper",
+            "Omen",
+            "Yoru",
+            "Fade",
+            "Waylay"
+          ],
           "pistols": {
-            "left": 0,
+            "left": 2,
             "right": 0
           },
-          "sides": {}
+          "sides": {
+            "left_atk": 9,
+            "left_def": 4,
+            "right_atk": 3,
+            "right_def": 3
+          }
         },
         {
-          "map": "Pearl\t\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t49:08",
+          "map": "Pearl",
           "ls": 13,
           "rs": 6,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Astra",
+            "Vyse",
+            "Tejo",
+            "Phoenix",
+            "Neon"
+          ],
+          "right_agents": [
+            "Astra",
+            "Yoru",
+            "Neon",
+            "Sova",
+            "Killjoy"
+          ],
           "pistols": {
-            "left": 0,
-            "right": 0
+            "left": 1,
+            "right": 1
           },
-          "sides": {}
+          "sides": {
+            "left_atk": 6,
+            "left_def": 7,
+            "right_atk": 5,
+            "right_def": 1
+          }
         }
       ],
       "veto": {
@@ -13816,7 +14545,7 @@
           {
             "order": 1,
             "type": "ban",
-            "team": "TYLOO",
+            "team": "Dragon Ranger Gaming",
             "map": "Haven"
           },
           {
@@ -13828,7 +14557,7 @@
           {
             "order": 3,
             "type": "pick",
-            "team": "TYLOO",
+            "team": "Dragon Ranger Gaming",
             "map": "Corrode"
           },
           {
@@ -13840,7 +14569,7 @@
           {
             "order": 5,
             "type": "ban",
-            "team": "TYLOO",
+            "team": "Dragon Ranger Gaming",
             "map": "Bind"
           },
           {
@@ -14009,34 +14738,68 @@
       "id": 598940,
       "date": "2026-02-06",
       "left": "Dragon Ranger Gaming",
-      "right": "Guangzhou Huadu Bilibili Gaming\t\t\t\t\t\t\n\t\t\t\t\t\t\t(Bilibili Gaming)",
-      "winner": "Guangzhou Huadu Bilibili Gaming\t\t\t\t\t\t\n\t\t\t\t\t\t\t(Bilibili Gaming)",
+      "right": "Bilibili Gaming",
+      "winner": "Bilibili Gaming",
       "played": [
         {
-          "map": "Split\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tPICK\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t58:10",
+          "map": "Split",
           "ls": 6,
           "rs": 13,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Neon",
+            "Fade",
+            "Yoru",
+            "Cypher",
+            "Omen"
+          ],
+          "right_agents": [
+            "Breach",
+            "Waylay",
+            "Omen",
+            "Viper",
+            "Fade"
+          ],
           "pistols": {
             "left": 0,
-            "right": 0
+            "right": 2
           },
-          "sides": {}
+          "sides": {
+            "left_atk": 1,
+            "left_def": 5,
+            "right_atk": 7,
+            "right_def": 6
+          }
         },
         {
-          "map": "Abyss\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tPICK\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t35:43",
+          "map": "Abyss",
           "ls": 2,
           "rs": 13,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Veto",
+            "Sova",
+            "Reyna",
+            "Astra",
+            "Waylay"
+          ],
+          "right_agents": [
+            "Omen",
+            "Waylay",
+            "Astra",
+            "Tejo",
+            "Breach"
+          ],
           "pistols": {
             "left": 0,
-            "right": 0
+            "right": 2
           },
-          "sides": {}
+          "sides": {
+            "left_atk": 2,
+            "left_def": 0,
+            "right_atk": 3,
+            "right_def": 10
+          }
         }
       ],
       "veto": {
@@ -14044,37 +14807,37 @@
           {
             "order": 1,
             "type": "ban",
-            "team": "Guangzhou Huadu Bilibili Gaming\t\t\t\t\t\t\n\t\t\t\t\t\t\t(Bilibili Gaming)",
+            "team": "Dragon Ranger Gaming",
             "map": "Haven"
           },
           {
             "order": 2,
             "type": "ban",
-            "team": "Guangzhou Huadu Bilibili Gaming\t\t\t\t\t\t\n\t\t\t\t\t\t\t(Bilibili Gaming)",
+            "team": "Dragon Ranger Gaming",
             "map": "Corrode"
           },
           {
             "order": 3,
             "type": "pick",
-            "team": "Guangzhou Huadu Bilibili Gaming\t\t\t\t\t\t\n\t\t\t\t\t\t\t(Bilibili Gaming)",
+            "team": "Dragon Ranger Gaming",
             "map": "Split"
           },
           {
             "order": 4,
             "type": "pick",
-            "team": "Guangzhou Huadu Bilibili Gaming\t\t\t\t\t\t\n\t\t\t\t\t\t\t(Bilibili Gaming)",
+            "team": "Dragon Ranger Gaming",
             "map": "Abyss"
           },
           {
             "order": 5,
             "type": "ban",
-            "team": "Guangzhou Huadu Bilibili Gaming\t\t\t\t\t\t\n\t\t\t\t\t\t\t(Bilibili Gaming)",
+            "team": "Dragon Ranger Gaming",
             "map": "Bind"
           },
           {
             "order": 6,
             "type": "ban",
-            "team": "Guangzhou Huadu Bilibili Gaming\t\t\t\t\t\t\n\t\t\t\t\t\t\t(Bilibili Gaming)",
+            "team": "Dragon Ranger Gaming",
             "map": "Pearl"
           },
           {
@@ -14091,73 +14854,158 @@
       "id": 598941,
       "date": "2026-02-08",
       "left": "Xi Lai Gaming",
-      "right": "Guangzhou Huadu Bilibili Gaming\t\t\t\t\t\t\n\t\t\t\t\t\t\t(Bilibili Gaming)",
+      "right": "Bilibili Gaming",
       "winner": "Xi Lai Gaming",
       "played": [
         {
-          "map": "Abyss\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tPICK\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t1:34:23",
+          "map": "Abyss",
           "ls": 14,
           "rs": 16,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Waylay",
+            "Astra",
+            "Omen",
+            "Yoru",
+            "Sova"
+          ],
+          "right_agents": [
+            "Breach",
+            "Astra",
+            "Tejo",
+            "Omen",
+            "Waylay"
+          ],
           "pistols": {
-            "left": 0,
+            "left": 2,
             "right": 0
           },
-          "sides": {}
+          "sides": {
+            "left_atk": 9,
+            "left_def": 5,
+            "right_atk": 10,
+            "right_def": 6
+          }
         },
         {
-          "map": "Bind\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tPICK\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t38:25",
+          "map": "Bind",
           "ls": 13,
           "rs": 4,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Brimstone",
+            "Yoru",
+            "Viper",
+            "Fade",
+            "Waylay"
+          ],
+          "right_agents": [
+            "Viper",
+            "Raze",
+            "Brimstone",
+            "KAY/O",
+            "Fade"
+          ],
           "pistols": {
-            "left": 0,
+            "left": 2,
             "right": 0
           },
-          "sides": {}
+          "sides": {
+            "left_atk": 9,
+            "left_def": 4,
+            "right_atk": 1,
+            "right_def": 3
+          }
         },
         {
-          "map": "Breeze\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tPICK\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t59:37",
+          "map": "Breeze",
           "ls": 12,
           "rs": 14,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Viper",
+            "Sova",
+            "Omen",
+            "Jett",
+            "Yoru"
+          ],
+          "right_agents": [
+            "Sova",
+            "Neon",
+            "Viper",
+            "Astra",
+            "Gekko"
+          ],
           "pistols": {
             "left": 0,
-            "right": 0
+            "right": 2
           },
-          "sides": {}
+          "sides": {
+            "left_atk": 6,
+            "left_def": 6,
+            "right_atk": 7,
+            "right_def": 7
+          }
         },
         {
-          "map": "Pearl\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tPICK\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t55:21",
+          "map": "Pearl",
           "ls": 13,
           "rs": 11,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Astra",
+            "Waylay",
+            "Killjoy",
+            "Yoru",
+            "Fade"
+          ],
+          "right_agents": [
+            "Tejo",
+            "Fade",
+            "Yoru",
+            "Astra",
+            "Killjoy"
+          ],
           "pistols": {
-            "left": 0,
-            "right": 0
+            "left": 1,
+            "right": 1
           },
-          "sides": {}
+          "sides": {
+            "left_atk": 4,
+            "left_def": 9,
+            "right_atk": 3,
+            "right_def": 8
+          }
         },
         {
-          "map": "Split\t\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t38:31",
+          "map": "Split",
           "ls": 13,
           "rs": 4,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Waylay",
+            "Yoru",
+            "Fade",
+            "Viper",
+            "Omen"
+          ],
+          "right_agents": [
+            "Breach",
+            "Fade",
+            "Waylay",
+            "Omen",
+            "Viper"
+          ],
           "pistols": {
-            "left": 0,
+            "left": 2,
             "right": 0
           },
-          "sides": {}
+          "sides": {
+            "left_atk": 4,
+            "left_def": 9,
+            "right_atk": 3,
+            "right_def": 1
+          }
         }
       ],
       "veto": {
@@ -14165,37 +15013,37 @@
           {
             "order": 1,
             "type": "ban",
-            "team": "Guangzhou Huadu Bilibili Gaming\t\t\t\t\t\t\n\t\t\t\t\t\t\t(Bilibili Gaming)",
+            "team": "Bilibili Gaming",
             "map": "Haven"
           },
           {
             "order": 2,
             "type": "ban",
-            "team": "Guangzhou Huadu Bilibili Gaming\t\t\t\t\t\t\n\t\t\t\t\t\t\t(Bilibili Gaming)",
+            "team": "Xi Lai Gaming",
             "map": "Corrode"
           },
           {
             "order": 3,
             "type": "pick",
-            "team": "Guangzhou Huadu Bilibili Gaming\t\t\t\t\t\t\n\t\t\t\t\t\t\t(Bilibili Gaming)",
+            "team": "Bilibili Gaming",
             "map": "Abyss"
           },
           {
             "order": 4,
             "type": "pick",
-            "team": "Guangzhou Huadu Bilibili Gaming\t\t\t\t\t\t\n\t\t\t\t\t\t\t(Bilibili Gaming)",
+            "team": "Xi Lai Gaming",
             "map": "Bind"
           },
           {
             "order": 5,
             "type": "pick",
-            "team": "Guangzhou Huadu Bilibili Gaming\t\t\t\t\t\t\n\t\t\t\t\t\t\t(Bilibili Gaming)",
+            "team": "Bilibili Gaming",
             "map": "Breeze"
           },
           {
             "order": 6,
             "type": "pick",
-            "team": "Guangzhou Huadu Bilibili Gaming\t\t\t\t\t\t\n\t\t\t\t\t\t\t(Bilibili Gaming)",
+            "team": "Xi Lai Gaming",
             "map": "Pearl"
           },
           {
@@ -14649,48 +15497,99 @@
     {
       "id": 598945,
       "date": "2026-02-04",
-      "left": "Wuxi Titan Esports Club\t\t\t\t\t\t\n\t\t\t\t\t\t\t(Titan Esports Club)",
-      "right": "JD Mall JDG Esports\t\t\t\t\t\t\n\t\t\t\t\t\t\t(JDG Esports)",
-      "winner": "JD Mall JDG Esports\t\t\t\t\t\t\n\t\t\t\t\t\t\t(JDG Esports)",
+      "left": "Titan Esports Club",
+      "right": "JDG Esports",
+      "winner": "JDG Esports",
       "played": [
         {
-          "map": "Bind\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tPICK\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t1:00:15",
+          "map": "Bind",
           "ls": 13,
           "rs": 5,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Chamber",
+            "Viper",
+            "Brimstone",
+            "Skye",
+            "Waylay"
+          ],
+          "right_agents": [
+            "Brimstone",
+            "Fade",
+            "Viper",
+            "Raze",
+            "Yoru"
+          ],
           "pistols": {
-            "left": 0,
-            "right": 0
+            "left": 1,
+            "right": 1
           },
-          "sides": {}
+          "sides": {
+            "left_atk": 10,
+            "left_def": 3,
+            "right_atk": 3,
+            "right_def": 2
+          }
         },
         {
-          "map": "Haven\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tPICK\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t51:29",
+          "map": "Haven",
           "ls": 10,
           "rs": 13,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Sova",
+            "Killjoy",
+            "Viper",
+            "Neon",
+            "Omen"
+          ],
+          "right_agents": [
+            "Yoru",
+            "Cypher",
+            "Neon",
+            "Omen",
+            "Sova"
+          ],
           "pistols": {
-            "left": 0,
-            "right": 0
+            "left": 1,
+            "right": 1
           },
-          "sides": {}
+          "sides": {
+            "left_atk": 5,
+            "left_def": 5,
+            "right_atk": 6,
+            "right_def": 7
+          }
         },
         {
-          "map": "Split\t\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t47:34",
+          "map": "Split",
           "ls": 8,
           "rs": 13,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Yoru",
+            "Omen",
+            "Fade",
+            "Neon",
+            "Viper"
+          ],
+          "right_agents": [
+            "Viper",
+            "Yoru",
+            "Fade",
+            "Raze",
+            "Omen"
+          ],
           "pistols": {
-            "left": 0,
-            "right": 0
+            "left": 1,
+            "right": 1
           },
-          "sides": {}
+          "sides": {
+            "left_atk": 2,
+            "left_def": 6,
+            "right_atk": 3,
+            "right_def": 10
+          }
         }
       ],
       "veto": {
@@ -14698,37 +15597,37 @@
           {
             "order": 1,
             "type": "ban",
-            "team": "JD Mall JDG Esports\t\t\t\t\t\t\n\t\t\t\t\t\t\t(JDG Esports)",
+            "team": "JDG Esports",
             "map": "Breeze"
           },
           {
             "order": 2,
             "type": "ban",
-            "team": "JD Mall JDG Esports\t\t\t\t\t\t\n\t\t\t\t\t\t\t(JDG Esports)",
+            "team": "Titan Esports Club",
             "map": "Pearl"
           },
           {
             "order": 3,
             "type": "pick",
-            "team": "JD Mall JDG Esports\t\t\t\t\t\t\n\t\t\t\t\t\t\t(JDG Esports)",
+            "team": "JDG Esports",
             "map": "Bind"
           },
           {
             "order": 4,
             "type": "pick",
-            "team": "JD Mall JDG Esports\t\t\t\t\t\t\n\t\t\t\t\t\t\t(JDG Esports)",
+            "team": "Titan Esports Club",
             "map": "Haven"
           },
           {
             "order": 5,
             "type": "ban",
-            "team": "JD Mall JDG Esports\t\t\t\t\t\t\n\t\t\t\t\t\t\t(JDG Esports)",
+            "team": "JDG Esports",
             "map": "Corrode"
           },
           {
             "order": 6,
             "type": "ban",
-            "team": "JD Mall JDG Esports\t\t\t\t\t\t\n\t\t\t\t\t\t\t(JDG Esports)",
+            "team": "Titan Esports Club",
             "map": "Abyss"
           },
           {
@@ -15157,43 +16056,94 @@
       "winner": "EDward Gaming",
       "played": [
         {
-          "map": "Split\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tPICK\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t1:09:02",
+          "map": "Split",
           "ls": 13,
           "rs": 11,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Cypher",
+            "Omen",
+            "Fade",
+            "Yoru",
+            "Neon"
+          ],
+          "right_agents": [
+            "Yoru",
+            "Neon",
+            "Omen",
+            "Viper",
+            "Fade"
+          ],
           "pistols": {
             "left": 0,
-            "right": 0
+            "right": 2
           },
-          "sides": {}
+          "sides": {
+            "left_atk": 6,
+            "left_def": 7,
+            "right_atk": 5,
+            "right_def": 6
+          }
         },
         {
-          "map": "Pearl\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tPICK\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t38:31",
+          "map": "Pearl",
           "ls": 2,
           "rs": 13,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Vyse",
+            "Phoenix",
+            "Tejo",
+            "Neon",
+            "Astra"
+          ],
+          "right_agents": [
+            "Yoru",
+            "Neon",
+            "Astra",
+            "Sova",
+            "Killjoy"
+          ],
           "pistols": {
-            "left": 0,
-            "right": 0
+            "left": 1,
+            "right": 1
           },
-          "sides": {}
+          "sides": {
+            "left_atk": 1,
+            "left_def": 1,
+            "right_atk": 11,
+            "right_def": 2
+          }
         },
         {
-          "map": "Corrode\t\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t38:56",
+          "map": "Corrode",
           "ls": 6,
           "rs": 13,
           "picked_by": null,
-          "left_agents": [],
-          "right_agents": [],
+          "left_agents": [
+            "Cypher",
+            "Gekko",
+            "Neon",
+            "Omen",
+            "Yoru"
+          ],
+          "right_agents": [
+            "Fade",
+            "Sage",
+            "Astra",
+            "Yoru",
+            "Phoenix"
+          ],
           "pistols": {
             "left": 0,
-            "right": 0
+            "right": 2
           },
-          "sides": {}
+          "sides": {
+            "left_atk": 4,
+            "left_def": 2,
+            "right_atk": 5,
+            "right_def": 8
+          }
         }
       ],
       "veto": {
@@ -15201,37 +16151,37 @@
           {
             "order": 1,
             "type": "ban",
-            "team": "EDward Gaming",
+            "team": "Dragon Ranger Gaming",
             "map": "Breeze"
           },
           {
             "order": 2,
             "type": "ban",
-            "team": "EDward Gaming",
+            "team": "Dragon Ranger Gaming",
             "map": "Abyss"
           },
           {
             "order": 3,
             "type": "pick",
-            "team": "EDward Gaming",
+            "team": "Dragon Ranger Gaming",
             "map": "Split"
           },
           {
             "order": 4,
             "type": "pick",
-            "team": "EDward Gaming",
+            "team": "Dragon Ranger Gaming",
             "map": "Pearl"
           },
           {
             "order": 5,
             "type": "ban",
-            "team": "EDward Gaming",
+            "team": "Dragon Ranger Gaming",
             "map": "Bind"
           },
           {
             "order": 6,
             "type": "ban",
-            "team": "EDward Gaming",
+            "team": "Dragon Ranger Gaming",
             "map": "Haven"
           },
           {
