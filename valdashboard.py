@@ -136,17 +136,22 @@ REGION_TEAMS = {
     "EMEA": [
         "Team Liquid", "Team Vitality", "Team Heretics", "Fnatic",
         "FUT Esports", "BBL Esports", "GIANTX", "Karmine Corp",
-        "Natus Vennere", "Gentle Mates", "PCIFIC Esports", "ULF Esports"
+        "Natus Vincere", "Gentle Mates", "PCIFIC Esports", "ULF Esports"
     ],
     "Pacific": [
-        "T1", "NS RedForce", "DRX", "FULL SENSE", "Paper Rex", "ZETA",
-        "RRQ", "DetonatioN FocusMe", "Talon Esports", "Team Secret",
+        "T1", "Nongshim RedForce", "DRX", "FULL SENSE", "Paper Rex", "ZETA DIVISION",
+        "Rex Regum Qeon", "DetonatioN FocusMe", "Talon Esports", "Team Secret",
         "Global Esports", "Gen.G"
     ],
     "China": [
         "EDward Gaming", "FunPlus Phoenix", "Trace Esports", "Bilibili Gaming",
         "Wolves Esports", "TYLOO", "All Gamers", "JDG Esports",
         "Titan Esports Club", "Dragon Ranger Gaming", "Xi Lai Gaming", "Nova Esports"
+    ],
+    "Masters Santiago": [
+        "All Gamers", "Xi Lai Gaming", "EDward Gaming", "Nongshim RedForce",
+        "T1", "Paper Rex", "BBL Esports", "Gentle Mates",
+        "Team Liquid", "FURIA", "G2 Esports", "NRG"
     ]
 }
 
@@ -194,6 +199,7 @@ def get_team_stats(team, matches):
         "atk_rounds": 0, "def_rounds": 0,
         "atk_rounds_lost": 0, "def_rounds_lost": 0,
         "ban_1st": {}, "ban_2nd": {},
+        "pick_wins": 0, "pick_losses": 0,
     }
     matches_played = []
 
@@ -217,7 +223,7 @@ def get_team_stats(team, matches):
                 stats["maps"][map_name] = {
                     "played": 0, "wins": 0, "losses": 0,
                     "round_wins": 0, "round_losses": 0,
-                    "picks": 0, "bans": 0,
+                    "picks": 0, "bans": 0, "pick_wins": 0, "pick_losses": 0,
                     "pistol_wins": 0, "pistol_losses": 0, "pistol_rounds": 0,
                     "atk_rounds_won": 0, "def_rounds_won": 0,
                     "atk_rounds_lost": 0, "def_rounds_lost": 0,
@@ -289,7 +295,7 @@ def get_team_stats(team, matches):
                     stats["maps"][map_v] = {
                         "played": 0, "wins": 0, "losses": 0,
                         "round_wins": 0, "round_losses": 0,
-                        "picks": 0, "bans": 0,
+                        "picks": 0, "bans": 0, "pick_wins": 0, "pick_losses": 0,
                         "pistol_wins": 0, "pistol_losses": 0, "pistol_rounds": 0,
                         "atk_rounds_won": 0, "def_rounds_won": 0,
                         "atk_rounds_lost": 0, "def_rounds_lost": 0,
@@ -303,6 +309,27 @@ def get_team_stats(team, matches):
                     stats["ban_1st"][map_v] = stats["ban_1st"].get(map_v, 0) + 1
                 elif team_ban_count == 2:
                     stats["ban_2nd"][map_v] = stats["ban_2nd"].get(map_v, 0) + 1
+
+        # Track pick win/loss (skip BO5s - more than 3 maps played)
+        played_maps = m.get("played", [])
+        if len(played_maps) <= 3:
+            team_picks = set()
+            for event in veto.get("events", []):
+                if event.get("type") == "pick" and event.get("team") == team:
+                    team_picks.add(event.get("map"))
+            for p in played_maps:
+                mn = p.get("map")
+                if mn in team_picks and mn in stats["maps"]:
+                    ls_v = safe_int(p.get("ls", 0))
+                    rs_v = safe_int(p.get("rs", 0))
+                    my_s = ls_v if is_left else rs_v
+                    op_s = rs_v if is_left else ls_v
+                    if my_s > op_s:
+                        stats["maps"][mn]["pick_wins"] += 1
+                        stats["pick_wins"] += 1
+                    else:
+                        stats["maps"][mn]["pick_losses"] += 1
+                        stats["pick_losses"] += 1
 
     return stats, matches_played
 
@@ -501,7 +528,7 @@ with tab_overview:
             def_t = stats['def_rounds'] + stats['def_rounds_lost']
 
             if pt_total > 0 or atk_t > 0:
-                with st.expander("Pistol & Side Stats", expanded=False):
+                with st.expander("Pistol, Side & Pick Stats", expanded=False):
                     if pt_total > 0:
                         pwr = calc_wr(stats['pistol_wins'], stats['pistol_losses'])
                         st.markdown(f"<div class='stat-box'><b>Pistol:</b> {pwr:.1f}% ({stats['pistol_wins']}-{stats['pistol_losses']})</div>", unsafe_allow_html=True)
@@ -510,6 +537,10 @@ with tab_overview:
                         def_wr = calc_wr(stats['def_rounds'], stats['def_rounds_lost'])
                         st.markdown(f"<div class='stat-box'><b>Attack:</b> {atk_wr:.1f}% ({stats['atk_rounds']}-{stats['atk_rounds_lost']})</div>", unsafe_allow_html=True)
                         st.markdown(f"<div class='stat-box'><b>Defense:</b> {def_wr:.1f}% ({stats['def_rounds']}-{stats['def_rounds_lost']})</div>", unsafe_allow_html=True)
+                    pick_total = stats['pick_wins'] + stats['pick_losses']
+                    if pick_total > 0:
+                        pick_wr = calc_wr(stats['pick_wins'], stats['pick_losses'])
+                        st.markdown(f"<div class='stat-box'><b>Map Pick WR:</b> {pick_wr:.1f}% ({stats['pick_wins']}-{stats['pick_losses']})</div>", unsafe_allow_html=True)
 
             # Map Win Rates
             map_wr_data = []
@@ -673,7 +704,13 @@ with tab_map:
                 ca, cb = st.columns(2)
                 with ca:
                     st.metric("Win Rate", f"{wr:.1f}%", f"{w}W - {l}L")
-                    st.metric("Picks", data.get("picks", 0))
+                    picks = data.get("picks", 0)
+                    pkw = data.get("pick_wins", 0)
+                    pkl = data.get("pick_losses", 0)
+                    if pkw + pkl > 0:
+                        st.metric("Picks", picks, f"Pick WR: {pkw}-{pkl} ({calc_wr(pkw, pkl):.0f}%)")
+                    else:
+                        st.metric("Picks", picks)
                 with cb:
                     st.metric("Pistol WR", f"{pwr:.1f}%", f"{pw_v}/{pr}" if pr else "N/A")
                     total_bans = data.get("bans", 0)
