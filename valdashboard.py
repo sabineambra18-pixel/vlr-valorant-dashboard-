@@ -74,11 +74,13 @@ st.markdown("""
     /* Sidebar */
     section[data-testid="stSidebar"] { background-color: #0d1117; }
 
-    /* Compact tabs */
-    .stTabs [data-baseweb="tab-list"] { gap: 4px; }
-    .stTabs [data-baseweb="tab"] { padding: 8px 14px; font-size: 13px; color: #9fb3c8 !important; }
+    /* Compact tabs - force visibility */
+    .stTabs [data-baseweb="tab-list"] { gap: 4px; background-color: #0f1520 !important; }
+    .stTabs [data-baseweb="tab-list"] button { color: #9fb3c8 !important; font-size: 14px !important; padding: 10px 16px !important; }
+    .stTabs [data-baseweb="tab-list"] button[aria-selected="true"] { color: #22d3ee !important; border-bottom: 3px solid #22d3ee !important; background-color: transparent !important; }
+    .stTabs [data-baseweb="tab-list"] button:hover { color: #e8ecf1 !important; }
+    .stTabs [data-baseweb="tab"] { color: #9fb3c8 !important; }
     .stTabs [data-baseweb="tab"][aria-selected="true"] { color: #22d3ee !important; border-bottom: 3px solid #22d3ee !important; }
-    .stTabs [data-baseweb="tab"]:hover { color: #e8ecf1 !important; }
 
     /* Mobile */
     @media (max-width: 768px) {
