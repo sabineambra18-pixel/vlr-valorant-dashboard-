@@ -76,7 +76,9 @@ st.markdown("""
 
     /* Compact tabs */
     .stTabs [data-baseweb="tab-list"] { gap: 4px; }
-    .stTabs [data-baseweb="tab"] { padding: 8px 14px; font-size: 13px; }
+    .stTabs [data-baseweb="tab"] { padding: 8px 14px; font-size: 13px; color: #9fb3c8 !important; }
+    .stTabs [data-baseweb="tab"][aria-selected="true"] { color: #22d3ee !important; border-bottom: 3px solid #22d3ee !important; }
+    .stTabs [data-baseweb="tab"]:hover { color: #e8ecf1 !important; }
 
     /* Mobile */
     @media (max-width: 768px) {
