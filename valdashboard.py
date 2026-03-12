@@ -81,6 +81,10 @@ st.markdown("""
     .stTabs [data-baseweb="tab-list"] button:hover { color: #e8ecf1 !important; }
     .stTabs [data-baseweb="tab"] { color: #9fb3c8 !important; }
     .stTabs [data-baseweb="tab"][aria-selected="true"] { color: #22d3ee !important; border-bottom: 3px solid #22d3ee !important; }
+    .stTabs [role="tab"] { color: #9fb3c8 !important; }
+    .stTabs [role="tab"][aria-selected="true"] { color: #22d3ee !important; }
+    .stTabs [data-baseweb="tab-list"] p { color: #9fb3c8 !important; font-size: 14px !important; }
+    .stTabs [data-baseweb="tab"][aria-selected="true"] p { color: #22d3ee !important; }
 
     /* Mobile */
     @media (max-width: 768px) {
@@ -145,17 +149,22 @@ REGION_TEAMS = {
     "EMEA": [
         "Team Liquid", "Team Vitality", "Team Heretics", "Fnatic",
         "FUT Esports", "BBL Esports", "GIANTX", "Karmine Corp",
-        "Natus Vennere", "Gentle Mates", "PCIFIC Esports", "ULF Esports"
+        "Natus Vincere", "Gentle Mates", "PCIFIC Esports", "ULF Esports"
     ],
     "Pacific": [
-        "T1", "NS RedForce", "DRX", "FULL SENSE", "Paper Rex", "ZETA",
-        "RRQ", "DetonatioN FocusMe", "Talon Esports", "Team Secret",
+        "T1", "Nongshim RedForce", "DRX", "FULL SENSE", "Paper Rex", "ZETA DIVISION",
+        "Rex Regum Qeon", "DetonatioN FocusMe", "Talon Esports", "Team Secret",
         "Global Esports", "Gen.G"
     ],
     "China": [
         "EDward Gaming", "FunPlus Phoenix", "Trace Esports", "Bilibili Gaming",
         "Wolves Esports", "TYLOO", "All Gamers", "JDG Esports",
         "Titan Esports Club", "Dragon Ranger Gaming", "Xi Lai Gaming", "Nova Esports"
+    ],
+    "Masters Santiago": [
+        "All Gamers", "Xi Lai Gaming", "EDward Gaming", "Nongshim RedForce",
+        "T1", "Paper Rex", "BBL Esports", "Gentle Mates",
+        "Team Liquid", "FURIA", "G2 Esports", "NRG"
     ]
 }
 
