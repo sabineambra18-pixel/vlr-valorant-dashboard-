@@ -94,25 +94,28 @@ st.markdown("""
     /* Custom footer */
     .custom-footer {
         position: fixed;
-        bottom: 0;
+        bottom: 40px;
         right: 0;
-        background: #2B2A27;
-        color: #ADDFB3;
-        padding: 8px 20px;
-        font-size: 14px;
+        background: #121a29;
+        color: #22d3ee;
+        padding: 10px 24px;
+        font-size: 16px;
         font-family: monospace;
-        z-index: 9999;
+        z-index: 9999999;
         border-top-left-radius: 8px;
-        border-top: 1px solid #4a4846;
-        border-left: 1px solid #4a4846;
+        border-bottom-left-radius: 8px;
+        border-top: 1px solid #1e2a3a;
+        border-left: 1px solid #1e2a3a;
+        border-bottom: 1px solid #1e2a3a;
+        box-shadow: -2px 0px 8px rgba(0,0,0,0.3);
     }
     .custom-footer a {
-        color: #ADDFB3;
+        color: #22d3ee;
         text-decoration: none;
         font-weight: bold;
     }
     .custom-footer a:hover {
-        color: #E59E6D;
+        color: #f59e0b;
     }
 </style>
 <div class="custom-footer">
