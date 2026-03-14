@@ -10,112 +10,125 @@ from datetime import datetime
 # --- Configuration ---
 st.set_page_config(page_title="VAL Dashboard", layout="wide", page_icon="⚔️")
 
-# --- Cream + Orange/Green color scheme ---
+# --- Clean CSS with mobile support ---
 st.markdown("""
 <style>
-    /* Base - warm cream background */
-    .stApp { background-color: #2B2A27; }
-    .stMarkdown, .stDataFrame { color: #EEE1C6; }
-    div[data-testid="stMetricValue"] { font-size: 22px; color: #EEE1C6; }
-    div[data-testid="stMetricLabel"] { color: #c4a88a; font-size: 13px; }
+    /* Base */
+    .stApp { background-color: #0a0e1a; }
+    .stMarkdown, .stDataFrame { color: #e8ecf1; }
+    div[data-testid="stMetricValue"] { font-size: 22px; color: #e8ecf1; }
+    div[data-testid="stMetricLabel"] { color: #9fb3c8; font-size: 13px; }
 
     /* Cards */
     .card {
-        background: linear-gradient(135deg, #353432 0%, #302e2c 100%);
-        border: 1px solid #4a4846; border-radius: 10px;
+        background: linear-gradient(135deg, #121a29 0%, #0f1520 100%);
+        border: 1px solid #1e2a3a; border-radius: 10px;
         padding: 16px; margin-bottom: 12px;
     }
     .card h3 {
-        margin-top: 0; color: #EEE1C6; font-size: 16px;
-        border-bottom: 1px solid #4a4846; padding-bottom: 8px; margin-bottom: 12px;
+        margin-top: 0; color: #cbd5e1; font-size: 16px;
+        border-bottom: 1px solid #1e2a3a; padding-bottom: 8px; margin-bottom: 12px;
     }
 
     /* Match card */
     .match-card {
-        background: linear-gradient(135deg, #353432 0%, #383634 100%);
-        border: 1px solid #4a4846; border-radius: 8px;
+        background: #121a29; border: 1px solid #1e2a3a; border-radius: 8px;
         padding: 12px 16px; margin-bottom: 8px;
         display: flex; align-items: center; justify-content: space-between;
         flex-wrap: wrap; gap: 8px;
     }
-    .match-card .date { color: #c4a88a; font-size: 12px; min-width: 80px; }
-    .match-card .teams { flex: 1; text-align: center; font-size: 15px; color: #EEE1C6; }
+    .match-card .date { color: #64748b; font-size: 12px; min-width: 80px; }
+    .match-card .teams { flex: 1; text-align: center; font-size: 15px; }
     .match-card .maps-row { font-size: 12px; width: 100%; text-align: center; margin-top: 4px; }
 
     /* Pills */
     .pill {
-        display: inline-block; background: #302e2c;
+        display: inline-block; background: #1b2332;
         padding: 3px 8px; border-radius: 999px;
-        margin: 2px; font-size: 11px; border: 1px solid #4a4846; color: #EEE1C6;
+        margin: 2px; font-size: 11px; border: 1px solid #1e2a3a; color: #e8ecf1;
     }
     .map-pill {
-        display: inline-block; border: 1px solid #4a4846;
+        display: inline-block; border: 1px solid #333;
         padding: 2px 8px; border-radius: 6px; margin: 1px 2px; font-size: 12px;
     }
 
-    /* Win team = warm orange, Map win = soft green, Loss = muted */
-    .win { color: #E59E6D !important; font-weight: 700; font-size: 1.05em; }
-    .loss { color: #b8a898 !important; font-weight: 400; }
+    /* Win/Loss */
+    .win { color: #4ade80 !important; font-weight: 600; }
+    .loss { color: #f87171 !important; font-weight: 600; }
 
     /* Team headers */
-    .team-header-left { border-left: 3px solid #E59E6D; padding-left: 12px; }
-    .team-header-right { border-left: 3px solid #ADDFB3; padding-left: 12px; }
+    .team-header-left { border-left: 3px solid #4FC3F7; padding-left: 12px; }
+    .team-header-right { border-left: 3px solid #FFB74D; padding-left: 12px; }
 
     /* Stat box */
     .stat-box {
-        background: #302e2c; padding: 8px 12px; border-radius: 6px;
-        margin: 3px 0; border: 1px solid #4a4846; font-size: 14px; color: #EEE1C6;
+        background: #1b2332; padding: 8px 12px; border-radius: 6px;
+        margin: 3px 0; border: 1px solid #1e2a3a; font-size: 14px;
     }
     .legend-text {
-        background-color: #353432; padding: 10px; border-radius: 8px;
-        border: 1px solid #4a4846; text-align: center; margin-bottom: 10px;
-        font-family: monospace; color: #EEE1C6;
+        background-color: #121a29; padding: 10px; border-radius: 8px;
+        border: 1px solid #1e2a3a; text-align: center; margin-bottom: 10px;
+        font-family: monospace;
     }
 
     /* Sidebar */
-    section[data-testid="stSidebar"] { background-color: #302e2c; }
-    section[data-testid="stSidebar"] .stSelectbox label,
-    section[data-testid="stSidebar"] .stTextInput label,
-    section[data-testid="stSidebar"] .stCheckbox label { color: #d4c8b0; }
+    section[data-testid="stSidebar"] { background-color: #0d1117; }
 
-    /* Tabs */
-    .stTabs [data-baseweb="tab-list"] {
-        gap: 4px;
-        border-bottom: 2px solid #4a4846;
-        background-color: #302e2c;
-        padding: 4px 0;
-    }
-    .stTabs [data-baseweb="tab"] {
-        padding: 10px 16px !important;
-        font-size: 14px !important;
-        color: #c4a88a !important;
-        background-color: transparent !important;
-    }
-    .stTabs [data-baseweb="tab"][aria-selected="true"] {
-        color: #E59E6D !important;
-        background-color: #2B2A27 !important;
-        border-radius: 6px 6px 0 0;
-        border-bottom: 3px solid #E59E6D !important;
-    }
-    .stTabs [data-baseweb="tab"]:hover {
-        color: #EEE1C6 !important;
-        background-color: #353432 !important;
-    }
-    .stTabs [data-baseweb="tab-panel"] { color: #EEE1C6; }
+    /* Compact tabs - force visibility */
+    .stTabs [data-baseweb="tab-list"] { gap: 4px; background-color: #0f1520 !important; }
+    .stTabs [data-baseweb="tab-list"] button { color: #9fb3c8 !important; font-size: 14px !important; padding: 10px 16px !important; }
+    .stTabs [data-baseweb="tab-list"] button[aria-selected="true"] { color: #22d3ee !important; border-bottom: 3px solid #22d3ee !important; background-color: transparent !important; }
+    .stTabs [data-baseweb="tab-list"] button:hover { color: #e8ecf1 !important; }
+    .stTabs [data-baseweb="tab"] { color: #9fb3c8 !important; }
+    .stTabs [data-baseweb="tab"][aria-selected="true"] { color: #22d3ee !important; border-bottom: 3px solid #22d3ee !important; }
+    .stTabs [role="tab"] { color: #9fb3c8 !important; }
+    .stTabs [role="tab"][aria-selected="true"] { color: #22d3ee !important; }
+    .stTabs [data-baseweb="tab-list"] p { color: #9fb3c8 !important; font-size: 14px !important; }
+    .stTabs [data-baseweb="tab"][aria-selected="true"] p { color: #22d3ee !important; }
 
     /* Mobile */
     @media (max-width: 768px) {
         .match-card { flex-direction: column; text-align: center; }
         div[data-testid="stMetricValue"] { font-size: 18px; }
-        .stTabs [data-baseweb="tab"] { padding: 6px 8px !important; font-size: 11px !important; }
+        .stTabs [data-baseweb="tab"] { padding: 6px 8px; font-size: 11px; }
         .stat-box { font-size: 12px; }
     }
 
     /* Cleaner */
     #MainMenu { visibility: hidden; }
     footer { visibility: hidden; }
-    .block-container { padding-top: 2.5rem; padding-bottom: 1rem; }
+    .block-container { padding-top: 1rem; padding-bottom: 1rem; }
+
+    /* Custom footer */
+    .custom-footer {
+        position: fixed;
+        bottom: 40px;
+        right: 0;
+        background: #121a29;
+        color: #22d3ee;
+        padding: 10px 24px;
+        font-size: 16px;
+        font-family: monospace;
+        z-index: 9999999;
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+        border-top: 1px solid #1e2a3a;
+        border-left: 1px solid #1e2a3a;
+        border-bottom: 1px solid #1e2a3a;
+        box-shadow: -2px 0px 8px rgba(0,0,0,0.3);
+    }
+    .custom-footer a {
+        color: #22d3ee;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    .custom-footer a:hover {
+        color: #f59e0b;
+    }
 </style>
+<div class="custom-footer">
+    <a href="https://x.com/ValDataHub" target="_blank">@ValDataHub</a>
+</div>
 """, unsafe_allow_html=True)
 
 # --- Data Loading ---
@@ -199,7 +212,6 @@ def get_team_stats(team, matches):
         "atk_rounds": 0, "def_rounds": 0,
         "atk_rounds_lost": 0, "def_rounds_lost": 0,
         "ban_1st": {}, "ban_2nd": {},
-        "pick_wins": 0, "pick_losses": 0,
     }
     matches_played = []
 
@@ -223,7 +235,7 @@ def get_team_stats(team, matches):
                 stats["maps"][map_name] = {
                     "played": 0, "wins": 0, "losses": 0,
                     "round_wins": 0, "round_losses": 0,
-                    "picks": 0, "bans": 0, "pick_wins": 0, "pick_losses": 0,
+                    "picks": 0, "bans": 0,
                     "pistol_wins": 0, "pistol_losses": 0, "pistol_rounds": 0,
                     "atk_rounds_won": 0, "def_rounds_won": 0,
                     "atk_rounds_lost": 0, "def_rounds_lost": 0,
@@ -259,48 +271,28 @@ def get_team_stats(team, matches):
                     my_atk, my_def = safe_int(sides.get("right_atk", 0)), safe_int(sides.get("right_def", 0))
                     opp_atk, opp_def = safe_int(sides.get("left_atk", 0)), safe_int(sides.get("left_def", 0))
                 ms["atk_rounds_won"] += my_atk; ms["def_rounds_won"] += my_def
-                ms["atk_rounds_lost"] += opp_def; ms["def_rounds_lost"] += opp_atk
+                ms["atk_rounds_lost"] += opp_atk; ms["def_rounds_lost"] += opp_def
                 stats["atk_rounds"] += my_atk; stats["def_rounds"] += my_def
-                stats["atk_rounds_lost"] += opp_def; stats["def_rounds_lost"] += opp_atk
+                stats["atk_rounds_lost"] += opp_atk; stats["def_rounds_lost"] += opp_def
 
             my_agents = p.get("left_agents" if is_left else "right_agents", [])
             for ag in my_agents:
                 if ag: ms["agents"][ag] = ms["agents"].get(ag, 0) + 1
 
             opponent = m.get("right" if is_left else "left")
-            # Store sides and pistol info for history display
-            h_entry = {
+            ms["history"].append({
                 "date": p.get("date") or m.get("date"),
                 "opponent": opponent,
                 "score": f"{my_score}-{opp_score}",
-                "agents": my_agents,
-                "atk": 0, "def": 0, "pistol_w": 0, "pistol_l": 0
-            }
-            if sides and isinstance(sides, dict):
-                h_entry["atk"] = my_atk
-                h_entry["def"] = my_def
-            if pistols and isinstance(pistols, dict):
-                h_entry["pistol_w"] = my_p
-                h_entry["pistol_l"] = opp_p
-            ms["history"].append(h_entry)
+                "agents": my_agents
+            })
 
         # Veto: picks, bans, 1st/2nd ban tracking
         veto = m.get("veto", {})
         team_ban_count = 0
         for event in veto.get("events", []):
             map_v = event.get("map"); evt_type = event.get("type"); evt_team = event.get("team")
-            if map_v and evt_team == team and evt_type in ("pick", "ban"):
-                # Create map entry if it doesn't exist yet
-                if map_v not in stats["maps"]:
-                    stats["maps"][map_v] = {
-                        "played": 0, "wins": 0, "losses": 0,
-                        "round_wins": 0, "round_losses": 0,
-                        "picks": 0, "bans": 0, "pick_wins": 0, "pick_losses": 0,
-                        "pistol_wins": 0, "pistol_losses": 0, "pistol_rounds": 0,
-                        "atk_rounds_won": 0, "def_rounds_won": 0,
-                        "atk_rounds_lost": 0, "def_rounds_lost": 0,
-                        "agents": {}, "history": []
-                    }
+            if map_v and map_v in stats["maps"] and evt_team == team:
                 if evt_type == "pick": stats["maps"][map_v]["picks"] += 1
                 elif evt_type == "ban": stats["maps"][map_v]["bans"] += 1
             if evt_type == "ban" and evt_team == team and map_v:
@@ -309,27 +301,6 @@ def get_team_stats(team, matches):
                     stats["ban_1st"][map_v] = stats["ban_1st"].get(map_v, 0) + 1
                 elif team_ban_count == 2:
                     stats["ban_2nd"][map_v] = stats["ban_2nd"].get(map_v, 0) + 1
-
-        # Track pick win/loss (skip BO5s - more than 3 maps played)
-        played_maps = m.get("played", [])
-        if len(played_maps) <= 3:
-            team_picks = set()
-            for event in veto.get("events", []):
-                if event.get("type") == "pick" and event.get("team") == team:
-                    team_picks.add(event.get("map"))
-            for p in played_maps:
-                mn = p.get("map")
-                if mn in team_picks and mn in stats["maps"]:
-                    ls_v = safe_int(p.get("ls", 0))
-                    rs_v = safe_int(p.get("rs", 0))
-                    my_s = ls_v if is_left else rs_v
-                    op_s = rs_v if is_left else ls_v
-                    if my_s > op_s:
-                        stats["maps"][mn]["pick_wins"] += 1
-                        stats["pick_wins"] += 1
-                    else:
-                        stats["maps"][mn]["pick_losses"] += 1
-                        stats["pick_losses"] += 1
 
     return stats, matches_played
 
@@ -428,36 +399,17 @@ with tab_home:
         played = match.get("played", [])
         lw = sum(1 for p in played if safe_int(p.get("ls")) > safe_int(p.get("rs")))
         rw = sum(1 for p in played if safe_int(p.get("rs")) > safe_int(p.get("ls")))
-
-        # Map pills - always from WINNER's perspective
         pills = []
-        winner_is_left = (winner == left)
         for p in played:
             mn = clean_map_name(p.get("map", ""))
             ls_v, rs_v = safe_int(p.get("ls")), safe_int(p.get("rs"))
-            # Show winner's score first
-            if winner:
-                w_score = ls_v if winner_is_left else rs_v
-                l_score = rs_v if winner_is_left else ls_v
-                if w_score > l_score:
-                    clr = "#ADDFB3"  # winner won this map
-                else:
-                    clr = "#c45c5c"  # winner lost this map
-                pills.append(f"<span class='map-pill' style='color:{clr}'>{mn} {w_score}-{l_score}</span>")
-            else:
-                pills.append(f"<span class='map-pill' style='color:#94a3b8'>{mn} {ls_v}-{rs_v}</span>")
-
-        # Winner in green+bold, loser in muted gray — winner listed first
-        if winner == left:
-            team_html = f"<span class='win'>{left}</span> <b>{lw}</b> - <b>{rw}</b> <span class='loss'>{right}</span>"
-        elif winner == right:
-            team_html = f"<span class='win'>{right}</span> <b>{rw}</b> - <b>{lw}</b> <span class='loss'>{left}</span>"
-        else:
-            team_html = f"<span>{left}</span> <b>{lw}</b> - <b>{rw}</b> <span>{right}</span>"
-
+            clr = "#4ade80" if ls_v > rs_v else "#f87171" if rs_v > ls_v else "#94a3b8"
+            pills.append(f"<span class='map-pill' style='color:{clr}'>{mn} {ls_v}-{rs_v}</span>")
+        l_cls = "win" if winner == left else "loss" if winner else ""
+        r_cls = "win" if winner == right else "loss" if winner else ""
         st.markdown(f"""<div class='match-card'>
             <span class='date'>{date}</span>
-            <span class='teams'>{team_html}</span>
+            <span class='teams'><span class='{l_cls}'>{left}</span> <b>{lw}</b> - <b>{rw}</b> <span class='{r_cls}'>{right}</span></span>
             <div class='maps-row'>{"".join(pills)}</div>
         </div>""", unsafe_allow_html=True)
 
@@ -528,7 +480,7 @@ with tab_overview:
             def_t = stats['def_rounds'] + stats['def_rounds_lost']
 
             if pt_total > 0 or atk_t > 0:
-                with st.expander("Pistol, Side & Pick Stats", expanded=False):
+                with st.expander("Pistol & Side Stats", expanded=False):
                     if pt_total > 0:
                         pwr = calc_wr(stats['pistol_wins'], stats['pistol_losses'])
                         st.markdown(f"<div class='stat-box'><b>Pistol:</b> {pwr:.1f}% ({stats['pistol_wins']}-{stats['pistol_losses']})</div>", unsafe_allow_html=True)
@@ -537,10 +489,6 @@ with tab_overview:
                         def_wr = calc_wr(stats['def_rounds'], stats['def_rounds_lost'])
                         st.markdown(f"<div class='stat-box'><b>Attack:</b> {atk_wr:.1f}% ({stats['atk_rounds']}-{stats['atk_rounds_lost']})</div>", unsafe_allow_html=True)
                         st.markdown(f"<div class='stat-box'><b>Defense:</b> {def_wr:.1f}% ({stats['def_rounds']}-{stats['def_rounds_lost']})</div>", unsafe_allow_html=True)
-                    pick_total = stats['pick_wins'] + stats['pick_losses']
-                    if pick_total > 0:
-                        pick_wr = calc_wr(stats['pick_wins'], stats['pick_losses'])
-                        st.markdown(f"<div class='stat-box'><b>Map Pick WR:</b> {pick_wr:.1f}% ({stats['pick_wins']}-{stats['pick_losses']})</div>", unsafe_allow_html=True)
 
             # Map Win Rates
             map_wr_data = []
@@ -554,7 +502,7 @@ with tab_overview:
             if map_wr_data:
                 df = pd.DataFrame(map_wr_data).sort_values("Win Rate", ascending=False)
                 fig = px.bar(df, x="Map", y="Win Rate", text="Record", color="Win Rate",
-                             color_continuous_scale=[[0, '#c45c5c'], [0.5, '#ADDFB3'], [1, '#ADDFB3']])
+                             color_continuous_scale=[[0, '#f87171'], [0.5, '#FFB74D'], [1, '#4ade80']])
                 fig.update_layout(paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)',
                                   font_color='#e8ecf1', showlegend=False, yaxis=dict(range=[0, 115]),
                                   margin=dict(t=10, b=10), height=300)
@@ -578,7 +526,7 @@ with tab_overview:
                                                  font_color='#e8ecf1', showlegend=False,
                                                  yaxis=dict(range=[0, max(ban_1st.values()) * 1.4]),
                                                  margin=dict(t=30, b=10), height=260)
-                            fig_b1.update_traces(marker_color='#c45c5c', textposition='outside')
+                            fig_b1.update_traces(marker_color='#f87171', textposition='outside')
                             st.plotly_chart(fig_b1, use_container_width=True, key=f"b1_{team_name}")
                     with bc2:
                         if ban_2nd:
@@ -591,11 +539,11 @@ with tab_overview:
                                                  font_color='#e8ecf1', showlegend=False,
                                                  yaxis=dict(range=[0, max(ban_2nd.values()) * 1.4]),
                                                  margin=dict(t=30, b=10), height=260)
-                            fig_b2.update_traces(marker_color='#ADDFB3', textposition='outside')
+                            fig_b2.update_traces(marker_color='#FFB74D', textposition='outside')
                             st.plotly_chart(fig_b2, use_container_width=True, key=f"b2_{team_name}")
 
-    render_team_overview(col_left, team1, t1_stats, "#E59E6D")
-    render_team_overview(col_right, team2, t2_stats, "#ADDFB3")
+    render_team_overview(col_left, team1, t1_stats, '#4FC3F7')
+    render_team_overview(col_right, team2, t2_stats, '#FFB74D')
 
 # ========== HISTORY ==========
 with tab_history:
@@ -611,7 +559,7 @@ with tab_history:
             elif rs_v > ls_v: rw += 1
             my_s = ls_v if is_left else rs_v
             op_s = rs_v if is_left else ls_v
-            clr = "#ADDFB3" if my_s > op_s else "#c45c5c"
+            clr = "#4ade80" if my_s > op_s else "#f87171"
             mn = clean_map_name(p.get('map', '?'))
             pist = p.get("pistols", {})
             if pist and isinstance(pist, dict):
@@ -672,7 +620,7 @@ with tab_h2h:
                 elif rs_v > ls_v: rw += 1
                 my_s = ls_v if is_left else rs_v
                 op_s = rs_v if is_left else ls_v
-                clr = "#ADDFB3" if my_s > op_s else "#c45c5c"
+                clr = "#4ade80" if my_s > op_s else "#f87171"
                 mn = clean_map_name(p.get('map', '?'))
                 pist = p.get("pistols", {})
                 if pist and isinstance(pist, dict):
@@ -692,7 +640,7 @@ with tab_map:
     if selected_map:
         col1, col2 = st.columns(2)
 
-        def render_map_card(col, team_name, data, color_border, team_stats):
+        def render_map_card(col, team_name, data, color_border):
             with col:
                 st.markdown(f"<div class='card' style='border-top: 3px solid {color_border}'><h3>{team_name} on {selected_map}</h3></div>", unsafe_allow_html=True)
                 if not data:
@@ -704,22 +652,10 @@ with tab_map:
                 ca, cb = st.columns(2)
                 with ca:
                     st.metric("Win Rate", f"{wr:.1f}%", f"{w}W - {l}L")
-                    picks = data.get("picks", 0)
-                    pkw = data.get("pick_wins", 0)
-                    pkl = data.get("pick_losses", 0)
-                    if pkw + pkl > 0:
-                        st.metric("Picks", picks, f"Pick WR: {pkw}-{pkl} ({calc_wr(pkw, pkl):.0f}%)")
-                    else:
-                        st.metric("Picks", picks)
+                    st.metric("Picks", data.get("picks", 0))
                 with cb:
                     st.metric("Pistol WR", f"{pwr:.1f}%", f"{pw_v}/{pr}" if pr else "N/A")
-                    total_bans = data.get("bans", 0)
-                    b1 = team_stats.get("ban_1st", {}).get(selected_map, 0)
-                    b2 = team_stats.get("ban_2nd", {}).get(selected_map, 0)
-                    if b1 > 0 or b2 > 0:
-                        st.metric("Bans", total_bans, f"1st: {b1} · 2nd: {b2}")
-                    else:
-                        st.metric("Bans", total_bans)
+                    st.metric("Bans", data.get("bans", 0))
 
                 atk_w, atk_l = data.get("atk_rounds_won", 0), data.get("atk_rounds_lost", 0)
                 def_w, def_l = data.get("def_rounds_won", 0), data.get("def_rounds_lost", 0)
@@ -736,28 +672,18 @@ with tab_map:
                 history = data.get("history", [])
                 if history:
                     with st.expander("Recent Comps", expanded=False):
-                        sorted_hist = sorted(history, key=lambda x: x.get('date') or '0000', reverse=True)
-                        for h in sorted_hist[:5]:
-                            atk_r = h.get('atk', 0)
-                            def_r = h.get('def', 0)
-                            pw = h.get('pistol_w', 0)
-                            pl = h.get('pistol_l', 0)
-                            detail = f"({h['score']})"
-                            if atk_r > 0 or def_r > 0:
-                                detail += f" ({atk_r}A, {def_r}D)"
-                            if pw > 0 or pl > 0:
-                                detail += f" ({pw}-{pl} Pistols)"
-                            st.markdown(f"<span style='font-size:12px; color:#c4a88a'>{h['date']} vs {h['opponent']} {detail}</span><br>"
+                        for h in history[:5]:
+                            st.markdown(f"<span style='font-size:12px; color:#64748b'>{h['date']} vs {h['opponent']} ({h['score']})</span><br>"
                                         f"<span style='font-size:12px'>{', '.join(h['agents'])}</span>", unsafe_allow_html=True)
 
-        render_map_card(col1, team1, t1_stats["maps"].get(selected_map, {}), "#ADDFB3", t1_stats)
-        render_map_card(col2, team2, t2_stats["maps"].get(selected_map, {}), "#EEE1C6", t2_stats)
+        render_map_card(col1, team1, t1_stats["maps"].get(selected_map, {}), "#4FC3F7")
+        render_map_card(col2, team2, t2_stats["maps"].get(selected_map, {}), "#FFB74D")
 
 # ========== COMPARISON ==========
 with tab_comp:
     cl, cm, cr = st.columns([1, 0.2, 1])
     with cl:
-        st.markdown(f"<h2 style='color:#E59E6D; text-align:center;'>{team1}</h2>", unsafe_allow_html=True)
+        st.markdown(f"<h2 style='color:#4FC3F7; text-align:center;'>{team1}</h2>", unsafe_allow_html=True)
         st.metric("Series Win Rate", f"{calc_wr(t1_stats['series_wins'], t1_stats['series_losses']):.1f}%",
                   f"{t1_stats['series_wins']}-{t1_stats['series_losses']}")
         st.metric("Map Win Rate", f"{calc_wr(t1_stats['total_map_wins'], t1_stats['total_map_losses']):.1f}%",
@@ -767,7 +693,7 @@ with tab_comp:
     with cm:
         st.markdown("<br><br><h3 style='text-align:center; color:#475569;'>VS</h3>", unsafe_allow_html=True)
     with cr:
-        st.markdown(f"<h2 style='color:#EEE1C6; text-align:center;'>{team2}</h2>", unsafe_allow_html=True)
+        st.markdown(f"<h2 style='color:#FFB74D; text-align:center;'>{team2}</h2>", unsafe_allow_html=True)
         st.metric("Series Win Rate", f"{calc_wr(t2_stats['series_wins'], t2_stats['series_losses']):.1f}%",
                   f"{t2_stats['series_wins']}-{t2_stats['series_losses']}")
         st.metric("Map Win Rate", f"{calc_wr(t2_stats['total_map_wins'], t2_stats['total_map_losses']):.1f}%",
@@ -785,7 +711,7 @@ with tab_comp:
             comp_data.append({"Map": mn, "Team": t, "Win Rate": calc_wr(d.get("wins", 0), d.get("losses", 0)), "Label": label})
     if comp_data:
         fig = px.bar(pd.DataFrame(comp_data), x="Map", y="Win Rate", color="Team", barmode="group", text="Label",
-                     color_discrete_map={team1: '#E59E6D', team2: '#ADDFB3'})
+                     color_discrete_map={team1: '#4FC3F7', team2: '#FFB74D'})
         fig.update_layout(paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)',
                           font_color='#e8ecf1', yaxis=dict(range=[0, 130]),
                           margin=dict(t=10, b=10), height=400)
