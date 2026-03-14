@@ -18347,6 +18347,122 @@
       }
     },
     {
+      "id": 626543,
+      "date": "2026-03-13",
+      "left": "Nongshim RedForce",
+      "right": "NRG",
+      "winner": "Nongshim RedForce",
+      "played": [
+        {
+          "map": "Bind",
+          "ls": 13,
+          "rs": 9,
+          "picked_by": null,
+          "left_agents": [
+            "Yoru",
+            "Brimstone",
+            "Neon",
+            "Fade",
+            "Viper"
+          ],
+          "right_agents": [
+            "Viper",
+            "Raze",
+            "Brimstone",
+            "Fade",
+            "Yoru"
+          ],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 6,
+            "left_def": 7,
+            "right_atk": 5,
+            "right_def": 4
+          }
+        },
+        {
+          "map": "Abyss",
+          "ls": 13,
+          "rs": 11,
+          "picked_by": null,
+          "left_agents": [
+            "Yoru",
+            "Cypher",
+            "Sova",
+            "Omen",
+            "Waylay"
+          ],
+          "right_agents": [
+            "Omen",
+            "Viper",
+            "Sova",
+            "Waylay",
+            "Tejo"
+          ],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 9,
+            "left_def": 4,
+            "right_atk": 8,
+            "right_def": 3
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "Nongshim RedForce",
+            "map": "Pearl"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "NRG",
+            "map": "Corrode"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "Nongshim RedForce",
+            "map": "Bind"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "NRG",
+            "map": "Abyss"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "Nongshim RedForce",
+            "map": "Breeze"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "NRG",
+            "map": "Split"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Haven"
+          }
+        ],
+        "decider": "Haven"
+      }
+    },
+    {
       "id": 626545,
       "date": "2026-03-08",
       "left": "Gentle Mates",
@@ -18898,6 +19014,152 @@
           }
         ],
         "decider": "Abyss"
+      }
+    },
+    {
+      "id": 626549,
+      "date": "2026-03-13",
+      "left": "Paper Rex",
+      "right": "G2 Esports",
+      "winner": "Paper Rex",
+      "played": [
+        {
+          "map": "Haven",
+          "ls": 11,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [
+            "Chamber",
+            "Phoenix",
+            "Omen",
+            "Yoru",
+            "Fade"
+          ],
+          "right_agents": [
+            "Phoenix",
+            "Astra",
+            "Fade",
+            "Yoru",
+            "Chamber"
+          ],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 5,
+            "left_def": 6,
+            "right_atk": 6,
+            "right_def": 7
+          }
+        },
+        {
+          "map": "Breeze",
+          "ls": 13,
+          "rs": 9,
+          "picked_by": null,
+          "left_agents": [
+            "Jett",
+            "Yoru",
+            "Sova",
+            "Omen",
+            "Viper"
+          ],
+          "right_agents": [
+            "Sova",
+            "Neon",
+            "Astra",
+            "Viper",
+            "Yoru"
+          ],
+          "pistols": {
+            "left": 2,
+            "right": 0
+          },
+          "sides": {
+            "left_atk": 5,
+            "left_def": 8,
+            "right_atk": 4,
+            "right_def": 5
+          }
+        },
+        {
+          "map": "Corrode",
+          "ls": 13,
+          "rs": 4,
+          "picked_by": null,
+          "left_agents": [
+            "Waylay",
+            "Vyse",
+            "Omen",
+            "Viper",
+            "Fade"
+          ],
+          "right_agents": [
+            "Neon",
+            "Vyse",
+            "Yoru",
+            "Fade",
+            "Astra"
+          ],
+          "pistols": {
+            "left": 2,
+            "right": 0
+          },
+          "sides": {
+            "left_atk": 3,
+            "left_def": 10,
+            "right_atk": 2,
+            "right_def": 2
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "Paper Rex",
+            "map": "Abyss"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "G2 Esports",
+            "map": "Split"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "Paper Rex",
+            "map": "Haven"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "G2 Esports",
+            "map": "Breeze"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "Paper Rex",
+            "map": "Pearl"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "G2 Esports",
+            "map": "Bind"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Corrode"
+          }
+        ],
+        "decider": "Corrode"
       }
     }
   ]
