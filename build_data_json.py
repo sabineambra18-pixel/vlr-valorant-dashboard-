@@ -8,6 +8,21 @@ import re
 import argparse
 from datetime import datetime
 
+TEAM_NAME_MAP = {
+    "DRX": "Kiwoom DRX",
+    "KIWOOM DRX (DRX)": "Kiwoom DRX",
+    "Kiwoom DRX": "Kiwoom DRX",
+    "ULF Esports": None,  # Removed team, exclude from output
+    "Talon Esports": None,  # Replaced by FULL SENSE
+}
+
+def normalize_team(name):
+    if not name:
+        return name
+    if name in TEAM_NAME_MAP:
+        return TEAM_NAME_MAP[name]
+    return name
+
 def safe_date(d):
     if not d:
         return None
@@ -40,10 +55,11 @@ def summarize_for_web(matches):
     teams = set()
     ms = []
     for m in matches:
-        left = (m.get("teams", {}) or {}).get("left")
-        right = (m.get("teams", {}) or {}).get("right")
+        left = normalize_team((m.get("teams", {}) or {}).get("left"))
+        right = normalize_team((m.get("teams", {}) or {}).get("right"))
         if left: teams.add(left)
         if right: teams.add(right)
+        winner = normalize_team((m.get("result") or {}).get("winner"))
         played = []
         for row in m.get("played", []):
             played.append({
@@ -56,14 +72,21 @@ def summarize_for_web(matches):
                 "pistols": row.get("pistols", {}),
                 "sides": row.get("sides", {})
             })
+        # Normalize veto team names
+        veto = m.get("veto")
+        if veto and isinstance(veto, dict):
+            for event in veto.get("events", []):
+                if event.get("team"):
+                    event["team"] = normalize_team(event["team"])
+
         ms.append({
             "id": m.get("match_id"),
             "date": m.get("date"),
             "left": left,
             "right": right,
-            "winner": (m.get("result") or {}).get("winner"),
+            "winner": winner,
             "played": played,
-            "veto": m.get("veto")
+            "veto": veto
         })
     return {"teams": sorted(t for t in teams if t), "matches": ms}
 

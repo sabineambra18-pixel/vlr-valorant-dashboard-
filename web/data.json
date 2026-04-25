@@ -5,7 +5,6 @@
     "BBL Esports",
     "Bilibili Gaming",
     "Cloud9",
-    "DRX",
     "DetonatioN FocusMe",
     "Dragon Ranger Gaming",
     "EDward Gaming",
@@ -23,7 +22,6 @@
     "Gentle Mates",
     "Global Esports",
     "JDG Esports",
-    "KIWOOM DRX (DRX)",
     "KRÜ Esports",
     "Karmine Corp",
     "Kiwoom DRX",
@@ -46,7 +44,6 @@
     "Team Vitality",
     "Titan Esports Club",
     "Trace Esports",
-    "ULF Esports",
     "VARREL",
     "Wolves Esports",
     "Xi Lai Gaming",
@@ -434,7 +431,7 @@
     {
       "id": 594743,
       "date": "2026-01-21",
-      "left": "ULF Esports",
+      "left": null,
       "right": "Team Vitality",
       "winner": "Team Vitality",
       "played": [
@@ -510,7 +507,7 @@
           {
             "order": 2,
             "type": "ban",
-            "team": "ULF Esports",
+            "team": null,
             "map": "Bind"
           },
           {
@@ -522,7 +519,7 @@
           {
             "order": 4,
             "type": "pick",
-            "team": "ULF Esports",
+            "team": null,
             "map": "Corrode"
           },
           {
@@ -534,7 +531,7 @@
           {
             "order": 6,
             "type": "ban",
-            "team": "ULF Esports",
+            "team": null,
             "map": "Pearl"
           },
           {
@@ -1950,7 +1947,7 @@
     {
       "id": 594754,
       "date": "2026-01-28",
-      "left": "ULF Esports",
+      "left": null,
       "right": "Team Heretics",
       "winner": "Team Heretics",
       "played": [
@@ -2020,7 +2017,7 @@
           {
             "order": 1,
             "type": "ban",
-            "team": "ULF Esports",
+            "team": null,
             "map": "Corrode"
           },
           {
@@ -2032,7 +2029,7 @@
           {
             "order": 3,
             "type": "pick",
-            "team": "ULF Esports",
+            "team": null,
             "map": "Haven"
           },
           {
@@ -2044,7 +2041,7 @@
           {
             "order": 5,
             "type": "ban",
-            "team": "ULF Esports",
+            "team": null,
             "map": "Abyss"
           },
           {
@@ -3029,8 +3026,8 @@
       "id": 594762,
       "date": "2026-02-03",
       "left": "PCIFIC Esports",
-      "right": "ULF Esports",
-      "winner": "ULF Esports",
+      "right": null,
+      "winner": null,
       "played": [
         {
           "map": "Split",
@@ -3098,7 +3095,7 @@
           {
             "order": 1,
             "type": "ban",
-            "team": "ULF Esports",
+            "team": null,
             "map": "Corrode"
           },
           {
@@ -3110,7 +3107,7 @@
           {
             "order": 3,
             "type": "pick",
-            "team": "ULF Esports",
+            "team": null,
             "map": "Split"
           },
           {
@@ -3122,7 +3119,7 @@
           {
             "order": 5,
             "type": "ban",
-            "team": "ULF Esports",
+            "team": null,
             "map": "Pearl"
           },
           {
@@ -3291,7 +3288,7 @@
       "id": 594764,
       "date": "2026-02-05",
       "left": "Team Liquid",
-      "right": "ULF Esports",
+      "right": null,
       "winner": "Team Liquid",
       "played": [
         {
@@ -3390,7 +3387,7 @@
           {
             "order": 1,
             "type": "ban",
-            "team": "ULF Esports",
+            "team": null,
             "map": "Corrode"
           },
           {
@@ -3402,7 +3399,7 @@
           {
             "order": 3,
             "type": "pick",
-            "team": "ULF Esports",
+            "team": null,
             "map": "Split"
           },
           {
@@ -3414,7 +3411,7 @@
           {
             "order": 5,
             "type": "ban",
-            "team": "ULF Esports",
+            "team": null,
             "map": "Bind"
           },
           {
@@ -4716,7 +4713,7 @@
     {
       "id": 595635,
       "date": "2026-01-24",
-      "left": "DRX",
+      "left": "Kiwoom DRX",
       "right": "FULL SENSE",
       "winner": "FULL SENSE",
       "played": [
@@ -4822,7 +4819,7 @@
           {
             "order": 2,
             "type": "ban",
-            "team": "DRX",
+            "team": "Kiwoom DRX",
             "map": "Corrode"
           },
           {
@@ -4834,7 +4831,7 @@
           {
             "order": 4,
             "type": "pick",
-            "team": "DRX",
+            "team": "Kiwoom DRX",
             "map": "Pearl"
           },
           {
@@ -4846,7 +4843,7 @@
           {
             "order": 6,
             "type": "ban",
-            "team": "DRX",
+            "team": "Kiwoom DRX",
             "map": "Bind"
           },
           {
@@ -5795,8 +5792,8 @@
       "id": 595643,
       "date": "2026-01-30",
       "left": "VARREL",
-      "right": "DRX",
-      "winner": "DRX",
+      "right": "Kiwoom DRX",
+      "winner": "Kiwoom DRX",
       "played": [
         {
           "map": "Corrode",
@@ -5900,7 +5897,7 @@
           {
             "order": 2,
             "type": "ban",
-            "team": "DRX",
+            "team": "Kiwoom DRX",
             "map": "Pearl"
           },
           {
@@ -5912,7 +5909,7 @@
           {
             "order": 4,
             "type": "pick",
-            "team": "DRX",
+            "team": "Kiwoom DRX",
             "map": "Split"
           },
           {
@@ -5924,7 +5921,7 @@
           {
             "order": 6,
             "type": "ban",
-            "team": "DRX",
+            "team": "Kiwoom DRX",
             "map": "Haven"
           },
           {
@@ -6232,7 +6229,7 @@
     {
       "id": 595646,
       "date": "2026-02-01",
-      "left": "DRX",
+      "left": "Kiwoom DRX",
       "right": "T1",
       "winner": "T1",
       "played": [
@@ -6302,7 +6299,7 @@
           {
             "order": 1,
             "type": "ban",
-            "team": "DRX",
+            "team": "Kiwoom DRX",
             "map": "Pearl"
           },
           {
@@ -6314,7 +6311,7 @@
           {
             "order": 3,
             "type": "pick",
-            "team": "DRX",
+            "team": "Kiwoom DRX",
             "map": "Split"
           },
           {
@@ -6326,7 +6323,7 @@
           {
             "order": 5,
             "type": "ban",
-            "team": "DRX",
+            "team": "Kiwoom DRX",
             "map": "Haven"
           },
           {
@@ -7194,9 +7191,9 @@
     {
       "id": 595653,
       "date": "2026-02-07",
-      "left": "DRX",
+      "left": "Kiwoom DRX",
       "right": "ZETA DIVISION",
-      "winner": "DRX",
+      "winner": "Kiwoom DRX",
       "played": [
         {
           "map": "Haven",
@@ -7300,7 +7297,7 @@
           {
             "order": 2,
             "type": "ban",
-            "team": "DRX",
+            "team": "Kiwoom DRX",
             "map": "Pearl"
           },
           {
@@ -7312,7 +7309,7 @@
           {
             "order": 4,
             "type": "pick",
-            "team": "DRX",
+            "team": "Kiwoom DRX",
             "map": "Bind"
           },
           {
@@ -7324,7 +7321,7 @@
           {
             "order": 6,
             "type": "ban",
-            "team": "DRX",
+            "team": "Kiwoom DRX",
             "map": "Corrode"
           },
           {
@@ -7487,8 +7484,8 @@
       "id": 595655,
       "date": "2026-02-08",
       "left": "FULL SENSE",
-      "right": "DRX",
-      "winner": "DRX",
+      "right": "Kiwoom DRX",
+      "winner": "Kiwoom DRX",
       "played": [
         {
           "map": "Corrode",
@@ -7562,7 +7559,7 @@
           {
             "order": 2,
             "type": "ban",
-            "team": "DRX",
+            "team": "Kiwoom DRX",
             "map": "Pearl"
           },
           {
@@ -7574,7 +7571,7 @@
           {
             "order": 4,
             "type": "pick",
-            "team": "DRX",
+            "team": "Kiwoom DRX",
             "map": "Abyss"
           },
           {
@@ -7586,7 +7583,7 @@
           {
             "order": 6,
             "type": "ban",
-            "team": "DRX",
+            "team": "Kiwoom DRX",
             "map": "Breeze"
           },
           {
@@ -7748,7 +7745,7 @@
     {
       "id": 595657,
       "date": "2026-02-12",
-      "left": "DRX",
+      "left": "Kiwoom DRX",
       "right": "Paper Rex",
       "winner": "Paper Rex",
       "played": [
@@ -7854,7 +7851,7 @@
           {
             "order": 2,
             "type": "ban",
-            "team": "DRX",
+            "team": "Kiwoom DRX",
             "map": "Pearl"
           },
           {
@@ -7866,7 +7863,7 @@
           {
             "order": 4,
             "type": "pick",
-            "team": "DRX",
+            "team": "Kiwoom DRX",
             "map": "Corrode"
           },
           {
@@ -7878,7 +7875,7 @@
           {
             "order": 6,
             "type": "ban",
-            "team": "DRX",
+            "team": "Kiwoom DRX",
             "map": "Split"
           },
           {
@@ -24044,8 +24041,8 @@
       "id": 644656,
       "date": "2026-04-05",
       "left": "Team Secret",
-      "right": "KIWOOM DRX (DRX)",
-      "winner": "KIWOOM DRX (DRX)",
+      "right": "Kiwoom DRX",
+      "winner": "Kiwoom DRX",
       "played": [
         {
           "map": "Pearl",
@@ -24119,7 +24116,7 @@
           {
             "order": 2,
             "type": "ban",
-            "team": "KIWOOM DRX (DRX)",
+            "team": "Kiwoom DRX",
             "map": "Bind"
           },
           {
@@ -24131,7 +24128,7 @@
           {
             "order": 4,
             "type": "pick",
-            "team": "KIWOOM DRX (DRX)",
+            "team": "Kiwoom DRX",
             "map": "Fracture"
           },
           {
@@ -24143,7 +24140,7 @@
           {
             "order": 6,
             "type": "ban",
-            "team": "KIWOOM DRX (DRX)",
+            "team": "Kiwoom DRX",
             "map": "Lotus"
           },
           {
@@ -24422,8 +24419,8 @@
       "id": 644659,
       "date": "2026-04-10",
       "left": "Nongshim RedForce",
-      "right": "KIWOOM DRX (DRX)",
-      "winner": "KIWOOM DRX (DRX)",
+      "right": "Kiwoom DRX",
+      "winner": "Kiwoom DRX",
       "played": [
         {
           "map": "Haven",
@@ -24527,7 +24524,7 @@
           {
             "order": 2,
             "type": "ban",
-            "team": "KIWOOM DRX (DRX)",
+            "team": "Kiwoom DRX",
             "map": "Bind"
           },
           {
@@ -24539,7 +24536,7 @@
           {
             "order": 4,
             "type": "pick",
-            "team": "KIWOOM DRX (DRX)",
+            "team": "Kiwoom DRX",
             "map": "Fracture"
           },
           {
@@ -24551,7 +24548,7 @@
           {
             "order": 6,
             "type": "ban",
-            "team": "KIWOOM DRX (DRX)",
+            "team": "Kiwoom DRX",
             "map": "Split"
           },
           {
