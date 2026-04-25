@@ -180,16 +180,16 @@ if not os.path.exists(DATA_PATH):
 REGION_TEAMS = {
     "Americas": [
         "Sentinels", "NRG", "Cloud9", "100 Thieves", "Evil Geniuses", "LOUD",
-        "FURIA", "MIBR", "Leviatán", "KRÜ Esports", "G2 Esports", "Envy"
+        "FURIA", "MIBR", "LEVIATÁN", "KRÜ Esports", "G2 Esports", "ENVY"
     ],
     "EMEA": [
-        "Team Liquid", "Team Vitality", "Team Heretics", "Fnatic",
+        "Team Liquid", "Team Vitality", "Team Heretics", "FNATIC",
         "FUT Esports", "BBL Esports", "GIANTX", "Karmine Corp",
-        "Natus Vincere", "Gentle Mates", "PCIFIC Esports", "ULF Esports"
+        "Natus Vincere", "Gentle Mates", "PCIFIC Esports", "Eternal Fire"
     ],
     "Pacific": [
-        "T1", "Nongshim RedForce", "DRX", "FULL SENSE", "Paper Rex", "ZETA DIVISION",
-        "Rex Regum Qeon", "DetonatioN FocusMe", "Talon Esports", "Team Secret",
+        "T1", "Nongshim RedForce", "Kiwoom DRX", "FULL SENSE", "Paper Rex", "ZETA DIVISION",
+        "Rex Regum Qeon", "DetonatioN FocusMe", "VARREL", "Team Secret",
         "Global Esports", "Gen.G"
     ],
     "China": [
@@ -197,11 +197,7 @@ REGION_TEAMS = {
         "Wolves Esports", "TYLOO", "All Gamers", "JDG Esports",
         "Titan Esports Club", "Dragon Ranger Gaming", "Xi Lai Gaming", "Nova Esports"
     ],
-    "Masters Santiago": [
-        "All Gamers", "Xi Lai Gaming", "EDward Gaming", "Nongshim RedForce",
-        "T1", "Paper Rex", "BBL Esports", "Gentle Mates",
-        "Team Liquid", "FURIA", "G2 Esports", "NRG"
-    ]
+    "Masters London": []
 }
 
 def normalize_name(name):

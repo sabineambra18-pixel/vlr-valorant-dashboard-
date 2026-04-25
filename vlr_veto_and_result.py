@@ -15,7 +15,10 @@ CLEAN_NAME_MAP = {
     "Guangzhou Huadu Bilibili Gaming (Bilibili Gaming)": "Bilibili Gaming",
     "JD Mall JDG Esports (JDG Esports)": "JDG Esports",
     "Wuxi Titan Esports Club (Titan Esports Club)": "Titan Esports Club",
-    "Xi Lai Gaming": "Xi Lai Gaming"
+    "Xi Lai Gaming": "Xi Lai Gaming",
+    "KIWOOM DRX (DRX)": "Kiwoom DRX",
+    "Kiwoom DRX": "Kiwoom DRX",
+    "DRX": "Kiwoom DRX",
 }
 
 DEFAULT_VETO_OVERRIDES: Dict[str, str] = {
@@ -82,7 +85,7 @@ def resolve_team_strict(token: str, left_full: str, right_full: str) -> str:
         "PRX": "PAPER REX", "DFM": "DETONATION FOCUSME",
         "TS": "TEAM SECRET", "GE": "GLOBAL ESPORTS",
         "RRQ": "REX REGUM QEON", "ZETA": "ZETA DIVISION",
-        "T1": "T1", "DRX": "DRX", "GEN": "GEN.G",
+        "T1": "T1", "DRX": "KIWOOM DRX", "GEN": "GEN.G",
         "NS": "NONGSHIM REDFORCE", "NSRF": "NONGSHIM REDFORCE",
         "FS": "FULL SENSE", "TLN": "TALON ESPORTS",
         "VL": "VARREL",

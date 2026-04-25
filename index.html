@@ -1,0 +1,2490 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self';
+                 script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net https://cdn.jsdelivr.net/npm/chart.js;
+                 style-src 'self' 'unsafe-inline';
+                 img-src 'self' data:;
+                 connect-src 'self' https://cdn.jsdelivr.net;
+                 font-src 'self';
+                 object-src 'none';
+                 base-uri 'self';">
+  <title>Valorant Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    * { box-sizing: border-box; }
+    body { 
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial; 
+      margin: 0; 
+      padding: 24px;
+      background: #0a0e1a; 
+      color: #e8ecf1; 
+    }
+    
+    /* Header */
+    header { 
+      background: linear-gradient(135deg, #1a2332 0%, #0f1520 100%);
+      padding: 24px;
+      border-radius: 16px;
+      margin-bottom: 24px;
+      border: 1px solid #2a3347;
+      box-shadow: 0 4px 12px rgba(0,0,0,.3);
+    }
+    
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    
+    h1 { 
+      margin: 0; 
+      font-size: 32px; 
+      background: linear-gradient(135deg, #4FC3F7 0%, #81C784 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .controls {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    
+    .control-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .control-group label {
+      font-size: 14px;
+      color: #9fb3c8;
+      font-weight: 500;
+    }
+    
+    select { 
+      padding: 8px 12px; 
+      font-size: 14px; 
+      background: #0f1520; 
+      color: #e8ecf1; 
+      border: 1px solid #2a3347; 
+      border-radius: 8px;
+      min-width: 180px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    
+    select:hover {
+      border-color: #415a9f;
+    }
+    
+    select:focus {
+      outline: none;
+      border-color: #4FC3F7;
+      box-shadow: 0 0 0 3px rgba(79, 195, 247, 0.1);
+    }
+    
+    /* Tabs */
+    .tabs { 
+      display: flex; 
+      gap: 8px; 
+      margin-bottom: 24px;
+      background: #121a29;
+      padding: 8px;
+      border-radius: 12px;
+      border: 1px solid #2a3347;
+    }
+    
+    .tabbtn { 
+      padding: 10px 20px; 
+      border: none;
+      border-radius: 8px; 
+      background: transparent;
+      color: #9fb3c8; 
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+    
+    .tabbtn:hover {
+      background: rgba(79, 195, 247, 0.1);
+      color: #e8ecf1;
+    }
+    
+    .tabbtn.active { 
+      background: linear-gradient(135deg, #4FC3F7 0%, #3FA9D3 100%);
+      color: #fff;
+      box-shadow: 0 2px 8px rgba(79, 195, 247, 0.3);
+    }
+    
+    /* Grid Layout */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+      gap: 24px;
+      margin-bottom: 24px;
+    }
+    
+    .full-width {
+      grid-column: 1 / -1;
+    }
+    
+    /* Cards */
+    .card { 
+      border: 1px solid #2a3347; 
+      border-radius: 16px; 
+      padding: 24px; 
+      box-shadow: 0 4px 12px rgba(0,0,0,.3); 
+      background: linear-gradient(135deg, #121a29 0%, #0f1520 100%);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0,0,0,.4);
+    }
+    
+    h2 { 
+      margin: 0 0 16px 0; 
+      font-size: 20px;
+      color: #e8ecf1;
+      border-bottom: 2px solid #2a3347;
+      padding-bottom: 12px;
+    }
+    
+    h3 { 
+      margin: 0 0 12px 0; 
+      font-size: 16px; 
+      color: #cbd5e1;
+      font-weight: 600;
+    }
+    
+    /* Charts */
+    canvas { 
+      width: 100% !important; 
+      height: 380px !important; 
+      max-height: 380px !important;
+      background: #0a0e1a; 
+      border-radius: 12px;
+      padding: 16px;
+    }
+    
+    /* Tables */
+    table { 
+      width: 100%; 
+      border-collapse: collapse; 
+    }
+    
+    th, td { 
+      text-align: left; 
+      padding: 12px; 
+      border-bottom: 1px solid #223048;
+      vertical-align: top;
+    }
+    
+    th { 
+      background: #0a0e1a; 
+      color: #9fb3c8;
+      font-weight: 600;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    tr:hover td {
+      background: rgba(79, 195, 247, 0.05);
+    }
+    
+    /* Pills */
+    .pill { 
+      display: inline-block; 
+      background: #1b2332; 
+      padding: 4px 10px; 
+      border-radius: 999px; 
+      margin: 3px; 
+      font-size: 12px; 
+      border: 1px solid #2a3347;
+      transition: all 0.2s;
+    }
+    
+    .pill:hover {
+      background: #223048;
+      border-color: #415a9f;
+    }
+    
+    /* Legend */
+    .legend { 
+      display: flex; 
+      gap: 20px; 
+      align-items: center; 
+      margin: 0 0 16px; 
+      padding: 12px;
+      background: #0a0e1a;
+      border-radius: 8px;
+    }
+    
+    .key { 
+      display: inline-flex; 
+      align-items: center; 
+      gap: 8px; 
+      font-size: 13px; 
+      color: #cbd5e1;
+      font-weight: 500;
+    }
+    
+    .swatch { 
+      width: 14px; 
+      height: 14px; 
+      border-radius: 4px; 
+      display: inline-block;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+    
+    /* Utility Classes */
+    .muted { 
+      color: #9fb3c8; 
+      font-size: 13px; 
+    }
+    
+    .hidden { 
+      display: none; 
+    }
+    
+    .two { 
+      display: grid; 
+      grid-template-columns: 1fr 1fr; 
+      gap: 24px; 
+    }
+    
+    .summary { 
+      margin: 0 0 16px; 
+      font-size: 13px; 
+      color: #9fb3c8;
+      padding: 12px;
+      background: #0a0e1a;
+      border-radius: 8px;
+      border-left: 3px solid #4FC3F7;
+    }
+    
+    /* H2H Comparison Styles */
+    .h2h-comparison {
+      display: grid;
+      grid-template-columns: 2fr 1fr 2fr;
+      gap: 24px;
+      align-items: start;
+    }
+    
+    .team-column {
+      background: #0a0e1a;
+      padding: 20px;
+      border-radius: 12px;
+      border: 2px solid #2a3347;
+    }
+    
+    .team-column.left { border-left: 4px solid #4FC3F7; }
+    .team-column.right { border-left: 4px solid #FFB74D; }
+    
+    .team-name {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+    
+    .team-column.left .team-name { color: #4FC3F7; }
+    .team-column.right .team-name { color: #FFB74D; }
+    
+    .stat-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 12px 0;
+      border-bottom: 1px solid #223048;
+    }
+    
+    .stat-label { color: #9fb3c8; font-size: 13px; }
+    .stat-value { font-size: 18px; font-weight: 600; color: #e8ecf1; }
+    
+    .vs-column {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+    }
+    
+    .vs-badge {
+      background: linear-gradient(135deg, #4FC3F7 0%, #FFB74D 100%);
+      color: #fff;
+      padding: 16px 24px;
+      border-radius: 50%;
+      font-size: 24px;
+      font-weight: 700;
+      box-shadow: 0 4px 12px rgba(79, 195, 247, 0.4);
+      width: 80px; height: 80px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    
+    .overall-record {
+      text-align: center;
+      background: #0a0e1a;
+      padding: 16px;
+      border-radius: 12px;
+      border: 1px solid #2a3347;
+      width: 100%;
+    }
+    
+    .overall-record .label { color: #9fb3c8; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+    .overall-record .score { font-size: 28px; font-weight: 700; color: #e8ecf1; }
+    
+    .map-comparison { margin-top: 20px; }
+    .map-row {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 10px; background: #0a0e1a; margin-bottom: 8px; border-radius: 8px; border: 1px solid #223048;
+    }
+    .map-row:hover { background: #121a29; border-color: #2a3347; }
+    .map-name { flex: 1; text-align: center; font-weight: 600; color: #cbd5e1; }
+    .map-stat { width: 80px; text-align: center; font-weight: 600; }
+    .win-stat { color: #81C784; } .loss-stat { color: #e57373; }
+    
+    #mapRecord { margin-left: 10px; font-size: 12px; color: #cbd5e1; }
+    .error { background: #3d1a1a; border: 1px solid #5a2626; padding: 16px; border-radius: 8px; margin: 16px 0; }
+    
+    @media (max-width: 1200px) {
+      .h2h-comparison { grid-template-columns: 1fr; }
+      .vs-column { order: -1; }
+      .map-analysis-grid { grid-template-columns: 1fr !important; }
+    }
+    
+    @media (max-width: 768px) {
+      .grid { grid-template-columns: 1fr; }
+      .two { grid-template-columns: 1fr; }
+      h1 { font-size: 24px; }
+    }
+    
+    /* Map Analysis Styles */
+    .map-analysis-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 24px; }
+    .map-team-card { background: #0a0e1a; padding: 24px; border-radius: 12px; border: 2px solid #2a3347; }
+    .map-team-card.team1 { border-left: 4px solid #4FC3F7; } 
+    .map-team-card.team2 { border-left: 4px solid #FFB74D; }
+    .map-team-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; padding-bottom: 16px; border-bottom: 2px solid #2a3347; }
+    .map-team-name { font-size: 22px; font-weight: 700; }
+    .map-stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px; }
+    .map-stat-box { background: #121a29; padding: 16px; border-radius: 8px; text-align: center; border: 1px solid #2a3347; }
+    .map-stat-label { color: #9fb3c8; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
+    .map-stat-value { font-size: 24px; font-weight: 700; color: #e8ecf1; }
+    .agents-section { margin-top: 24px; }
+    .agents-section h4 { margin: 0 0 12px 0; font-size: 15px; color: #cbd5e1; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+    .agent-composition { background: #121a29; padding: 16px; border-radius: 8px; margin-bottom: 12px; border: 1px solid #2a3347; transition: all 0.2s; }
+    .agent-composition:hover { background: #1b2332; border-color: #415a9f; }
+    .composition-header { display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 13px; color: #9fb3c8; }
+    .composition-agents { display: flex; flex-wrap: wrap; gap: 6px; }
+    .agent-pill { background: #1b2332; padding: 6px 12px; border-radius: 6px; font-size: 13px; border: 1px solid #2a3347; color: #e8ecf1; font-weight: 500; }
+
+    /* Pick and Ban history items */
+    .pick-ban-item { background: #121a29; padding: 12px 16px; border-radius: 8px; margin-bottom: 8px; border: 1px solid #2a3347; transition: all 0.2s; display: flex; gap: 12px; align-items: center; font-size: 13px; }
+    .pick-ban-item:hover { background: #1b2332; border-color: #415a9f; }
+    .pick-ban-date { color: #9fb3c8; min-width: 80px; }
+    .pick-ban-opponent { color: #e8ecf1; flex: 1; }
+    .pick-ban-order { color: #81C784; font-style: italic; }
+
+    /* Map-by-map record styling */
+    .map-records-list { display: flex; flex-direction: column; gap: 8px; }
+    .map-record-item { 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center;
+      padding: 12px 16px; 
+      background: #121a29; 
+      border-radius: 8px; 
+      border: 1px solid #2a3347;
+      font-size: 14px;
+    }
+    .map-record-name { 
+      color: #e8ecf1; 
+      font-weight: 600;
+      flex: 1;
+      text-align: center;
+    }
+    .map-record-left {
+      min-width: 60px;
+      text-align: left;
+      font-weight: 700;
+    }
+    .map-record-right {
+      min-width: 60px;
+      text-align: right;
+      font-weight: 700;
+    }
+
+    /* NEW: small subtitle line under team name for map analysis */
+    .map-opponent-sub { margin-top: 6px; font-size: 13px; color: #9fb3c8; }
+    .top-agents { background: #121a29; padding: 16px; border-radius: 8px; margin-bottom: 20px; border: 1px solid #2a3347; }
+    .top-agents-title { font-size: 13px; color: #9fb3c8; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .top-agents-list { display: flex; flex-wrap: wrap; gap: 8px; }
+    .top-agent-item { background: #0a0e1a; padding: 8px 12px; border-radius: 6px; border: 1px solid #2a3347; font-size: 13px; }
+    .agent-name { color: #e8ecf1; font-weight: 600; } 
+    .agent-count { color: #9fb3c8; margin-left: 4px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-content">
+    <h1 id="title">Valorant Dashboard</h1>
+  </div>
+</header>
+
+<div class="tabs">
+  <button id="tabOverview" class="tabbtn active">Overview</button>
+  <button id="tabH2H" class="tabbtn">Head-to-Head</button>
+  <button id="tabMapAnalysis" class="tabbtn">Map Analysis</button>
+  <button id="tabOverallComparison" class="tabbtn">Overall Comparison</button>
+</div>
+
+<div id="mainControls" class="controls" style="margin: 24px 0; padding: 20px; background: linear-gradient(135deg, #1a2332 0%, #0f1520 100%); border-radius: 12px; border: 1px solid #2a3347;">
+  <div class="control-group">
+    <label for="regionSel" style="font-size: 14px; font-weight: 600;">Region:</label>
+    <select id="regionSel" style="min-width: 200px;"></select>
+  </div>
+  <div class="control-group">
+    <label for="teamSel" style="font-size: 14px; font-weight: 600;">Team:</label>
+    <select id="teamSel" style="min-width: 200px;"></select>
+  </div>
+  <div class="control-group">
+    <label for="oppSel" style="font-size: 14px; font-weight: 600;">Opponent:</label>
+    <select id="oppSel" style="min-width: 200px;"></select>
+  </div>
+</div>
+
+<div id="viewOverview">
+  <div class="grid">
+    <div class="card">
+      <h2 id="picksBansTitle">Picks vs Bans</h2>
+      <div class="legend">
+        <span class="key"><span class="swatch" style="background:#4FC3F7"></span> Picks</span>
+        <span class="key"><span class="swatch" style="background:#FFB74D"></span> Bans</span>
+        <span class="muted">Hover bars for details</span>
+      </div>
+      <canvas id="picksBans"></canvas>
+    </div>
+    
+    <div class="card">
+      <h2 id="pistolTitle">Pistol Win Rate by Map</h2>
+      <canvas id="pistolWR"></canvas>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="card full-width">
+      <h2 id="agentsTitle">Agents by Map (per match comps)</h2>
+      <div class="muted">
+        Select a map:
+        <select id="mapSel" style="margin-left:6px;"></select>
+        <span id="mapRecord"></span>
+      </div>
+      <div class="two" style="margin-top:16px">
+        <div>
+          <h3 id="leftTeamHdr"></h3>
+          <div id="leftAgentsSummary" class="summary"></div>
+          <table id="leftAgentsTbl"><thead>
+            <tr><th>Date</th><th>Opponent</th><th>Agents</th></tr>
+          </thead><tbody></tbody></table>
+        </div>
+        <div>
+          <h3 id="rightTeamHdr"></h3>
+          <div id="rightAgentsSummary" class="summary"></div>
+          <table id="rightAgentsTbl"><thead>
+            <tr><th>Date</th><th>Opponent</th><th>Agents</th></tr>
+          </thead><tbody></tbody></table>
+        </div>
+      </div>
+    </div>
+
+    <div class="card full-width">
+      <h2>Latest Results</h2>
+      <table id="seriesTable">
+        <thead><tr><th>Date</th><th>Opponent</th><th>Series</th><th>Maps</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div id="viewH2H" class="hidden">
+  <div class="card" style="margin-bottom: 24px;">
+    <h2 id="h2hTitle">Head-to-Head Comparison</h2>
+    
+    <div class="h2h-comparison" id="h2hComparison"></div>
+  </div>
+  
+  <div class="card">
+    <h2>Match History</h2>
+    <table id="h2hTable">
+      <thead><tr><th>Date</th><th>Series</th><th>Maps</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</div>
+
+<div id="viewMapAnalysis" class="hidden">
+  <div class="card" style="margin-bottom: 24px;">
+    <h2>Map Analysis - Side by Side Comparison</h2>
+    
+    <div class="controls" style="margin-bottom: 24px; padding: 16px; background: #0a0e1a; border-radius: 12px;">
+      <div class="control-group">
+        <label for="mapAnalysisRegion">Region:</label>
+        <select id="mapAnalysisRegion"></select>
+      </div>
+      <div class="control-group">
+        <label for="mapAnalysisMap">Map:</label>
+        <select id="mapAnalysisMap"></select>
+      </div>
+      <div class="control-group">
+        <label for="mapAnalysisTeam1">Team 1:</label>
+        <select id="mapAnalysisTeam1"></select>
+      </div>
+      <div class="control-group">
+        <label for="mapAnalysisTeam2">Team 2:</label>
+        <select id="mapAnalysisTeam2"></select>
+      </div>
+    </div>
+    
+    <div id="mapAnalysisContent"></div>
+  </div>
+</div>
+
+<div id="viewOverallComparison" class="hidden">
+  <div class="card" style="margin-bottom: 24px;">
+    <h2>Overall Comparison - Side by Side</h2>
+    
+    <div class="controls" style="margin-bottom: 24px; padding: 16px; background: #0a0e1a; border-radius: 12px;">
+      <div class="control-group">
+        <label for="overallCompRegion">Region:</label>
+        <select id="overallCompRegion"></select>
+      </div>
+      <div class="control-group">
+        <label for="overallCompTeam1">Team 1:</label>
+        <select id="overallCompTeam1"></select>
+      </div>
+      <div class="control-group">
+        <label for="overallCompTeam2">Team 2:</label>
+        <select id="overallCompTeam2"></select>
+      </div>
+    </div>
+    
+    <div id="overallComparisonContent"></div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+let RAW = null;
+let DATA = null;
+let charts = { picksBans:null, pistolWR:null };
+let currentTeam = null;
+
+// Region mapping
+const REGION_TEAMS = {
+  "VCT EMEA": [
+    "Team Liquid", "Team Vitality", "Team Heretics", "Fnatic", 
+    "FUT Esports", "BBL Esports", "GIANTX", "Karmine Corp", 
+    "Natus Vincere", "Movistar KOI", "Gentle Mates", "Apeks"
+  ],
+  "Americas Ascension": [
+    "TSM", "ENVY", "Stellae Gaming", "Team Solid", 
+    "9z Team", "Winthrop University"
+  ],
+  "EMEA Ascension": [
+    "ULF Esports", "BBL PCIFIC", "Twisted Minds", 
+    "Joblife", "DNSTY", "Mandatory"
+  ],
+  "Pacific Ascension": [
+    "Nongshim RedForce", "BOOM Esports", "Motiv Esports", 
+    "NAOS Esports", "NAOS", "SLT Seongnam", "Velocity Gaming"
+  ],
+  "Game Changers 2025": [
+    "Xipto GC", "Ninetails", "KRÜ Blaze", 
+    "Karmine Corp GC", "Team Liquid Brazil", "Shopify Rebellion Gold",
+    "GiantX GC"
+  ]
+};
+
+// Fuzzy team name matching - handles variations like "9z Team" vs "9z", "NAOS Esports" vs "NAOS"
+function teamNamesMatch(name1, name2) {
+  if (!name1 || !name2) return false;
+  
+  // Exact match (case insensitive)
+  if (name1.toLowerCase() === name2.toLowerCase()) return true;
+  
+  // Normalize: lowercase, remove extra spaces, remove accents
+  const normalize = (s) => s.toLowerCase()
+    .replace(/\s+/g, ' ')
+    .trim()
+    .normalize("NFD").replace(/[\u0300-\u036f]/g, ""); // Remove accents
+  
+  const n1 = normalize(name1);
+  const n2 = normalize(name2);
+  
+  if (n1 === n2) return true;
+  
+  // Remove common suffixes and check
+  const removeSuffixes = (s) => s
+    .replace(/\s+(esports?|gaming|team|gc)$/i, '')
+    .trim();
+  
+  const s1 = removeSuffixes(n1);
+  const s2 = removeSuffixes(n2);
+  
+  if (s1 === s2) return true;
+  
+  // Very strict matching: only allow if one name is the other + a known suffix
+  // This prevents "Team Liquid" from matching "Team Liquid Brazil"
+  const shorter = s1.length < s2.length ? s1 : s2;
+  const longer = s1.length < s2.length ? s2 : s1;
+  
+  // Check if longer = shorter + space + ONLY a suffix word
+  if (shorter.length >= 3 && longer.startsWith(shorter + ' ')) {
+    const remainder = longer.substring(shorter.length + 1); // +1 for the space
+    // Only match if remainder is EXACTLY a known suffix (nothing more)
+    if (/^(esports?|esport|gaming|team|gc)$/i.test(remainder)) {
+      return true;
+    }
+  }
+  
+  // Check if longer = ONLY a suffix word + space + shorter  
+  if (shorter.length >= 3 && longer.endsWith(' ' + shorter)) {
+    const prefix = longer.substring(0, longer.length - shorter.length - 1); // -1 for space
+    if (/^(esports?|esport|gaming|team|gc)$/i.test(prefix)) {
+      return true;
+    }
+  }
+  
+  return false;
+}
+
+// Check if a team belongs to a region
+function isTeamInRegion(teamName, regionName) {
+  const regionTeams = REGION_TEAMS[regionName];
+  if (!regionTeams) return false;
+  
+  return regionTeams.some(regionTeam => teamNamesMatch(teamName, regionTeam));
+}
+
+let currentRegion = "";
+let overallCompRegion = "";
+let mapAnalysisRegion = "";
+
+function fmtDate(iso) {
+  if (!iso || iso === "1900-01-01") return "No date";
+  const d = new Date(iso);
+  if (isNaN(d.getTime())) return iso;
+  const opts = {month:"short", day:"numeric", year:"numeric"};
+  return d.toLocaleDateString(undefined, opts);
+}
+
+function normTeam(s) {
+  return (s || "").toLowerCase().replace(/[^a-z0-9]+/g, "");
+}
+
+function resolveSideByName(name, L, R) {
+  if (!name) return null;
+  const a = normTeam(name), l = normTeam(L), r = normTeam(R);
+  if (a === l) return "left";
+  if (a === r) return "right";
+  return null;
+}
+
+/* getSideForTeam — read nested teams too */
+function getSideForTeam(match, teamName) {
+  const L = match?.left;
+  const R = match?.right;
+  if (L === teamName) return 'left';
+  if (R === teamName) return 'right';
+  return null;
+}
+
+/* matchesForTeam — filter using nested teams */
+function matchesForTeam(team) {
+  return (DATA.matches || []).filter(m =>
+    (m?.teams && (m.teams.left === team || m.teams.right === team)) ||
+    (m?.left === team || m?.right === team)
+  );
+}
+
+/* deriveFromMatches(...) — L/R from nested teams */
+function deriveFromMatches(matches) {
+  const out = { teams: {}, matches: matches || [] };
+
+  const ensureTeam = (name) => {
+    if (!out.teams[name]) out.teams[name] = { country: "", maps: {}, h2h: {} };
+    return out.teams[name];
+  };
+  const ensureMap = (teamNode, mapName) => {
+    if (!teamNode.maps[mapName]) {
+      teamNode.maps[mapName] = {
+        picks: 0, bans: 0, wins: 0, losses: 0,
+        pistol_win_rate: 0, pistol_wins: 0, pistol_losses: 0,
+        _pistol_wins: 0, _pistol_rounds: 0,
+        picks_log: [], bans_log: [],
+        team_agents_log: [], opp_agents_log: []
+      };
+    }
+    return teamNode.maps[mapName];
+  };
+  const ensureH2H = (teamNode, opp) => {
+    if (!teamNode.h2h[opp]) teamNode.h2h[opp] = { series: [] };
+    return teamNode.h2h[opp];
+  };
+
+  for (const m of matches) {
+    if (!m) continue;
+    const L = m?.left;
+    const R = m?.right;
+    if (!L || !R) continue;
+    const date = m?.date || "";
+    const leftNode = ensureTeam(L);
+    const rightNode = ensureTeam(R);
+
+    // Avoid double counting picks per match/map
+    const countedPickForMap = new Set();
+
+    const evs = (m?.veto?.events || []).filter(e => e && e.map && e.type);
+    const pickerByMap = new Map();
+    for (const r of (m?.played || [])) {
+      if (r?.map && r?.picked_by) pickerByMap.set(r.map, r.picked_by);
+    }
+
+    // A) mark picks from veto events
+    let overallBanCount = 0; // Track overall ban order across all maps
+    
+    for (const e of evs) {
+      const map = e.map;
+      if (!map) continue;
+      let side = resolveSideByName(e.team, L, R);
+      if (!side && e.type === "pick") {
+        const pb = pickerByMap.get(map);
+        side = resolveSideByName(pb, L, R);
+      }
+      
+      // Track ban order overall (not per map)
+      let note = `${e.type.toUpperCase()} ${map}`;
+      if (e.type === "ban") {
+        overallBanCount++;
+        note = `BAN${overallBanCount} ${map}`;
+      }
+      
+      if (side === "left") {
+        const bucket = ensureMap(leftNode, map);
+        if (e.type === "pick") {
+          if (!countedPickForMap.has(map)) {
+            bucket.picks += 1;
+            countedPickForMap.add(map);
+          }
+          bucket.picks_log.push({ date, opponent: R, note });
+        } else if (e.type === "ban") {
+          bucket.bans += 1;
+          bucket.bans_log.push({ date, opponent: R, note });
+        }
+      } else if (side === "right") {
+        const bucket = ensureMap(rightNode, map);
+        if (e.type === "pick") {
+          if (!countedPickForMap.has(map)) {
+            bucket.picks += 1;
+            countedPickForMap.add(map);
+          }
+          bucket.picks_log.push({ date, opponent: L, note });
+        } else if (e.type === "ban") {
+          bucket.bans += 1;
+          bucket.bans_log.push({ date, opponent: L, note });
+        }
+      }
+    }
+
+    // B) infer picks from played rows if not already counted
+    for (const r of (m?.played || [])) {
+      if (!r?.map || !r?.picked_by) continue;
+      if (countedPickForMap.has(r.map)) continue; // already counted from events
+
+      const sidePB = resolveSideByName(r.picked_by, L, R);
+      const notePB = `PICK ${r.map} (from played)`;
+      if (sidePB === "left") {
+        const bucket = ensureMap(leftNode, r.map);
+        bucket.picks += 1;
+        countedPickForMap.add(r.map);
+        bucket.picks_log.push({ date, opponent: R, note: notePB });
+      } else if (sidePB === "right") {
+        const bucket = ensureMap(rightNode, r.map);
+        bucket.picks += 1;
+        countedPickForMap.add(r.map);
+        bucket.picks_log.push({ date, opponent: L, note: notePB });
+      }
+    }
+
+    const played = m?.played || [];
+    for (const row of played) {
+      const map = row?.map; if (!map) continue;
+      const ls = row?.ls ?? row?.left_score;
+      const rs = row?.rs ?? row?.right_score;
+      const pist = row?.pistols || {};
+      const leftAgents = row?.left_agents || [];
+      const rightAgents = row?.right_agents || [];
+      const rowDate = row?.date || date;
+
+      {
+        const b = ensureMap(leftNode, map);
+        if (Number.isInteger(ls) && Number.isInteger(rs)) {
+          if (ls > rs) b.wins += 1; else if (rs > ls) b.losses += 1;
+        }
+        const lw = parseInt(pist.left || 0, 10);
+        const lwSafe = Number.isFinite(lw) ? lw : 0;
+        b._pistol_wins += lwSafe;
+        b._pistol_rounds += 2;
+        b.team_agents_log.push({ date: rowDate, opponent: R, agents: leftAgents, score: `${ls}-${rs}`, pistols: `${lwSafe}-${2-lwSafe}` });
+        b.opp_agents_log.push({ date: rowDate, opponent: R, agents: rightAgents });
+      }
+      {
+        const b = ensureMap(rightNode, map);
+        if (Number.isInteger(ls) && Number.isInteger(rs)) {
+          if (rs > ls) b.wins += 1; else if (ls > rs) b.losses += 1;
+        }
+        const rw = parseInt(pist.right || 0, 10);
+        const rwSafe = Number.isFinite(rw) ? rw : 0;
+        b._pistol_wins += rwSafe;
+        b._pistol_rounds += 2;
+        b.team_agents_log.push({ date: rowDate, opponent: L, agents: rightAgents, score: `${rs}-${ls}`, pistols: `${rwSafe}-${2-rwSafe}` });
+        b.opp_agents_log.push({ date: rowDate, opponent: L, agents: leftAgents });
+      }
+    }
+
+    /* ---------- map summary + H2H push (with pistols) ---------- */
+    const baseMaps = played.map(r => {
+      const Ls = r.ls ?? r.left_score;
+      const Rs = r.rs ?? r.right_score;
+      const haveScores = Number.isInteger(Ls) && Number.isInteger(Rs);
+      const pist = r?.pistols || {};
+      return {
+        map: r.map || "Unknown",
+        score: haveScores ? `${Ls}-${Rs}` : "—",
+        picked_by: r.picked_by || "",
+        date: r.date || m.date || "",
+        pist_left: Number.isFinite(pist.left) ? pist.left : (typeof pist.left === 'number' ? pist.left : parseInt(pist.left || 0,10)),
+        pist_right: Number.isFinite(pist.right) ? pist.right : (typeof pist.right === 'number' ? pist.right : parseInt(pist.right || 0,10)),
+      };
+    });
+
+    let leftMapWins = 0, rightMapWins = 0;
+    for (const r of played) {
+      const Ls = r.ls ?? r.left_score;
+      const Rs = r.rs ?? r.right_score;
+      if (Number.isInteger(Ls) && Number.isInteger(Rs)) {
+        if (Ls > Rs) leftMapWins++;
+        else if (Rs > Ls) rightMapWins++;
+      }
+    }
+
+    let seriesL = m?.result?.left_wins  ?? 0;
+    let seriesR = m?.result?.right_wins ?? 0;
+    if ((seriesL === 0 && seriesR === 0) && (leftMapWins + rightMapWins > 0)) {
+      seriesL = leftMapWins;
+      seriesR = rightMapWins;
+    }
+
+    const mapsForLeft = baseMaps.map(b => ({
+      map: b.map,
+      score: b.score,
+      picked_by: b.picked_by,
+      date: b.date,
+      pistols_my: (Number.isFinite(b.pist_left) && Number.isFinite(b.pist_right)) ? `${b.pist_left}-${b.pist_right}` : ""
+    }));
+    const mapsForRight = baseMaps.map(b => ({
+      map: b.map,
+      score: b.score,
+      picked_by: b.picked_by,
+      date: b.date,
+      pistols_my: (Number.isFinite(b.pist_left) && Number.isFinite(b.pist_right)) ? `${b.pist_right}-${b.pist_left}` : ""
+    }));
+
+    ensureH2H(leftNode, R).series.push({
+      date,
+      score: `${seriesL}-${seriesR}`,
+      maps: mapsForLeft,
+      opponent: R
+    });
+    ensureH2H(rightNode, L).series.push({
+      date,
+      score: `${seriesR}-${seriesL}`,
+      maps: mapsForRight,
+      opponent: L
+    });
+    /* ----------------------------------------------------------- */
+  }
+
+  // finalize pistol metrics
+  Object.values(out.teams).forEach(teamNode => {
+    Object.values(teamNode.maps).forEach(m => {
+      m.pistol_win_rate = m._pistol_rounds ? (m._pistol_wins / m._pistol_rounds) : 0;
+      m.pistol_wins = m._pistol_wins;
+      m.pistol_losses = m._pistol_rounds - m._pistol_wins;
+      delete m._pistol_wins; delete m._pistol_rounds;
+    });
+  });
+
+  return out;
+}
+
+function initUI() {
+  const regionSel = document.getElementById('regionSel');
+  const teamSel = document.getElementById('teamSel');
+  const oppSel = document.getElementById('oppSel');
+  const mapSel = document.getElementById('mapSel');
+
+  // Populate region dropdown
+  regionSel.innerHTML = '<option value="">-- All Regions --</option>';
+  const regionNames = Object.keys(REGION_TEAMS).sort();
+  for (const region of regionNames) {
+    const opt = document.createElement('option');
+    opt.value = region;
+    opt.textContent = region;
+    regionSel.appendChild(opt);
+  }
+
+  // Function to populate team dropdown based on selected region
+  function populateTeamDropdown() {
+    teamSel.innerHTML = '<option value="">-- Select Team --</option>';
+    
+    const allTeams = Object.keys(DATA.teams || {}).sort();
+    let teamsToShow = allTeams;
+    
+    // Filter by region if one is selected
+    if (currentRegion && REGION_TEAMS[currentRegion]) {
+      teamsToShow = allTeams.filter(team => isTeamInRegion(team, currentRegion));
+    }
+    
+    for (const tn of teamsToShow) {
+      const opt = document.createElement('option');
+      opt.value = tn;
+      opt.textContent = tn;
+      teamSel.appendChild(opt);
+    }
+    
+    // If current team is not in the filtered list, clear selection
+    if (currentTeam && !teamsToShow.includes(currentTeam)) {
+      currentTeam = null;
+      teamSel.value = "";
+      oppSel.innerHTML = '<option value="">-- All Opponents --</option>';
+      renderOverview();
+      renderH2H();
+    }
+  }
+
+  // Region change listener
+  regionSel.addEventListener('change', () => {
+    currentRegion = regionSel.value;
+    populateTeamDropdown();
+  });
+
+  // Initial population
+  populateTeamDropdown();
+
+  teamSel.addEventListener('change', () => {
+    currentTeam = teamSel.value;
+    updateOpponentDropdown();
+    renderOverview();
+    renderH2H();
+  });
+
+  oppSel.addEventListener('change', () => {
+    renderH2H();
+  });
+
+  mapSel.addEventListener('change', () => {
+    renderAgentsTable();
+  });
+
+  document.getElementById('tabOverview').addEventListener('click', () => {
+    document.getElementById('tabOverview').classList.add('active');
+    document.getElementById('tabH2H').classList.remove('active');
+    document.getElementById('tabMapAnalysis').classList.remove('active');
+    document.getElementById('tabOverallComparison').classList.remove('active');
+    document.getElementById('viewOverview').classList.remove('hidden');
+    document.getElementById('viewH2H').classList.add('hidden');
+    document.getElementById('viewMapAnalysis').classList.add('hidden');
+    document.getElementById('viewOverallComparison').classList.add('hidden');
+    document.getElementById('mainControls').classList.remove('hidden');
+  });
+
+  document.getElementById('tabH2H').addEventListener('click', () => {
+    document.getElementById('tabH2H').classList.add('active');
+    document.getElementById('tabOverview').classList.remove('active');
+    document.getElementById('tabMapAnalysis').classList.remove('active');
+    document.getElementById('tabOverallComparison').classList.remove('active');
+    document.getElementById('viewH2H').classList.remove('hidden');
+    document.getElementById('viewOverview').classList.add('hidden');
+    document.getElementById('viewMapAnalysis').classList.add('hidden');
+    document.getElementById('viewOverallComparison').classList.add('hidden');
+    document.getElementById('mainControls').classList.remove('hidden');
+    renderH2H();
+  });
+
+  document.getElementById('tabMapAnalysis').addEventListener('click', () => {
+    document.getElementById('tabMapAnalysis').classList.add('active');
+    document.getElementById('tabOverview').classList.remove('active');
+    document.getElementById('tabH2H').classList.remove('active');
+    document.getElementById('tabOverallComparison').classList.remove('active');
+    document.getElementById('viewMapAnalysis').classList.remove('hidden');
+    document.getElementById('viewOverview').classList.add('hidden');
+    document.getElementById('viewH2H').classList.add('hidden');
+    document.getElementById('viewOverallComparison').classList.add('hidden');
+    document.getElementById('mainControls').classList.add('hidden');
+    initMapAnalysis();
+  });
+
+  document.getElementById('tabOverallComparison').addEventListener('click', () => {
+    document.getElementById('tabOverallComparison').classList.add('active');
+    document.getElementById('tabOverview').classList.remove('active');
+    document.getElementById('tabH2H').classList.remove('active');
+    document.getElementById('tabMapAnalysis').classList.remove('active');
+    document.getElementById('viewOverallComparison').classList.remove('hidden');
+    document.getElementById('viewOverview').classList.add('hidden');
+    document.getElementById('viewH2H').classList.add('hidden');
+    document.getElementById('viewMapAnalysis').classList.add('hidden');
+    document.getElementById('mainControls').classList.add('hidden');
+    initOverallComparison();
+  });
+}
+
+function updateOpponentDropdown() {
+  const oppSel = document.getElementById('oppSel');
+  oppSel.innerHTML = '<option value="">-- All Opponents --</option>';
+  
+  if (!currentTeam) return;
+  
+  const h2hData = DATA.teams?.[currentTeam]?.h2h || {};
+  const opponents = Object.keys(h2hData).sort();
+  
+  for (const opp of opponents) {
+    const opt = document.createElement('option');
+    opt.value = opp;
+    opt.textContent = opp;
+    oppSel.appendChild(opt);
+  }
+}
+
+function renderOverview() {
+  if (!currentTeam) return;
+  
+  const teamNode = DATA.teams[currentTeam];
+  if (!teamNode) return;
+
+  const mapNames = Object.keys(teamNode.maps).sort();
+  const mapSel = document.getElementById('mapSel');
+  mapSel.innerHTML = '';
+  for (const mn of mapNames) {
+    const opt = document.createElement('option');
+    opt.value = mn;
+    opt.textContent = mn;
+    mapSel.appendChild(opt);
+  }
+  if (mapNames.length && !mapSel.value) mapSel.value = mapNames[0];
+
+  renderPicksBans(teamNode, mapNames);
+  renderPistolWR(teamNode, mapNames);
+  renderAgentsTable();
+  renderSeriesTable();
+}
+
+function renderPicksBans(teamNode, mapNames) {
+  const labels = [], picks = [], bans = [], picksTips = [], bansTips = [];
+  for (const mn of mapNames) {
+    const mm = teamNode.maps[mn];
+    labels.push(mn);
+    picks.push(mm.picks);
+    bans.push(mm.bans);
+    picksTips.push(mm.picks_log.map(x => `${fmtDate(x.date)} vs ${x.opponent}`).join('\n'));
+    bansTips.push(mm.bans_log.map(x => `${fmtDate(x.date)} vs ${x.opponent}`).join('\n'));
+  }
+  drawPicksBans(labels, picks, bans, picksTips, bansTips);
+}
+
+function renderPistolWR(teamNode, mapNames) {
+  const labels = [], wr = [];
+  for (const mn of mapNames) {
+    const mm = teamNode.maps[mn];
+    labels.push(mn);
+    wr.push(mm.pistol_win_rate);
+  }
+  drawPistolWR(labels, wr);
+}
+
+function renderAgentsTable() {
+  if (!currentTeam) return;
+  const mapSel = document.getElementById('mapSel');
+  const selectedMap = mapSel.value;
+  if (!selectedMap) return;
+
+  const teamNode = DATA.teams[currentTeam];
+  const mm = teamNode.maps[selectedMap];
+  if (!mm) return;
+
+  document.getElementById('leftTeamHdr').textContent = `${currentTeam} on ${selectedMap}`;
+  document.getElementById('rightTeamHdr').textContent = `Opponents on ${selectedMap}`;
+
+  const mapRecord = `(W-L: ${mm.wins}-${mm.losses})`;
+  document.getElementById('mapRecord').textContent = mapRecord;
+
+  const leftLog = mm.team_agents_log || [];
+  const rightLog = mm.opp_agents_log || [];
+
+  const leftCounts = {};
+  for (const x of leftLog) {
+    for (const a of x.agents) {
+      leftCounts[a] = (leftCounts[a] || 0) + 1;
+    }
+  }
+  const leftSorted = Object.entries(leftCounts).sort((a,b) => b[1]-a[1]);
+  const leftSummary = leftSorted.slice(0, 5).map(([a,c]) => `${a} (${c})`).join(', ');
+  document.getElementById('leftAgentsSummary').textContent = leftSummary || "No data";
+
+  const rightCounts = {};
+  for (const x of rightLog) {
+    for (const a of x.agents) {
+      rightCounts[a] = (rightCounts[a] || 0) + 1;
+    }
+  }
+  const rightSorted = Object.entries(rightCounts).sort((a,b) => b[1]-a[1]);
+  const rightSummary = rightSorted.slice(0, 5).map(([a,c]) => `${a} (${c})`).join(', ');
+  document.getElementById('rightAgentsSummary').textContent = rightSummary || "No data";
+
+  const fill = (tbody, rows) => {
+    tbody.innerHTML = '';
+    if (!rows.length) {
+      const tr = document.createElement('tr');
+      const td = document.createElement('td');
+      td.colSpan = 3;
+      td.textContent = "No data";
+      tr.appendChild(td);
+      tbody.appendChild(tr);
+      return;
+    }
+    for (const r of rows) {
+      const tr = document.createElement('tr');
+      const tdD = document.createElement('td'); tdD.textContent = fmtDate(r.date);
+      const tdO = document.createElement('td'); tdO.textContent = r.opponent;
+      const tdA = document.createElement('td');
+      for (const a of r.agents) {
+        const pill = document.createElement('span');
+        pill.className = 'pill';
+        pill.textContent = a;
+        tdA.appendChild(pill);
+      }
+      tr.appendChild(tdD); tr.appendChild(tdO); tr.appendChild(tdA);
+      tbody.appendChild(tr);
+    }
+  };
+
+  const ltbody = document.querySelector('#leftAgentsTbl tbody');
+  const rtbody = document.querySelector('#rightAgentsTbl tbody');
+  const leftRows = leftLog.map(x => ({ date: x.date, opponent: x.opponent, agents: x.agents }));
+  const oppRows  = rightLog.map(x => ({ date: x.date, opponent: x.opponent, agents: x.agents }));
+  fill(ltbody, leftRows);
+  fill(rtbody, oppRows);
+}
+
+function renderSeriesTable() {
+  const tbody = document.querySelector('#seriesTable tbody');
+  tbody.innerHTML = '';
+
+  const rows = [];
+  for (const match of matchesForTeam(currentTeam)) {
+    const side = getSideForTeam(match, currentTeam);
+    if (!side) continue;
+
+    const L = match?.left;
+    const R = match?.right;
+    const opponent = side === 'left' ? R : L;
+
+    let myMaps = 0, oppMaps = 0;
+    const pills = [];
+    for (const row of (match.played || [])) {
+      const myScore  = side === 'left' ? row.ls ?? row.left_score : row.rs ?? row.right_score;
+      const oppScore = side === 'left' ? row.rs ?? row.right_score : row.ls ?? row.left_score;
+      if (Number.isInteger(myScore) && Number.isInteger(oppScore)) {
+        if (myScore > oppScore) myMaps++; else if (oppScore > myScore) oppMaps++;
+      }
+      const pickInfo = row.picked_by ? ` (picked by ${row.picked_by})` : "";
+      const pist = row?.pistols || {};
+      const myP   = (side === 'left') ? pist.left  : pist.right;
+      const oppP  = (side === 'left') ? pist.right : pist.left;
+      const pistolTxt = (Number.isFinite(myP) && Number.isFinite(oppP)) ? ` Pistols: ${myP}-${oppP}` : "";
+      const when = row.date || match.date || "";
+      const whenTxt = when ? fmtDate(when) + " — " : "";
+      pills.push(`<div class="pill">${whenTxt}${row.map}: ${myScore}-${oppScore}${pistolTxt}${pickInfo}</div>`);
+    }
+
+    let bestDate = match.date;
+    if (!bestDate && match.played && match.played.length > 0) {
+      bestDate = match.played[0].date;
+    }
+
+    rows.push({
+      date: bestDate || "1900-01-01",
+      opponent,
+      seriesScore: `${myMaps}-${oppMaps}`,
+      mapsHTML: pills.join(" ")
+    });
+  }
+
+  rows.sort((a, b) => b.date.localeCompare(a.date));
+
+  if (!rows.length) {
+    const tr=document.createElement('tr');
+    const td=document.createElement('td'); td.colSpan=4; td.textContent="No series yet.";
+    tr.appendChild(td); tbody.appendChild(tr);
+    return;
+  }
+
+  for (const r of rows) {
+    const tr=document.createElement('tr');
+    const tdD=document.createElement('td'); tdD.textContent=fmtDate(r.date);
+    const tdO=document.createElement('td'); tdO.textContent=r.opponent;
+    const tdS=document.createElement('td'); tdS.textContent=r.seriesScore;
+    const tdM=document.createElement('td'); tdM.innerHTML=r.mapsHTML;
+    tr.appendChild(tdD); tr.appendChild(tdO); tr.appendChild(tdS); tr.appendChild(tdM);
+    tbody.appendChild(tr);
+  }
+}
+
+function renderH2H() {
+  const selectedOpp = document.getElementById('oppSel').value;
+  const h2hTitle = document.getElementById('h2hTitle');
+  const tbody = document.querySelector('#h2hTable tbody');
+  const comparisonDiv = document.getElementById('h2hComparison');
+  
+  tbody.innerHTML = '';
+  comparisonDiv.innerHTML = '';
+
+  if (!currentTeam) return;
+
+  const h2hData = DATA.teams?.[currentTeam]?.h2h || {};
+  
+  if (!selectedOpp) {
+    h2hTitle.textContent = `Head-to-Head: ${currentTeam} vs All Opponents`;
+    renderH2HSummary(comparisonDiv, currentTeam, null, h2hData);
+    const allSeries = [];
+    for (const [opp, data] of Object.entries(h2hData)) {
+      for (const s of data.series || []) {
+        allSeries.push({ ...s, opponent: opp });
+      }
+    }
+    allSeries.sort((a, b) => (b.date || "1900-01-01").localeCompare(a.date || "1900-01-01"));
+
+    if (!allSeries.length) {
+      const tr=document.createElement('tr');
+      const td=document.createElement('td'); td.colSpan=3; td.textContent="No H2H data yet.";
+      tr.appendChild(td); tbody.appendChild(tr);
+      return;
+    }
+
+    for (const s of allSeries) {
+      const tr=document.createElement('tr');
+      const tdD=document.createElement('td'); tdD.textContent=fmtDate(s.date);
+      const tdS=document.createElement('td'); tdS.textContent=`vs ${s.opponent}: ${s.score}`;
+      const tdM=document.createElement('td');
+      const pills = (s.maps || []).map(m => {
+        const when = m.date ? fmtDate(m.date) + " — " : "";
+        const pick = m.picked_by ? ` (picked by ${m.picked_by})` : "";
+        const pist = m.pistols_my ? ` Pistols: ${m.pistols_my}` : "";
+        return `<div class="pill">${when}${m.map}: ${m.score}${pist}${pick}</div>`;
+      });
+      tdM.innerHTML = pills.join(" ");
+      tr.appendChild(tdD); tr.appendChild(tdS); tr.appendChild(tdM);
+      tbody.appendChild(tr);
+    }
+    
+  } else {
+    h2hTitle.textContent = `Head-to-Head: ${currentTeam} vs ${selectedOpp}`;
+    renderH2HSummary(comparisonDiv, currentTeam, selectedOpp, h2hData);
+    const oppData = h2hData[selectedOpp];
+    if (!oppData || !oppData.series || oppData.series.length === 0) {
+      const tr=document.createElement('tr');
+      const td=document.createElement('td'); td.colSpan=3; td.textContent="No matches against this opponent yet.";
+      tr.appendChild(td); tbody.appendChild(tr);
+      return;
+    }
+
+    const series = [...oppData.series].sort((a, b) => (b.date || "1900-01-01").localeCompare(a.date || "1900-01-01"));
+    for (const s of series) {
+      const tr=document.createElement('tr');
+      const tdD=document.createElement('td'); tdD.textContent=fmtDate(s.date);
+      const tdS=document.createElement('td'); tdS.textContent=s.score;
+      const tdM=document.createElement('td');
+      const pills = (s.maps || []).map(m => {
+        const when = m.date ? fmtDate(m.date) + " — " : "";
+        const pick = m.picked_by ? ` (picked by ${m.picked_by})` : "";
+        const pist = m.pistols_my ? ` Pistols: ${m.pistols_my}` : "";
+        return `<div class="pill">${when}${m.map}: ${m.score}${pist}${pick}</div>`;
+      });
+      tdM.innerHTML = pills.join(" ");
+      tr.appendChild(tdD); tr.appendChild(tdS); tr.appendChild(tdM);
+      tbody.appendChild(tr);
+    }
+  }
+}
+
+function renderH2HSummary(container, team1, team2, h2hData) {
+  if (!team2) {
+    let totalSeriesWins = 0;
+    let totalSeriesLosses = 0;
+    let totalMapWins = 0;
+    let totalMapLosses = 0;
+    // PISTOL TOTALS (ALL OPP)
+    let pistolWins = 0;
+    let pistolLosses = 0;
+    
+    for (const [opp, data] of Object.entries(h2hData)) {
+      for (const s of data.series || []) {
+        const [w, l] = (s.score || "0-0").split('-').map(Number);
+        if (w > l) totalSeriesWins++;
+        else if (l > w) totalSeriesLosses++;
+        totalMapWins += w;
+        totalMapLosses += l;
+
+        for (const m of (s.maps || [])) {
+          if (m.pistols_my && m.pistols_my.includes('-')) {
+            const [pw, pl] = m.pistols_my.split('-').map(x => parseInt(x, 10));
+            if (Number.isFinite(pw) && Number.isFinite(pl)) {
+              pistolWins += pw; pistolLosses += pl;
+            }
+          }
+        }
+      }
+    }
+
+    const pistolRounds = pistolWins + pistolLosses;
+    const pistolWR = pistolRounds ? ((pistolWins / pistolRounds) * 100).toFixed(1) : 0;
+    
+    container.innerHTML = `
+      <div class="team-column left">
+        <div class="team-name">${team1}</div>
+        <div class="stat-row">
+          <span class="stat-label">Series Record</span>
+          <span class="stat-value win-stat">${totalSeriesWins}-${totalSeriesLosses}</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">Map Record</span>
+          <span class="stat-value">${totalMapWins}-${totalMapLosses}</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">Pistol Record</span>
+          <span class="stat-value">${pistolWins}-${pistolLosses}</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">Pistol Win Rate</span>
+          <span class="stat-value">${pistolWR}%</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">Win Rate</span>
+          <span class="stat-value">${totalSeriesWins + totalSeriesLosses > 0 ? ((totalSeriesWins / (totalSeriesWins + totalSeriesLosses)) * 100).toFixed(1) : 0}%</span>
+        </div>
+      </div>
+      
+      <div class="vs-column">
+        <div class="vs-badge">ALL</div>
+        <div class="overall-record">
+          <div class="label">Overall</div>
+          <div class="score">${totalSeriesWins}-${totalSeriesLosses}</div>
+        </div>
+      </div>
+      
+      <div class="team-column right">
+        <div class="team-name">All Opponents</div>
+        <div class="stat-row">
+          <span class="stat-value loss-stat">${totalSeriesLosses}-${totalSeriesWins}</span>
+          <span class="stat-label">Series Record</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-value">${totalMapLosses}-${totalMapWins}</span>
+          <span class="stat-label">Map Record</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-value">${pistolLosses}-${pistolWins}</span>
+          <span class="stat-label">Pistol Record</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-value">${pistolRounds ? ((pistolLosses / pistolRounds) * 100).toFixed(1) : 0}%</span>
+          <span class="stat-label">Pistol Win Rate</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-value">${totalSeriesWins + totalSeriesLosses > 0 ? ((totalSeriesLosses / (totalSeriesWins + totalSeriesLosses)) * 100).toFixed(1) : 0}%</span>
+          <span class="stat-label">Win Rate</span>
+        </div>
+      </div>
+    `;
+    return;
+  }
+  
+  const oppData = h2hData[team2] || { series: [] };
+  let team1SeriesWins = 0;
+  let team2SeriesWins = 0;
+  let team1MapWins = 0;
+  let team2MapWins = 0;
+  const mapRecords = {};
+
+  // PISTOL TOTALS (SPECIFIC OPP)
+  let t1PistolWins = 0, t1PistolLosses = 0;
+  
+  for (const s of oppData.series) {
+    const [w, l] = (s.score || "0-0").split('-').map(Number);
+    if (w > l) team1SeriesWins++;
+    else if (l > w) team2SeriesWins++;
+    team1MapWins += w;
+    team2MapWins += l;
+    
+    for (const m of s.maps || []) {
+      const mapName = m.map;
+      if (!mapRecords[mapName]) mapRecords[mapName] = { team1: 0, team2: 0 };
+      const [mw, ml] = (m.score || "0-0").split('-').map(Number);
+      if (mw > ml) mapRecords[mapName].team1++;
+      else if (ml > mw) mapRecords[mapName].team2++;
+
+      if (m.pistols_my && m.pistols_my.includes('-')) {
+        const [pw, pl] = m.pistols_my.split('-').map(x => parseInt(x,10));
+        if (Number.isFinite(pw) && Number.isFinite(pl)) {
+          t1PistolWins += pw; t1PistolLosses += pl;
+        }
+      }
+    }
+  }
+  const t1PistolRounds = t1PistolWins + t1PistolLosses;
+  const t1PistolWR = t1PistolRounds ? ((t1PistolWins / t1PistolRounds) * 100).toFixed(1) : 0;
+  
+  let mapComparisonHTML = '';
+  if (Object.keys(mapRecords).length > 0) {
+    mapComparisonHTML = '<div class="map-comparison"><h3 style="text-align: center; margin-bottom: 12px;">Map-by-Map Record</h3>';
+    for (const [map, record] of Object.entries(mapRecords).sort()) {
+      mapComparisonHTML += `
+        <div class="map-row">
+          <div class="map-stat win-stat">${record.team1}-${record.team2}</div>
+          <div class="map-name">${map}</div>
+          <div class="map-stat loss-stat">${record.team2}-${record.team1}</div>
+        </div>
+      `;
+    }
+    mapComparisonHTML += '</div>';
+  }
+  
+  container.innerHTML = `
+    <div class="team-column left">
+      <div class="team-name">${team1}</div>
+      <div class="stat-row">
+        <span class="stat-label">Series Record</span>
+        <span class="stat-value win-stat">${team1SeriesWins}-${team2SeriesWins}</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-label">Map Record</span>
+        <span class="stat-value">${team1MapWins}-${team2MapWins}</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-label">Pistol Record</span>
+        <span class="stat-value">${t1PistolWins}-${t1PistolLosses}</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-label">Pistol Win Rate</span>
+        <span class="stat-value">${t1PistolWR}%</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-label">Series Win Rate</span>
+        <span class="stat-value">${team1SeriesWins + team2SeriesWins > 0 ? ((team1SeriesWins / (team1SeriesWins + team2SeriesWins)) * 100).toFixed(1) : 0}%</span>
+      </div>
+    </div>
+    
+    <div class="vs-column">
+      <div class="vs-badge">VS</div>
+      <div class="overall-record">
+        <div class="label">Series</div>
+        <div class="score">${team1SeriesWins}-${team2SeriesWins}</div>
+      </div>
+      ${mapComparisonHTML}
+    </div>
+    
+    <div class="team-column right">
+      <div class="team-name">${team2}</div>
+      <div class="stat-row">
+        <span class="stat-value loss-stat">${team2SeriesWins}-${team1SeriesWins}</span>
+        <span class="stat-label">Series Record</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-value">${team2MapWins}-${team1MapWins}</span>
+        <span class="stat-label">Map Record</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-value">${t1PistolLosses}-${t1PistolWins}</span>
+        <span class="stat-label">Pistol Record</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-value">${t1PistolRounds ? ((t1PistolLosses / t1PistolRounds) * 100).toFixed(1) : 0}%</span>
+        <span class="stat-label">Pistol Win Rate</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-value">${team1SeriesWins + team2SeriesWins > 0 ? ((team2SeriesWins / (team1SeriesWins + team2SeriesWins)) * 100).toFixed(1) : 0}%</span>
+        <span class="stat-label">Series Win Rate</span>
+      </div>
+    </div>
+  `;
+}
+
+function destroyChart(key) { if (charts[key]) { charts[key].destroy(); charts[key]=null; } }
+
+/* helper: most recent score on a given map (teamA vs teamB) for the Map Analysis subtitle */
+function findMapH2HScore(teamA, teamB, mapName) {
+  let latest = null;  // {dateISO, scoreMy, pistMy}
+  for (const m of (DATA.matches || [])) {
+    const L = m?.left;
+    const R = m?.right;
+    if (!((L === teamA && R === teamB) || (L === teamB && R === teamA))) continue;
+
+    for (const r of (m.played || [])) {
+      if (r.map !== mapName) continue;
+      const d = r.date || m.date || "1900-01-01";
+
+      let myScore, oppScore, pistMy, pistOpp;
+      if (L === teamA) {
+        myScore  = r.ls ?? r.left_score;
+        oppScore = r.rs ?? r.right_score;
+        pistMy   = (r.pistols && Number.isFinite(r.pistols.left))  ? r.pistols.left  : parseInt(r?.pistols?.left  || 0,10);
+        pistOpp  = (r.pistols && Number.isFinite(r.pistols.right)) ? r.pistols.right : parseInt(r?.pistols?.right || 0,10);
+      } else {
+        myScore  = r.rs ?? r.right_score;
+        oppScore = r.ls ?? r.left_score;
+        pistMy   = (r.pistols && Number.isFinite(r.pistols.right)) ? r.pistols.right : parseInt(r?.pistols?.right || 0,10);
+        pistOpp  = (r.pistols && Number.isFinite(r.pistols.left))  ? r.pistols.left  : parseInt(r?.pistols?.left  || 0,10);
+      }
+
+      const entry = {
+        dateISO: d,
+        scoreMy: (Number.isInteger(myScore) && Number.isInteger(oppScore)) ? `${myScore}-${oppScore}` : "",
+        pistMy:  (Number.isFinite(pistMy) && Number.isFinite(pistOpp)) ? `${pistMy}-${pistOpp}` : ""
+      };
+      if (!latest || d > latest.dateISO) latest = entry;
+    }
+  }
+  return latest; // or null
+}
+
+function initMapAnalysis() {
+  const regionSelect = document.getElementById('mapAnalysisRegion');
+  const mapSelect = document.getElementById('mapAnalysisMap');
+  const team1Select = document.getElementById('mapAnalysisTeam1');
+  const team2Select = document.getElementById('mapAnalysisTeam2');
+  
+  // Populate region dropdown (only once)
+  if (regionSelect && regionSelect.options.length <= 1) {
+    regionSelect.innerHTML = '<option value="">-- All Regions --</option>';
+    const regionNames = Object.keys(REGION_TEAMS).sort();
+    for (const region of regionNames) {
+      const opt = document.createElement('option');
+      opt.value = region;
+      opt.textContent = region;
+      regionSelect.appendChild(opt);
+    }
+  }
+  
+  const allMaps = new Set();
+  for (const teamName in DATA.teams) {
+    const team = DATA.teams[teamName];
+    for (const mapName in team.maps) {
+      allMaps.add(mapName);
+    }
+  }
+  
+  mapSelect.innerHTML = '<option value="">-- Select Map --</option>';
+  Array.from(allMaps).sort().forEach(map => {
+    const opt = document.createElement('option');
+    opt.value = map;
+    opt.textContent = map;
+    mapSelect.appendChild(opt);
+  });
+  
+  const populateTeamSelects = () => {
+    const allTeams = Object.keys(DATA.teams || {}).sort();
+    let teamsToShow = allTeams;
+    
+    // Filter by region if one is selected
+    if (mapAnalysisRegion && REGION_TEAMS[mapAnalysisRegion]) {
+      teamsToShow = allTeams.filter(team => isTeamInRegion(team, mapAnalysisRegion));
+    }
+    
+    const currentTeam1 = team1Select.value;
+    const currentTeam2 = team2Select.value;
+    
+    team1Select.innerHTML = '<option value="">-- Select Team --</option>';
+    team2Select.innerHTML = '<option value="">-- Select Team --</option>';
+    
+    teamsToShow.forEach(team => {
+      const opt1 = document.createElement('option');
+      opt1.value = team;
+      opt1.textContent = team;
+      team1Select.appendChild(opt1);
+      
+      const opt2 = document.createElement('option');
+      opt2.value = team;
+      opt2.textContent = team;
+      team2Select.appendChild(opt2);
+    });
+    
+    // Restore selections if still valid
+    if (currentTeam1 && teamsToShow.includes(currentTeam1)) {
+      team1Select.value = currentTeam1;
+    }
+    if (currentTeam2 && teamsToShow.includes(currentTeam2)) {
+      team2Select.value = currentTeam2;
+    }
+  };
+  
+  populateTeamSelects();
+  
+  // Region change listener
+  if (regionSelect) {
+    // Clear old listener
+    const newRegionSelect = regionSelect.cloneNode(true);
+    regionSelect.parentNode.replaceChild(newRegionSelect, regionSelect);
+    
+    newRegionSelect.addEventListener('change', () => {
+      mapAnalysisRegion = newRegionSelect.value;
+      populateTeamSelects();
+      renderMapAnalysis();
+    });
+  }
+  
+  const updateMapAnalysis = () => renderMapAnalysis();
+  mapSelect.addEventListener('change', updateMapAnalysis);
+  team1Select.addEventListener('change', updateMapAnalysis);
+  team2Select.addEventListener('change', updateMapAnalysis);
+  
+  renderMapAnalysis();
+}
+
+function renderMapAnalysis() {
+  const mapSelect = document.getElementById('mapAnalysisMap');
+  const team1Select = document.getElementById('mapAnalysisTeam1');
+  const team2Select = document.getElementById('mapAnalysisTeam2');
+  const content = document.getElementById('mapAnalysisContent');
+
+  const selectedMap = mapSelect.value;
+  const team1 = team1Select.value;
+  const team2 = team2Select.value;
+
+  if (!selectedMap || !team1 || !team2) {
+    content.innerHTML = '<div class="no-data-message">Please select a map and two teams to compare</div>';
+    return;
+  }
+  if (team1 === team2) {
+    content.innerHTML = '<div class="no-data-message">Please select two different teams</div>';
+    return;
+  }
+
+  const team1Data = DATA.teams[team1];
+  const team2Data = DATA.teams[team2];
+  if (!team1Data || !team2Data) {
+    content.innerHTML = '<div class="no-data-message">Team data not found</div>';
+    return;
+  }
+
+  const team1MapData = team1Data.maps[selectedMap];
+  const team2MapData = team2Data.maps[selectedMap];
+
+  // 🔧 Use Team 1's perspective score for the selected map vs Team 2
+  const t1Perspective = findMapH2HScore(team1, team2, selectedMap);
+
+  content.innerHTML = `
+    <div class="map-analysis-grid">
+      ${renderTeamMapCard(team1, team1MapData, 'team1', team2, t1Perspective)}
+      ${renderTeamMapCard(team2, team2MapData, 'team2', team1, t1Perspective)}
+    </div>
+  `;
+}
+
+function renderTeamMapCard(teamName, mapData, teamClass, opponentName, mapScoreObj) {
+  if (!mapData) {
+    return `
+      <div class="map-team-card ${teamClass}">
+        <div class="map-team-header">
+          <div class="map-team-name">${teamName}</div>
+          ${opponentName ? `<div class="map-opponent-sub">vs ${opponentName}</div>` : ''}
+        </div>
+        <div class="no-data-message">No data available for this map</div>
+      </div>
+    `;
+  }
+  
+  const wins = mapData.wins || 0;
+  const losses = mapData.losses || 0;
+  const winRate = wins + losses > 0 
+    ? ((wins / (wins + losses)) * 100).toFixed(1)
+    : 0;
+  
+  const pistolWins = mapData.pistol_wins || 0;
+  const pistolLosses = mapData.pistol_losses || 0;
+  const pistolWinRate = (mapData.pistol_win_rate * 100).toFixed(1);
+
+  // NEW: subtitle text if we have a result on this map vs the selected opponent
+  const subtitle = (opponentName && mapScoreObj && (mapScoreObj.scoreMy || mapScoreObj.pistMy))
+    ? `vs ${opponentName} — ${mapScoreObj.scoreMy || '—'}${mapScoreObj.pistMy ? ` (${mapScoreObj.pistMy})` : ''}`
+    : (opponentName ? `vs ${opponentName}` : '');
+  
+  const agentCounts = {};
+  for (const log of (mapData.team_agents_log || [])) {
+    for (const agent of log.agents) {
+      agentCounts[agent] = (agentCounts[agent] || 0) + 1;
+    }
+  }
+  
+  const topAgents = Object.entries(agentCounts)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 10);
+  
+  const topAgentsHTML = topAgents.length > 0
+    ? `
+      <div class="top-agents">
+        <div class="top-agents-title">Most Played Agents</div>
+        <div class="top-agents-list">
+          ${topAgents.map(([agent, count]) => `
+            <div class="top-agent-item">
+              <span class="agent-name">${agent}</span>
+              <span class="agent-count">(${count})</span>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    `
+    : '';
+  
+  // Picks history
+  const picksLog = (mapData.picks_log || [])
+    .slice()
+    .sort((a, b) => {
+      const dateA = a.date || '1900-01-01';
+      const dateB = b.date || '1900-01-01';
+      return dateB.localeCompare(dateA);
+    });
+  
+  const picksHTML = picksLog.length > 0
+    ? `
+      <div class="agents-section">
+        <h4>Pick History (${picksLog.length})</h4>
+        ${picksLog.map(pick => `
+          <div class="pick-ban-item">
+            <span class="pick-ban-date">${fmtDate(pick.date)}</span>
+            <span class="pick-ban-opponent">vs ${pick.opponent}</span>
+          </div>
+        `).join('')}
+      </div>
+    `
+    : '';
+  
+  // Bans history
+  const bansLog = (mapData.bans_log || [])
+    .slice()
+    .sort((a, b) => {
+      const dateA = a.date || '1900-01-01';
+      const dateB = b.date || '1900-01-01';
+      return dateB.localeCompare(dateA);
+    });
+  
+  const bansHTML = bansLog.length > 0
+    ? `
+      <div class="agents-section">
+        <h4>Ban History (${bansLog.length})</h4>
+        ${bansLog.map(ban => {
+          // Extract ban order from note (e.g., "BAN1 Ascent" -> "1st ban")
+          const banOrder = ban.note && ban.note.match(/BAN(\d+)/) 
+            ? (ban.note.match(/BAN(\d+)/)[1] === '1' ? '1st ban' : '2nd ban')
+            : '';
+          return `
+          <div class="pick-ban-item">
+            <span class="pick-ban-date">${fmtDate(ban.date)}</span>
+            <span class="pick-ban-opponent">vs ${ban.opponent}</span>
+            ${banOrder ? `<span class="pick-ban-order">(${banOrder})</span>` : ''}
+          </div>
+        `;
+        }).join('')}
+      </div>
+    `
+    : '';
+  
+  const recentComps = (mapData.team_agents_log || [])
+    .slice()
+    .sort((a, b) => {
+      const dateA = a.date || '1900-01-01';
+      const dateB = b.date || '1900-01-01';
+      return dateB.localeCompare(dateA);
+    })
+    .slice(0, 10);
+  
+  const compositionsHTML = recentComps.length > 0
+    ? `
+      <div class="agents-section">
+        <h4>Recent Compositions</h4>
+        ${recentComps.map(comp => `
+          <div class="agent-composition">
+            <div class="composition-header">
+              <span>${fmtDate(comp.date)}</span>
+              <span>vs ${comp.opponent}${comp.score ? ` — ${comp.score}` : ''}${comp.pistols ? ` (${comp.pistols})` : ''}</span>
+            </div>
+            <div class="composition-agents">
+              ${comp.agents.map(agent => `<span class="agent-pill">${agent}</span>`).join('')}
+            </div>
+          </div>
+        `).join('')}
+      </div>
+    `
+    : '<div class="no-data-message">No composition data available</div>';
+  
+  return `
+    <div class="map-team-card ${teamClass}">
+      <div class="map-team-header">
+        <div>
+          <div class="map-team-name">${teamName}</div>
+        </div>
+      </div>
+      
+      <div class="map-stats-grid">
+        <div class="map-stat-box">
+          <div class="map-stat-label">Win Rate</div>
+          <div class="map-stat-value" style="color: ${parseFloat(winRate) >= 50 ? '#81C784' : '#e57373'}">${winRate}% (${wins}-${losses})</div>
+        </div>
+        <div class="map-stat-box">
+          <div class="map-stat-label">Pistol WR</div>
+          <div class="map-stat-value" style="color: ${parseFloat(pistolWinRate) >= 50 ? '#81C784' : '#e57373'}">${pistolWinRate}% (${pistolWins}-${pistolLosses})</div>
+        </div>
+        <div class="map-stat-box">
+          <div class="map-stat-label">Picks</div>
+          <div class="map-stat-value">${mapData.picks}</div>
+        </div>
+        <div class="map-stat-box">
+          <div class="map-stat-label">Bans</div>
+          <div class="map-stat-value">${mapData.bans}</div>
+        </div>
+      </div>
+      
+      ${topAgentsHTML}
+      ${picksHTML}
+      ${bansHTML}
+      ${compositionsHTML}
+    </div>
+  `;
+}
+
+// ========== OVERALL COMPARISON ==========
+function initOverallComparison() {
+  const regionSelect = document.getElementById('overallCompRegion');
+  const team1Select = document.getElementById('overallCompTeam1');
+  const team2Select = document.getElementById('overallCompTeam2');
+  
+  if (!regionSelect || !team1Select || !team2Select) {
+    console.error('Overall comparison selects not found');
+    return;
+  }
+  
+  if (!DATA || !DATA.teams) {
+    console.error('DATA not loaded yet');
+    team1Select.innerHTML = '<option value="">-- Loading... --</option>';
+    team2Select.innerHTML = '<option value="">-- Loading... --</option>';
+    return;
+  }
+  
+  // Populate region dropdown (only once)
+  if (regionSelect.options.length <= 1) {
+    regionSelect.innerHTML = '<option value="">-- All Regions --</option>';
+    const regionNames = Object.keys(REGION_TEAMS).sort();
+    for (const region of regionNames) {
+      const opt = document.createElement('option');
+      opt.value = region;
+      opt.textContent = region;
+      regionSelect.appendChild(opt);
+    }
+  }
+  
+  const populateTeamSelects = () => {
+    const allTeams = Object.keys(DATA.teams || {}).sort();
+    let teamsToShow = allTeams;
+    
+    // Filter by region if one is selected
+    if (overallCompRegion && REGION_TEAMS[overallCompRegion]) {
+      teamsToShow = allTeams.filter(team => isTeamInRegion(team, overallCompRegion));
+    }
+    
+    console.log('Populating teams:', teamsToShow);
+    
+    const currentTeam1 = team1Select.value;
+    const currentTeam2 = team2Select.value;
+    
+    team1Select.innerHTML = '<option value="">-- Select Team --</option>';
+    team2Select.innerHTML = '<option value="">-- Select Team --</option>';
+    
+    teamsToShow.forEach(team => {
+      const option1 = document.createElement('option');
+      option1.value = team;
+      option1.textContent = team;
+      team1Select.appendChild(option1);
+      
+      const option2 = document.createElement('option');
+      option2.value = team;
+      option2.textContent = team;
+      team2Select.appendChild(option2);
+    });
+    
+    // Restore selections if still valid
+    if (currentTeam1 && teamsToShow.includes(currentTeam1)) {
+      team1Select.value = currentTeam1;
+    }
+    if (currentTeam2 && teamsToShow.includes(currentTeam2)) {
+      team2Select.value = currentTeam2;
+    }
+  };
+  
+  populateTeamSelects();
+  
+  // Clear old listeners and add new ones
+  const newRegionSelect = regionSelect.cloneNode(true);
+  const newTeam1Select = team1Select.cloneNode(true);
+  const newTeam2Select = team2Select.cloneNode(true);
+  regionSelect.parentNode.replaceChild(newRegionSelect, regionSelect);
+  team1Select.parentNode.replaceChild(newTeam1Select, team1Select);
+  team2Select.parentNode.replaceChild(newTeam2Select, team2Select);
+  
+  // Region change listener on the new element
+  newRegionSelect.addEventListener('change', () => {
+    overallCompRegion = newRegionSelect.value;
+    populateTeamSelectsForNew();
+    renderOverallComparison();
+  });
+  
+  // Function to populate using the new select elements
+  const populateTeamSelectsForNew = () => {
+    const allTeams = Object.keys(DATA.teams || {}).sort();
+    let teamsToShow = allTeams;
+    
+    // Filter by region if one is selected
+    if (overallCompRegion && REGION_TEAMS[overallCompRegion]) {
+      teamsToShow = allTeams.filter(team => isTeamInRegion(team, overallCompRegion));
+    }
+    
+    const currentTeam1 = newTeam1Select.value;
+    const currentTeam2 = newTeam2Select.value;
+    
+    newTeam1Select.innerHTML = '<option value="">-- Select Team --</option>';
+    newTeam2Select.innerHTML = '<option value="">-- Select Team --</option>';
+    
+    teamsToShow.forEach(team => {
+      const option1 = document.createElement('option');
+      option1.value = team;
+      option1.textContent = team;
+      newTeam1Select.appendChild(option1);
+      
+      const option2 = document.createElement('option');
+      option2.value = team;
+      option2.textContent = team;
+      newTeam2Select.appendChild(option2);
+    });
+    
+    if (currentTeam1 && teamsToShow.includes(currentTeam1)) {
+      newTeam1Select.value = currentTeam1;
+    }
+    if (currentTeam2 && teamsToShow.includes(currentTeam2)) {
+      newTeam2Select.value = currentTeam2;
+    }
+  };
+  
+  const updateComparison = () => renderOverallComparison();
+  newTeam1Select.addEventListener('change', updateComparison);
+  newTeam2Select.addEventListener('change', updateComparison);
+  
+  renderOverallComparison();
+}
+
+function renderOverallComparison() {
+  const team1Select = document.getElementById('overallCompTeam1');
+  const team2Select = document.getElementById('overallCompTeam2');
+  const content = document.getElementById('overallComparisonContent');
+  
+  const team1 = team1Select.value;
+  const team2 = team2Select.value;
+  
+  if (!team1 || !team2) {
+    content.innerHTML = '<div class="no-data-message">Please select two teams to compare</div>';
+    return;
+  }
+  
+  if (team1 === team2) {
+    content.innerHTML = '<div class="no-data-message">Please select two different teams</div>';
+    return;
+  }
+  
+  // Calculate overall stats for team1
+  const team1Stats = calculateOverallStats(team1);
+  const team2Stats = calculateOverallStats(team2);
+  
+  // Render using the same layout as H2H
+  content.innerHTML = `
+    <div class="h2h-comparison">
+      <div class="team-column left">
+        <div class="team-name">${team1}</div>
+        <div class="stat-row">
+          <span class="stat-label">Series Record</span>
+          <span class="stat-value win-stat">${team1Stats.seriesWins}-${team1Stats.seriesLosses}</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">Map Record</span>
+          <span class="stat-value">${team1Stats.mapWins}-${team1Stats.mapLosses}</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">Pistol Record</span>
+          <span class="stat-value">${team1Stats.pistolWins}-${team1Stats.pistolLosses}</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">Pistol Win Rate</span>
+          <span class="stat-value">${team1Stats.pistolWR}%</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">Series Win Rate</span>
+          <span class="stat-value">${team1Stats.seriesWR}%</span>
+        </div>
+      </div>
+      
+      <div class="vs-column">
+        <div class="vs-badge">VS</div>
+        <div class="overall-record">
+          <div class="label">Overall Stats</div>
+        </div>
+      </div>
+      
+      <div class="team-column right">
+        <div class="team-name">${team2}</div>
+        <div class="stat-row">
+          <span class="stat-value win-stat">${team2Stats.seriesWins}-${team2Stats.seriesLosses}</span>
+          <span class="stat-label">Series Record</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-value">${team2Stats.mapWins}-${team2Stats.mapLosses}</span>
+          <span class="stat-label">Map Record</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-value">${team2Stats.pistolWins}-${team2Stats.pistolLosses}</span>
+          <span class="stat-label">Pistol Record</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-value">${team2Stats.pistolWR}%</span>
+          <span class="stat-label">Pistol Win Rate</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-value">${team2Stats.seriesWR}%</span>
+          <span class="stat-label">Series Win Rate</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card" style="margin-top: 24px;">
+      <h3 style="text-align: center; margin-bottom: 20px;">Map-by-Map Record</h3>
+      <div class="two" style="gap: 24px;">
+        ${getMapByMapRecord(team1, team2)}
+      </div>
+    </div>
+    
+    <div class="two" style="margin-top: 24px; gap: 24px;">
+      <div class="card">
+        <h3>${team1} - Latest Results</h3>
+        <table>
+          <thead><tr><th>Date</th><th>Opponent</th><th>W/L</th><th>Series</th><th>Maps</th></tr></thead>
+          <tbody>
+            ${getLatestResults(team1, 10)}
+          </tbody>
+        </table>
+      </div>
+      
+      <div class="card">
+        <h3>${team2} - Latest Results</h3>
+        <table>
+          <thead><tr><th>Date</th><th>Opponent</th><th>W/L</th><th>Series</th><th>Maps</th></tr></thead>
+          <tbody>
+            ${getLatestResults(team2, 10)}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  `;
+}
+
+function getLatestResults(teamName, limit = 10) {
+  const matches = DATA?.matches || [];
+  const teamMatches = matches
+    .filter(m => m.left === teamName || m.right === teamName)
+    .slice(0, limit);
+  
+  if (teamMatches.length === 0) {
+    return '<tr><td colspan="5" class="no-data-message">No matches found</td></tr>';
+  }
+  
+  return teamMatches.map(m => {
+    const isLeft = m.left === teamName;
+    const opponent = isLeft ? m.right : m.left;
+    const date = fmtDate(m.date);
+    
+    // Determine winner and series score
+    const result = m.result || {};
+    let winner = result.winner;
+    let seriesScore = '—';
+    let wlText = '—';
+    let wlClass = '';
+    
+    // Calculate map wins to determine winner if not specified
+    let leftMapWins = 0;
+    let rightMapWins = 0;
+    (m.played || []).forEach(map => {
+      if (Number.isInteger(map.ls) && Number.isInteger(map.rs)) {
+        if (map.ls > map.rs) leftMapWins++;
+        else if (map.rs > map.ls) rightMapWins++;
+      }
+    });
+    
+    // Use result.score if available, otherwise calculate from map wins
+    if (result.score) {
+      seriesScore = isLeft ? result.score : result.score.split('-').reverse().join('-');
+    } else if (leftMapWins > 0 || rightMapWins > 0) {
+      seriesScore = isLeft ? `${leftMapWins}-${rightMapWins}` : `${rightMapWins}-${leftMapWins}`;
+    }
+    
+    // Determine winner if not specified
+    if (!winner && (leftMapWins > 0 || rightMapWins > 0)) {
+      if (leftMapWins > rightMapWins) {
+        winner = m.left;
+      } else if (rightMapWins > leftMapWins) {
+        winner = m.right;
+      }
+    }
+    
+    // Set W/L text and class
+    if (winner) {
+      const won = winner === teamName;
+      wlText = won ? 'W' : 'L';
+      wlClass = won ? 'win' : 'loss';
+    }
+    
+    // Build maps breakdown
+    const mapsPlayed = m.played || [];
+    const mapsHTML = mapsPlayed.map(mp => {
+      const myScore = isLeft ? mp.ls : mp.rs;
+      const oppScore = isLeft ? mp.rs : mp.ls;
+      const mapWon = myScore > oppScore;
+      const mapClass = mapWon ? 'win' : 'loss';
+      
+      // Add pistol scores if available
+      let pistolText = '';
+      if (mp.pistols) {
+        const myPistols = isLeft ? mp.pistols.left : mp.pistols.right;
+        const oppPistols = isLeft ? mp.pistols.right : mp.pistols.left;
+        if (Number.isFinite(myPistols) && Number.isFinite(oppPistols)) {
+          pistolText = ` (${myPistols}-${oppPistols})`;
+        }
+      }
+      
+      return `<span class="${mapClass}">${mp.map} ${myScore}-${oppScore}${pistolText}</span>`;
+    }).join(' ');
+    
+    return `
+      <tr>
+        <td>${date}</td>
+        <td>${opponent}</td>
+        <td class="${wlClass}">${wlText}</td>
+        <td>${seriesScore}</td>
+        <td class="maps-cell">${mapsHTML || '—'}</td>
+      </tr>
+    `;
+  }).join('');
+}
+
+function getMapByMapRecord(team1, team2) {
+  // Get all maps played
+  const maps = ['Abyss', 'Ascent', 'Bind', 'Haven', 'Icebox', 'Lotus', 'Split', 'Sunset'];
+  
+  const team1MapStats = {};
+  const team2MapStats = {};
+  
+  // Calculate map stats for each team
+  const matches = DATA?.matches || [];
+  
+  matches.forEach(m => {
+    const isTeam1Left = m.left === team1;
+    const isTeam1Right = m.right === team1;
+    const isTeam2Left = m.left === team2;
+    const isTeam2Right = m.right === team2;
+    
+    (m.played || []).forEach(map => {
+      const mapName = map.map;
+      if (!mapName) return;
+      
+      // Initialize map stats if needed
+      if (!team1MapStats[mapName]) team1MapStats[mapName] = { wins: 0, losses: 0 };
+      if (!team2MapStats[mapName]) team2MapStats[mapName] = { wins: 0, losses: 0 };
+      
+      // Team 1 stats
+      if (isTeam1Left) {
+        if (map.ls > map.rs) team1MapStats[mapName].wins++;
+        else if (map.rs > map.ls) team1MapStats[mapName].losses++;
+      } else if (isTeam1Right) {
+        if (map.rs > map.ls) team1MapStats[mapName].wins++;
+        else if (map.ls > map.rs) team1MapStats[mapName].losses++;
+      }
+      
+      // Team 2 stats
+      if (isTeam2Left) {
+        if (map.ls > map.rs) team2MapStats[mapName].wins++;
+        else if (map.rs > map.ls) team2MapStats[mapName].losses++;
+      } else if (isTeam2Right) {
+        if (map.rs > map.ls) team2MapStats[mapName].wins++;
+        else if (map.ls > map.rs) team2MapStats[mapName].losses++;
+      }
+    });
+  });
+  
+  // Build HTML for both columns
+  const team1HTML = maps.map(mapName => {
+    const stats = team1MapStats[mapName] || { wins: 0, losses: 0 };
+    const total = stats.wins + stats.losses;
+    if (total === 0) return '';
+    
+    return `
+      <div class="map-record-item">
+        <span class="map-record-left win">${stats.wins}-${stats.losses}</span>
+        <span class="map-record-name">${mapName}</span>
+      </div>
+    `;
+  }).filter(x => x).join('');
+  
+  const team2HTML = maps.map(mapName => {
+    const stats = team2MapStats[mapName] || { wins: 0, losses: 0 };
+    const total = stats.wins + stats.losses;
+    if (total === 0) return '';
+    
+    return `
+      <div class="map-record-item">
+        <span class="map-record-name">${mapName}</span>
+        <span class="map-record-right ${stats.wins > stats.losses ? 'win' : 'loss'}">${stats.wins}-${stats.losses}</span>
+      </div>
+    `;
+  }).filter(x => x).join('');
+  
+  return `
+    <div>
+      <h4 style="text-align: center; margin-bottom: 16px; color: #4FC3F7;">${team1}</h4>
+      <div class="map-records-list">
+        ${team1HTML || '<div class="no-data-message">No map data</div>'}
+      </div>
+    </div>
+    <div>
+      <h4 style="text-align: center; margin-bottom: 16px; color: #FFB74D;">${team2}</h4>
+      <div class="map-records-list">
+        ${team2HTML || '<div class="no-data-message">No map data</div>'}
+      </div>
+    </div>
+  `;
+}
+
+function calculateOverallStats(teamName) {
+  const matches = DATA?.matches || [];
+  let seriesWins = 0;
+  let seriesLosses = 0;
+  let mapWins = 0;
+  let mapLosses = 0;
+  let pistolWins = 0;
+  let pistolLosses = 0;
+  
+  matches.forEach(match => {
+    const isLeft = match.left === teamName;
+    const isRight = match.right === teamName;
+    
+    if (!isLeft && !isRight) return;
+    
+    // Series record
+    const result = match.result || {};
+    let winner = result.winner;
+    
+    // If no winner specified, calculate from map wins
+    if (!winner && match.played && match.played.length > 0) {
+      let leftMapWins = 0;
+      let rightMapWins = 0;
+      
+      match.played.forEach(map => {
+        // Only count maps with valid scores
+        if (Number.isInteger(map.ls) && Number.isInteger(map.rs)) {
+          if (map.ls > map.rs) leftMapWins++;
+          else if (map.rs > map.ls) rightMapWins++;
+        }
+      });
+      
+      if (leftMapWins > rightMapWins) {
+        winner = match.left;
+      } else if (rightMapWins > leftMapWins) {
+        winner = match.right;
+      }
+    }
+    
+    if (winner === teamName) {
+      seriesWins++;
+    } else if (winner && winner !== teamName) {
+      seriesLosses++;
+    }
+    
+    // Map and pistol records
+    (match.played || []).forEach(map => {
+      // Skip maps without score data
+      if (!Number.isInteger(map.ls) || !Number.isInteger(map.rs)) {
+        return;
+      }
+      
+      if (isLeft) {
+        mapWins += (map.ls > map.rs) ? 1 : 0;
+        mapLosses += (map.rs > map.ls) ? 1 : 0;
+        
+        const pistols = map.pistols || {};
+        const leftPistols = parseInt(pistols.left, 10);
+        if (Number.isFinite(leftPistols) && leftPistols >= 0 && leftPistols <= 2) {
+          pistolWins += leftPistols;
+          pistolLosses += (2 - leftPistols);
+        }
+      } else if (isRight) {
+        mapWins += (map.rs > map.ls) ? 1 : 0;
+        mapLosses += (map.ls > map.rs) ? 1 : 0;
+        
+        const pistols = map.pistols || {};
+        const rightPistols = parseInt(pistols.right, 10);
+        if (Number.isFinite(rightPistols) && rightPistols >= 0 && rightPistols <= 2) {
+          pistolWins += rightPistols;
+          pistolLosses += (2 - rightPistols);
+        }
+      }
+    });
+  });
+  
+  const pistolRounds = pistolWins + pistolLosses;
+  const pistolWR = pistolRounds ? ((pistolWins / pistolRounds) * 100).toFixed(1) : '0.0';
+  const seriesWR = (seriesWins + seriesLosses) > 0 
+    ? ((seriesWins / (seriesWins + seriesLosses)) * 100).toFixed(1) 
+    : '0.0';
+  
+  return {
+    seriesWins,
+    seriesLosses,
+    mapWins,
+    mapLosses,
+    pistolWins,
+    pistolLosses,
+    pistolWR,
+    seriesWR
+  };
+}
+
+function drawPicksBans(labels, picks, bans, picksTips, bansTips) {
+  destroyChart('picksBans');
+  
+  if (charts._rendering) return;
+  charts._rendering = true;
+  
+  setTimeout(() => {
+    const ctx = document.getElementById('picksBans').getContext('2d');
+    charts.picksBans = new Chart(ctx, {
+      type: 'bar',
+      data: { labels,
+        datasets: [
+          { label: 'Picks', data: picks, backgroundColor:'#4FC3F7', tooltipTips: picksTips },
+          { label: 'Bans',  data: bans,  backgroundColor:'#FFB74D', tooltipTips: bansTips  },
+        ]
+      },
+      options: {
+        responsive:true,
+        maintainAspectRatio: false,
+        plugins:{
+          legend:{ position:'top', labels:{ color:'#e8ecf1', font: { size: 13, weight: '500' } } },
+          tooltip: {
+            callbacks: { 
+              afterLabel: (ctx)=> (ctx.dataset.tooltipTips||[])[ctx.dataIndex] || '' 
+            }
+          }
+        },
+        scales: {
+          x:{ ticks:{ color:'#cbd5e1' }, grid:{ color:'#223048' } },
+          y:{ beginAtZero:true, ticks:{ color:'#cbd5e1', stepSize: 1 }, grid:{ color:'#223048' } }
+        }
+      }
+    });
+    charts._rendering = false;
+  }, 100);
+}
+
+function drawPistolWR(labels, wr) {
+  destroyChart('pistolWR');
+  
+  if (charts._renderingPistol) return;
+  charts._renderingPistol = true;
+  
+  setTimeout(() => {
+    const ctx = document.getElementById('pistolWR').getContext('2d');
+    charts.pistolWR = new Chart(ctx, {
+      type: 'bar',
+      data: { labels, datasets: [{ label:'Pistol Win Rate', data: wr, backgroundColor:'#81C784' }] },
+      options: {
+        responsive:true,
+        maintainAspectRatio: false,
+        plugins:{ legend:{ labels:{ color:'#e8ecf1', font: { size: 13, weight: '500' } } } },
+        scales: {
+          x:{ ticks:{ color:'#cbd5e1' }, grid:{ color:'#223048' } },
+          y:{
+            beginAtZero:true, suggestedMax:1,
+            ticks: { color:'#cbd5e1', callback: (v)=> (v*100).toFixed(0)+'%' },
+            grid:{ color:'#223048' }
+          }
+        }
+      }
+    });
+    charts._renderingPistol = false;
+  }, 100);
+}
+
+// Load data from data.json (pointing at web/data.json)
+window.addEventListener('DOMContentLoaded', async () => {
+  try {
+    const response = await fetch(`data.json?t=${Date.now()}`, { cache: 'no-store' });
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+    }
+    RAW = await response.json();
+
+    // Build derived structures
+    const derived = deriveFromMatches(RAW?.matches || []);
+    DATA = { teams: derived.teams, matches: RAW.matches || [] };
+
+    initUI();
+  } catch (error) {
+    console.error('Error loading data:', error);
+    document.body.innerHTML = `
+      <div class="error">
+        <h2>⚠️ Error Loading Data</h2>
+        <p><strong>Could not load data.json</strong></p>
+        <p>Error: ${error.message}</p>
+        <p>Make sure you're running a local web server!</p>
+        <p>Run: <code>python -m http.server 8000</code> in the folder</p>
+      </div>
+    `;
+  }
+});
+</script>
+</body>
+</html>
