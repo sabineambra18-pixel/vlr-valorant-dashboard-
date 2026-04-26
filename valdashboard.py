@@ -244,6 +244,7 @@ def get_team_stats(team, matches):
         "atk_rounds": 0, "def_rounds": 0,
         "atk_rounds_lost": 0, "def_rounds_lost": 0,
         "ban_1st": {}, "ban_2nd": {},
+        "ban_history": [],
         "pick_wins": 0, "pick_losses": 0,
     }
     matches_played = []
@@ -350,6 +351,14 @@ def get_team_stats(team, matches):
                 elif evt_type == "ban": stats["maps"][map_v]["bans"] += 1
             if evt_type == "ban" and evt_team == team and map_v:
                 team_ban_count += 1
+                opponent = m.get("right" if is_left else "left")
+                ban_order = "1st" if team_ban_count == 1 else "2nd"
+                stats["ban_history"].append({
+                    "map": map_v,
+                    "date": m.get("date"),
+                    "opponent": opponent,
+                    "order": ban_order
+                })
                 if team_ban_count == 1:
                     stats["ban_1st"][map_v] = stats["ban_1st"].get(map_v, 0) + 1
                 elif team_ban_count == 2:
@@ -765,6 +774,21 @@ with tab_map:
                         st.metric("Bans", total_bans, f"1st: {b1} · 2nd: {b2}")
                     else:
                         st.metric("Bans", total_bans)
+
+                # Ban history for this map
+                map_ban_history = [b for b in team_stats.get("ban_history", []) if b["map"] == selected_map]
+                if map_ban_history:
+                    with st.expander(f"Ban History ({len(map_ban_history)})", expanded=False):
+                        for b in sorted(map_ban_history, key=lambda x: x.get("date") or "0000", reverse=True):
+                            order_color = "#c45c5c" if b["order"] == "1st" else "#b57aff"
+                            st.markdown(
+                                f"<div class='stat-box'>"
+                                f"<span style='color:#7a7490; font-size:12px'>{b.get('date', '?')}</span> "
+                                f"vs <b>{b.get('opponent', '?')}</b> "
+                                f"<span style='color:{order_color}; font-size:12px'>({b['order']} ban)</span>"
+                                f"</div>",
+                                unsafe_allow_html=True
+                            )
 
                 atk_w, atk_l = data.get("atk_rounds_won", 0), data.get("atk_rounds_lost", 0)
                 def_w, def_l = data.get("def_rounds_won", 0), data.get("def_rounds_lost", 0)
