@@ -31776,6 +31776,238 @@
         ],
         "decider": "Breeze"
       }
+    },
+    {
+      "id": 645490,
+      "date": "2026-04-26",
+      "left": "Evil Geniuses",
+      "right": "Sentinels",
+      "winner": "Sentinels",
+      "played": [
+        {
+          "map": "Haven",
+          "ls": 7,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [
+            "Sova",
+            "Killjoy",
+            "Neon",
+            "Omen",
+            "Viper"
+          ],
+          "right_agents": [
+            "Omen",
+            "Viper",
+            "Sova",
+            "Killjoy",
+            "Neon"
+          ],
+          "pistols": {
+            "left": 0,
+            "right": 2
+          },
+          "sides": {
+            "left_atk": 2,
+            "left_def": 5,
+            "right_atk": 7,
+            "right_def": 6
+          }
+        },
+        {
+          "map": "Bind",
+          "ls": 11,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [
+            "Waylay",
+            "Viper",
+            "Brimstone",
+            "Neon",
+            "Skye"
+          ],
+          "right_agents": [
+            "Viper",
+            "Neon",
+            "Skye",
+            "Raze",
+            "Harbor"
+          ],
+          "pistols": {
+            "left": 2,
+            "right": 0
+          },
+          "sides": {
+            "left_atk": 5,
+            "left_def": 6,
+            "right_atk": 6,
+            "right_def": 7
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "Evil Geniuses",
+            "map": "Breeze"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "Sentinels",
+            "map": "Fracture"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "Evil Geniuses",
+            "map": "Haven"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "Sentinels",
+            "map": "Bind"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "Evil Geniuses",
+            "map": "Split"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "Sentinels",
+            "map": "Lotus"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Pearl"
+          }
+        ],
+        "decider": "Pearl"
+      }
+    },
+    {
+      "id": 645491,
+      "date": "2026-04-26",
+      "left": "MIBR",
+      "right": "Cloud9",
+      "winner": "Cloud9",
+      "played": [
+        {
+          "map": "Breeze",
+          "ls": 12,
+          "rs": 14,
+          "picked_by": null,
+          "left_agents": [
+            "Jett",
+            "Astra",
+            "Skye",
+            "Harbor",
+            "Neon"
+          ],
+          "right_agents": [
+            "Neon",
+            "Harbor",
+            "Sova",
+            "Viper",
+            "Iso"
+          ],
+          "pistols": {
+            "left": 2,
+            "right": 0
+          },
+          "sides": {
+            "left_atk": 5,
+            "left_def": 7,
+            "right_atk": 6,
+            "right_def": 8
+          }
+        },
+        {
+          "map": "Split",
+          "ls": 12,
+          "rs": 14,
+          "picked_by": null,
+          "left_agents": [
+            "Raze",
+            "Neon",
+            "Fade",
+            "Astra",
+            "Vyse"
+          ],
+          "right_agents": [
+            "Omen",
+            "Raze",
+            "Skye",
+            "Viper",
+            "Neon"
+          ],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 6,
+            "left_def": 6,
+            "right_atk": 7,
+            "right_def": 7
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "Cloud9",
+            "map": "Pearl"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "MIBR",
+            "map": "Fracture"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "Cloud9",
+            "map": "Breeze"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "MIBR",
+            "map": "Split"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "Cloud9",
+            "map": "Lotus"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "MIBR",
+            "map": "Haven"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Bind"
+          }
+        ],
+        "decider": "Bind"
+      }
     }
   ]
 }
