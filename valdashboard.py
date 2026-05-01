@@ -335,11 +335,15 @@ def get_team_stats(team, matches):
             if map_name not in stats["map_match_history"]:
                 stats["map_match_history"][map_name] = []
             result_str = "W" if my_score > opp_score else "L"
+            pistol_str = ""
+            if pistols and isinstance(pistols, dict):
+                pistol_str = f" ({my_p}-{opp_p} P)"
             stats["map_match_history"][map_name].append({
                 "date": m.get("date", "?"),
                 "opponent": opponent,
                 "score": f"{my_score}-{opp_score}",
-                "result": result_str
+                "result": result_str,
+                "pistol": pistol_str
             })
 
         # Veto: picks, bans, 1st/2nd ban tracking
@@ -621,7 +625,7 @@ with tab_overview:
                     hover_lines = [f"<b>{mn}</b> ({w}-{l})<br>"]
                     for h in sorted(history_entries, key=lambda x: x.get("date", ""), reverse=True):
                         res_color = "#39ff14" if h["result"] == "W" else "#c45c5c"
-                        hover_lines.append(f"<span style='color:{res_color}'>{h['result']}</span> {h['score']} vs {h['opponent']} ({h['date']})")
+                        hover_lines.append(f"<span style='color:{res_color}'>{h['result']}</span> {h['score']} vs {h['opponent']}{h.get('pistol', '')} {h['date']}")
                     hover_text = "<br>".join(hover_lines)
                     map_wr_data.append({"Map": mn, "Win Rate": calc_wr(w, l), "Record": rec, "Hover": hover_text})
             if map_wr_data:
