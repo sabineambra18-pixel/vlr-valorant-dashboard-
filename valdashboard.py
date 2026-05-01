@@ -245,6 +245,7 @@ def get_team_stats(team, matches):
         "atk_rounds_lost": 0, "def_rounds_lost": 0,
         "ban_1st": {}, "ban_2nd": {},
         "ban_history": [],
+        "map_match_history": {},
         "pick_wins": 0, "pick_losses": 0,
     }
     matches_played = []
@@ -329,6 +330,17 @@ def get_team_stats(team, matches):
                 h_entry["pistol_w"] = my_p
                 h_entry["pistol_l"] = opp_p
             ms["history"].append(h_entry)
+
+            # Track per-map match history for hover tooltips
+            if mn not in stats["map_match_history"]:
+                stats["map_match_history"][mn] = []
+            result_str = "W" if my_score > opp_score else "L"
+            stats["map_match_history"][mn].append({
+                "date": m.get("date", "?"),
+                "opponent": opponent,
+                "score": f"{my_score}-{opp_score}",
+                "result": result_str
+            })
 
         # Veto: picks, bans, 1st/2nd ban tracking
         veto = m.get("veto", {})
@@ -604,48 +616,81 @@ with tab_overview:
                     pw_v, pl_v = d.get('pistol_wins', 0), d.get('pistol_losses', 0)
                     rec = f"{w}-{l}"
                     if pw_v + pl_v > 0: rec += f" | P:{pw_v}-{pl_v}"
-                    map_wr_data.append({"Map": mn, "Win Rate": calc_wr(w, l), "Record": rec})
+                    # Build hover text from match history
+                    history_entries = stats.get("map_match_history", {}).get(mn, [])
+                    hover_lines = [f"<b>{mn}</b> ({w}-{l})<br>"]
+                    for h in sorted(history_entries, key=lambda x: x.get("date", ""), reverse=True):
+                        res_color = "#39ff14" if h["result"] == "W" else "#c45c5c"
+                        hover_lines.append(f"<span style='color:{res_color}'>{h['result']}</span> {h['score']} vs {h['opponent']} ({h['date']})")
+                    hover_text = "<br>".join(hover_lines)
+                    map_wr_data.append({"Map": mn, "Win Rate": calc_wr(w, l), "Record": rec, "Hover": hover_text})
             if map_wr_data:
                 df = pd.DataFrame(map_wr_data).sort_values("Win Rate", ascending=False)
                 fig = px.bar(df, x="Map", y="Win Rate", text="Record", color="Win Rate",
                              color_continuous_scale=[[0, '#c45c5c'], [0.5, '#b57aff'], [1, '#b57aff']])
+                fig.update_traces(
+                    textposition='outside', textfont_size=11,
+                    hovertemplate="%{customdata[0]}<extra></extra>",
+                    customdata=df[["Hover"]].values
+                )
                 fig.update_layout(paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)',
                                   font_color='#e8ecf1', showlegend=False, yaxis=dict(range=[0, 115]),
                                   margin=dict(t=10, b=10), height=300)
-                fig.update_traces(textposition='outside', textfont_size=11)
                 st.plotly_chart(fig, use_container_width=True, key=f"mwr_{team_name}")
 
             # Ban Tendencies
             ban_1st = stats.get("ban_1st", {})
             ban_2nd = stats.get("ban_2nd", {})
+            ban_history = stats.get("ban_history", [])
             if ban_1st or ban_2nd:
                 with st.expander("🚫 Ban Tendencies", expanded=True):
                     bc1, bc2 = st.columns(2)
                     with bc1:
                         if ban_1st:
                             total_1 = sum(ban_1st.values())
-                            b1 = [{"Map": m, "Count": c, "Rate": f"{c/total_1*100:.0f}%"}
-                                  for m, c in sorted(ban_1st.items(), key=lambda x: x[1], reverse=True)]
-                            fig_b1 = px.bar(pd.DataFrame(b1), x="Map", y="Count", text="Rate",
+                            b1 = []
+                            for m_name, c in sorted(ban_1st.items(), key=lambda x: x[1], reverse=True):
+                                # Build hover from ban history
+                                bh = [b for b in ban_history if b["map"] == m_name and b["order"] == "1st"]
+                                hover_lines = [f"<b>{m_name}</b> (1st ban x{c})<br>"]
+                                for b in sorted(bh, key=lambda x: x.get("date", ""), reverse=True):
+                                    hover_lines.append(f"vs {b['opponent']} ({b['date']})")
+                                b1.append({"Map": m_name, "Count": c, "Rate": f"{c/total_1*100:.0f}%", "Hover": "<br>".join(hover_lines)})
+                            df_b1 = pd.DataFrame(b1)
+                            fig_b1 = px.bar(df_b1, x="Map", y="Count", text="Rate",
                                             title=f"1st Ban ({total_1} series)")
+                            fig_b1.update_traces(
+                                marker_color='#c45c5c', textposition='outside',
+                                hovertemplate="%{customdata[0]}<extra></extra>",
+                                customdata=df_b1[["Hover"]].values
+                            )
                             fig_b1.update_layout(paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)',
                                                  font_color='#e8ecf1', showlegend=False,
                                                  yaxis=dict(range=[0, max(ban_1st.values()) * 1.4]),
                                                  margin=dict(t=30, b=10), height=260)
-                            fig_b1.update_traces(marker_color='#c45c5c', textposition='outside')
                             st.plotly_chart(fig_b1, use_container_width=True, key=f"b1_{team_name}")
                     with bc2:
                         if ban_2nd:
                             total_2 = sum(ban_2nd.values())
-                            b2 = [{"Map": m, "Count": c, "Rate": f"{c/total_2*100:.0f}%"}
-                                  for m, c in sorted(ban_2nd.items(), key=lambda x: x[1], reverse=True)]
-                            fig_b2 = px.bar(pd.DataFrame(b2), x="Map", y="Count", text="Rate",
+                            b2 = []
+                            for m_name, c in sorted(ban_2nd.items(), key=lambda x: x[1], reverse=True):
+                                bh = [b for b in ban_history if b["map"] == m_name and b["order"] == "2nd"]
+                                hover_lines = [f"<b>{m_name}</b> (2nd ban x{c})<br>"]
+                                for b in sorted(bh, key=lambda x: x.get("date", ""), reverse=True):
+                                    hover_lines.append(f"vs {b['opponent']} ({b['date']})")
+                                b2.append({"Map": m_name, "Count": c, "Rate": f"{c/total_2*100:.0f}%", "Hover": "<br>".join(hover_lines)})
+                            df_b2 = pd.DataFrame(b2)
+                            fig_b2 = px.bar(df_b2, x="Map", y="Count", text="Rate",
                                             title=f"2nd Ban ({total_2} series)")
+                            fig_b2.update_traces(
+                                marker_color='#b57aff', textposition='outside',
+                                hovertemplate="%{customdata[0]}<extra></extra>",
+                                customdata=df_b2[["Hover"]].values
+                            )
                             fig_b2.update_layout(paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)',
                                                  font_color='#e8ecf1', showlegend=False,
                                                  yaxis=dict(range=[0, max(ban_2nd.values()) * 1.4]),
                                                  margin=dict(t=30, b=10), height=260)
-                            fig_b2.update_traces(marker_color='#b57aff', textposition='outside')
                             st.plotly_chart(fig_b2, use_container_width=True, key=f"b2_{team_name}")
 
     render_team_overview(col_left, team1, t1_stats, "#39ff14")
