@@ -332,10 +332,10 @@ def get_team_stats(team, matches):
             ms["history"].append(h_entry)
 
             # Track per-map match history for hover tooltips
-            if mn not in stats["map_match_history"]:
-                stats["map_match_history"][mn] = []
+            if map_name not in stats["map_match_history"]:
+                stats["map_match_history"][map_name] = []
             result_str = "W" if my_score > opp_score else "L"
-            stats["map_match_history"][mn].append({
+            stats["map_match_history"][map_name].append({
                 "date": m.get("date", "?"),
                 "opponent": opponent,
                 "score": f"{my_score}-{opp_score}",
