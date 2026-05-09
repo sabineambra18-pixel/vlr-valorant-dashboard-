@@ -34338,6 +34338,298 @@
       }
     },
     {
+      "id": 645498,
+      "date": "2026-05-08",
+      "left": "KRÜ Esports",
+      "right": "Evil Geniuses",
+      "winner": "KRÜ Esports",
+      "played": [
+        {
+          "map": "Haven",
+          "ls": 11,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [
+            "Cypher",
+            "Omen",
+            "Fade",
+            "Neon",
+            "Phoenix"
+          ],
+          "right_agents": [
+            "Neon",
+            "Sova",
+            "Viper",
+            "Killjoy",
+            "Omen"
+          ],
+          "pistols": {
+            "left": 0,
+            "right": 2
+          },
+          "sides": {
+            "left_atk": 5,
+            "left_def": 6,
+            "right_atk": 6,
+            "right_def": 7
+          }
+        },
+        {
+          "map": "Lotus",
+          "ls": 13,
+          "rs": 11,
+          "picked_by": null,
+          "left_agents": [
+            "Fade",
+            "Viper",
+            "Vyse",
+            "Omen",
+            "Neon"
+          ],
+          "right_agents": [
+            "Neon",
+            "Fade",
+            "Viper",
+            "Vyse",
+            "Omen"
+          ],
+          "pistols": {
+            "left": 2,
+            "right": 0
+          },
+          "sides": {
+            "left_atk": 9,
+            "left_def": 4,
+            "right_atk": 8,
+            "right_def": 3
+          }
+        },
+        {
+          "map": "Bind",
+          "ls": 13,
+          "rs": 6,
+          "picked_by": null,
+          "left_agents": [
+            "Brimstone",
+            "Vyse",
+            "Fade",
+            "Neon",
+            "Viper"
+          ],
+          "right_agents": [
+            "Brimstone",
+            "Neon",
+            "Phoenix",
+            "Skye",
+            "Viper"
+          ],
+          "pistols": {
+            "left": 2,
+            "right": 0
+          },
+          "sides": {
+            "left_atk": 6,
+            "left_def": 7,
+            "right_atk": 5,
+            "right_def": 1
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "Evil Geniuses",
+            "map": "Breeze"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "KRÜ Esports",
+            "map": "Fracture"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "Evil Geniuses",
+            "map": "Haven"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "KRÜ Esports",
+            "map": "Lotus"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "Evil Geniuses",
+            "map": "Split"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "KRÜ Esports",
+            "map": "Pearl"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Bind"
+          }
+        ],
+        "decider": "Bind"
+      }
+    },
+    {
+      "id": 645499,
+      "date": "2026-05-08",
+      "left": "FURIA",
+      "right": "100 Thieves",
+      "winner": "100 Thieves",
+      "played": [
+        {
+          "map": "Pearl",
+          "ls": 13,
+          "rs": 9,
+          "picked_by": null,
+          "left_agents": [
+            "Killjoy",
+            "Fade",
+            "Phoenix",
+            "Neon",
+            "Astra"
+          ],
+          "right_agents": [
+            "Chamber",
+            "Phoenix",
+            "Neon",
+            "Astra",
+            "Fade"
+          ],
+          "pistols": {
+            "left": 0,
+            "right": 2
+          },
+          "sides": {
+            "left_atk": 8,
+            "left_def": 5,
+            "right_atk": 7,
+            "right_def": 2
+          }
+        },
+        {
+          "map": "Haven",
+          "ls": 8,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [
+            "Sova",
+            "Cypher",
+            "Neon",
+            "Omen",
+            "Phoenix"
+          ],
+          "right_agents": [
+            "Sova",
+            "Phoenix",
+            "Cypher",
+            "Omen",
+            "Neon"
+          ],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 4,
+            "left_def": 4,
+            "right_atk": 8,
+            "right_def": 5
+          }
+        },
+        {
+          "map": "Breeze",
+          "ls": 6,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [
+            "Harbor",
+            "Sova",
+            "Neon",
+            "Iso",
+            "Astra"
+          ],
+          "right_agents": [
+            "Phoenix",
+            "Sova",
+            "Harbor",
+            "Neon",
+            "Cypher"
+          ],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 2,
+            "left_def": 4,
+            "right_atk": 8,
+            "right_def": 5
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "100 Thieves",
+            "map": "Split"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "FURIA",
+            "map": "Bind"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "100 Thieves",
+            "map": "Pearl"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "FURIA",
+            "map": "Haven"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "100 Thieves",
+            "map": "Lotus"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "FURIA",
+            "map": "Fracture"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Breeze"
+          }
+        ],
+        "decider": "Breeze"
+      }
+    },
+    {
       "id": 659474,
       "date": "2026-05-01",
       "left": "Xi Lai Gaming",
