@@ -35008,6 +35008,152 @@
       }
     },
     {
+      "id": 645503,
+      "date": "2026-05-10",
+      "left": "Sentinels",
+      "right": "NRG",
+      "winner": "NRG",
+      "played": [
+        {
+          "map": "Fracture",
+          "ls": 11,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [
+            "Raze",
+            "Fade",
+            "Cypher",
+            "Brimstone",
+            "Neon"
+          ],
+          "right_agents": [
+            "Waylay",
+            "Phoenix",
+            "Cypher",
+            "Brimstone",
+            "Fade"
+          ],
+          "pistols": {
+            "left": 2,
+            "right": 0
+          },
+          "sides": {
+            "left_atk": 8,
+            "left_def": 3,
+            "right_atk": 9,
+            "right_def": 4
+          }
+        },
+        {
+          "map": "Breeze",
+          "ls": 13,
+          "rs": 11,
+          "picked_by": null,
+          "left_agents": [
+            "Viper",
+            "Iso",
+            "Harbor",
+            "Sova",
+            "Neon"
+          ],
+          "right_agents": [
+            "Sova",
+            "Harbor",
+            "Viper",
+            "Jett",
+            "KAY/O"
+          ],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 4,
+            "left_def": 9,
+            "right_atk": 3,
+            "right_def": 8
+          }
+        },
+        {
+          "map": "Lotus",
+          "ls": 10,
+          "rs": 13,
+          "picked_by": null,
+          "left_agents": [
+            "Vyse",
+            "Raze",
+            "Neon",
+            "Omen",
+            "Fade"
+          ],
+          "right_agents": [
+            "Vyse",
+            "Fade",
+            "Neon",
+            "Omen",
+            "Viper"
+          ],
+          "pistols": {
+            "left": 1,
+            "right": 1
+          },
+          "sides": {
+            "left_atk": 3,
+            "left_def": 7,
+            "right_atk": 5,
+            "right_def": 8
+          }
+        }
+      ],
+      "veto": {
+        "events": [
+          {
+            "order": 1,
+            "type": "ban",
+            "team": "NRG",
+            "map": "Bind"
+          },
+          {
+            "order": 2,
+            "type": "ban",
+            "team": "Sentinels",
+            "map": "Pearl"
+          },
+          {
+            "order": 3,
+            "type": "pick",
+            "team": "NRG",
+            "map": "Fracture"
+          },
+          {
+            "order": 4,
+            "type": "pick",
+            "team": "Sentinels",
+            "map": "Breeze"
+          },
+          {
+            "order": 5,
+            "type": "ban",
+            "team": "NRG",
+            "map": "Split"
+          },
+          {
+            "order": 6,
+            "type": "ban",
+            "team": "Sentinels",
+            "map": "Haven"
+          },
+          {
+            "order": 7,
+            "type": "decider",
+            "team": null,
+            "map": "Lotus"
+          }
+        ],
+        "decider": "Lotus"
+      }
+    },
+    {
       "id": 659474,
       "date": "2026-05-01",
       "left": "Xi Lai Gaming",
