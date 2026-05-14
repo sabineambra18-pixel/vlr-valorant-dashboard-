@@ -244,8 +244,6 @@ def get_team_stats(team, matches):
         "atk_rounds": 0, "def_rounds": 0,
         "atk_rounds_lost": 0, "def_rounds_lost": 0,
         "ban_1st": {}, "ban_2nd": {},
-        "ban_history": [],
-        "map_match_history": {},
         "pick_wins": 0, "pick_losses": 0,
     }
     matches_played = []
@@ -331,21 +329,6 @@ def get_team_stats(team, matches):
                 h_entry["pistol_l"] = opp_p
             ms["history"].append(h_entry)
 
-            # Track per-map match history for hover tooltips
-            if map_name not in stats["map_match_history"]:
-                stats["map_match_history"][map_name] = []
-            result_str = "W" if my_score > opp_score else "L"
-            pistol_str = ""
-            if pistols and isinstance(pistols, dict):
-                pistol_str = f" ({my_p}-{opp_p} P)"
-            stats["map_match_history"][map_name].append({
-                "date": m.get("date", "?"),
-                "opponent": opponent,
-                "score": f"{my_score}-{opp_score}",
-                "result": result_str,
-                "pistol": pistol_str
-            })
-
         # Veto: picks, bans, 1st/2nd ban tracking
         veto = m.get("veto", {})
         team_ban_count = 0
@@ -367,14 +350,6 @@ def get_team_stats(team, matches):
                 elif evt_type == "ban": stats["maps"][map_v]["bans"] += 1
             if evt_type == "ban" and evt_team == team and map_v:
                 team_ban_count += 1
-                opponent = m.get("right" if is_left else "left")
-                ban_order = "1st" if team_ban_count == 1 else "2nd"
-                stats["ban_history"].append({
-                    "map": map_v,
-                    "date": m.get("date"),
-                    "opponent": opponent,
-                    "order": ban_order
-                })
                 if team_ban_count == 1:
                     stats["ban_1st"][map_v] = stats["ban_1st"].get(map_v, 0) + 1
                 elif team_ban_count == 2:
@@ -475,8 +450,8 @@ t2_stats, _ = get_team_stats(team2, team2_matches)
 # =============================================
 # ALL TABS — same as original, cleaned up
 # =============================================
-tab_home, tab_leaderboard, tab_overview, tab_history, tab_h2h, tab_map, tab_comp = st.tabs([
-    "🏠 Home", "🏆 Leaderboard", "📊 Overview", "📜 History", "⚔️ Head-to-Head", "🗺️ Map Deep Dive", "📈 Comparison"
+tab_home, tab_leaderboard, tab_overview, tab_history, tab_h2h, tab_map, tab_comp, tab_meta = st.tabs([
+    "🏠 Home", "🏆 Leaderboard", "📊 Overview", "📜 History", "⚔️ Head-to-Head", "🗺️ Map Deep Dive", "📈 Comparison", "🌐 Map Meta"
 ])
 
 # ========== HOME ==========
@@ -620,81 +595,48 @@ with tab_overview:
                     pw_v, pl_v = d.get('pistol_wins', 0), d.get('pistol_losses', 0)
                     rec = f"{w}-{l}"
                     if pw_v + pl_v > 0: rec += f" | P:{pw_v}-{pl_v}"
-                    # Build hover text from match history
-                    history_entries = stats.get("map_match_history", {}).get(mn, [])
-                    hover_lines = [f"<b>{mn}</b> ({w}-{l})<br>"]
-                    for h in sorted(history_entries, key=lambda x: x.get("date", ""), reverse=True):
-                        res_color = "#39ff14" if h["result"] == "W" else "#c45c5c"
-                        hover_lines.append(f"<span style='color:{res_color}'>{h['result']}</span> {h['score']} vs {h['opponent']}{h.get('pistol', '')} {h['date']}")
-                    hover_text = "<br>".join(hover_lines)
-                    map_wr_data.append({"Map": mn, "Win Rate": calc_wr(w, l), "Record": rec, "Hover": hover_text})
+                    map_wr_data.append({"Map": mn, "Win Rate": calc_wr(w, l), "Record": rec})
             if map_wr_data:
                 df = pd.DataFrame(map_wr_data).sort_values("Win Rate", ascending=False)
                 fig = px.bar(df, x="Map", y="Win Rate", text="Record", color="Win Rate",
                              color_continuous_scale=[[0, '#c45c5c'], [0.5, '#b57aff'], [1, '#b57aff']])
-                fig.update_traces(
-                    textposition='outside', textfont_size=11,
-                    hovertemplate="%{customdata[0]}<extra></extra>",
-                    customdata=df[["Hover"]].values
-                )
                 fig.update_layout(paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)',
                                   font_color='#e8ecf1', showlegend=False, yaxis=dict(range=[0, 115]),
                                   margin=dict(t=10, b=10), height=300)
+                fig.update_traces(textposition='outside', textfont_size=11)
                 st.plotly_chart(fig, use_container_width=True, key=f"mwr_{team_name}")
 
             # Ban Tendencies
             ban_1st = stats.get("ban_1st", {})
             ban_2nd = stats.get("ban_2nd", {})
-            ban_history = stats.get("ban_history", [])
             if ban_1st or ban_2nd:
                 with st.expander("🚫 Ban Tendencies", expanded=True):
                     bc1, bc2 = st.columns(2)
                     with bc1:
                         if ban_1st:
                             total_1 = sum(ban_1st.values())
-                            b1 = []
-                            for m_name, c in sorted(ban_1st.items(), key=lambda x: x[1], reverse=True):
-                                # Build hover from ban history
-                                bh = [b for b in ban_history if b["map"] == m_name and b["order"] == "1st"]
-                                hover_lines = [f"<b>{m_name}</b> (1st ban x{c})<br>"]
-                                for b in sorted(bh, key=lambda x: x.get("date", ""), reverse=True):
-                                    hover_lines.append(f"vs {b['opponent']} ({b['date']})")
-                                b1.append({"Map": m_name, "Count": c, "Rate": f"{c/total_1*100:.0f}%", "Hover": "<br>".join(hover_lines)})
-                            df_b1 = pd.DataFrame(b1)
-                            fig_b1 = px.bar(df_b1, x="Map", y="Count", text="Rate",
+                            b1 = [{"Map": m, "Count": c, "Rate": f"{c/total_1*100:.0f}%"}
+                                  for m, c in sorted(ban_1st.items(), key=lambda x: x[1], reverse=True)]
+                            fig_b1 = px.bar(pd.DataFrame(b1), x="Map", y="Count", text="Rate",
                                             title=f"1st Ban ({total_1} series)")
-                            fig_b1.update_traces(
-                                marker_color='#c45c5c', textposition='outside',
-                                hovertemplate="%{customdata[0]}<extra></extra>",
-                                customdata=df_b1[["Hover"]].values
-                            )
                             fig_b1.update_layout(paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)',
                                                  font_color='#e8ecf1', showlegend=False,
                                                  yaxis=dict(range=[0, max(ban_1st.values()) * 1.4]),
                                                  margin=dict(t=30, b=10), height=260)
+                            fig_b1.update_traces(marker_color='#c45c5c', textposition='outside')
                             st.plotly_chart(fig_b1, use_container_width=True, key=f"b1_{team_name}")
                     with bc2:
                         if ban_2nd:
                             total_2 = sum(ban_2nd.values())
-                            b2 = []
-                            for m_name, c in sorted(ban_2nd.items(), key=lambda x: x[1], reverse=True):
-                                bh = [b for b in ban_history if b["map"] == m_name and b["order"] == "2nd"]
-                                hover_lines = [f"<b>{m_name}</b> (2nd ban x{c})<br>"]
-                                for b in sorted(bh, key=lambda x: x.get("date", ""), reverse=True):
-                                    hover_lines.append(f"vs {b['opponent']} ({b['date']})")
-                                b2.append({"Map": m_name, "Count": c, "Rate": f"{c/total_2*100:.0f}%", "Hover": "<br>".join(hover_lines)})
-                            df_b2 = pd.DataFrame(b2)
-                            fig_b2 = px.bar(df_b2, x="Map", y="Count", text="Rate",
+                            b2 = [{"Map": m, "Count": c, "Rate": f"{c/total_2*100:.0f}%"}
+                                  for m, c in sorted(ban_2nd.items(), key=lambda x: x[1], reverse=True)]
+                            fig_b2 = px.bar(pd.DataFrame(b2), x="Map", y="Count", text="Rate",
                                             title=f"2nd Ban ({total_2} series)")
-                            fig_b2.update_traces(
-                                marker_color='#b57aff', textposition='outside',
-                                hovertemplate="%{customdata[0]}<extra></extra>",
-                                customdata=df_b2[["Hover"]].values
-                            )
                             fig_b2.update_layout(paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)',
                                                  font_color='#e8ecf1', showlegend=False,
                                                  yaxis=dict(range=[0, max(ban_2nd.values()) * 1.4]),
                                                  margin=dict(t=30, b=10), height=260)
+                            fig_b2.update_traces(marker_color='#b57aff', textposition='outside')
                             st.plotly_chart(fig_b2, use_container_width=True, key=f"b2_{team_name}")
 
     render_team_overview(col_left, team1, t1_stats, "#39ff14")
@@ -824,21 +766,6 @@ with tab_map:
                     else:
                         st.metric("Bans", total_bans)
 
-                # Ban history for this map
-                map_ban_history = [b for b in team_stats.get("ban_history", []) if b["map"] == selected_map]
-                if map_ban_history:
-                    with st.expander(f"Ban History ({len(map_ban_history)})", expanded=False):
-                        for b in sorted(map_ban_history, key=lambda x: x.get("date") or "0000", reverse=True):
-                            order_color = "#c45c5c" if b["order"] == "1st" else "#b57aff"
-                            st.markdown(
-                                f"<div class='stat-box'>"
-                                f"<span style='color:#7a7490; font-size:12px'>{b.get('date', '?')}</span> "
-                                f"vs <b>{b.get('opponent', '?')}</b> "
-                                f"<span style='color:{order_color}; font-size:12px'>({b['order']} ban)</span>"
-                                f"</div>",
-                                unsafe_allow_html=True
-                            )
-
                 atk_w, atk_l = data.get("atk_rounds_won", 0), data.get("atk_rounds_lost", 0)
                 def_w, def_l = data.get("def_rounds_won", 0), data.get("def_rounds_lost", 0)
                 if (atk_w + atk_l + def_w + def_l) > 0:
@@ -909,3 +836,101 @@ with tab_comp:
                           margin=dict(t=10, b=10), height=400)
         fig.update_traces(textposition='outside')
         st.plotly_chart(fig, use_container_width=True)
+
+# ========== MAP META ==========
+with tab_meta:
+    st.subheader("Map Attack/Defense Breakdown (All Matches)")
+    st.caption("Aggregated across all filtered matches — shows whether each map favors attack or defense.")
+
+    # Aggregate sides data across all filtered matches
+    map_sides = {}
+    for m in filtered_matches:
+        for p in m.get("played", []):
+            mn = clean_map_name(p.get("map", ""))
+            if not mn:
+                continue
+            sides = p.get("sides", {})
+            if not sides or not isinstance(sides, dict):
+                continue
+            if mn not in map_sides:
+                map_sides[mn] = {"atk_rounds": 0, "def_rounds": 0, "maps_played": 0}
+            left_atk = safe_int(sides.get("left_atk", 0))
+            left_def = safe_int(sides.get("left_def", 0))
+            right_atk = safe_int(sides.get("right_atk", 0))
+            right_def = safe_int(sides.get("right_def", 0))
+            # Attack rounds won = left_atk + right_atk (both teams' attack rounds)
+            # Defense rounds won = left_def + right_def (both teams' defense rounds)
+            map_sides[mn]["atk_rounds"] += left_atk + right_atk
+            map_sides[mn]["def_rounds"] += left_def + right_def
+            map_sides[mn]["maps_played"] += 1
+
+    if map_sides:
+        meta_data = []
+        for mn, d in sorted(map_sides.items(), key=lambda x: x[1]["maps_played"], reverse=True):
+            total = d["atk_rounds"] + d["def_rounds"]
+            if total > 0:
+                atk_pct = d["atk_rounds"] / total * 100
+                def_pct = d["def_rounds"] / total * 100
+                meta_data.append({
+                    "Map": mn,
+                    "Maps Played": d["maps_played"],
+                    "Atk Rounds": d["atk_rounds"],
+                    "Def Rounds": d["def_rounds"],
+                    "Total Rounds": total,
+                    "Atk %": atk_pct,
+                    "Def %": def_pct
+                })
+
+        if meta_data:
+            df_meta = pd.DataFrame(meta_data)
+
+            # Stacked horizontal bar chart
+            fig_meta = go.Figure()
+            fig_meta.add_trace(go.Bar(
+                y=df_meta["Map"], x=df_meta["Atk %"],
+                name="Attack", orientation='h',
+                marker_color='#c45c5c',
+                text=[f"{v:.1f}%" for v in df_meta["Atk %"]],
+                textposition='inside', textfont=dict(size=13, color='white'),
+                hovertemplate="<b>%{y}</b><br>Attack: %{x:.1f}%<br>Rounds: %{customdata[0]}<extra></extra>",
+                customdata=df_meta[["Atk Rounds"]].values
+            ))
+            fig_meta.add_trace(go.Bar(
+                y=df_meta["Map"], x=df_meta["Def %"],
+                name="Defense", orientation='h',
+                marker_color='#39ff14',
+                text=[f"{v:.1f}%" for v in df_meta["Def %"]],
+                textposition='inside', textfont=dict(size=13, color='#13111c'),
+                hovertemplate="<b>%{y}</b><br>Defense: %{x:.1f}%<br>Rounds: %{customdata[0]}<extra></extra>",
+                customdata=df_meta[["Def Rounds"]].values
+            ))
+            fig_meta.update_layout(
+                barmode='stack',
+                paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)',
+                font_color='#e8ecf1',
+                showlegend=True,
+                legend=dict(orientation='h', yanchor='bottom', y=1.02, xanchor='center', x=0.5),
+                margin=dict(t=40, b=10, l=10, r=10),
+                height=max(300, len(meta_data) * 55),
+                xaxis=dict(range=[0, 100], showticklabels=False),
+                yaxis=dict(autorange='reversed')
+            )
+            st.plotly_chart(fig_meta, use_container_width=True)
+
+            # Summary table
+            st.markdown("#### Detailed Breakdown")
+            for row in meta_data:
+                sided = "Attack-sided" if row["Atk %"] > 50 else "Defense-sided" if row["Def %"] > 50 else "Neutral"
+                color = "#c45c5c" if sided == "Attack-sided" else "#39ff14" if sided == "Defense-sided" else "#b57aff"
+                diff = abs(row["Atk %"] - 50)
+                st.markdown(
+                    f"<div class='stat-box'>"
+                    f"<b>{row['Map']}</b> — {row['Maps Played']} maps, {row['Total Rounds']} rounds — "
+                    f"<span style='color:#c45c5c'>Atk {row['Atk %']:.1f}%</span> / "
+                    f"<span style='color:#39ff14'>Def {row['Def %']:.1f}%</span> — "
+                    f"<span style='color:{color}'>{sided}</span> (+{diff:.1f}%)"
+                    f"</div>",
+                    unsafe_allow_html=True
+                )
+    else:
+        st.info("No sides data available for the current filter.")
